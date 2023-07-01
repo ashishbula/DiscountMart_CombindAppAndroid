@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        android:id="@+id/weekly_incentive_item_cardView_item"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="5dp">
+
+        /*Linear Layout Repurchase incentive Item*/
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            *Linear Layout for Payout/From Date*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="Payout Date"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_payoutDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView To Payout Date*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="To Date"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_todate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Matching FV Bonus*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/matching_bonus"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_match_pair"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Self FV Income*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/self_fvincome"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_self_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+            /*Linear Layout for TextView Direct sponsor income*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/dir_incom"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_dir_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Sponsor Level Income */
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/sponsor_level_incom"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_sponsor_level_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Roylety Income */
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/royalty_incom"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_royalty_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+
+            /*Linear Layout for TextView Gross Income*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/gross_income"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_gross"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView TDS Amount*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/tds_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_tds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Admin Charge*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/admin_charge"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_admin_charge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Social Charge*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/social_charge"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_social_charge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+
+            /*Linear Layout for TextView Total Deduction*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/tot_deduction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_deduction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Repurchase Deduction*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/repurchse_deduction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_repurchase_deduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Net Income*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/net_income"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_newIncome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Previous Balance*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/pre_bal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txtView_pre_bal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Carry Forward /Closing Balance*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/carry_forward"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/weekly_incentive_item_txt_closing_bal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Statement*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin_v_small"
+                android:gravity="center"
+                android:id="@+id/weekly_incentive_item_layout_statement"
+                android:weightSum="0">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0"
+                    app:contentPadding="0dp"
+                    android:layout_margin="3dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="Statement..."
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/weekly_incentive_item_txt_statement"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_normal"></TextView>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <!--Header Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/black"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet Request Details "
+            android:id="@+id/downline_purchase_frag_TxtView_heading"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+
+    <!--Total Records-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_v_small"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Records :"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wallet_request_detail_fragment_record"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <!--No Record Image-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/wallet_request_detail_fragment_layout_noRecord"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/no_result"/>
+
+    </LinearLayout>
+
+    <!--Layout Table Check Epin Request REport-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:id="@+id/wallet_request_detail_fragment_layout_table"
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <!--Teble-->
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/LightGray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <!--TABLE-->
+                        <ScrollView
+                            android:id="@+id/wallet_request_detail_fragment_scrollView_Vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fillViewport="true"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:scrollbarStyle="outsideInset"
+                            android:scrollbars="vertical">
+
+                            <HorizontalScrollView
+                                android:id="@+id/wallet_request_detail_fragment_scrollView_scrollHorizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:fillViewport="true"
+                                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="horizontal">
+
+
+                                <TableLayout
+                                    android:id="@+id/wallet_request_detail_fragment_tablelayout_record"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:gravity="center">
+
+                                </TableLayout>
+
+                            </HorizontalScrollView>
+
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

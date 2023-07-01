@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <!--Passenger Type and Passenger count-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="@dimen/margin_50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="S.no"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:textStyle="bold"
+                    android:text="Pax Type"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="Age"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp">
+
+                <TextView
+                    android:layout_width="@dimen/margin_50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:id="@+id/room_book_detail_act_txt_count"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="20"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:id="@+id/room_book_detail_act_txt_pass_type"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="20"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:id="@+id/room_book_detail_act_txt_passenger_age"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="20"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:id="@+id/room_book_detail_act_txt_gender"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="ashish"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:id="@+id/room_book_detail_act_txt_passenger_name"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+
+
+</LinearLayout>

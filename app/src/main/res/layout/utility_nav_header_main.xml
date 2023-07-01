@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:gravity="center_vertical">
+
+    <!--user image, name id, password-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        <!--userImage-->
+        <LinearLayout
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="@dimen/margin_80dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dash_act_nav_header_profileImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/profile_icon" />
+        </LinearLayout>
+
+        <!--Name and id, Wallet Balance-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="13dp"
+            android:orientation="vertical">
+            <!--Name-->
+            <TextView
+                android:id="@+id/nav_header_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utility"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold" />
+
+            <!--Mail Id-->
+            <TextView
+                android:id="@+id/nav_header_txt_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:text="Android Programmer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_medium" />
+
+            <!--Main Wallet Bal-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|right"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_wallet_white" />
+
+                <TextView
+                    android:id="@+id/nav_header_txt_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="0.0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Account type-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" />
+
+        <!--Account type-->
+        <TextView
+            android:id="@+id/nav_header_txt_acctype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+
+</LinearLayout>

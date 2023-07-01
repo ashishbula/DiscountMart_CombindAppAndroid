@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_v_small">
+
+    <!--Header Title Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bus_passenger_item_layout_header"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_traveler_information"
+            android:textSize="@dimen/txt_size_large"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:background="@color/gray3"
+            android:textSize="@dimen/txt_size_medium"
+            android:text="@string/str_name_shoud_be_govt"/>
+
+
+    </LinearLayout>
+
+    <!--Passenger Detail Layout for Seat, Name, mobile, email, age, gender-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@color/white"
+        android:id="@+id/bus_passenger_item_layout_itemview"
+        android:orientation="vertical">
+
+        <!--Layout for Seat, Name, mobile, email, age, gender-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Text Seat-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_seat"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/bus_passenger_item_txt_seat"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <!--SEat Value-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:id="@+id/bus_passenger_item_txt_seat_name"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <!-- Edit Text Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bus_passenger_item_edtxt_name"
+                android:textSize="@dimen/txt_size_normal"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:inputType="textPersonName"
+                android:hint="@string/str_name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Edit Text Mobile Number-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bus_passenger_item_edtxt_mobile"
+                android:textSize="@dimen/txt_size_normal"
+                android:inputType="number"
+                android:hint="@string/str_mobile"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Edit Text Emial-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bus_passenger_item_edtxt_email"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/txt_size_normal"
+                android:hint="@string/str_email"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Age and Gender-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--Edit text Age-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bus_passenger_item_edtxt_dob"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:inputType="number"
+                    android:hint="@string/str_age"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Gender Radio Group-->
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/bus_passenger_item_rdg_gender"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:checked="true"
+                    android:id="@+id/bus_passenger_item_rdb_male"
+                    android:text="Male"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:id="@+id/bus_passenger_item_rdb_female"
+                    android:text="Female"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Layout For error msg-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/bus_passenger_item_txt_error"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

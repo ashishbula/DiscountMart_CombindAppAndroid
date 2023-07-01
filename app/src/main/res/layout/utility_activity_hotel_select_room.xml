@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.hotel.hotel_activity.HotelSelectRoomActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_50dp"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="false">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/hotel_select_room_act_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_select_room_act_img_close"
+                        android:src="@drawable/ic_close_black"/>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--For content-->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_large">
+            <!--Child Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_50dp"
+                android:orientation="vertical">
+
+                <!--Show city and date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:text="city"
+                        android:id="@+id/hotel_select_room_act_txt_city"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:text="city"
+                        android:id="@+id/hotel_select_room_act_txt_date"/>
+
+                </LinearLayout>
+
+                <!--Text How Many people-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="@string/str_how_many_people"
+                        android:id="@+id/hotel_select_room_act_txt_howmany"/>
+                </LinearLayout>
+
+                <!--incoude content for select adult and child-->
+               <!-- <include layout="@layout/utility_hotel_select_room_content"/>-->
+
+
+                <!--Recycler for room info item-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/hotel_select_room_act_recycler"
+                    android:paddingBottom="@dimen/margin_medium">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <!--Select Room-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/hotel_select_room_act_layout_addroom"
+                    android:padding="@dimen/margin_v_small"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_select_room_act_txt_addroom"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:text="@string/str_add_room"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_v_small"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_apply"
+            android:textColor="@color/white"
+            android:id="@+id/hotel_select_room_act_btn_apply"
+            android:background="@drawable/selector_bg_btn"/>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

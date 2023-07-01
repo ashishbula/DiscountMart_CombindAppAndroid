@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--Epin Detail Items-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:id="@+id/epin_detail_item_liner_layout_item"
+        android:weightSum="2">
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            android:id="@+id/epin_detail_item_cardView_item"
+            app:cardPreventCornerOverlap="true"
+            android:layout_margin="5dp">
+
+            /*Linear Layout Epin  Details Item*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:orientation="vertical">
+
+                /*Linear Layout for TextView S. No*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text="S.No."
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_sno"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Id No*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Pin No."
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_pinno"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Product Name*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Product Name"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_pro_name"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Issued Date*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/fragment_details_linear_layout_assignto"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Issued Date"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_issueDate"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Epin Status*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Epin Status"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_epin_status"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Used By*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/epin_detail_item_layout_usedby"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Used By"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_usedby"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Name*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/epin_detail_item_layout_name"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Name"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_name"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                /*Linear Layout for TextView Used Date*/
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/epin_detail_item_layout_useddate"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="Used Date"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.7"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epin_detail_item_txtView_used_date"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:weightSum="2"
+            android:visibility="visible"
+            android:id="@+id/epin_detail_item_liner_layout_button"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/epin_detail_item_txtView_view"
+                android:layout_height="wrap_content"
+                ></TextView>
+
+            <!--Topup-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                app:contentPadding="2dp"
+                app:cardElevation="@dimen/margin_v_small"
+                app:cardCornerRadius="@dimen/margin_v_small"
+                android:visibility="visible"
+                android:layout_gravity="bottom"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/margin_v_small"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/epin_detail_item_txtView_topup"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"
+                    android:text="TopUp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

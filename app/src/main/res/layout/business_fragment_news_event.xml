@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background"
+    tools:context=".business.fragment.NewsEventFragment">
+
+    <!--Layout Header TExt-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/black"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news_event"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--RecyclerView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/news_frag_layout_record"
+            android:padding="@dimen/margin_v_small">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_frag_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:layout_margin="2dp"
+                android:clipToPadding="false"
+                android:paddingBottom="35dp"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+        <!--No Record Image-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/news_frag_layout_noRecord"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/no_result"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

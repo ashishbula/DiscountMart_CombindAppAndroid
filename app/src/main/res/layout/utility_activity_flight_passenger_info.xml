@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".travel.flight.flight_activity.FlightPassengerInfoActivity">
+    <!--Tool Bar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/passenger_info_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <!--Layout for toolbar content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:baselineAligned="false">
+                <!--Layout for from , to city, departure date, adult, child, infants-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                    <!--Layout from,to city, edit icon-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/passenger_info_activity_toolbar_txtfromcity"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_arrow_white"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:layout_marginRight="@dimen/margin_v_small"
+                            android:id="@+id/passenger_info_activity_toolbar_img_arrow"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/passenger_info_activity_toolbar_txttocity"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left|bottom"
+                        android:id="@+id/passenger_info_activity_toolbar_layout_edit"
+                        android:orientation="horizontal">
+
+                        <!-- Departure Date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:id="@+id/passenger_info_activity_toolbar_txt_dDate"
+                            android:textSize="@dimen/txt_size_small"/>
+
+                        <!--Travellers Adult-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:textSize="@dimen/txt_size_small"
+                            android:id="@+id/passenger_info_activity_toolbar_txt_adult"/>
+
+                        <!--Travellers child-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:id="@+id/passenger_info_activity_toolbar_txt_child"
+                            android:layout_marginLeft="0dp"/>
+
+                        <!--Travellers Infants-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:layout_marginLeft="0dp"
+                            android:id="@+id/passenger_info_activity_toolbar_txt_infants"/>
+
+                        <!--Image home-->
+                        <ImageView
+                            android:layout_width="@dimen/margin_normal"
+                            android:visibility="visible"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:id="@+id/passenger_info_activity_toolbar_img_edit"
+                            android:layout_height="@dimen/margin_normal"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_edit_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Layout for home and edit icon-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!--Image home-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/passenger_info_activity_toolbar_img_home"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_whit"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Layout for passenger info content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <!--Layout for Recycler View-->
+        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/passenger_info_activity_recycler"
+                        android:paddingBottom="@dimen/margin_medium">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+        <!--Layout for offer-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg_white"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:id="@+id/passenger_info_activity_layout_fareamout"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/passenger_info_activity_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/passenger_info_activity_txt_total_travelor"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/passenger_info_activity_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:id="@+id/passenger_info_activity_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:text="continue >>"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

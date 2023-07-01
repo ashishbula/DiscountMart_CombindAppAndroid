@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/black"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-pin "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            />
+
+
+    </LinearLayout>
+
+
+    <!--Radio Button Used or Unused Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:text="Check Any One"
+            android:textColor="@color/black" />
+
+
+
+        <RadioGroup
+            android:id="@+id/epin_frag_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/epin_frag_radiobt_used"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="USED"
+                android:checked="true"
+                android:buttonTint="@color/colorPrimaryDark"
+                />
+
+            <RadioButton
+                android:id="@+id/epin_frag_radiobt_unused"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="UNUSED"
+                android:buttonTint="@color/colorPrimaryDark"
+
+                />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <!--Spinner Package, Textview Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_pckg"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:textColor="@color/black" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:background="@drawable/white_bg_box_black_border"
+            android:padding="2dp"
+            >
+            <Spinner
+                android:id="@+id/epin_fragment_spin_package"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:ems="0"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <!--Button Submit-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left|center"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:background="@drawable/selector_bg_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/epin_frag_btn_submit"
+            />
+    </LinearLayout>
+</LinearLayout>

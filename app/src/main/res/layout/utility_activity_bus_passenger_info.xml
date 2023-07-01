@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.discountmart.utility_services.travel.bus.bus_activity.BusPassengerInfoActivity">
+
+    <!--Layout for Travel name and bus type, and departure date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_v_small"
+        android:elevation="@dimen/margin_v_small"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!--Travel name and bus type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text Travel Name-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_travel_name"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/bus_passenger_act_txt_travel_name"/>
+            <!-- Departure Date-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium"
+                android:visibility="visible"
+                android:id="@+id/bus_passenger_act_txt_dep_Date"/>
+
+        </LinearLayout>
+
+        <!--Bus Type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text Bus Type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_bus_type"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/bus_passenger_act_txt_bus_type"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for passenger info content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:orientation="vertical">
+
+        <!--Layout for Recycler View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bus_passenger_act_recycler"
+                android:paddingBottom="@dimen/margin_medium">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <!--Layout for offer-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray3"
+        android:id="@+id/bus_passenger_act_layout_continue"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:id="@+id/bus_passenger_act_layout_fareamout"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/bus_passenger_act_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/bus_passenger_act_txt_total_seat"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/bus_passenger_act_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:id="@+id/bus_passenger_act_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:text="continue >>"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

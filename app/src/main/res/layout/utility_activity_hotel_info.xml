@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".travel.hotel.hotel_activity.HotelInfoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:id="@+id/hotel_info_act_appbarlayout">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/hotel_info_act_collapsTool"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentScrim="@color/colorPrimary"
+
+            android:fitsSystemWindows="true">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/hotel_info_act_image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/hotel_info_act_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStart="0dp"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+<!--android:theme="@style/AppTheme.AppBarOverlay"-->
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <!--Add Content-->
+    <include layout="@layout/utility_hotelinfo_act_content"/>
+
+    <!--Layout button select room-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_select_room"
+            android:background="@drawable/selector_bg_btn"
+            android:id="@+id/hotel_info_act_btn_select"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

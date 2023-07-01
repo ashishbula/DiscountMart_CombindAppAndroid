@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility_services.recharge.fragment.FragmentDynamicTabs">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/light_gray_bg"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/commonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_centerInParent="false"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_centerInParent="false"
+            android:text="Recommended plans given below.."
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frag_dy_plandetail_layout_result"
+        android:layout_marginTop="@dimen/bootom_nav_margin"
+        android:padding="@dimen/margin_small"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_dy_plandetail_recycler"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/frag_dy_plandetail_layout_noresult"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/no_result"
+            android:id="@+id/frag_dy_plandetail_img"/>
+    </LinearLayout>
+
+</FrameLayout>

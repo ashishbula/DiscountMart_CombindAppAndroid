@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@mipmap/cashback_home1"
+            android:title="@string/home_string"/>
+        <item
+            android:id="@+id/my_account"
+            android:checked="false"
+            android:icon="@mipmap/cashback_my_account"
+            android:title="@string/myaccount_string"/>
+
+        <item
+            android:id="@+id/store"
+            android:checked="false"
+            android:icon="@mipmap/cashback_store"
+            android:title="@string/store"/>
+        <item
+            android:id="@+id/setting"
+            android:checked="false"
+            android:icon="@mipmap/cashback_settings"
+            android:title="@string/setting"/>
+        <item
+            android:id="@+id/aboutus"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@mipmap/cashback_support"
+            android:title="@string/aboutus"/>
+        <item
+            android:id="@+id/tnc"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@mipmap/cashback_termsconditions"
+            android:title="@string/tnc_string"/>
+
+        <item
+            android:id="@+id/faq"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@mipmap/cashback_faq"
+            android:title="@string/faq_string"/>
+        <item
+            android:id="@+id/rateapp"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@mipmap/cashback_rate_app"
+            android:title="@string/rateapp_string"/>
+        <item
+            android:id="@+id/shareapp"
+            android:checked="false"
+            android:icon="@mipmap/cashback_share_app"
+            android:title="@string/shareapp_string"/>
+
+        <item
+            android:id="@+id/refernearn"
+            android:checked="false"
+            android:icon="@mipmap/cashback_refer_and_earn"
+            android:title="@string/refer_string"/>
+        <item
+            android:id="@+id/howitworks"
+            android:checked="false"
+            android:icon="@mipmap/cashback_howitworks"
+            android:title="@string/howitworks_string"/>
+
+        <item
+            android:id="@+id/contactus"
+            android:checked="false"
+            android:icon="@mipmap/cashback_contact_us"
+            android:title="@string/contact_us"/>
+        <item
+            android:id="@+id/logout"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@mipmap/cashback_logout"
+            android:title="@string/logout_string"/>
+
+        <item
+            android:id="@+id/login"
+            android:checked="false"
+            android:icon="@mipmap/cashback_logout"
+            android:title="@string/login_string"/>
+    </group>
+
+</menu>

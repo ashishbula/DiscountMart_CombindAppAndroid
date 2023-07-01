@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".travel.hotel.hotel_activity.HotelBookBaseFareDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Base Fare content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <!--Title (Base Fare) icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/margin_large"
+                        android:layout_height="@dimen/margin_large"
+                        android:src="@mipmap/rupee_sign"
+                        android:padding="4dp"
+                        android:background="@drawable/circle"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_basefare"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_x_large"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <!--Layout for  total room and member-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Layout for text total room-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_book_info_act_txt_totroom"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:textColor="@color/black"/>
+
+                    <!-- text total member-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_book_info_act_txt_member"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <!--Room Wise member-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal"
+                    android:id="@+id/hotel_book_info_act_layout_roomwise">
+
+                </LinearLayout>
+
+                <!--Base Fare-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_basefare"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:id="@+id/hotel_book_info_act_txt_basefare"
+                        android:text=""/>
+                </LinearLayout>
+
+                <!--Texes Fare-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_taxes"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_taxes"
+                        android:text=""/>
+                </LinearLayout>
+
+                <!--Other charge-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Text Other charge-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_other_charge"/>
+
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_other_charge"
+                        />
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:background="@color/black"/>
+
+                <!--Total Fare-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Text Total amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textStyle="bold"
+                        android:text="@string/str_total_fare"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textStyle="bold"
+                        android:id="@+id/hotel_book_info_act_txt_total_fare"
+                        android:text=""/>
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/black"/>
+
+                <!--Line-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                    <!--Text Amount-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height=".5dp"
+                        android:gravity="right"
+                        android:background="@color/black"
+
+                        />
+                </LinearLayout>
+
+                <!--Total Paid-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textStyle="bold"
+                        android:text="@string/str_total_paid"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textStyle="bold"
+                        android:id="@+id/hotel_book_info_act_txt_total_paid"
+                        android:text=""/>
+                </LinearLayout>
+
+                <!--discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <!--Discount (Cashback)-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:id="@+id/hotel_book_info_act_layout_discount"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:orientation="horizontal">
+                        <!--Text Name-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:text="@string/str_discount"/>
+                        <!--Text Name-->
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:gravity="right"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_minus_black"
+                            android:textSize="@dimen/txt_size_normal"
+                            />
+                        <!--Text Amount-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".6"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/hotel_book_info_act_txt_discount"
+                            android:text=""/>
+                    </LinearLayout>
+                    <!--Detail note of discount-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:id="@+id/hotel_book_info_act_txt_discount_note"
+                        android:text="@string/str_have_discount_cong"/>
+
+                </LinearLayout>
+
+
+                <!-- Promo discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/hotel_book_info_act_layout_promo_dis"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_promo_discount"/>
+                    <!--Text Promo  Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_promo_discount" />
+                </LinearLayout>
+
+                <!--Promodiscount Note-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/hotel_book_info_act_txt_promo_discount_note"
+                    android:text="@string/str_promo_cashbck_detail"/>
+
+
+            </LinearLayout>
+
+            <!--Title (Agent Invoice Detail) text and icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/hotel_book_info_act_layout_agent"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/rupee_sign"
+                    android:padding="4dp"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_agent_invoice_detail"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_large"
+                    android:textColor="@color/black"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"
+                    android:padding="4dp"
+                    android:id="@+id/hotel_book_info_act_image_downicon"
+                    android:layout_marginLeft="@dimen/margin_medium" />
+            </LinearLayout>
+
+            <!--Agent Invoice Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/hotel_book_info_act_layout_agent_content"
+                android:orientation="vertical">
+                <!--discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_discount"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_agent_discount"/>
+                </LinearLayout>
+
+                <!-- Margin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_margin"/>
+                    <!--Text Margin  Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_margin" />
+                </LinearLayout>
+
+                <!-- Promo discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/hotel_book_info_act_layout_promo_dis_invoice"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_promo_discount"/>
+                    <!--Text Promo  Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_book_info_act_txt_agent_promo_discount" />
+                </LinearLayout>
+
+
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/black"/>
+
+                <!--Total Amout less dis,promo,margin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Text Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textStyle="bold"
+                        android:text="@string/str_total_fare"/>
+                    <!--Text Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textStyle="bold"
+                        android:id="@+id/hotel_book_info_act_txt_total_invoice_Amount"/>
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/black"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

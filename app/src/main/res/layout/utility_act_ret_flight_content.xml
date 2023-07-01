@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.discountmart.utility_services.travel.flight.flight_activity.FlightFilterActivity">
+
+    <!--All Content Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="70dp"
+        android:orientation="vertical">
+
+       <!--Layout for title text-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Ownward flight-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ownward_flight"/>
+
+
+            <!--Return flight-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/return_flight"/>
+
+        </LinearLayout>
+        <!--Layout for ownward and return flight-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--All Content Layout for Ownward flight-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Layout for non refundable flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="@string/str_refundable"
+                        android:textSize="@dimen/txt_size_medium"/>
+                    <CheckBox
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/own_flight_filter_act_chekbox_nonrefund"
+                        />
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+
+                <!--Layout for stop flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_stop"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight stops-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/own_flight_filter_rdg_stop"
+                        android:orientation="vertical">
+
+                        <!--Non stop flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_non_stop"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_non_stop"/>
+
+                        <!--Max i stop flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_max_1stop"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_1stop"/>
+
+                        <!--All flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_all_flight"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:checked="true"
+                            android:id="@+id/own_flight_filter_rdb_all"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout for departure time according flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_departure_time"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight stops-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/own_flight_filter_rdg_departure_time"
+                        android:orientation="vertical">
+
+                        <!--Before 11.00Am flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_before_11am"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_berore11am"/>
+
+                        <!--After noon (11 to 5pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_after_11to5pm"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_afternoon"/>
+
+                        <!--Evening (5 to 9pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_5to9pm"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_evening5to9"/>
+
+                        <!--After (9pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_after_9pm"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_after9pm"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout flight class-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_flight_class"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight Airlines-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/own_flight_filter_rdg_class"
+                        android:orientation="vertical">
+
+                        <!--first class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_first"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_first"/>
+
+                        <!--busness class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_business"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/own_flight_filter_rdb_business"/>
+
+                        <!--economy class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_economy"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/own_flight_filter_rdb_economy"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout for flight airlines-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/txt_size_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_airlines"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Add Dynemic check box-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:id="@+id/own_flight_filter_act_layout_airlines">
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Horizontal line-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"/>
+
+            <!--All Content Layout for Return flight-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Layout for non refundable flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="@string/str_refundable"
+                        android:textSize="@dimen/txt_size_medium"/>
+                    <CheckBox
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/ret_flight_filter_act_chekbox_nonrefund"
+                        />
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+
+                <!--Layout for stop flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_stop"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight stops-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/ret_flight_filter_rdg_stop"
+                        android:orientation="vertical">
+
+                        <!--Non stop flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_non_stop"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_non_stop"/>
+
+                        <!--Max i stop flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_max_1stop"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_1stop"/>
+
+                        <!--All flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_all_flight"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:checked="true"
+                            android:id="@+id/ret_flight_filter_rdb_all"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout for departure time according flight-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_departure_time"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight stops-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/ret_flight_filter_rdg_departure_time"
+                        android:orientation="vertical">
+
+                        <!--Before 11.00Am flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_before_11am"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_berore11am"/>
+
+                        <!--After noon (11 to 5pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_after_11to5pm"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_afternoon"/>
+
+                        <!--Evening (5 to 9pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_5to9pm"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_evening5to9"/>
+
+                        <!--After (9pm) flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_after_9pm"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_after9pm"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout flight class-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_flight_class"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Radio Group Flight Airlines-->
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/ret_flight_filter_rdg_class"
+                        android:orientation="vertical">
+
+                        <!--first class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_first"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_first"/>
+
+                        <!--busness class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_business"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:id="@+id/ret_flight_filter_rdb_business"/>
+
+                        <!--economy class flight-->
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_economy"
+                            android:paddingLeft="@dimen/txt_size_medium"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/ret_flight_filter_rdb_economy"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Vertical line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:background="@color/gray"/>
+
+                <!--Layout for flight airlines-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/txt_size_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_airlines"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Add Dynemic check box-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:id="@+id/ret_flight_filter_act_layout_airlines">
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

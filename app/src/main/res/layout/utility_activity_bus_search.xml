@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.bus.bus_activity.BusSearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--Layout from city and to city search-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_x_large"
+            android:elevation="@dimen/margin_v_small"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <!--From-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_v_small"
+                        android:orientation="vertical"
+                        android:id="@+id/bus_search_act_layout_from"
+                        android:background="@drawable/black_border_bg_box">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:text="@string/str_from"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/str_select"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/bus_search_act_txt_fromcity" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/black"
+                            android:id="@+id/bus_search_act_txt_fromcitycode"
+                            android:text="@string/str_from_city"
+                            />
+
+                    </LinearLayout>
+
+                    <!--Arrow-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_arrow_fill_black"
+                            android:id="@+id/bus_img_oneway"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:src="@drawable/left_right_arrow_fill_black"
+                            android:id="@+id/bus_img_twoway"/>
+                    </LinearLayout>
+
+                    <!--To-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_v_small"
+                        android:orientation="vertical"
+                        android:background="@drawable/black_border_bg_box"
+                        android:id="@+id/bus_search_act_layout_to"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:text="@string/str_to"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/str_select"
+                            android:textColor="@color/black"
+                            android:id="@+id/bus_search_act_txt_tocity" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/bus_search_act_txt_tocitycode"
+                            android:text="@string/str_to_city"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <!--Departure -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight= "@dimen/margin_normal"
+                android:orientation="vertical">
+
+                <!--TExt-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:text="@string/str_departure_date"/>
+
+                <!--Layout for edit text date , text-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Edit text date-->
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/bus_search_act_edtxt_departuredate"
+                        android:drawableRight="@drawable/ic_action_date"
+                        android:hint="@string/str_departure_date"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <!--Text Today date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bus_search_act_txt_todaydate"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_today_date"/>
+                        <!--Text line-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:text="/"/>
+                        <!--TExt Tomorrow date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bus_search_act_txt_tomorowdate"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_tomarow_date"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <!--Button Search Flight-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_xx_large"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/margin_xx_large">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal"
+                    android:id="@+id/bus_search_act_btn_search"
+                    android:textColor="@color/white"
+                    android:text="@string/str_bus_search"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

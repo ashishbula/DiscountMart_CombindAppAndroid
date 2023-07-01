@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/white">
+    <CheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_non_stop_flight"
+        android:textSize="@dimen/txt_size_medium"
+        android:id="@+id/fight_shortby_item_checktxt_text"/>
+
+</LinearLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".travel.flight.fragment_flight.FlightSerachFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <!--Radio Button Demostic and International-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/filght_serach_frag_rdg_type"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="@string/str_demostic"
+                    android:id="@+id/flight_search_frag_rdb_demostic"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="@string/str_international"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:id="@+id/flight_search_frag_rdb_internation"
+                    android:layout_height="wrap_content"
+                    />
+            </RadioGroup>
+
+            <!--Text View Oneway and Roundtrip-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/black_border_bg_box"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_oneway"
+                    android:background="@drawable/colorprimary_bg_box"
+                    android:id="@+id/flight_search_frag_txt_oneway"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_roundtrip"
+                    android:id="@+id/flight_search_frag_txt_rondtrip"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+            <!--Layout from to search-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--From-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/flight_search_frag_layout_from"
+                    android:background="@drawable/black_border_bg_box">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_search_frag_txt_fromcitycode"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_search_frag_txt_fromcity"
+                        android:text="@string/str_from_city"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--To-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/black_border_bg_box"
+                    android:id="@+id/flight_search_frag_layout_to"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_to"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_search_frag_txt_tocitycode"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_search_frag_txt_tocity"
+                        android:text="@string/str_to_city"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Departure and Return Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Departure Date-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/flight_search_frag_edtxt_departuredate"
+                        android:drawableRight="@drawable/ic_date"
+                        android:hint="@string/str_departure_date"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Return Date-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/flight_search_frag_edtxt_returndate"
+                        android:drawableRight="@drawable/ic_date"
+                        android:hint="@string/str_return_date"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for adult and child , infants-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--For Adults-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/str_adult"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_adult_year"
+                        android:textSize="@dimen/txt_size_medium"/>
+
+
+                        <TextView
+                            android:id="@+id/flight_search_frag_txt_adult_increse"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/colorprimary_bg_box"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_large"
+                            android:layout_gravity="center"
+                            android:elevation="@dimen/margin_v_small"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:gravity="center|top"
+                            android:text="+" />
+
+                        <TextView
+                            android:id="@+id/flight_search_frag_txt_number_adult"
+                            android:layout_width="@dimen/margin_40dp"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:layout_marginBottom="0dp"
+                           android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="0dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/flight_search_frag_txt_adult_decrese"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_large"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:background="@drawable/colorprimary_bg_box"
+                            android:gravity="center"
+                            android:text="-" />
+                    </LinearLayout>
+
+                <!--For Adults-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/str_child"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_child_year"
+                        android:textSize="@dimen/txt_size_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_child_increse"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="center"
+                        android:elevation="@dimen/margin_v_small"
+                        android:gravity="center"
+                        android:background="@drawable/colorprimary_bg_box"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_number_child"
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_child_decrese"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_large"
+                        android:elevation="@dimen/margin_v_small"
+                        android:textColor="@color/white"
+                        android:background="@drawable/colorprimary_bg_box"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--For Adults-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/str_infants"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_infants_year"
+                        android:textSize="@dimen/txt_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_infants_increse"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:elevation="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_large"
+                        android:background="@drawable/colorprimary_bg_box"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_number_infants"
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="0"
+                       android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/flight_search_frag_txt_infants_decrese"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:elevation="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_large"
+                        android:background="@drawable/colorprimary_bg_box"
+                        android:text="-" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Button Search Flight-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flight_search_frag_btn_search"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:text="@string/str_serch_flight"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D9000000"
+    android:weightSum="2"
+    tools:context=".travel.flight.flight_activity.FlightShortByActivity">
+
+    <!--Layout header trasparent-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:orientation="horizontal"
+        android:id="@+id/flight_shortby_layout_header">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!--Layout for return flight title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flight_shortby_layout_return"
+            android:padding="@dimen/margin_v_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:id="@+id/flight_shortby_txt_ownward"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content"
+                android:text="@string/ownward_flight"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:id="@+id/flight_shortby_txt_return"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content"
+                android:text="@string/return_flight"/>
+        </LinearLayout>
+
+        <!--Layout for single flight title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flight_shortby_layout_single"
+            android:padding="@dimen/margin_v_small"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content"
+                android:text="Sort by"/>
+        </LinearLayout>
+        <!--Line vertical-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginTop="@dimen/margin_v_small"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_bg_white">
+            <!--Flight ownward  sort list recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:layout_height="wrap_content"
+                android:id="@+id/flight_shortby_recycler_list"
+                tools:ignore="NestedWeights">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--Horizontal line-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:background="@color/gray"/>
+            <!--Flight Return sort list recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_shortby_recycler_returnlist">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+
+
+    <item
+        android:id="@+id/action_myaccount"
+        android:orderInCategory="101"
+        android:title="@string/action_myaccount"
+        android:icon="@mipmap/cashback_my_account1"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="101"
+        android:title="@string/action_search"
+        android:icon="@mipmap/cashback_search"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_home_icon"
+        android:orderInCategory="101"
+        android:title="@string/action_home"
+        android:icon="@mipmap/cashback_home1"
+        app:showAsAction="always"/>
+</menu>

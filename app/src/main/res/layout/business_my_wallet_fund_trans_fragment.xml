@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Layout for Select any one title text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:background="@color/lightgray"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select any one service"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_large"/>
+    </LinearLayout>
+
+    <!--Layout for main and shopping wallet-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/wallet_fund_frag_layout_wallet">
+        <!--Layout Main wallet content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/wallet_fund_frag_layout_mainwallet"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_main_wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+        <!--Layout Service/Shopping wallet content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/wallet_fund_frag_layout_shopwallet"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/service_wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Layout for Fun Transfer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/wallet_fund_frag_layout_fund">
+
+        <!--Layout Main to Shopping wallet transfer content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/wallet_fund_frag_layout_maintoshop"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Main to Service Wallet Transfer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Main to other wallet transfer content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/wallet_fund_frag_layout_maintoother"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Main to Other Wallet Transfer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Bank withdrawl content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/wallet_fund_frag_layout_bank"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Withdrawal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down"/>
+        </LinearLayout>
+        <!--Layout Bank withdrawl content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/wallet_fund_frag_layout_withdrawl"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="0dp"
+                android:padding="@dimen/margin_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/wallet_fund_frag_layout_bankwithdrawl"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@color/lightgray2"
+                android:elevation="@dimen/margin_small">
+
+                <!--Service Main Wallet Detail-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Withdrawal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"/>
+
+            <!--Layout Bank withdrawl content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:padding="@dimen/margin_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/wallet_fund_frag_layout_withdrawl_detail"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@color/lightgray2"
+                android:elevation="@dimen/margin_small">
+
+                <!--Service Main Wallet Detail-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Withdrawal Detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

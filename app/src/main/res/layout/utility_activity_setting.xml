@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.activity.SettingActivity">
+
+    <!--Layout for content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_normal"
+        android:orientation="vertical">
+
+        <!--Layout for personal info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray5"
+                android:id="@+id/setting_act_layout_personal"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_personal_detail"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+            <!--Mobile number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_v_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_act_edTxt_mobile"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_mobile_no"
+                    android:autofillHints="@string/str_mobile_no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--email id-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_act_edTxt_email"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_email"
+                    android:autofillHints="@string/str_email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--Layout for Account info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical">
+            <!--title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray5"
+                android:id="@+id/setting_act_layout_account"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_account_detail"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+            <!--Account number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_act_edTxt_acno"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_account_no"
+                    android:autofillHints="@string/str_account_no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Ifsc code-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_act_edTxt_ifsc"
+                    android:background="@null"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_ifsc"
+                    android:autofillHints="@string/str_ifsc" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Pan number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_act_edTxt_panno"
+                    android:background="@null"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_pan" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <!--Layout for GST Info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_normal">
+            <!--title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray5"
+                android:id="@+id/setting_act_layout_gst"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_gst_detail"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+
+            <!--GSt No-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_gst_no"
+                    android:id="@+id/setting_act_edtxt_gstno" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Company Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_company_name"
+                    android:background="@null"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:id="@+id/setting_act_edtxt_companyno"
+                    android:textSize="@dimen/txt_default"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Company Address-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:hint="@string/str_company_address"
+                    android:id="@+id/setting_act_edtxt_company_address"
+                    android:textSize="@dimen/txt_default"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Contact number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="@string/str_contact_no"
+                    android:id="@+id/setting_act_edtxt_contact_no"
+                    android:textSize="@dimen/txt_default"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--GST Email-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_gst_email"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:id="@+id/setting_act_edtxt_gst_email"
+                    android:textSize="@dimen/txt_default"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Layout for button submit-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/setting_act_btn_submit"
+                    android:textColor="@color/white"
+                    android:text="submit"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

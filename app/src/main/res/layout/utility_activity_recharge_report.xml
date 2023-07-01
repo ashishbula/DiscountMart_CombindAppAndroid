@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".report.activity.RechargeReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:layout_margin="@dimen/margin_v_small"
+        android:elevation="@dimen/margin_v_small"
+        android:background="@drawable/layout_bg_white"
+        android:orientation="vertical">
+
+        <!--Text Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/rechare_report_note"/>
+        <!--Text Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:text="@string/select_date"/>
+        <!--Layout for from,to date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--From Date-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/recharge_report_act_edtxt_from"
+                    android:drawableRight="@drawable/ic_date"
+                    android:hint="@string/from_date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- To Date-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/recharge_report_act_edtxt_to"
+                    android:drawableRight="@drawable/ic_date"
+                    android:hint="@string/to_date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!--Text Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:text="@string/select_service"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:id="@+id/recharge_report_act_rdg_option"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recharge_report_act_rdb_all"
+                android:textSize="@dimen/txt_size_normal"
+                android:checked="true"
+                android:text="All" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recharge_report_act_rdb_prepaid"
+                android:textSize="@dimen/txt_size_normal"
+                android:text="@string/str_prepaid" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recharge_report_act_rdb_postpaid"
+                android:textSize="@dimen/txt_size_normal"
+                android:text="@string/str_postpaid" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recharge_report_act_rdb_dth"
+                android:textSize="@dimen/txt_size_normal"
+                android:text="@string/str_dth" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--Layout for list content-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:id="@+id/recharge_report_act_recycler_content"
+        android:paddingBottom="@dimen/margin_medium">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

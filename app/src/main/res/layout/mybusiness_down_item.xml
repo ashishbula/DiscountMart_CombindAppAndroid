@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:id="@+id/mybusiness_down_item_Layout_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_30dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mybusiness_down_item_cardView"
+            style="@style/CardView.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            app:cardCornerRadius="@dimen/margin_small"
+            app:cardElevation="@dimen/margin_small"
+            app:contentPadding="@dimen/margin_small">
+            <!--Layout for Member name,id,pv,self,group,total,level-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Member Id-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Member Id" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_memberId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Member Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Member Name" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_membername"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Sponser Id-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Sponsor ID" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_sponserID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+
+                <!--Level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:textColor="@color/black"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Slab" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Previous PV-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Previous PV" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_prepv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Self-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".7"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Self PV" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_self"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Group-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Group PV" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+                <!--Total-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:text="Total PV" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"/>
+
+                    <TextView
+                        android:id="@+id/mybusiness_frag_txtview_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/txt_default"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:textColor="@color/black"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mybusiness_down_item_cardView_img"
+        android:layout_width="@dimen/margin_30dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        app:cardElevation="@dimen/margin_small"
+        app:cardCornerRadius="@dimen/margin_small"
+        app:contentPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_down_black"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

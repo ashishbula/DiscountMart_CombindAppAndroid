@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/hotel_search_list_act_toolbar"
+                android:layout_width="match_parent"
+                app:contentInsetStart="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <!--Layout for tool bar content-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <!--Layout for From and to city,total adult,child,infants and departure date -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <!--Select city , total hotel-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Selected city-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/str_from_city"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:textColor="@color/white"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_city"/>
+
+                            <!--Total hotel-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/str_from_city"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:textColor="@color/white"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_total_hotel"/>
+
+                        </LinearLayout>
+
+                        <!--total adult,child,infants and departure date-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <!-- Check in Date-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="fgfgg"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_chkin_Date"
+                                android:textSize="@dimen/txt_size_small"/>
+                            <View
+                                android:layout_width="@dimen/margin_v_small"
+                                android:layout_height="1dp"
+                                android:background="@color/white"
+                                android:layout_marginLeft="@dimen/margin_v_small"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="@dimen/margin_v_small"
+                                android:text="fgfgg"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_chkout_Date"
+                                android:textSize="@dimen/txt_size_small"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:layout_marginLeft="@dimen/margin_v_small"/>
+
+                            <!--Travellers Adult-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_size_small"
+                                android:layout_marginLeft="@dimen/margin_v_small"
+                                android:text="fgfgg"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_adult"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:layout_marginLeft="@dimen/margin_v_small"/>
+                            <!--Travellers Adult-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_size_small"
+                                android:layout_marginLeft="@dimen/margin_v_small"
+                                android:text="fgfgg"
+                                android:id="@+id/hotel_search_list_act_toolbar_txt_child"/>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Layout for home and edit icon-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".2"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!--Image home-->
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/hotel_search_list_act_toolbar_img_home"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_home_whit"/>
+
+                        <!--Image home-->
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/hotel_search_list_act_toolbar_img_edit"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_edit_white"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--Add Content -->
+        <include layout="@layout/utility_hotel_search_list_content"/>
+
+    </LinearLayout>
+
+    <!--Layout for bottom navigation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@drawable/custom_bottom_nav_bg"
+        android:id="@+id/hotel_search_list_actvity_layout_bottom"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <!--Text Short for flight filter-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/hotel_search_list_actvity_layout_short"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sort"
+                android:id="@+id/hotel_search_list_actvity_txt_short"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <!--Select short type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/hotel_search_list_actvity_txt_select_short"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--Text for filter-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/hotel_search_list_actvity_txt_filter"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--not stop-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                app:trackTintMode="add"
+                style="@style/SwitchCompatStyle"
+                app:track="@drawable/white_bg_box"
+                android:id="@+id/hotel_search_list_actvity_switch_btn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/str_five_star"
+                android:textSize="@dimen/txt_size_medium"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:id="@+id/hotel_search_list_actvity_txt_fivstar"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Filter Button-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_v_small"
+        android:id="@+id/hotel_search_list_actvity_layout_filter"
+        android:elevation="@dimen/margin_v_small"
+        android:background="@drawable/colorprimary_border_bg_white_box">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:text="@string/str_filter_as"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

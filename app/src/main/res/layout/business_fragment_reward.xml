@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Rewards"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_v_small"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:text="Left BV :"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:id="@+id/reward_frag_textView_leftbv"
+            android:textSize="@dimen/txt_size_normal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_v_small"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:text="Right BV :"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/reward_frag_textView_rightbv"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/reward_frag_tabslayout"
+        android:background="@color/LightGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"/>
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_complaint_frame">
+
+    </FrameLayout>-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/reward_frag_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+</LinearLayout>

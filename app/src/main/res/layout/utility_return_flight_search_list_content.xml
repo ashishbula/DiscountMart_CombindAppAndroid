@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/utility_activity_flight_search_round_trip_list"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <!--Layout for lowest ownward or return flight price, and total book amount-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Layout ownward flight price-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Text Ownward flight-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:text="@string/ownward"
+                />
+            <TextView
+                android:id="@+id/own_flight_search_list_actvity_txt_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                />
+        </LinearLayout>
+
+        <!--Layout return flight price-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Text Ownward flight-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:text="@string/ret"
+                />
+            <TextView
+                android:id="@+id/return_flight_search_list_actvity_txt_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                />
+        </LinearLayout>
+        <!--Layout total  price-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Text total-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:text="@string/tot"
+                />
+            <TextView
+                android:id="@+id/return_flight_search_list_actvity_txt_totamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                />
+        </LinearLayout>
+
+        <!--Layout button book-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <!--Button Send Request-->
+            <Button
+                android:id="@+id/return_flight_search_list_actvity_btn_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/book"
+                app:cornerRadius="5dp"
+                app:iconTint="@color/gray2"
+                app:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/gray" />
+
+    <!--Layout for Ownward , return flight date ans from and to city-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Layout for ownward flight-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_v_small"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--text ownward flight form and to city-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_medium"
+                android:id="@+id/own_flight_search_list_actvity_txt_city"/>
+
+
+            <!--text ownward flight date day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/own_flight_search_list_actvity_txt_date"/>
+
+        </LinearLayout>
+        <!--Horizontal line-->
+        <View
+            android:layout_width="1dp"
+            android:background="@color/gray"
+            android:layout_height="match_parent"/>
+
+        <!--Layout for return flight-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_v_small"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--text return flight form and to city-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_medium"
+                android:id="@+id/return_flight_search_list_actvity_txt_city"/>
+
+
+            <!--text ownward flight date day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/return_flight_search_list_actvity_txt_date"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Layout for Ownward Flight List in Recycler View-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/own_flight_search_list_actvity_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_v_small">
+            </androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/own_flight_search_list_act_norecord">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/no_result"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--Horizontal line-->
+        <View
+            android:layout_width="1dp"
+            android:background="@color/gray"
+            android:layout_height="match_parent"/>
+
+        <!--Layout for Return Flight List in Recycler View-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/return_flight_search_list_actvity_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_margin="@dimen/margin_v_small">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/return_flight_search_list_act_norecord">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/no_result"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

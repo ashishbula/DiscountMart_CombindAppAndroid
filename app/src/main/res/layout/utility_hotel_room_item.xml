@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Card View for content-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_v_small"
+        app:cardElevation="@dimen/margin_v_small"
+        android:id="@+id/hotel_room_item_card"
+        android:layout_margin="@dimen/margin_v_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="vertical">
+            <!--TExt Room Type Name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hotel_room_item_txt_roomName"/>
+
+            <!--Layout for Price and policy-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Layout for inclusion-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center|left"
+                    android:gravity="left|center"
+                    android:id="@+id/hotel_room_item_layout_inclusion"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--Inclusion-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/hotel_room_item_txt_roomInclusion"/>
+
+                </LinearLayout>
+
+                <!--Layout for Price and detail-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <!--Price-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/hotel_room_item_txt_roomPrice"/>
+
+
+                    <!--Total Price-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/hotel_room_item_txt_roomtotPrice"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for Cancel policy-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/hotel_room_item_layout_CancelPolicy"
+                android:padding="@dimen/margin_v_small">
+                <!--Line vertical-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/black"/>
+
+                <!--Cancellation Policy-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/hotel_room_item_txt_roomCanPolicy"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".travel.utility_cab.cab_activity.CabSearchActivity">
+
+    <!--Scroll view for all content scroll down-up easily-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Layout for all content views-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_large">
+
+            <!--Radio Button Outstation, Airport cabs, Rentals cabs-->
+            <RadioGroup
+                android:id="@+id/filght_serach_act_rdg_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center"
+                android:elevation="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Radion button Outstation -->
+                <RadioButton
+                    android:id="@+id/cab_search_act_rdb_outstation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/outstation" />
+
+                <!--Radion button Rentals cabs -->
+                <RadioButton
+                    android:id="@+id/cab_search_act_rdb_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="@string/airpot_cab" />
+
+                <!--Radion button Airport cabs -->
+                <RadioButton
+                    android:id="@+id/cab_search_act_rdb_rental"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="@string/rent_cab" />
+
+            </RadioGroup>
+
+            <!--for selection Text View onw way or round trip-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:elevation="@dimen/margin_v_small"
+                android:id="@+id/cab_search_act_layout_type"
+                android:background="@drawable/black_border_bg_box"
+                android:orientation="horizontal">
+
+                <!--Text Ac-->
+                <TextView
+                    android:id="@+id/cab_search_act_txt_ac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/colorprimary_bg_box"
+                    android:gravity="center"
+                    android:elevation="@dimen/margin_v_small"
+                    android:text="@string/str_ac"
+                    android:textColor="@color/white" />
+                <!--Text Non Ac-->
+                <TextView
+                    android:id="@+id/cab_search_act_txt_noac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/margin_v_small"
+                    android:gravity="center"
+                    android:text="@string/str_bus_nonAc" />
+
+
+            </LinearLayout>
+
+            <!--Layout for edit text from and to adddress-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingRight="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_v_small"
+                android:id="@+id/cab_search_act_layout"
+                android:elevation="@dimen/margin_v_small">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+                    <!--From-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_v_small"
+                        android:orientation="vertical"
+                        android:id="@+id/cab_search_act_layout_from"
+                        android:background="@drawable/colorprimary_border_bg_white_box">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:text="@string/pickup_location"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/str_select"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/cab_search_act_txt_from" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/black"
+                            android:id="@+id/cab_search_act_txt_fromcitycode"
+                            android:text="@string/str_from"
+                            />
+
+                    </LinearLayout>
+
+                    <!--Arrow-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_arrow_fill_black"
+                            android:id="@+id/cab_img_oneway"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:src="@drawable/left_right_arrow_fill_black"
+                            android:id="@+id/cab_img_twoway"/>
+                    </LinearLayout>
+
+                    <!--To-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_v_small"
+                        android:orientation="vertical"
+                        android:background="@drawable/colorprimary_border_bg_white_box"
+                        android:id="@+id/cab_search_act_layout_to"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:text="@string/drop_location"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/str_select"
+                            android:textColor="@color/black"
+                            android:id="@+id/cab_search_act_txt_tocity" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/cab_search_act_txt_tocitycode"
+                            android:text="@string/str_to_city"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+                    <!--Edit text from pick-up address/location-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pickup_date" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:autofillHints="@string/pickup_date"
+                            android:padding="@dimen/margin_small"
+                            android:focusable="false"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:drawableRight="@drawable/ic_date"
+                            android:background="@drawable/colorprimary_border_bg_white_box"
+                            android:id="@+id/cab_search_act_edtxt_date"
+                            android:hint="@string/pickup_date" />
+
+
+
+                    </LinearLayout>
+
+                    <!--Arrow-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="wrap_content">
+
+
+                    </LinearLayout>
+
+                    <!--Edit text to drop address/location-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pickup_time" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:autofillHints="@string/pickup_time"
+                            android:padding="@dimen/margin_small"
+                            android:focusable="false"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:drawableRight="@drawable/ic_time"
+                            android:background="@drawable/colorprimary_border_bg_white_box"
+                            android:id="@+id/cab_search_act_edtxt_time"
+                            android:hint="@string/pickup_time" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <!--Layout button Search-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cab_search_act_btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/selector_bg_btn"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="@string/search_cab"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

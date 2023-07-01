@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.flight.flight_activity.SelectReturnFlightActivity">
+    <!--Tool Bar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/return_flight_select_act_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/return_flight_select_act_toolbar_txtfromcity"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:src="@drawable/left_right_arrow_white"
+                        android:id="@+id/return_flight_select_act_toolbar_img_arrow"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/return_flight_select_act_toolbar_txttocity"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Departure Date-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:id="@+id/return_flight_select_act_toolbar_txt_dDate"
+                        android:textSize="@dimen/txt_size_small"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="3dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/return_flight_select_act_toolbar_txt_adult"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="3dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/return_flight_select_act_toolbar_txt_child"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="3dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="@dimen/txt_size_small"
+                        android:id="@+id/return_flight_select_act_toolbar_txt_infants"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Layout for content Select flight-->
+
+    <!--Content-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Layout for Ownward/departure flight Recycler View-->
+            <!--Text Ownward flight-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ownward_flight"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:id="@+id/return_flight_select_act_recyOwnFlight">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!--Text Ownward flight-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/return_flight"/>
+
+            <!--Layout for Return flight Recycler View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:id="@+id/return_flight_select_act_recyRetFlight">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!--Layout for offer-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:visibility="visible"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offers:-"
+                    android:textSize="@dimen/txt_size_large"
+                    android:textColor="@color/black"/>
+
+                <!--discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="@string/str_have_discount"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text=":- "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:id="@+id/return_flight_select_act_txt_discount"/>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <!--Layout for discount detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_normal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/return_flight_select_act_txt_dis_detail"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Promocode-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/txt_size_normal"
+                android:paddingBottom="@dimen/margin_normal"
+                android:background="@color/white">
+                <!--Promo coupon-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:visibility="gone"
+                    android:id="@+id/return_flight_select_act_layout_promocode"
+                    android:orientation="vertical">
+                    <!--Text couponcode, and couponcod-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_coupon_code"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/return_flight_select_act_lyout_remove_promo"
+                            android:background="@drawable/colorprimary_bg_box"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:id="@+id/return_flight_select_act_txt_promocode"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_coupon_code"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:src="@drawable/ic_close"
+                                android:id="@+id/return_flight_select_act_img_remove_promo"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Detail about coupon code and cashback amount-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/return_flight_select_act_txt_cashback"/>
+                    </LinearLayout>
+                    <!--coupon from and to date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/return_flight_select_act_txt_Date"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/return_flight_select_act_layout_have_promo">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange8"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/return_flight_select_act_txt_have_promo"
+                        android:text="@string/str_have_promo"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/white_bg_box"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:id="@+id/return_flight_select_act_layout_fareamout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/return_flight_select_act_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/return_flight_select_act_txt_total_travelor"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/return_flight_select_act_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:padding="@dimen/margin_v_small"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/return_flight_select_act_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/white"
+                android:text="continue >>"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

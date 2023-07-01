@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <!--LOGO-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"></ImageView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_small">
+
+        <!--Layout for PDF -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn_pdf"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_xx_large"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/margin_xx_large"
+                android:padding="15dp"
+                android:text="Business PDF"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                app:cornerRadius="5dp" />
+        </LinearLayout>
+
+        <!--Layout for gallary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn_gallery"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_xx_large"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/margin_xx_large"
+                android:padding="15dp"
+                android:text="View Gallery"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+
+                />
+        </LinearLayout>
+
+        <!--Layout for meeting schedule -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn_meeting"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_xx_large"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/margin_xx_large"
+                android:padding="15dp"
+                android:text="Meeting Schedule"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+
+                />
+        </LinearLayout>
+
+        <!--Layout for rank acheiver -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn_rank"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_xx_large"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/margin_xx_large"
+                android:padding="15dp"
+                android:text="Rank achiever"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

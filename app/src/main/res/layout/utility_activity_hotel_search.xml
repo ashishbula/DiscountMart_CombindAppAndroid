@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/gray3"
+    tools:context="in.discountmart.utility_services.travel.hotel.hotel_activity.HotelSearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Layout for all content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <!--Text View India and International-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:background="@drawable/black_border_bg_box"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_oneway"
+                    android:background="@drawable/colorprimary_bg_box"
+                    android:id="@+id/hotel_search_act_txt_oneway"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_roundtrip"
+                    android:id="@+id/hotel_search_act_txt_rondtrip"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+            <!--Layout city search-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Select city-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/hotel_search_act_layout_city"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_select_city"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_large"
+                        android:textStyle="bold"
+                        android:id="@+id/hotel_search_act_txt_city"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/flight_search_act_txt_cityid"
+                        android:text="@string/str_from_city"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Line vertical-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/black"/>
+            <!--Layout for Check-in and Check-out Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Check-in Date-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/margin_small"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/hotel_search_act_edtxt_checkin_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:hint="@string/str_checkin_date"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Check-out Date-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/hotel_search_act_edtxt_checkout_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:hint="@string/str_checkout_date"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <!--Layout for Guests and Rooms-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Select Guest-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/margin_small"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/hotel_search_act_edtxt_guest"
+                        android:hint="@string/str_guest"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Select Rooms-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/hotel_search_act_edtxt_rooms"
+                        android:hint="@string/str_room"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Line vertical-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                />
+
+            <!--Button Search Flight-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/hotel_search_act_btn_search"
+                    android:textColor="@color/white"
+                    android:text="@string/str_search_hotel"/>
+            </LinearLayout>
+            <!--Line vertical-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_normal"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

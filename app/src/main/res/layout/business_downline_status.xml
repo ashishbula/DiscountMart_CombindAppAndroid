@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/background"
+    android:orientation="vertical">
+
+    <!--Header Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xx_large"
+        android:gravity="center"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Downline Status"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="#ffffff"
+            />
+     </LinearLayout>
+
+
+
+
+
+
+    <!--Layout For Total Join Downline-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="vertical">
+
+        <!--heard txt total joined-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_bg_box_black_border"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_tot_join"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!--Header Text left or right-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/white_bg_box_black_border">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/str_left"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:textColor="#000" />
+
+                        </LinearLayout>
+
+            <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/white_bg_box_black_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/str_right"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:textColor="#000" />
+
+                        </LinearLayout>
+        </LinearLayout>
+
+        <!--Layout for Total Joined Group A B Value-->
+        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/white_bg_box_black_border">
+
+                            <TextView
+                                android:id="@+id/downline_fragment_txt_totaljoingroupa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Group A"
+                                android:textColor="#000"
+                                android:textSize="@dimen/txt_size_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/white_bg_box_black_border"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/downline_fragment_txt_totaljoingroupb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Group B"
+                                android:textColor="#000"
+                                android:textSize="@dimen/txt_size_normal" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout For Total Topup Downline-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:padding="0dp"
+        android:orientation="vertical">
+
+        <!--Layout Header Title Total Topup-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_x_large"
+                android:background="@drawable/white_bg_box_black_border"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_tot_topup"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal" />
+            </LinearLayout>
+
+        <!--Layout Header Title Group A and Group B-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/white_bg_box_black_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left"
+                    android:textSize="15sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+            <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Right"
+                            android:textSize="15sp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+        </LinearLayout>
+
+
+        <!--Layout for TextView  Value Group A and Group B-->
+        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border">
+
+                        <TextView
+                            android:id="@+id/downline_fragment_txt_totaltopupgroupa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Group A"
+                            android:textColor="#000"
+                            android:textSize="@dimen/txt_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/downline_fragment_txt_totaltopupgroupb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Group B"
+                            android:textColor="#000"
+                            android:textSize="@dimen/txt_size_normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--Layout For Total BV Left or Right-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:visibility="visible"
+        android:padding="0dp"
+        android:orientation="vertical">
+
+        <!--Layout Header Title Total BV-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/white_bg_box_black_border"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_tot_bv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal" />
+            </LinearLayout>
+
+        <!--Layout Header Title Group A and Group B-->
+        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_left"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="#000" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_right"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="#000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+        <!--Layout for TextView  Value Group A and Group B-->
+
+        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border">
+
+                        <TextView
+                            android:id="@+id/downline_fragment_txt_totalbv_groupA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Group A"
+                            android:textColor="#000"
+                            android:textSize="@dimen/txt_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/downline_fragment_txt_totalbv_groupB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Group B"
+                            android:textColor="#000"
+                            android:textSize="@dimen/txt_size_normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout Button Group A, Group B-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        android:layout_gravity="bottom">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/downline_fragment_btn_groupa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_left"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="#ffffff"
+                android:background="@drawable/selector_bg_btn_black"
+                 />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/downline_fragment_btn_groupb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_right"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="#ffffff"
+                android:background="@drawable/selector_bg_btn_black"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

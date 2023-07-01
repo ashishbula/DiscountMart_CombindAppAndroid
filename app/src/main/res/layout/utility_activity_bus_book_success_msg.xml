@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#cf000000"
+    tools:context="in.discountmart.utility_services.travel.bus.bus_activity.BusBookSuccessMsgActivity">
+
+    <!--Header Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/margin_xx_large"
+            android:layout_height="@dimen/margin_xx_large"
+            android:src="@drawable/ic_close"
+            android:background="@color/black"
+            android:id="@+id/bus_book_succes_act_imag_close"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="vertical">
+            <!--Layout for Show Success Message-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/txt_size_large"
+                    android:text="Ticket book succesfully"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/bus_book_success_msg_act_txt_msg"/>
+            </LinearLayout>
+
+            <!--Layout for show Flight booking fare detail -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:orientation="vertical">
+
+                <!--Layout for txtview Bus Name, booking no-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="@dimen/margin_xxx_large"
+                        android:src="@mipmap/utility_ic_bus"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/bus_book_success_msg_act_txt_travel_name"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+                <!--Layout for txtview Pnr no, booking no-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--PNR Number-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="pnr no- 123456"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_success_msg_act_txt_pnr"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+
+                    <!--Booking Number-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="book id.- 12456"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:id="@+id/bus_book_success_msg_act_txt_bookid"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--Layout for txtview Flight no, Total Amount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Bus Type-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="bus type- Ai102"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/bus_book_success_msg_act_txt_bus_type"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+
+                    <!--Total Amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Book amont-5000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:gravity="right"
+                        android:id="@+id/bus_book_success_msg_act_txt_total_amnt"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for  Bus Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/bus_book_success_msg_act_layout_bus_detail">
+
+                <!--Bus Depart and Arrival Time-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Departure time -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="10am"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/bus_book_success_msg_act_txt_depart_time"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+                    <!--Arrival Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="5.30pm"
+                        android:gravity="right"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_success_msg_act_txt_arrival_time"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!--Flight From and To city-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/txt_size_medium"
+                    android:orientation="horizontal">
+                    <!--From -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Jai jaipur"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_large"
+                        android:id="@+id/bus_book_success_msg_act_txt_from"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+                    <!--to City -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="DEL Dehli"
+                        android:gravity="right"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_success_msg_act_txt_to"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:background="@color/gray"/>
+
+            <!--Layout for Select Passenger Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/bus_book_success_msg_act_layout_passenger_detail">
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:background="@color/gray"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--For ticket print/pdf-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_margin="@dimen/margin_v_small">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_print"
+            android:id="@+id/bus_book_success_msg_act_floatbtn_print"
+            android:backgroundTint="@color/gray2"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <!--Layout For Header Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Wallet Request"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        !--All Item Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Package,Amount,Quantity-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <!--Layout for Note-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_note1"
+                        android:layout_gravity="left"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_note2"
+                        android:textSize="12sp"
+                        android:layout_gravity="left"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+
+                <!--Spinner Select Wallet -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textColor="@color/black"
+                        android:text="@string/str_select_wallet"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/wallet_request_act_spiner_wallet">
+                        </Spinner>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <!--Select Amount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/enter_amount"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:hint="@string/enter_amount"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:autofillHints="@string/enter_amount"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:inputType="number"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/wallet_request_act_edTxt_amount"/>
+
+                </LinearLayout>
+
+                <!--Spinner Paymode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textColor="@color/black"
+                        android:text="@string/paymode"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/wallet_request_act_spiner_paymode">
+                        </Spinner>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--Transaction No-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:id="@+id/wallet_request_act_layout_trans_no"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/wallet_request_act_txt_trans_no"
+                        android:textColor="@color/black"
+                        android:text="@string/transaction_no"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:inputType="number"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:hint="@string/transaction_no"
+                        android:autofillHints="@string/transaction_no"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/wallet_request_act_edtxt_transactionno"/>
+
+                </LinearLayout>
+
+                <!--Transaction Date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/wallet_request_act_layout_trans_date"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/wallet_request_act_txt_trans_date"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:text="@string/transaction_date"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:autoSizeMaxTextSize="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:hint="@string/transaction_date"
+                        android:autofillHints="@string/transaction_date"
+                        android:drawableRight="@drawable/ic_action_date"
+                        android:layout_gravity="center"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:id="@+id/wallet_request_act_txtView_transactionDate">
+
+                    </TextView>
+                </LinearLayout>
+
+                <!--Bank List-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:id="@+id/wallet_request_act_layout_bank"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:text="@string/str_select_bank"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border">
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/wallet_request_act_spiner_bank">
+                        </Spinner>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Bank Branch-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:visibility="gone"
+                    android:id="@+id/wallet_request_act_layout_branch"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:text="@string/str_branch_nme"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_branch_nme"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:autofillHints="@string/str_branch_nme"
+                        android:inputType="text"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/wallet_request_act_edTxt_branch"/>
+
+                </LinearLayout>
+
+
+                <!--Layout for Upload Image Bank Detail doc-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/wallet_request_act_layout_choose"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_gravity="left"
+                        android:text="Upload doc"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/margin_40dp"
+                            android:id="@+id/wallet_request_act_img_doc"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_camera_black"
+                            android:padding="@dimen/margin_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:textSize="@dimen/txt_small"
+                            android:id="@+id/wallet_request_act_txt_img_pah"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Remark-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/str_remark"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:minLines="2"
+                        android:maxLines="3"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:autofillHints="@string/str_remark"
+                        android:hint="@string/str_remark"
+                        android:inputType="textMultiLine"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/wallet_request_act_edTxt_remark"/>
+
+                </LinearLayout>
+
+                <!--Button Submitt-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:visibility="visible"
+                    android:id="@+id/wallet_request_act_layout_sbmitt"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:id="@+id/wallet_request_act_btn_submitt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_default"
+                        app:cornerRadius="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="@string/str_submit"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

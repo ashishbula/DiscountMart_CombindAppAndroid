@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".business.activity.WalletTransferActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+                <!--Layout for Total Balance-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:text="@string/rs_symbol"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_name_total_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Total Balance"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--Layout for individual balance-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--Layout for Balance Utility-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:background="@drawable/box_utility"
+                            android:gravity="center"
+                            android:text="@string/str_utility_bal"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Balance"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_name_available_balance_utility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/margin_medium"/>
+
+                        <Button
+                            android:id="@+id/button_viewdetail_utility"
+                            style="@style/ButtonTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Details"></Button>
+                    </LinearLayout>
+
+                    <!--Layout for Balance Shopping-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:background="@drawable/box_shopping"
+                            android:gravity="center"
+                            android:text="@string/str_main_wallet"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Balance"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_name_available_balance_shopping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/button_viewdetail_shopping"
+                            style="@style/ButtonTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Details"></Button>
+                    </LinearLayout>
+
+                    <!--Layout for Balance Business-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:background="@drawable/box_utility"
+                            android:gravity="center"
+                            android:text="@string/income_wallet"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Balance"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textSize="@dimen/margin_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_name_available_balance_business"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/button_viewdetail_business"
+                            style="@style/ButtonTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Details"></Button>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <!-- Add Fund -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--text Add Fund -->
+                    <LinearLayout
+                        android:id="@+id/layout_add_fund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:elevation="@dimen/margin_large"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_large">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Add Fund"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+                    <!--Add Fund content-->
+                    <LinearLayout
+                        android:id="@+id/layout_add_fund_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:orientation="vertical">
+
+                            <!--Add Fund -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_name_add_fund"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Add Fund >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!--Fund Request -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_name_fund_request"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Fund Request >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!-- Fund Request Status-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_name_fund_request_status"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Fund Request Status >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!--Get Promocode -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/txt_name_promocode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Get Promocode >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!--Ledger Report  -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/txt_name_ledgerreport"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Ledger Report >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Fund Tranfer-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--Text Fund Tranfer-->
+                    <LinearLayout
+                        android:id="@+id/layout_fund_tranfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:elevation="@dimen/margin_large"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_large">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fund Transfer"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+                    <!-- Fund Tranfer content-->
+                    <LinearLayout
+                        android:id="@+id/layout_fund_tranfer_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:orientation="vertical">
+
+                            <!--Business To Shopping -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_business_to_shopping"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Business To Shopping >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!--Business To Others -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_business_to_other"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Business To Others >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+                            <!-- Bank Withdrawal-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/box"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/txt_bank_withdrawal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/margin_x_large"
+                                    android:layout_gravity="center"
+                                    android:gravity="left"
+                                    android:text="Bank Withdrawal >>"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_small" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

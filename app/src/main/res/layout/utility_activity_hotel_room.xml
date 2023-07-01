@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--Layout for hotel name , start address-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:orientation="vertical">
+        <!--Text hotel name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_hotel_name"
+            android:textSize="@dimen/margin_normal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/hotel_room_actvity_txt_hotelname"/>
+
+        <!--Text hotel rating bar-->
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:numStars="5"
+            android:id="@+id/hotel_room_actvity_rating_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"/>
+        <!--Text hotel city-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_medium"
+            android:text="@string/str_to_city"
+            android:id="@+id/hotel_room_actvity_txt_hotel_city"/>
+    </LinearLayout>
+
+    <!--Layout for Check in date , check out date, room guest-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:elevation="@dimen/margin_medium"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/full_round_corner_white_box"
+        android:orientation="horizontal">
+
+        <!--Text check in date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="2-2-2019"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/hotel_room_actvity_txt_checkIn_date"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="-"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_medium"
+            />
+
+
+        <!--Text check out date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="2-2-2019"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/hotel_room_actvity_txt_checkOut_date"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="-"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_medium"
+            />
+
+        <!--Text hotel room-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="2"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/hotel_room_actvity_txt_hotel_room"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="-"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_medium"
+            />
+
+        <!--Text hotel guest-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="2"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/hotel_room_actvity_txt_hotel_guest"/>
+
+    </LinearLayout>
+
+
+    <!--Layout for list content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Text-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_v_small"
+            android:gravity="center|left"
+            android:padding="@dimen/margin_medium"
+            android:elevation="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:id="@+id/hotel_room_actvity_txt_totalhotel"
+                android:text="@string/str_recommended_for_u_room"/>
+
+        </LinearLayout>
+
+        <!--Layout for Flight List in Recycler View-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotel_room_actvity_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_v_small"
+            android:layout_marginTop="@dimen/margin_v_small">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

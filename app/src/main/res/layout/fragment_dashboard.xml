@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <!--Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/dash_detail"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_normal"
+            android:layout_margin="@dimen/margin_small">
+
+            <!--Layout for Profile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/margin_small"
+                android:visibility="visible"
+                android:id="@+id/dash_detail_layout_profile"
+                android:orientation="vertical">
+
+                <!--Text title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/my_profile_detail"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for image, name , id no-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Layout for image-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_80dp"
+                            android:layout_height="@dimen/margin_80dp"
+                            android:id="@+id/dash_detail_image_profile"
+                            android:src="@mipmap/drawer_user_icon"></ImageView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:gravity="left|center"
+                        android:orientation="vertical">
+
+                        <!--Name-->
+                        <TextView
+                            android:id="@+id/dash_detail_txt_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textStyle="bold" />
+
+
+
+                        <!--Rank -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:id="@+id/dash_detail_txt_id"/>
+                        <!--Rank no-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:textStyle="bold"
+                            android:id="@+id/dash_detail_txt_rank"/>
+                        <!--Club -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:textStyle="bold"
+                            android:id="@+id/dash_detail_txt_club"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Layout for mobile, doa, doj-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <!--Id no-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="0dp"
+                            android:text="@string/mobile"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                        <TextView
+                            android:id="@+id/dash_detail_txt_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                    </LinearLayout>
+                    <!--Date of join-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="0dp"
+                            android:text="@string/str_doj"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                        <TextView
+                            android:id="@+id/dash_detail_txt_doj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                    </LinearLayout>
+
+                    <!--Date of Active-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="0dp"
+                            android:text="@string/str_dob_active"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                        <TextView
+                            android:id="@+id/dash_detail_txt_doa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+            </LinearLayout>
+
+            <!--Layout for Referral lnk-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:visibility="visible"
+                android:id="@+id/dash_detail_layout_link"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+                <!--Text title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Referral Link Left"/>
+                <!--Text title-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/dash_detail_layout_link_left"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/business_mydash_frag_txt_referral_left"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text="share link"
+                        android:id="@+id/business_mydash_frag_btn_linkleft"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:visibility="gone"
+                    android:background="@color/gray"/>
+                <!--Text title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:visibility="visible"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Referral Link right"/>
+                <!--Layout referral link right-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/dash_detail_layout_link_right"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/dash_detail_txt_referral_right"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text="share link"
+                        android:id="@+id/dash_detail_btn_linkright"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/gray"/>
+
+            </LinearLayout>
+
+            <!--Layout for my team detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:id="@+id/business_mydash_frag_layout_myteam"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <!--Layout for Title heading-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:id="@+id/business_mydash_frag_layout_team_click"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/my_team_detail"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+                <!--Layout for MY team content Dynamic show-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:id="@+id/business_mydash_frag_myteam_content">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for top seller detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:visibility="gone"
+                android:id="@+id/business_mydash_frag_layout_topseller"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <!--Layout for top seller Title heading-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:id="@+id/business_mydash_frag_layout_topseller_click"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/top_seller"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+                <!--Layout for top seller content Dynamic show-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:id="@+id/business_mydash_frag_topseller_content">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for my Direct-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:id="@+id/dash_detail_layout_direct"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <!--Layout for Title heading-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:id="@+id/dash_detail_layout_mydirect"
+                    android:clickable="true"
+                    android:visibility="visible"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/my_direct"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+                <!--Layout for MY Direct content Dynamic show-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:id="@+id/business_mydash_frag_mydirect_content">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for my income-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="visible"
+                android:id="@+id/dash_detail_layout_income"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical">
+                <!--Layout for title header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:id="@+id/dash_detail_layout_myincome"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/my_income"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_down"/>
+
+                </LinearLayout>
+
+               <!--Layout for table header title and value-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:id="@+id/dash_detail_layout_myincome_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for Waller Summary-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:visibility="visible"
+                android:id="@+id/dash_detail_layout_wallet_summery"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <!--Layout for Title heading-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:id="@+id/dash_detail_layout_wallet"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/str_wallet_summary"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+               <!--Layout for Main Wallet summary content-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:id="@+id/dash_detail_layout_wallet_detail">
+
+
+                    <!--Line-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGray"
+                        android:layout_marginTop="@dimen/margin_small">
+
+                    </View>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for Reward Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:visibility="visible"
+                android:id="@+id/dash_detail_layout_reward"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <!--Layout for Title heading-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:id="@+id/dash_detail_layout_reward_detail"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                    <!--Text title-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/reward"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+                <!--Layout for Reward content-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:id="@+id/dash_detail_layout_reward_content">
+
+
+                    <!--Line-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGray"
+                        android:layout_marginTop="@dimen/margin_small">
+
+                    </View>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for MFA REport Detail-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:visibility="visible"
+
+                    android:id="@+id/dash_detail_layout_mfa"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:orientation="vertical">
+
+                    <!--Layout for Title heading-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:id="@+id/dash_detail_layout_mfa_detial"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:orientation="horizontal">
+                        <!--Text title-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="MFA Business"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/ic_arrow_down"/>
+                    </LinearLayout>
+
+                    <!--Layout for Reward content-->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:id="@+id/dash_detail_layout_mfa_content">
+
+
+                        <!--Line-->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/LightGray"
+                            android:layout_marginTop="@dimen/margin_small">
+
+                        </View>
+
+                    </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_v_small"
+    android:layout_height="wrap_content">
+
+    <!--Layout for Bus logo, Name , Code-->
+    <!--Layout travel name-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:padding="@dimen/margin_v_small"
+        android:gravity="center|left"
+        android:orientation="vertical">
+
+        <!--Travels name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <!--Layout for Bus Logo-->
+            <ImageView
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:visibility="gone"
+                android:id="@+id/bus_search_list_item_img_flight_logo"/>
+
+            <!--Bus NAme -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/bus_search_list_item_txt_travels_name"
+                android:text="Shrinath"/>
+
+        </LinearLayout>
+
+        <!--Text Bus Type-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/bus_search_list_item_txt_bus_type"
+            android:text="AC"/>
+
+        <!--Text Bus Ac or NonAv-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:visibility="gone"
+            android:id="@+id/bus_search_list_item_txt_bus_acnonAc"
+            android:text="AC"/>
+
+    </LinearLayout>
+
+    <!--Layout for date time , price , seats-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_v_small"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <!--Layout for bus Departure and arrival Time,Day,date -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <!--time-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--Departure time-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:id="@+id/bus_search_list_item_txt_departure_time"
+                    android:text="time"/>
+
+                <!--Bus Total Reach Time-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:id="@+id/bus_search_list_item_txt_total_hour"
+                    android:text=""/>
+
+                <!--Arrival time-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bus_search_list_item_txt_arrival_time"
+                    android:text="time"/>
+            </LinearLayout>
+            <!--Date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--Departure Date-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:id="@+id/bus_search_list_item_txt_departure_date"
+                    android:text="date"/>
+
+                <!--Bus Total Reach Time-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text=""/>
+
+                <!--Arrival Date-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_small"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bus_search_list_item_txt_arrival_date"
+                    android:text="date"/>
+            </LinearLayout>
+
+            <!--Day -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Departure day-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/bus_search_list_item_txt_departure_day"
+                    android:text="day"/>
+
+                <!--Bus Total Reach Time-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text=""/>
+
+                <!--Arrival Day-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_small"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bus_search_list_item_txt_arrival_day"
+                    android:text="day"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Layout Form bus Price, Seat Available-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".8"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!--flight Price-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/bus_search_list_item_txt_price"
+                android:text=" 1500"/>
+            <!--Seat Availabel-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_small"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/bus_search_list_item_txt_avail_seat"
+                android:text="3"/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Layout for rating, drop point, cancellation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:padding="@dimen/margin_v_small"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <!--Text Rating-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appBar_color"
+            android:textSize="@dimen/txt_size_medium"
+            android:visibility="gone"
+            android:id="@+id/bus_search_list_item_txt_rating"
+            android:text="@string/str_rating"/>
+
+        <!--Text Drop Point-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.3"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appBar_color"
+            android:textSize="@dimen/txt_size_medium"
+            android:visibility="gone"
+            android:id="@+id/bus_search_list_item_txt_drop_point"
+            android:text="@string/str_drop_point"/>
+
+        <!--Text Cancellation policy-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appBar_color"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/bus_search_list_item_txt_cancel_policy"
+            android:text="@string/str_cancel_policy"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

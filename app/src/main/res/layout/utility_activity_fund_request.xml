@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.fund.activity.FundRequestActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <!--TExt Name-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_name"
+                android:padding="@dimen/margin_v_small"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:textSize="@dimen/txt_size_normal"
+                android:background="@drawable/light_gray_bg"
+                android:id="@+id/fund_req_act_txt_name"/>
+
+            <!--TExt Company Name-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_company_name"
+                android:padding="@dimen/margin_v_small"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:textSize="@dimen/txt_size_normal"
+                android:background="@drawable/light_gray_bg"
+                android:id="@+id/fund_req_act_txt_comp_name"/>
+            <!--Text Company name-->
+
+            <!--Edit Amount-->
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:hint="@string/str_amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"
+                    android:id="@+id/fund_req_act_edtxt_amount"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--TExt tile name deposit mode-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:textSize="@dimen/margin_normal"
+                android:text="@string/str_deposit_mode"/>
+            <!--layout for Deposit mode spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:background="@drawable/white_bg_box_round_corner"
+                android:orientation="vertical">
+                <!--Spinner deposit mode-->
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxx_large"
+                    android:id="@+id/fund_req_act_spinner_deposit_mode">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+            </LinearLayout>
+
+            <!--Edit remark-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/fund_req_act_txtInput_remark"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"
+                    android:id="@+id/fund_req_act_edtxt_remark"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Layout for Upload Image Bank Detail doc-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:id="@+id/fund_req_act_txt_upload_doc"
+                    android:layout_gravity="left"
+                    android:text="Upload document of selected mode related"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:id="@+id/fund_req_act_img_doc"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_camera_black"
+                        android:padding="@dimen/margin_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="center"
+                        android:text="No File Attach"
+                        android:textSize="@dimen/txt_small"
+                        android:id="@+id/fund_req_act_txt_img_pah"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Button Send Request-->
+            <Button
+                android:id="@+id/fund_req_act_btn_send"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/str_send_req"
+                app:cornerRadius="16dp"
+                app:iconTint="@color/colorPrimary"
+                app:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

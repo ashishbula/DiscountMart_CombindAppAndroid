@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        android:id="@+id/outerteam_report_cardView_item"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="5dp">
+
+        /*Linear Layout Repurchase incentive Item*/
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            *Linear Layout for S no*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/sno"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_item_txtsno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Id no*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_idno"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_idno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Name*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/name"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView City*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_city"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Team 1 FV*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/team1fv"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_team1fv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Team 2 FV*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/team2fv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_team2fv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Team 1 RP*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/team1rp"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_team1rp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Team 2 RP*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="Gross Income"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/outerteam_report_txt_team2rp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

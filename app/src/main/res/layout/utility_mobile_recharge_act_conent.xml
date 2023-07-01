@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_xx_large"
+            android:elevation="@dimen/margin_v_small"
+            android:orientation="vertical">
+
+            <!--Layout for main balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@color/LightGray1"
+                android:layout_marginLeft="@dimen/margin_x_large"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_wallet"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_main_wallet"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:id="@+id/mobile_recharge_act_txt_balance"
+                    android:textSize="@dimen/txt_size_normal"/>
+            </LinearLayout>
+
+            <!--Layout for choose type Radio Button -->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:id="@+id/mobile_recharge_act_rdg_type"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text="@string/str_prepaid"
+                    android:id="@+id/mobile_recharge_act_rdb_prepaid"/>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text="@string/str_postpaid"
+                    android:id="@+id/mobile_recharge_act_rdb_postpaid"/>
+
+
+            </RadioGroup>
+
+
+
+            <!--Layout for Mobile number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/margin_small"
+                        app:boxBackgroundMode="none"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_enter_mobno"
+                            android:background="@null"
+                            android:paddingLeft="0dp"
+                            android:inputType="number"
+                            android:autofillHints="@string/str_enter_mobno"
+                            android:id="@+id/mobile_recharge_act_edtxt_mobile"
+                            android:textSize="@dimen/txt_default"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".13"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:id="@+id/mobile_recharge_act_layout_contact">
+                        <ImageView
+                            android:layout_width="@dimen/margin_40dp"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:src="@drawable/ic_contact_custom"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/LightGray"/>
+
+            </LinearLayout>
+            <!--Layout for  confirm Mobile number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:orientation="vertical">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/conf_mobile"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:autofillHints="@string/str_enter_mobno"
+                        android:id="@+id/mobile_recharge_act_edtxt_confirm_mobile"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:background="@color/gray"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <!--Layout for text operator, circle-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/mobile_recharge_act_txt_oprator"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/mobile_recharge_act_txt_circle"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:background="@color/LightGray"/>
+
+            <!--Layout for service Operator -->
+            <LinearLayout
+                android:id="@+id/mobile_recharge_act_layout_oprator"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="@dimen/spiner_height">
+                <TextView
+                    android:id="@+id/mobile_recharge_act_txt_select_oprator"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:text="Choose Operator"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="@dimen/margin_30dp"
+                        android:layout_height="@dimen/margin_30dp"
+                        android:src="@drawable/ic_arrow_down_black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:background="@color/LightGray"/>
+
+            <!--Layout for service Circle -->
+            <LinearLayout
+                android:id="@+id/mobile_recharge_act_layout_circle"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="@dimen/spiner_height">
+                <TextView
+                    android:id="@+id/mobile_recharge_act_txt_select_circle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:text="Choose Circle"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="@dimen/margin_30dp"
+                        android:layout_height="@dimen/margin_30dp"
+                        android:src="@drawable/ic_arrow_down_black"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:background="@color/LightGray"/>
+
+            <!--Layout for service Plan -->
+            <LinearLayout
+                android:id="@+id/mobile_recharge_act_layout_plan"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="@dimen/spiner_height">
+                <TextView
+                    android:id="@+id/mobile_recharge_act_txt_select_plan"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:text="Choose Plan"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/mobile_recharge_act_line_plan"
+                android:background="@color/LightGray"/>
+
+            <!--Layout for Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:padding="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_rs_black"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:hint="@string/str_enter_amount"
+                        android:background="@null"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:autofillHints="@string/str_enter_amount"
+                        android:id="@+id/mobile_recharge_act_edtxt_amount"
+                        android:textSize="@dimen/txt_size_large"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/gray"/>
+
+
+
+            </LinearLayout>
+
+            <!--Layout for selected Plan Detail -->
+            <LinearLayout
+                android:id="@+id/mobile_recharge_act_layout_plan_detail"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/light_gray_bg"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/mobile_recharge_act_txt_plan_detail"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <!--Layout button Recharge-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_xxx_large"
+                android:layout_marginRight="@dimen/margin_xxx_large"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:id="@+id/mobile_recharge_act_layout_recharge"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/mobile_recharge_act_btn_recharge"
+                    android:text="@string/str_rechrge"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

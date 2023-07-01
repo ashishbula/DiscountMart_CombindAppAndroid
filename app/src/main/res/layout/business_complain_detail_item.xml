@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="@dimen/margin_v_small"
+        app:contentPadding="@dimen/margin_v_small"
+        android:id="@+id/complain_detail_item_cardView_item"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="@dimen/margin_v_small">
+
+        /*Linear Layout Complain Detail Item*/
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            *Linear Layout for Complain ID*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_complain_id"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_complain_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Complain Date*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_complain_date"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_complain_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+
+            /*Linear Layout for TextView Complaint*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_complain"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_complain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Reply Date*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/str_reply_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_reply_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Reply*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/str_reply"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_reply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView View*/
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_v_small"
+                app:cardElevation="@dimen/margin_v_small"
+                app:cardCornerRadius="@dimen/margin_v_small"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="0">
+
+                <TextView
+                    android:id="@+id/complain_detail_item_txtView_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/str_view"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

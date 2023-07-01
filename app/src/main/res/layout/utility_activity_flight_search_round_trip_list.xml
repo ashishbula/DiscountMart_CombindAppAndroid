@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".travel.flight.flight_activity.FlightSearchRoundTripListActivity"
+    android:id="@+id/return_flight_search_list_actvity_coordinator">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/return_flight_search_list_act_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            app:contentInsetStart="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txtfromcity"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:src="@drawable/left_right_arrow_white"
+                        android:id="@+id/return_flight_search_list_act_toolbar_img_arrow"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txttocity"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Departure Date-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="fgfgg"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txt_dDate"
+                        android:textSize="@dimen/txt_size_small"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txt_adult"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txt_child"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/return_flight_search_list_act_toolbar_txt_infants"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/utility_return_flight_search_list_content"/>
+
+    <!--Layout for bootm navigation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_bottom_nav_bg"
+        android:id="@+id/return_flight_search_list_actvity_layout_bottom"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <!--Text Short for flight filter-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/return_flight_search_list_actvity_layout_short"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sort"
+                android:id="@+id/return_flight_search_list_actvity_txt_short"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <!--Select short type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/return_flight_search_list_actvity_txt_select_short"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--Text for filter-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/return_flight_search_list_actvity_txt_filter"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--not stop-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/return_flight_search_list_actvity_layout_nonStop"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                app:trackTintMode="add"
+                style="@style/SwitchCompatStyle"
+                android:id="@+id/return_flight_search_list_actvity_switch_btn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/str_non_stop_flight"
+                android:textSize="@dimen/txt_size_medium"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:id="@+id/return_flight_search_list_actvity_txt_nonstop"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

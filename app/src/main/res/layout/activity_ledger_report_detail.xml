@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".utilityServices.report.activity.LedgerReportDetailActivity">
+
+    <!--Layout for Time date , status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Text Date note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Date : - " />
+            <!--Text Date-->
+            <!-- date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/ledger_detail_act_txt_date"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <!--Status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Text Status note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:text="Status : -"
+                android:textStyle="bold"
+                android:id="@+id/ledger_detail_act_txt_statusnote"/>
+            <!--Text Status-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/ledger_detail_act_txt_status"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for transaction id,user name, member name, company name-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <!--Layout for transaction id-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Transaction ID : -"/>
+
+            <!--text Transaction ID-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/ledger_detail_act_txt_transid" />
+
+        </LinearLayout>
+
+        <!--Layout for User name-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+            <!--Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="User Id : -"/>
+
+            <!--text user name-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/ledger_detail_act_txt_username"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <!--Layout for Company name-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+            <!--Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Company Name : -"/>
+
+            <!--text company name-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/ledger_detail_act_txt_comp_name" />
+
+        </LinearLayout>
+
+        <!--Layout for user name or company-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="vertical">
+            <!--user name , company name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:text="@string/member_name"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <!--text Member name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/ledger_detail_act_txt_memname" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <!--Layout for service type, reference/ mobile no-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/ledger_detail_act_layout_service"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small">
+        <!--Service type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--Text service type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/service_type" />
+
+            <!--Text Service name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textColor="@color/black"
+                android:id="@+id/ledger_detail_act_txt_service_type"/>
+
+        </LinearLayout>
+        <!--Reference no , mobile no-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--Text service name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/ledger_detail_act_txt_refname"/>
+
+            <!--Text Ref or mobile no-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textColor="@color/black"
+                android:id="@+id/ledger_detail_act_txt_refno"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Layout for debit , credit , balance-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal">
+
+        <!--debit, credit-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/ledger_detail_act_txt_drcr"
+            android:layout_height="wrap_content" />
+
+        <!--Balance-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/ledger_detail_act_txt_balance"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!--Remark-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_small"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <!--Text Remark -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/remark" />
+
+        <!--Text remark-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textColor="@color/black"
+            android:id="@+id/ledger_detail_act_txt_remark"/>
+
+    </LinearLayout>
+
+</LinearLayout>

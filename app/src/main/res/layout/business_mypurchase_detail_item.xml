@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_v_small">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="@dimen/margin_v_small"
+        app:contentPadding="@dimen/margin_v_small"
+        android:id="@+id/mypurchase_detail_item_cardView_item"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="@dimen/margin_v_small">
+
+        /*Linear Layout My purchase detail Item*/
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            *Linear Layout for S.No*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/sno"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_sno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Order No*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/orderno"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_orderno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+
+            /*Linear Layout for TextView Order Date*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/order_date"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_order_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Order Amount*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/order_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_order_amnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Request*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/request"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_request"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+            /*Linear Layout for TextView Shopping wallet*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/shop_wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_shop_wallet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+            /*Linear Layout for TextView Courier Name*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/courier_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_courier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView docket No*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/docket_no"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_docketno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Docket Date*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/docket_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_docket_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+            /*Linear Layout for TextView BV*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/str_bv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_bv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Status*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/status"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+                <TextView
+                    android:id="@+id/mypurchase_detail_item_txt_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"></TextView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

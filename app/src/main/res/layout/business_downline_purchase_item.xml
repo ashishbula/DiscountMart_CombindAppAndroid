@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        android:id="@+id/downline_purchase_item_cardView_item"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="5dp">
+
+        /*Linear Layout Downline purchase Item*/
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            *Linear Layout for Bill Date*/
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/bill_date"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_billDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView To Invoice no*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/invoice_no"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_invoice_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Id no*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_idno"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_id_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Member name*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/member_name"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_member_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView City*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/str_city"
+                    android:paddingLeft="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for Team */
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/team"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_team"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+
+            /*Linear Layout for TextView Invoice Income*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/invoice_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_invoice_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Net Amount*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/net_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_net_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView FV/RV*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/fv_rv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_fvrv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Bill Type*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/white_bg_box_black_border"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:paddingLeft="1dp"
+                    android:text="@string/bill_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+                <TextView
+                    android:id="@+id/downline_purchase_item_txt_bill_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

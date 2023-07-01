@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">b2meshopping.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">b2mefood.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">b2memall.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">www.b2memovie.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">www.b2memart.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">www.b2meutility.in</domain>
+    </domain-config>
+
+    <!-- Utility-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">utility.discountmart.in</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">movie.discountmart.in</domain>
+    </domain-config>
+
+
+
+
+
+
+</network-security-config>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_nav_action_home"
+        android:icon="@drawable/ic_home_orange_icon"
+        android:title="@string/str_home"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/bottom_nav_action_profile"
+        android:icon="@drawable/ic_persone_orange_icon"
+        android:title="@string/str_profile"
+        android:visible="false"
+        app:showAsAction="ifRoom|withText"/>
+   <!-- <item
+        android:id="@+id/bottom_nav_action_addfund"
+        android:icon="@drawable/ic_addfund_icon"
+        android:title="@string/str_add_money"
+        app:showAsAction="ifRoom|withText"
+        android:visible="false"/>-->
+    <item
+        android:id="@+id/bottom_nav_action_business_dashboard"
+        android:icon="@drawable/ic_business"
+        android:title="@string/str_business_dashboard"
+        app:showAsAction="ifRoom|withText"/>
+
+    <!--<item
+        android:id="@+id/bottom_nav_action_report"
+        android:icon="@drawable/ic_reportt_icon"
+        android:title="@string/str_report"
+        app:showAsAction="ifRoom|withText"/>-->
+
+    <item
+        android:id="@+id/bottom_nav_action_complaints"
+        android:icon="@drawable/ic_reportt_icon"
+        android:title="@string/str_complaints"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/bottom_nav_action_share"
+        android:icon="@drawable/ic_account_icon"
+        android:title="@string/str_share_app"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

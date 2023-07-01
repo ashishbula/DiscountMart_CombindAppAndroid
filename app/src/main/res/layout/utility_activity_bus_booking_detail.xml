@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.report.activity.BusBookingDetailActivity">
+
+    <!--Layout for content-->
+
+    <!--Layout for Time date , status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Booking date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/bus_reportdetail_act_txt_date"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <!--Status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Text Status note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/bus_reportdetail_act_txt_statusnote"/>
+            <!--Text Status-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/bus_reportdetail_act_txt_status"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for Travels name , bus type-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <!--text Travels name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/bus_reportdetail_act_txt_travel_name" />
+        <!--text Travels name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:id="@+id/bus_reportdetail_act_txt_bus_type" />
+
+    </LinearLayout>
+
+    <!--Pnr Status and tid-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--Text service type-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_pnr"/>
+        <!--Text service type-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_tid"/>
+
+    </LinearLayout>
+
+    <!--Layout for departure and arrival time-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <!--departure Time-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_dep_time"
+            android:layout_height="wrap_content" />
+
+        <!--arrival Time-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_arr_time"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <!--Layout for departure and destination city time-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <!--departure city-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_dep_city"
+            android:layout_height="wrap_content" />
+
+        <!--destination city-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_arr_city"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <!--Layout for Total seat and Seat no-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <!--Total seat-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_totseat"
+            android:layout_height="wrap_content" />
+
+        <!--Seat no-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_seatno"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <!--Layout for Total Amount and Promo Code-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <!--Total seat-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_totamnt"
+            android:layout_height="wrap_content" />
+
+        <!--Seat no-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:id="@+id/bus_reportdetail_act_txt_pormo"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Business"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Select option-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_any"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/black"/>
+
+            <!--Radio  Group for select option for session detail-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/mybusiness_frag_rdg_option"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Session Wise"
+                    android:visibility="gone"
+                    android:id="@+id/mybusiness_frag_rdb_session"
+                    android:checked="true"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Wise"
+                    android:checked="true"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:id="@+id/mybusiness_frag_rdb_date" />
+            </RadioGroup>
+
+            <!--Layout from date or to date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mybusiness_frag_layout_date"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <!--Layout From  To Date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mybusiness_frag_layout_fromDate"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:hint="From Date"
+                            android:textSize="13dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="0dp"
+                            android:drawableRight="@drawable/ic_action_date"
+                            android:id="@+id/mybusiness_frag_txtView_fromDate"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/mybusiness_frag_layout_toDate"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="35dp"
+                            android:drawableRight="@drawable/ic_action_date"
+                            android:hint="To Date"
+                            android:padding="5dp"
+                            android:inputType="none"
+                            android:textSize="13dp"
+                            android:id="@+id/mybusiness_frag_txtView_toDate"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Layout For Button-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:visibility="visible"
+                    android:id="@+id/mybusiness_frag_layout"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_bg_btn_black"
+                        android:text="Submit"
+                        android:id="@+id/mybusiness_frag_btn_self"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--Layout Session Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/white_bg_box_black_border"
+                android:id="@+id/mybusiness_frag_layout_session"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spiner_height"
+                    android:id="@+id/mybusiness_frag_spin_session">
+
+                </Spinner>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+            <!---->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Layout for Member name,id,pv,self,group,total,level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible"
+                    android:id="@+id/mybusiness_frag_layout_item"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <!--Member Id-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Member Id"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mybusiness_frag_txtview_memberId"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Member Name-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:padding="1dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Member Name"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:id="@+id/mybusiness_frag_txtview_membername"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Sponser Id-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:padding="1dp"
+                        android:id="@+id/mybusiness_frag_layout_sponserId"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Sponser ID"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:id="@+id/mybusiness_frag_txtview_sponserID"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Level-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="1dp"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Slab"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:id="@+id/mybusiness_frag_txtview_level"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Previous PV-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:padding="1dp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Previous PV"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mybusiness_frag_txtview_prepv"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Self-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:gravity="left|center"
+                        android:layout_gravity="center"
+                        android:padding="1dp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_gravity="center"
+                            android:gravity="left|center"
+                            android:layout_height="match_parent"
+                            android:text="Self PV"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mybusiness_frag_txtview_self"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Group-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:layout_marginTop="5dp"
+                        android:padding="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Group PV"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mybusiness_frag_txtview_group"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+                    <!--Total-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:padding="1dp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:layout_height="match_parent"
+                            android:text="Total PV"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:text=":"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:id="@+id/mybusiness_frag_txtview_total"
+                            android:text=""/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!--Layout For No Item-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/mybusiness_frag_layout_noitem"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/no_result"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+            <!--Layout For Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/mybusiness_frag_layout_btn"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:text="Check Downline"
+                    android:layout_gravity="center"
+                    app:cornerRadius="@dimen/margin_small"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:id="@+id/mybusiness_frag_btn_downline"
+                    android:textColor="@color/white">
+
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/homedash_nested_scroll"
+    android:background="@color/LightGray1"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Top slider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/homedash_top_layout"
+                android:padding="@dimen/margin_medium"
+                android:orientation="horizontal"
+                android:background="@drawable/blue_rounded_dark_bg">
+
+                <!--Wallet-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:id="@+id/homedash_frag_service_wallet"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1">
+                    <!--Layout for image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:background="@drawable/colorprimary_trans_bg">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/utility_top_ic_wallet"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textSize="@dimen/margin_medium"
+                        android:text="@string/str_wallet"/>
+
+                </LinearLayout>
+
+                <!--Add fund-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:id="@+id/homedash_frag_service_addfund"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1">
+
+                    <!--Layout for image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/colorprimary_trans_bg">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/utility_top_ic_fund"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:visibility="gone"
+                        android:textSize="@dimen/margin_medium"
+                        android:text="@string/str_add_fund"/>
+
+                </LinearLayout>
+
+                <!-- fund request-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:id="@+id/homedash_frag_service_fundreq"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1">
+
+                    <!--Layout for image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:background="@drawable/colorprimary_trans_bg">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/utility_top_ic_fund_request"/>
+                    </LinearLayout>
+
+                    <!--Text fund request-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textSize="@dimen/margin_medium"
+                        android:text="@string/str_fund_req"/>
+
+                </LinearLayout>
+                <!-- Transaction -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:id="@+id/homedash_frag_service_transaction"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1">
+
+                    <!--Layout for image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:background="@drawable/colorprimary_trans_bg">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/utility_top_ic_transaction"/>
+                    </LinearLayout>
+
+                    <!--Text fund request-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:textSize="@dimen/margin_medium"
+                        android:text="@string/str_fund_req"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- Layout for utility services-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:cardCornerRadius="@dimen/margin_small">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:orientation="vertical">
+
+                    <!--Text Title-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:text="@string/str_utility_services"/>
+
+
+                    <!--Layout for Travel and booking-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/gray4"
+                        android:orientation="horizontal">
+
+                        <!--Flight-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="0dp"
+                            android:padding="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:background="@color/white"
+                            android:id="@+id/homedash_frag_service_flight"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_flight"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:visibility="gone"
+                                android:textColor="@color/black"
+                                android:text="@string/str_flight"/>
+
+                        </LinearLayout>
+                        <!--Bus-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:padding="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:background="@color/white"
+                            android:id="@+id/homedash_frag_service_bus"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                android:src="@mipmap/utility_ic_bus"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:visibility="gone"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_bus"/>
+
+                        </LinearLayout>
+                        <!--Cab-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:background="@color/white"
+                            android:padding="0dp"
+                            android:id="@+id/homedash_frag_service_cab"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_cab"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:visibility="gone"
+                                android:text="@string/str_cab"/>
+
+                        </LinearLayout>
+                        <!--Hotel-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="0dp"
+                            android:background="@color/white"
+                            android:id="@+id/homedash_frag_service_hotel"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_hotel"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:visibility="gone"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_hotel"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Layout for Bill payment-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray4"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+
+                        <!--Electricity-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="0dp"
+                            android:background="@color/white"
+                            android:id="@+id/homedash_frag_service_electricity"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_electricity"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:visibility="gone"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_elctricity"/>
+
+                        </LinearLayout>
+                        <!--Gas-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/white"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="0dp"
+                            android:id="@+id/homedash_frag_service_gas"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_gas"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:visibility="gone"
+                                android:text="@string/str_gas"/>
+
+                        </LinearLayout>
+                        <!--credit card-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/white"
+                            android:padding="0dp"
+                            android:id="@+id/homedash_frag_service_credit"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_credit"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:visibility="gone"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_credit_card"/>
+                        </LinearLayout>
+
+                        <!--More service-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/white"
+                            android:padding="0dp"
+                            android:gravity="center"
+                            android:id="@+id/homedash_frag_service_datacard"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/utility_ic_datacard"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="More"
+                                android:visibility="gone"
+                                android:textSize="@dimen/txt_size_normal"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Layout for Recharge-->
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/gray4"
+                            android:orientation="horizontal">
+
+                            <!--Prepaid-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:background="@color/white"
+                                android:padding="0dp"
+                                android:id="@+id/homedash_frag_service_prepaid"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/utility_ic_prepaid"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/txt_size_normal"
+                                    android:text="@string/str_prepaid"/>
+
+                            </LinearLayout>
+                            <!--Pospaid-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:background="@color/white"
+                                android:padding="0dp"
+                                android:id="@+id/homedash_frag_service_postpaid"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/utility_ic_postpaid"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_size_normal"
+                                    android:visibility="gone"
+                                    android:text="@string/str_postpaid"/>
+
+                            </LinearLayout>
+                            <!--DTH-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:background="@color/white"
+                                android:padding="0dp"
+                                android:id="@+id/homedash_frag_service_dth"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/utility_ic_dth"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/black"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/txt_size_normal"
+                                    android:text="@string/str_dth"/>
+
+                            </LinearLayout>
+                            <!-- More-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:layout_marginBottom="0dp"
+                                android:background="@color/white"
+                                android:padding="0dp"
+                                android:gravity="center"
+                                android:id="@+id/homedash_frag_service_more"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/utility_ic_more"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:text="More"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/txt_size_normal"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Slider for offer and news-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/homedash_frag_service_slider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    />
+            </LinearLayout>
+
+            <!--Slider for offer and news-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray4"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/homedash_frag_service_slider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    />
+            </LinearLayout>
+
+
+            <!-- Layout for shopping offer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

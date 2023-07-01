@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".travel.bus.bus_fragment.BusSeatsFragment">
+
+    <!--Layout for seats content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--Layout for text lower, upper -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:background="@drawable/black_border_bg_box"
+            android:elevation="@dimen/margin_small"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/str_lower"
+                android:background="@drawable/colorprimary_bg_box"
+                android:id="@+id/bus_seat_frag_txt_lower"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/str_upper"
+                android:id="@+id/bus_seat_frag_txt_upper"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+        <!--Layout for seats type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+
+            <!--Available-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_v_small"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/margin_normal"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/utility_seat_available"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text="@string/str_available"
+                    />
+            </LinearLayout>
+
+            <!--Booked-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_v_small"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/utility_seat_booked"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text="@string/str_booked"
+                    />
+            </LinearLayout>
+
+            <!--Ladies-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_v_small"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/utility_seat_ladies"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text="@string/str_ladies"
+                    />
+            </LinearLayout>
+
+            <!--Ladies Booked-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_v_small"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/utility_seat_ladies_boked"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text="@string/str_ladies_booked"
+                    />
+            </LinearLayout>
+
+            <!--select seat-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/margin_v_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:src="@mipmap/utility_seat_select"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_small"
+                    android:text="@string/str_select"
+                    />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/blue"
+                android:visibility="gone"
+                android:buttonTint="@color/blue"
+                android:clickable="false"
+                android:text="@string/str_available"/>
+            <!--Booked-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:visibility="gone"
+                android:textColor="@color/gray"
+                android:buttonTint="@color/gray"
+                android:clickable="false"
+                android:text="@string/str_booked"/>
+            <!--Ladies-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red1"
+                android:visibility="gone"
+                android:textColor="@color/red1"
+                android:buttonTint="@color/red1"
+                android:clickable="false"
+                android:text="@string/str_ladies"/>
+            <!--Select-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green1"
+                android:visibility="gone"
+                android:textColor="@color/green1"
+                android:buttonTint="@color/green1"
+                android:clickable="false"
+                android:text="@string/str_select"/>
+
+        </LinearLayout>
+
+        <!--Layout seats-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_medium"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <!--Layout for bus utility_stairing image -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".3"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_xx_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_stairing" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--Layout for lower seat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/bus_seat_frag_layout_lower_seat_map"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="match_parent"/>
+                <!--Table for Lower Seat-->
+                <TableLayout
+                    android:id="@+id/bus_seat_frag_table_lower_seat_map"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_v_small"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                </TableLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--Layout for upper seat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/bus_seat_frag_layout_upper_seat_map"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="match_parent"/>
+                <!--Table for upper Seat-->
+                <TableLayout
+                    android:id="@+id/bus_seat_frag_table_upper_seat_map"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_v_small"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                </TableLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bus_bottom_nav_action_home"
+        android:icon="@drawable/bus_ic_footer_home"
+        android:title="@string/Home"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/bus_bottom_nav_action_wallet"
+        android:icon="@drawable/bus_ic_footer_wallet"
+        android:title="@string/str_wallet"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/bus_bottom_nav_action_income"
+        android:icon="@drawable/bus_ic_footer_income"
+        android:title="@string/income"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+
+
+    <item
+        android:id="@+id/bus_bottom_nav_action_share"
+        android:icon="@drawable/bus_ic_footer_share"
+        android:title="@string/Share_App"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/bus_bottom_nav_action_support"
+        android:icon="@drawable/bus_ic_footer_support"
+        android:title="@string/support"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

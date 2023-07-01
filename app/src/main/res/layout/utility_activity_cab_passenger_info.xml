@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.utility_cab.cab_activity.CabPassengerInfoActivity">
+
+    <!--Layout for Cab name and Cab type, and departure date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_v_small"
+        android:elevation="@dimen/margin_v_small"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <!--From city  and  To city-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text From city-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"
+                android:id="@+id/cab_passenger_act_txt_from_city"/>
+            <!-- To city-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"
+                android:visibility="visible"
+                android:id="@+id/cab_passenger_act_txt_to_city"/>
+
+        </LinearLayout>
+
+        <!--Travel name and cab type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text Travel Name-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_cab"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/cab_passenger_act_txt_cab_name"/>
+            <!--Text cab Type-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/cab_passenger_act_txt_cab_type"/>
+
+
+        </LinearLayout>
+
+        <!--cab Type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+
+            <!-- Departure Date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium"
+                android:visibility="visible"
+                android:id="@+id/cab_passenger_act_txt_dep_Date"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for passenger info content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:orientation="vertical">
+
+            <!--Passenger Detail Layout for Seat, Name, mobile, email, age, gender-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/white"
+                android:id="@+id/cab_passenger_act_layout_passenger"
+                android:orientation="vertical">
+
+                <!--Layout for Seat, Name, mobile, email, age, gender-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Text Seat-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passenger Details"
+                        android:textSize="@dimen/txt_large"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <!-- Edit Text Name-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_passenger_act_edtxt_name"
+                        android:textSize="@dimen/txt_default"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:inputType="textPersonName"
+                        android:hint="@string/str_name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Layout for mobile and email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <!--Edit Text Mobile Number-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:layout_height="wrap_content"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cab_passenger_act_edtxt_mobile"
+                            android:textSize="@dimen/txt_default"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:hint="@string/str_mobile"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Edit Text Emial-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:layout_height="wrap_content"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cab_passenger_act_edtxt_email"
+                            android:inputType="textEmailAddress"
+                            android:textSize="@dimen/txt_default"
+                            android:hint="@string/str_email"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+
+                <!--N of Pax and Gender-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Edit text No of Pax / Passenger-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cab_passenger_act_edtxt_pax"
+                            android:textSize="@dimen/txt_default"
+                            android:inputType="number"
+                            android:hint="@string/no_of_pax"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Gender Radio Group-->
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/cab_passenger_act_rdg_gender"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:checked="true"
+                            android:id="@+id/cab_passenger_act_rdb_male"
+                            android:text="Male"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:id="@+id/cab_passenger_act_rdb_female"
+                            android:text="Female"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Edit Text Pic-up address-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_passenger_act_edtxt_pic_address"
+                        android:inputType="textPostalAddress"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/pickup_address"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Edit Text Drop-off address-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_passenger_act_edtxt_drop_address"
+                        android:inputType="textPostalAddress"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/drop_address"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Layout For error msg-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/cab_passenger_act_txt_error"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Personal Detail Layout for mobile, email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/white"
+                android:id="@+id/cab_passenger_act_layout_personal"
+                android:orientation="vertical">
+
+                <!--Layout mobile, email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Text Seat-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personal Details"
+                        android:textSize="@dimen/txt_large"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <!-- Edit Text Mobile-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_passenger_act_edtxt_mobile2"
+                        android:textSize="@dimen/txt_default"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:hint="@string/mobile"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Edit Text Email-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_passenger_act_edtxt_email2"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/str_email"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <!--Layout For error msg-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/cab_passenger_act_txt_error2"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray3"
+        android:id="@+id/cab_passenger_act_layout_continue"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:id="@+id/cab_passenger_act_layout_fareamout"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/cab_passenger_act_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/cab_passenger_act_txt_total_seat"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/cab_passenger_act_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:id="@+id/cab_passenger_act_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:text="continue >>"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

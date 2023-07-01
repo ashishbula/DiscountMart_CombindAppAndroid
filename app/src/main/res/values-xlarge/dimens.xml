@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">25dp</dimen>
+    <dimen name="activity_vertical_margin">25dp</dimen>
+
+
+    <dimen name="nav_drawer_width">260dp</dimen>
+    <dimen name="nav_header_vertical_spacing">28dp</dimen>
+    <dimen name="nav_header_height">300dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_width">140dp</dimen>
+    <dimen name="profile_height">140dp</dimen>
+    <dimen name="bootom_nav_margin">100dp</dimen>
+    <dimen name="bottom_fram_margin">90dp</dimen>
+
+    <dimen name="app_bar_height">140dp</dimen>
+
+    <dimen name="margin_v_small">10dp</dimen>
+    <dimen name="margin_small">15dp</dimen>
+    <dimen name="margin_medium">20dp</dimen>
+    <dimen name="margin_normal">25dp</dimen>
+    <dimen name="margin_large">30dp</dimen>
+    <dimen name="margin_x_large">35dp</dimen>
+    <dimen name="margin_xx_large">40dp</dimen>
+    <dimen name="margin_xxx_large">45dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="txt_size_45sp">45sp</dimen>
+    <dimen name="txt_size_50">50sp</dimen>
+    <dimen name="Login_activity_top_maargin">15dp</dimen>
+
+    <!--Seat size-->
+    <dimen name="seat_size">50</dimen>
+    <dimen name="sleeper_size_height">100</dimen>
+    <dimen name="sleeper_size_width">50</dimen>
+
+    <!--Text Size -->
+    <dimen name="txt_small">16sp</dimen>
+    <dimen name="txt_medium">18sp</dimen>
+    <dimen name="txt_default">22sp</dimen>
+    <dimen name="txt_large">28sp</dimen>
+    <dimen name="txt_xlarge">36sp</dimen>
+
+
+
+    <!--Edit Text Size-->
+    <dimen name="edtxt_default">60dp</dimen>
+    <dimen name="edtxt_large">70dp</dimen>
+    <dimen name="edtxt_xlarge">80dp</dimen>
+
+    <!--Logo height and width-->
+    <dimen name="logo_height">180dp</dimen>
+    <dimen name="logo_width">250dp</dimen>
+    <dimen name="login_logo_width">250dp</dimen>
+    <dimen name="login_logo_height">200dp</dimen>
+
+    <dimen name="txt_size_vv_small">5sp</dimen>
+    <dimen name="txt_size_v_small">8sp</dimen>
+    <dimen name="txt_size_small">10sp</dimen>
+    <dimen name="txt_size_medium">13sp</dimen>
+    <dimen name="txt_size_normal">15sp</dimen>
+    <dimen name="txt_size_large">20sp</dimen>
+    <dimen name="txt_size_x_large">25sp</dimen>
+    <dimen name="txt_size_xx_large">30sp</dimen>
+    <dimen name="txt_size_xxx_large">35sp</dimen>
+    <dimen name="txt_size_40sp">40sp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_70dp">70dp</dimen>
+    <dimen name="margin_80dp">80dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="activity_horizontal_margin1">16dp</dimen>
+
+    <dimen name="fab_margin1">16dp</dimen>
+
+    <dimen name="font_default">16dp</dimen>
+    <dimen name="font_list_drawer">13sp</dimen>
+    <dimen name="font_small">12dp</dimen>
+    <dimen name="offset_default">3dp</dimen>
+    <dimen name="padding_default">12dp</dimen>
+
+    <dimen name="data_item_row_height">50dp</dimen>
+    <dimen name="data_item_row_padding">5dp</dimen>
+
+    <!--<dimen name="level_beam_line_width">6dp</dimen>-->
+    <dimen name="level_beam_line_width">6dp</dimen>
+    <dimen name="level_beam_line_offset">2dp</dimen>
+
+
+    <dimen name="edtxt_height">60dp</dimen>
+    <dimen name="spiner_height">60dp</dimen>
+
+
+    <dimen name="font_drawer_default">18dp</dimen>
+    <dimen name="font_drawer_large">22sp</dimen>
+
+
+
+
+
+
+
+</resources>

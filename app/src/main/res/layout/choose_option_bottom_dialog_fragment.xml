@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--Layout for Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Any One."
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_large"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/black"/>
+
+    <!-- Layout for add fund from
+    Utility Wallet, Main/ Shop Wallet (MLM) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:visibility="gone"
+        android:id="@+id/bottom_frag_layout_addfund"
+        android:orientation="horizontal">
+        <!--Utility Wallet-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/bottom_frag_layout_addfund_utility"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_add_fund"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utility Wallet"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/LightGray"/>
+        <!-- Layout for Main/ Shop Wallet -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/bottom_frag_layout_addfund_mainWallet"
+            android:padding="@dimen/margin_small"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:src="@mipmap/ic_add_fund"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main Wallet (Business)"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Layout for fund request from
+    Utility Wallet, Main/ Shop Wallet (MLM) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:visibility="gone"
+        android:id="@+id/bottom_frag_layout_fund_reuqest"
+        android:orientation="horizontal">
+        <!--Utility Wallet-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/bottom_frag_layout_fund_req_utility"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_fund_request"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utility"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/LightGray"/>
+        <!-- Layout for Main/ Shop Wallet -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/bottom_frag_layout_fund_req_mainWallet"
+            android:padding="@dimen/margin_small"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:src="@mipmap/ic_fund_request"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main Wallet (Business)"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightGray"/>
+
+
+
+
+</LinearLayout>

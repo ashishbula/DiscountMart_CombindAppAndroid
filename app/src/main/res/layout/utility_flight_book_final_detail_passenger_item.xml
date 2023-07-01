@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Passenger Type and Passenger count-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:text="1"
+            android:textColor="@color/black"
+            android:id="@+id/flight_book_detail_act_txt_passenger_count"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:text="adult"
+            android:textSize="@dimen/txt_default"
+            android:layout_marginLeft="0dp"
+            android:textColor="@color/black"
+            android:id="@+id/flight_book_detail_act_txt_passenger_type"/>
+
+        <!-- Age -->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="@dimen/margin_v_small"
+            android:text="age"
+            android:id="@+id/flight_book_detail_act_txt_passenger_age"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:text="gender"
+            android:textSize="@dimen/txt_default"
+            android:layout_marginLeft="0dp"
+            android:textColor="@color/black"
+            android:id="@+id/flight_book_detail_act_txt_passenger_gender"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/flight_book_detail_act_txt_passenger_name"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

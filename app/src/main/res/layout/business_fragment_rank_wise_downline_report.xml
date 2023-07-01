@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Title Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_wise"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_x_large"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/white_bg_box"
+        android:elevation="@dimen/margin_medium">
+
+
+
+        <!--Search By spinner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_xx_large"
+            android:layout_marginTop="@dimen/margin_normal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Search By"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                />
+
+            <!--Spinner Search by-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:background="@drawable/white_bg_box_black_border"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/rank_downline_report_frag_spiner_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxx_large"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dialog"
+                    android:gravity="center"  />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Rank List spinner Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rank_downline_report_frag_layout_level"
+            android:layout_marginLeft="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_xx_large"
+            android:layout_marginTop="@dimen/margin_normal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Select Rank"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                />
+
+            <!--Spinner Level-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/rank_downline_report_frag_spin_rank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxx_large"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dialog"
+                    android:gravity="center"  />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Layout For Member id-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_xx_large"
+            android:layout_marginTop="@dimen/margin_normal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/str_member_id"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                />
+
+            <!--spinner Status-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/white_bg_box_black_border">
+                <EditText
+                    android:id="@+id/rank_downline_report_frag_edtxt_memberid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:padding="@dimen/margin_small"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Button Submit-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_xx_large"
+            android:layout_marginTop="@dimen/margin_x_large">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:id="@+id/rank_downline_report_frag_btn_submit"
+                android:text="@string/str_submit"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

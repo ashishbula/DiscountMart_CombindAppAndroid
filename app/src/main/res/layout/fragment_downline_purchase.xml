@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Title Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/downline_purchase"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <!--Layout for content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_x_large"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/whit_bg_box"
+        android:elevation="@dimen/margin_small">
+
+
+
+        <!--Radio Button Side Left or Right Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose"
+                android:textColor="@color/black"
+               />
+
+            <!--Radio Group Request Type-->
+            <RadioGroup
+                android:id="@+id/downline_repurchase_frag_rdg_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/downline_purchase_frag_rdbtn_repurchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repurchase"
+                    android:checked="true"
+                    android:buttonTint="@color/appBar_color1" />
+
+                <RadioButton
+                    android:id="@+id/downline_purchase_frag_rdbtn_topup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TopUp"
+                    android:buttonTint="@color/appBar_color1" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Lavel List spinner Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/downline_purchase_frag_layout_level"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/select_level"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                />
+
+            <!--Spinner Level-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/white_bg_box_black_border"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/downline_purchase_frag_spinlevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dialog"
+                    android:gravity="center"  />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--Radio Button Side Left or Right Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:gravity="center|left"
+            android:visibility="gone"
+            android:id="@+id/downline_purchase_frag_layout_group"
+            android:layout_gravity="center">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="@dimen/margin_v_small"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Wise"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/black"
+                />
+
+            <!--Radio Group Request Type-->
+            <RadioGroup
+                android:id="@+id/downline_repurchase_frag_rdg_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/downline_purchase_frag_rdbtn_group_both"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Both"
+                    android:buttonTint="@color/appBar_color1" />
+
+                <RadioButton
+                    android:id="@+id/downline_purchase_frag_rdbtn_group_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group A"
+                    android:buttonTint="@color/appBar_color1" />
+
+                <RadioButton
+                    android:id="@+id/downline_purchase_frag_rdbtn_group_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group B"
+                    android:buttonTint="@color/appBar_color1" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Layout for From and To date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal">
+
+            <!--From date-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from_date"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/downline_purchase_frag_txt_fromdate"
+                    android:textColor="@color/black"
+                    android:hint="@string/from_date"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_action_date"
+                    android:drawableEnd="@drawable/ic_action_date" />
+
+            </LinearLayout>
+
+            <!--To date-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_date"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:padding="@dimen/margin_small"
+                    android:hint="@string/to_date"
+                    android:id="@+id/downline_purchase_frag_txt_todate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_action_date"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Button Submit-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xx_large"
+            android:layout_marginRight="@dimen/margin_xx_large"
+            android:layout_marginTop="@dimen/margin_x_large">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:id="@+id/downline_purchase_frag_btn_submit"
+                android:text="@string/str_submit"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

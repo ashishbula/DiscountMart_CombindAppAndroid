@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:titleTextColor">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>//app name
+        <item name="android:textColorSecondary">@color/colorAccent</item>//drawer, more menu three dot
+        <item name="android:textColor">@color/colorAccent</item>-->
+    </style>
+    <!--Base Activity Theme-->
+   <!-- <style name="DashBoardTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false
+        <item name="windowNoTitle">true</item>
+    </style>-->
+
+    <style name="DashBoardTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+         <item name="android:navigationBarColor">@android:color/transparent</item>
+         <item name="android:windowTranslucentStatus">true</item>-->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DashBoardTheme_Business" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+         <item name="android:windowTranslucentStatus">true</item>
+         <item name="android:navigationBarColor">@android:color/transparent</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="windowNoTitle">true</item>-->
+    </style>
+
+    <style name="DashBoardTheme_Brand" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+         <item name="android:windowTranslucentStatus">true</item>
+         <item name="android:navigationBarColor">@android:color/transparent</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="windowNoTitle">true</item>-->
+    </style>
+
+    <!--Utility -->
+    <style name="DashBoardTheme_Utlity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+         <item name="android:navigationBarColor">@android:color/transparent</item>
+         <item name="android:windowTranslucentStatus">true</item>-->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Splash_Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+    <!--Flight Search Theme-->
+    <style name="FlightSearch_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- &lt;!&ndash; Customize your theme here. &ndash;&gt;
+         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+         <item name="android:windowTranslucentStatus">true</item>
+         <item name="android:statusBarColor">@android:color/transparent</item>-->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <!--Material dialog theme-->
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginRight">@dimen/margin_small</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">@style/TextInputLayoutAppearance</item>
+    </style>
+
+    <style name="NoActionBar_FullTheme_Utility" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+
+    <style name="AppTheme.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item> <!---->
+        <item name="android:statusBarColor">@android:color/transparent</item> <!---->
+        <item name="android:windowTranslucentNavigation">true</item> <!---->
+        <item name="android:windowTranslucentStatus">true</item> <!---->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item> <!---->
+    </style>
+
+    <!--When Use this this transparent theme than use com parent layout android:fitsSystemWindows="true"-->
+
+
+
+    <!--Login Activity Theme-->
+    <!--<style name="Login_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/app_bg_light</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        &lt;!&ndash;<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>&ndash;&gt;
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>-->
+
+    <!--DashBoard Theme-->
+
+    <style name="Dashboard_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+       <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+        <!--<item name="android:windowActionModeOverlay">true</item>-->
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="NoActionBar_FullTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+
+    <!--New Registration Theme-->
+    <style name="New_RegistrationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="android:windowActionModeOverlay">true</item>-->
+    </style>
+
+   <!-- <style name="AppTheme.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/reddark</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="colorPrimary">@color/appcolorprimary</item>
+        <item name="colorPrimaryDark">@color/appcolorprimarydark</item>
+        <item name="colorAccent">@color/appcolorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>-->
+
+
+
+    <!--  Button Text Style-->
+    <style name="ButtonTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+
+
+    </style>
+
+
+
+    <!--Base Activity Navigation Drawer Header TextVew Style-->
+    <style name="NavigationHeaderTextViewStyle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--  Button Text Style-->
+    <style name="ButtonAllCapsTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+   <!-- <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/switch_color</item>
+        <item name="trackTint">@color/switch_color</item>
+    </style>-->
+
+    <style name="CollapsedAppBar">
+        <item name="android:textSize">@dimen/txt_size_large</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ExpandedAppBar">
+        <item name="android:textSize">@dimen/txt_size_large</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/utility_switch_color</item>
+        <item name="trackTint">@color/utility_switch_color</item>
+    </style>
+
+
+</resources>

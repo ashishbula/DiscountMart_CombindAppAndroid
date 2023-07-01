@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Layout for Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Any One."
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_large"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/black"/>
+
+    <!-- Layout for flight report, Bus report-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <!--flight report-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/travel_report_frag_layout_flight"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/utility_ic_flight"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flight"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"/>
+        <!-- Layout for Bus report-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/travel_report_frag_layout_bus"
+            android:padding="@dimen/margin_small"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:src="@mipmap/utility_ic_bus"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <!-- Layout for Cab report-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/travel_report_frag_layout_cab"
+            android:padding="@dimen/margin_small"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/utility_ic_cab"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cab"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"/>
+
+        <!-- Layout hotel-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/travel_report_frag_layout_hotel"
+            android:padding="@dimen/margin_small"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/utility_ic_hotel"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

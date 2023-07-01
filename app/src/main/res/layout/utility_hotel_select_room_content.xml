@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/colorprimary_border_bg_white_box">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/hotel_select_room_content_txt_room"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_remove"
+            android:textColor="@color/red"
+            android:gravity="right"
+            android:id="@+id/hotel_select_room_content_txt_remove"
+            android:textSize="@dimen/txt_size_medium"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!--Layout for select adult -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal">
+        <!--Text Adult and age-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_adult"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_adult_year"/>
+        </LinearLayout>
+
+        <!--Increment and decrement-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="right|center"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_decrese"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_gravity="center"
+                android:elevation="@dimen/margin_v_small"
+                android:visibility="visible"
+                android:background="@drawable/colorprimary_bg_box"
+                android:gravity="center|top"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_number_adult"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="1"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_large" />
+
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_adult_increse"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:background="@drawable/colorprimary_bg_box"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:elevation="@dimen/margin_v_small"
+                android:gravity="center"
+                android:text="+" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Vertical Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/gray"/>
+
+    <!--Layout for select child -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+        <!--Text child and age-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_child"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_child_year"/>
+        </LinearLayout>
+
+        <!--Increment and decrement-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="right|center"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_child_decrese"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:elevation="@dimen/margin_v_small"
+                android:background="@drawable/colorprimary_bg_box"
+                android:gravity="center|top"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_number_child"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_large" />
+
+
+            <TextView
+                android:id="@+id/hotel_select_room_content_txt_child_increse"
+                android:layout_width="@dimen/margin_xx_large"
+                android:layout_height="@dimen/margin_xx_large"
+                android:background="@drawable/colorprimary_bg_box"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:elevation="@dimen/margin_v_small"
+                android:gravity="center"
+                android:text="+" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout Child Age one-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center"
+        android:visibility="visible"
+            android:id="@+id/hotel_select_room_content_layout_child_age1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_medium"
+                android:text="@string/str_child1_age"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:id="@+id/hotel_select_room_content_txt_child_age1"/>
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="12"
+            android:progress="2"
+            android:min="2"
+            android:layout_marginLeft="@dimen/margin_x_large"
+            android:id="@+id/hotel_select_room_content_seekbar_child_age1"
+            android:layout_height="@dimen/margin_normal"/>
+    </LinearLayout>
+
+    <!--Layout Child Age two-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center"
+        android:id="@+id/hotel_select_room_content_layout_child_age2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/margin_medium"
+            android:text="@string/str_child2_age"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/black"
+            android:id="@+id/hotel_select_room_content_txt_child_age2"/>
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="12"
+            android:progress="2"
+            android:min="2"
+            android:layout_marginLeft="@dimen/margin_x_large"
+            android:id="@+id/hotel_select_room_content_seekbar_child_age2"
+            android:layout_height="@dimen/margin_normal"/>
+        </LinearLayout>
+
+
+</LinearLayout>

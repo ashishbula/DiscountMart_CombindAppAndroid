@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/spiceCoordinatorLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginEnd="64dp"
+
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/spiceToolbarId"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="?attr/homeAsUpIndicator">
+                <!--Layout for From and to city,total adult,child,infants and departure date -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <!--Select city , total hotel-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--Selected city-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_city"/>
+
+                        <!--Total hotel-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_total_hotel"/>
+
+                    </LinearLayout>
+
+                    <!--total adult,child,infants and departure date-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left|center"
+                        android:orientation="horizontal">
+
+                        <!-- Check in Date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="fgfgg"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_chkin_Date"
+                            android:textSize="@dimen/txt_size_small"/>
+                        <View
+                            android:layout_width="@dimen/margin_v_small"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            android:layout_marginLeft="@dimen/margin_v_small"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text="fgfgg"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_chkout_Date"
+                            android:textSize="@dimen/txt_size_small"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginLeft="@dimen/margin_v_small"/>
+
+                        <!--Travellers Adult-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text="fgfgg"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_adult"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginLeft="@dimen/margin_v_small"/>
+                        <!--Travellers Adult-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text="fgfgg"
+                            android:id="@+id/hotel_search_list_act_toolbar_txt_child"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/llSpiceDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

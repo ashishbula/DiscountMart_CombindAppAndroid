@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--Header Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_x_large"
+        android:gravity="center"
+        android:background="@color/black">
+        <TextView
+            android:id="@+id/tvleftdowndetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Transaction Password"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Old Transaction password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                app:hintTextColor="@color/black"
+                android:hint="@string/old_pass"
+                android:textColor="@color/black">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="@dimen/margin_v_small"
+                    android:inputType="text|textPassword"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:theme="@style/TextInputLayoutAppearance"
+                    android:id="@+id/change_transPass_frag_edttxt_oldtpass"
+                    android:autofillHints="@string/old_pass" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--New Transaction Password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                app:hintTextColor="@color/black"
+                android:hint="@string/new_pass"
+                android:textColor="@color/black">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="@dimen/margin_v_small"
+                    android:inputType="text|textPassword"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:theme="@style/TextInputLayoutAppearance"
+                    android:id="@+id/change_transPass_frag_edttxt_newpass"
+                    android:autofillHints="@string/new_pass" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Confirm Transaction Password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:hintTextColor="@color/black"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:hint="@string/confirm_pass"
+                android:textColor="@color/black">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="@dimen/margin_v_small"
+                    android:inputType="text|textPassword"
+                    android:theme="@style/TextInputLayoutAppearance"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/change_transPass_frag_edTxt_conf_password"
+                    android:autofillHints="@string/confirm_pass" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Button Submit-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/change_transPass_frag_btn_submit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/str_submit"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:background="@drawable/selector_bg_btn_black"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

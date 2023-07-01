@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/str_topup"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <!--TExt View Note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/topup_fragment_txt_note"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:text="Please Enter Id No. Than click blank space"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    android:hint="@string/str_idno">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:autofillHints="@string/str_idno"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textColor="@color/black"
+                        android:id="@+id/topup_fragment_editxt_Idno"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout Scratch no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    android:hint="@string/str_scratch_no">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:autofillHints="@string/str_scratch_no"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textColor="@color/black"
+                        android:id="@+id/topup_fragment_editxt_scratchno"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout Button Submit, Cancel-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:id="@+id/topup_fragment_layout_process"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/topup_fragment_btn_process"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:background="@drawable/selector_bg_btn_black"
+                    android:textColor="@color/white"
+                    android:text="Continue to process"/>
+
+            </LinearLayout>
+
+            <!--Layout Sponser Id-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/topup_fragment_layout_sponsrid"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    android:hint="@string/sponsor_id">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:autofillHints="@string/sponsor_id"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textColor="@color/black"
+                        android:id="@+id/topup_fragment_editxt_sponserId"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout Member Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/topup_fragment_layout_memb_name"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    android:hint="@string/member_name">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:autofillHints="@string/member_name"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textColor="@color/black"
+                        android:id="@+id/topup_fragment_editxt_memb_nme"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout Topup By-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/topup_fragment_layout_topupby"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    android:hint="@string/str_topup_by">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:autofillHints="@string/str_topup_by"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textColor="@color/black"
+                        android:id="@+id/topup_fragment_editxt_topupby"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--Layout Button Submit, Cancel-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:id="@+id/topup_fragment_layout_submit"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/topup_fragment_btn_submit"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:background="@drawable/selector_bg_btn_black"
+                    android:textColor="@color/white"
+                    android:text="@string/str_submit"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

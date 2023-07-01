@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/hotel_select_room_content_txt_child"
+            android:textSize="@dimen/txt_size_medium"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/hotel_select_room_content_txt_age"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical">
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_large"
+            android:id="@+id/hotel_select_room_content_seekbar"
+            android:max="9"/>
+    </LinearLayout>
+
+
+</LinearLayout>

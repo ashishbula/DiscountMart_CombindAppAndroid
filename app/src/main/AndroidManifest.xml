@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.discountmart">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_icon"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.DiscountMart">
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Splash_Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.DashboardActivity"
+            android:theme="@style/DashBoardTheme"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WebViewActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ForgotpassActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!--**********************************Utility***********************************-->
+        <activity
+            android:name=".utility_services.recharge.activity.RechargePlanActivity"
+            android:exported="false" />
+        <activity android:name=".utility_services.activity.MoreServicesActivity" />
+        <activity android:name=".utility_services.travel.TravelMainActivity" />
+
+        <!-- ***************UTILITY*************** -->
+        <!-- main activity_utility -->
+        <activity
+            android:name=".utility_services.activity.MainActivity_utility"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DashBoardTheme_Utlity" />
+        <activity
+            android:name=".utility_services.activity.BankInfoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.NavigationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility_services.report.activity.BillPayReportDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.BillPamentReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.TestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".utility_services.activity.MyWalletActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.TransactionActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.NameListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility_services.report.activity.ReportListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.activity.VerifyOtpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.SettingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.activity.WebViewActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <!-- *************************** Travel ************************** -->
+        <!-- Flight -->
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightCityListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityListTheme">
+
+            <!--
+            <meta-data
+                android:name="android.app.utility_searchable"
+                android:resource="@xml/utility_searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightSearchListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightSearchRoundTripListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.SelectFlightActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.SelectReturnFlightActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightPassengerInfoActivity"
+            android:exported="true"
+            android:isScrollContainer="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightBookFareDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightBookFinalDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" /> <!-- SMS Receiver -->
+        <!--
+<receiver android:name=".utility_services.brodcast.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightBookOtp_PaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.OtpVerify_FlightBookActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightBookSuccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.activity.PromocodeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightFilterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.RetrunFlightFilterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.flight.flight_activity.FlightShortByActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <!-- **********************Hotel*********************** -->
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelCityListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityListTheme" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelFilterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelSelectRoomActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityListTheme" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelSelectRoomChildAgeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelSearchListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelInfoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelRoomActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.RoomCancelPolicyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelPassengerInfoActivity"
+            android:exported="true"
+            android:isScrollContainer="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelBookFinalDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelBookBaseFareDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.OtpAndHotelPaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.OtpVerify_HotelBookActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.hotel.hotel_activity.HotelBookSuccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <!-- *************Recharge********************* -->
+        <!-- Mobile Recharge -->
+        <activity
+            android:name=".utility_services.recharge.activity.MobileRechargeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.recharge.activity.PrepaidActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.recharge.activity.DatacardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.recharge.activity.PostpaidActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.recharge.activity.ServiceProviderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
+        <!-- Dth Recharge -->
+
+        <activity
+            android:name=".utility_services.recharge.activity.DthRechargeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.recharge.activity.RechargeSucccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.recharge.activity.CheckFinalDetailRechargeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.recharge.activity.OtpAndVerify_RechargeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+
+        <!-- *************Bill Pay********************* -->
+        <!-- Gas Activity -->
+
+        <activity
+            android:name=".utility_services.billpayment.activity.GasBillActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- Credit Card Activity -->
+        <activity
+            android:name=".utility_services.billpayment.activity.CreditCardBillPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- Insurance Activity -->
+        <activity
+            android:name=".utility_services.billpayment.activity.InsuranceBillPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- Electricity Activity -->
+        <activity
+            android:name=".utility_services.billpayment.activity.ElectricityBillPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- Bill Service Activity -->
+        <activity
+            android:name=".utility_services.billpayment.activity.BillPayServiceListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <!-- Check final detail Activity -->
+        <activity
+            android:name=".utility_services.billpayment.activity.BillPayFinalDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.billpayment.activity.OtpAndVerify_BillPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.billpayment.activity.BillPaymentSuccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+
+        <!-- *******************************Bus****************************** -->
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusCityListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityListTheme" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusSearchListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusCancellationPolicyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusShortByActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusFilterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusSeatsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusBoarding_DropPointActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusPassengerInfoActivity"
+            android:exported="true"
+            android:isScrollContainer="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusBookFinalDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusBookFareDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.OtpVerify_BusBookActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.OtpAndBusBookPaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.bus.bus_activity.BusBookSuccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
+
+        <!-- *****************fund***************** -->
+        <!-- fund Request Activity -->
+
+        <activity
+            android:name=".utility_services.fund.activity.FundRequestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.fund.activity.AddFundActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.fund.activity.AddfundOtp_VerifyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.fund.activity.FundRequestStatusActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar_FullTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".utility_services.activity.PromocodeListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- ************************************  Report  ********************************************* -->
+
+        <activity
+            android:name=".utility_services.report.activity.RechargeReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.BusBookReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.BusBookingDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.RechargeReportDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.LedgerReportDetailActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.LedgerReportActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.FlightBookReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.FlightBookDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.CabBookDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.report.activity.CabBookReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+
+
+        <!-- ***********Utility Cab**************** -->
+
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabCityListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityListTheme" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabSearchListActivity"
+            android:exported="true"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabSelectActivity"
+            android:exported="true"
+            android:theme="@style/FlightSearch_Theme" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabBookFaireDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabBookFinalDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabPassengerInfoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.Otp_CabBookPaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Utility" />
+        <activity
+            android:name=".utility_services.travel.utility_cab.cab_activity.CabBookSuccessMsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
+        <!--**************************Business********************************-->
+
+        <activity
+            android:name=".business.activity.WebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--<activity
+            android:name=".business.activity.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />-->
+        <activity
+            android:name=".business.activity.BusinessDashboardActivity"
+            android:exported="true"
+            android:theme="@style/DashBoardTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.EditProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.RegistrationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NewJoinTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.BusinessOppurtunityActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name=".business.activity.WebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />-->
+        <activity
+            android:name=".business.activity.BankListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.activity.Kyc_Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".business.activity.AddressProofActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.BankProofActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.ForgotpassActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".business.activity.ComplaintActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.DownlinePurchaseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".business.activity.ShoppingWalletReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.MainWalletReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.Business_WalletRequestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.CommonReportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.IDActivationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.LevelWiseDirectDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.WalletRequestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.WalletTransferActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.WalletTransferActivity_1"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.BankWithdrawalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+    </application>
+
+</manifest>

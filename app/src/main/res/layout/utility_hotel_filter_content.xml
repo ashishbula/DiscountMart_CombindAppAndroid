@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".travel.hotel.hotel_activity.HotelFilterActivity">
+
+    <!--All Content Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="70dp"
+        android:orientation="vertical">
+
+        <!--Layout for hotel filter start rating-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_filter_by_rating"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+
+            <!-- Hotel Rating check Box and rating bar-->
+
+            <!-- hotel Rating 5-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_gravity="center"
+                    android:id="@+id/hotel_filter_act_chekbox_5star"
+                    />
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:progressTint="@color/colorPrimaryDark"
+                    android:id="@+id/hotel_filter_act_rating_bar5"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+
+            <!-- hotel Rating 4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_gravity="center"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_gravity="center"
+                    android:id="@+id/hotel_filter_act_chekbox_4star"
+                    />
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:progressTint="@color/colorPrimaryDark"
+                    android:id="@+id/hotel_filter_act_rating_bar4"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+
+            <!-- hotel Rating 3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_gravity="center"
+                    android:id="@+id/hotel_filter_act_chekbox_3star"
+                    />
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:progressTint="@color/colorPrimaryDark"
+                    android:id="@+id/hotel_filter_act_rating_bar3"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+
+            <!-- hotel Rating 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_gravity="center"
+                    android:id="@+id/hotel_filter_act_chekbox_2star"
+                    />
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:progressTint="@color/colorPrimaryDark"
+                    android:id="@+id/hotel_filter_act_rating_bar2"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Vertical line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@color/gray"/>
+
+        <!--Layout for bus filter by-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <!--TExt title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_filter_by"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+
+            <!--Layout for title text Hotel name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:id="@+id/hotel_filter_act_layout_hotel"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_hotel_name"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+            <!--Layout for show travel name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/hotel_filter_act_layout_hotelname">
+
+            </LinearLayout>
+            <!--Vertical line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:background="@color/gray"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

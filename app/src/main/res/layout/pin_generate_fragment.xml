@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background">
+
+    <!--Layout for Header Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/black">
+        <TextView
+            android:id="@+id/tvleftdowndetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pin Generate"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <!--Layout for Available Balance, Shopping Banlance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:text="Available Balance:- "
+                    android:id="@+id/pin_generate_fragt_avl_bal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:text="Shopping Balance:- "
+                    android:id="@+id/pin_generate_fragt_txt_shop_bal"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <!--Layout for Kit Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="left"
+                    android:text="Select Package Name*"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:id="@+id/pin_generate_fragt_layout_kit">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pin_generate_fragt_spinner_kit">
+                    </Spinner>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--Layout for Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:visibility="visible"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="left"
+                    android:text="Quantity*"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:id="@+id/pin_generate_fragt_edtxt_qty"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Layout for Transaction Password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="left"
+                    android:text="Transaction Password*"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:inputType="textPassword"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:id="@+id/pin_generate_fragt_edtxt_tPass"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Layout submit Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:text="@string/str_submit"
+                    android:id="@+id/pin_generate_fragt_btn_submitt"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

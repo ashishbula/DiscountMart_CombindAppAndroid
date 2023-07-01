@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+    <!--Custom toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/electricity_billpay_act_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.Dark"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--title-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Electricity Bill Pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_normal"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wallet"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:layout_gravity="right|center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/electricity_billpay_act_txt_walletamount"
+                android:layout_gravity="right|center"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginRight="@dimen/margin_small"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--all Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:paddingBottom="@dimen/margin_large"
+            android:layout_margin="@dimen/margin_v_small"
+            android:orientation="vertical">
+            <!--title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:textSize="@dimen/margin_normal"
+                android:text="Choose Service Provider "/>
+
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/gray"/>
+            <!--Choose service provider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/white"
+                android:gravity="center"
+                android:id="@+id/electricity_billpay_act_layout_oprator"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_choose_oprator"
+                    android:id="@+id/electricity_billpay_act_txt_oprator"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/gray"/>
+            <!--Layout for district-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/electricity_billpay_act_layout_district"
+                android:orientation="vertical">
+
+                <!--title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:textSize="@dimen/margin_normal"
+                    android:text="Choose District"/>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+                <!--Choose district -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_select_disrtict"
+                        android:id="@+id/electricity_billpay_act_txt_district"
+                        android:textSize="@dimen/txt_size_normal"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_down"/>
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+            </LinearLayout>
+
+            <!--Layout for preference/policy number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_ref"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:hint="@string/str_ref_k_id_no"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/electricity_billpay_act_edtxt_ref_no"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Bill/policy Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_billamount"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_bill_amount"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:id="@+id/electricity_billpay_act_edtxt_bill_amnt"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Gas Group Number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_groupno"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_gas_group_no"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/electricity_billpay_act_edtxt_gasno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Customer/policy holder name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_billername"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_customer_name"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/electricity_billpay_act_edtxt_cust_name"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Mobile no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_mobile"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:hint="@string/str_mobile_no"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_mobileno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Email Id-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_email">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_email"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_email"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Location code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_locationcode">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_location_code"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_location_code"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Meter No-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_meterno">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_meter_no"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_meterno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Meter Reading Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_meter_read_date">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_meter_read_date"
+                        android:focusable="false"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_meter_read_date"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Bill Unit-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_bill_unit">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_bill_unit"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_bill_unit"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for cycle no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_cycleno">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_cycle_no"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_cycleno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for client id-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_clientid">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_client_id"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_edtxt_clientid"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for DOB-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_dob">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/str_date_of_birth"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:focusable="false"
+                        android:id="@+id/electricity_billpay_act_edtxt_dob"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for card number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_card_no"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_card_no"
+                    android:textSize="@dimen/txt_size_normal"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_cardno1"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/electricity_billpay_act_edtxt_cardno2"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_cardno3"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:padding="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_cardno4"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for confirm card number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/electricity_billpay_act_layout_confcardno"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_confirm_card_no"
+                    android:textSize="@dimen/txt_size_normal"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_conf_cardno1"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/electricity_billpay_act_edtxt_conf_cardno2"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_conf_cardno3"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:padding="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/electricity_billpay_act_edtxt_conf_cardno4"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout promocode -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/electricity_billpay_act_layout_promocode"
+                android:orientation="horizontal">
+
+                <!--Text Calculate Get Promocode -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_have_promo"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_txt_getpromo"
+                        android:background="@drawable/colorprimary_bg_box"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/electricity_billpay_act_txt_used_promo"
+                        />
+
+                </LinearLayout>
+
+                <!--Edit text Promocode-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:background="@drawable/bg_gray_border_black_box"
+                        android:hint="@string/str_promocode"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:id="@+id/electricity_billpay_act_edtxt_promocode"
+                        android:textSize="@dimen/txt_default"/>
+
+
+                </LinearLayout>
+
+                <!--Remove Promo-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/electricity_billpay_act_layout_remove_promo">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close_black"></ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout promocode discount -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/electricity_billpay_act_layout_discount"
+                android:orientation="horizontal">
+
+                <!--Edit text Promocode-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:inputType="number"
+                            android:hint="@string/str_promocode_discount"
+                            android:paddingLeft="@dimen/margin_v_small"
+                            android:id="@+id/electricity_billpay_act_edtxt_promo_dis"
+                            android:textSize="@dimen/txt_size_normal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--Text Calculate Promo discount-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_btn_discount_cal"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_txt_cal_dis"
+                        android:background="@drawable/colorprimary_bg_box"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Layout file upload-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/electricity_billpay_act_layout_file_upload">
+                <!--Image upload 1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:hint="@string/str_click_here_for_doc"
+                        android:autofillHints="@string/str_click_here_for_doc"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/margin_medium"
+                        android:id="@+id/electricity_billpay_act_txt_file_upload"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_btn_upload"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_upload_file"/>
+
+
+                </LinearLayout>
+
+                <!--Image upload 2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:hint="@string/str_click_here_for_doc2"
+                        android:autofillHints="@string/str_click_here_for_doc2"
+                        android:padding="@dimen/margin_v_small"
+                        android:gravity="center"
+                        android:textSize="@dimen/margin_medium"
+                        android:id="@+id/electricity_billpay_act_txt_file_upload2"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:id="@+id/electricity_billpay_act_btn_upload2"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:text="@string/str_upload_id"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Button Bill Pay-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/electricity_billpay_act_layout_billpay">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_btn_bilPay"
+                    android:textColor="@color/white"
+                    android:id="@+id/electricity_billpay_act_btn_billpay"
+                    android:background="@drawable/selector_bg_btn"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

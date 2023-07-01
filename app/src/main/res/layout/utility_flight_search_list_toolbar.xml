@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/flight_search_list_act_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/flight_search_list_act_toolbar_txtfromcity"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:src="@drawable/right_arrow_white"
+                        android:id="@+id/flight_search_list_act_toolbar_img_arrow"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_from_city"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/white"
+                        android:id="@+id/flight_search_list_act_toolbar_txttocity"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Departure Date-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="fgfgg"
+                        android:id="@+id/flight_search_list_act_toolbar_txt_dDate"
+                        android:textSize="@dimen/txt_size_small"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/flight_search_list_act_toolbar_txt_adult"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/flight_search_list_act_toolbar_txt_child"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="2dp"/>
+                    <!--Travellers Adult-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_small"
+                        android:layout_marginLeft="3dp"
+                        android:text="fgfgg"
+                        android:id="@+id/flight_search_list_act_toolbar_txt_infants"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/utility_flight_search_list_content"/>
+
+</LinearLayout>

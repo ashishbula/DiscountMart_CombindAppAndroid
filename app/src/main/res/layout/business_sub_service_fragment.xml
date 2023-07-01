@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Layout for Select any one title text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/black"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/sub_service_frag_txt_title"
+            android:textSize="@dimen/txt_size_normal"/>
+    </LinearLayout>
+
+    <!--Layout for Select any one title text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:id="@+id/sub_service_frag_layout_note"
+        android:background="@color/lightgray"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select any one service"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_large"/>
+    </LinearLayout>
+
+    <!--Layout for Team Report-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sub_service_frag_layout_team_report">
+        <!--Layout My direct content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_mydirect"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service My Direct -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/my_direct"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Rank Wise-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_rankwise"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/rank_wise"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Level Wise-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_levelwise"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/level_wise"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Downline Detail-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_downline"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/downline_detail"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Layout for Business Report-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sub_service_frag_layout_business_report">
+
+        <!--Layout My Purchase / Invoice-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_mypurchase"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/my_invoice"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Team purchase / Downline purchase-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_team_purchase"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/team_purchase"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for My Voucher-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sub_service_frag_layout_voucher">
+
+        <!--Layout Utility -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_utility"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_utility"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Shopping-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_shopping"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_shopping"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--Layout for Wallet -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sub_service_frag_layout_wallet">
+
+        <!--Layout Main Wallet report -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_main_wallet"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_main_wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Shop Wallet-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_shop_wallet"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Main Wallet Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <!-- Layout for Wallet type List-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_service_frag_layout_walletlist"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sub_service_frag_recycler"/>
+    </LinearLayout>
+
+    <!--Layout for my income-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:id="@+id/sub_service_frag_layout_myincome"
+        android:orientation="vertical">
+        <!--Layout for table header title and value-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="vertical">
+            <!--Layout for Title on table content-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimary"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+                <!--Particular name-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/particular"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_medium"/>
+                </LinearLayout>
+
+                <!--Particular Value-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:padding="@dimen/margin_small"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/value"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_medium"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Layout for Matching/ Development Bonus-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular name Matching bonus-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dev_bonus"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Matching bonus value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_match_bonus"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Direct income/ Referral-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular name Direct income-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ref_bonus"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Direct income value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_dir_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Sponsor Level / Leadership Income Content-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular name Sponsor Level / Leadership Income-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/leadership_bonus"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Sponsor Level Income value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_spons_lvl_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Royalty Income-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <!--Particular Royalty Income -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rank_bonus"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Royalty Income value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_roylty_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Level Income-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular Level Income -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/repurchase_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!-- Level value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_level_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Rank-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular name Total Income-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rank Reward"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Total Income value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_rank"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+
+                <!--Layout for Total Income-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+                    <!--Particular name Total Income-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_income"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_medium"/>
+                    </LinearLayout>
+
+                    <!--Total Income value-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub_service_frag_txt_tot_income"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_small"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                </View>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for Website-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/sub_service_frag_layout_website">
+
+        <!--Layout Business Website content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_business_site"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Business Website -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Business Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Shopping Website -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_shop_site"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Shopping Website Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Shopping Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Utility Website -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_utility_site"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Shopping Website Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Utility Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+
+        <!--Layout Service Big Bazaar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sub_service_frag_layout_bigbazaar_site"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:elevation="@dimen/margin_small">
+
+            <!--Service Big Bazaar Detail-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Big Bazaar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

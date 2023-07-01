@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--Passenger  Name-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:textColor="@color/blue"
+            android:text="mr"
+            android:id="@+id/flight_book_success_act_txt_passenger_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:textColor="@color/black"
+            android:text="ashish"
+            android:id="@+id/flight_book_success_act_txt_passenger_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:textColor="@color/black"
+            android:text="bula"
+            android:id="@+id/flight_book_success_act_txt_passenger_lastname"/>
+    </LinearLayout>
+
+</LinearLayout>

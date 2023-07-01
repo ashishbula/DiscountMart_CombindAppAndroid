@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.zaradobit.utility_services.activity.TransactionActivity">
+
+    <!-- Layout for Transaction Main Wallet-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_small"
+        android:elevation="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/layout_bg_white"
+        android:id="@+id/transaction_act_layout_main_wallet">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_wallet"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Income Wallet"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/margin_normal"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+    <!-- Layout for Transaction Shop / Subscription Wallet-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_small"
+        android:elevation="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/layout_bg_white"
+        android:id="@+id/transaction_act_layout_shop_wallet">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_wallet"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Main Wallet"
+            android:paddingLeft="@dimen/margin_normal"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <!-- Layout for Transaction Cashback Wallet-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_small"
+        android:elevation="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/layout_bg_white"
+        android:id="@+id/transaction_act_layout_cashback">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_wallet"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Referral Point Wallet"
+            android:paddingLeft="@dimen/margin_normal"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <!-- Layout for Transaction Utility Wallet-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_small"
+        android:elevation="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/layout_bg_white"
+        android:id="@+id/transaction_act_layout_utility_wallet">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_wallet"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Utility Wallet"
+            android:paddingLeft="@dimen/margin_normal"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_default"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+</LinearLayout>

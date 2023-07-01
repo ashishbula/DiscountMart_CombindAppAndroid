@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/black"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/report_act_txt_title" />
+
+    </LinearLayout>
+
+    <!--Layout for  Direct summery content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:id="@+id/report_act_layout_mydirect_summery"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <!--Layout for  MFA REport Notes-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:id="@+id/report_act_layout_mfa_notes"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_default"
+            android:id="@+id/report_act_txt_mfa_note1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/txt_default"
+            android:id="@+id/report_act_txt_mfa_note2"/>
+
+
+    </LinearLayout>
+
+    <!-- Layout for Wallet Status Report-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:visibility="gone"
+        android:id="@+id/report_act_layout_wallet_status"
+        android:orientation="vertical">
+
+        <!--Balance-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:id="@+id/report_act_layout_wallet_status"
+            android:orientation="horizontal">
+
+        </LinearLayout>-->
+    </LinearLayout>
+
+    <!--Record -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:id="@+id/report_act_txt_record"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/report_act_txt_lbv"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/report_act_txt_rbv"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <!-- Layout for Monthly Reward point Total-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:visibility="gone"
+        android:id="@+id/report_act_layout_rewardpoint_total"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/txt_default"
+            android:id="@+id/report_act_txt_rewardpoint_total"/>
+    </LinearLayout>
+
+    <!--No Record Image-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/report_act_layout_noRecord"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/no_result"/>
+
+    </LinearLayout>
+
+    <!--Layout Table Main Wallet REport-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:id="@+id/report_act_layout_table"
+        android:orientation="vertical">
+        <!--Teble-->
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/LightGray">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <!--TABLE-->
+                        <ScrollView
+                            android:id="@+id/report_act_scrollView_Vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fillViewport="true"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
+                            android:scrollbarStyle="outsideInset"
+                            android:scrollbars="vertical">
+
+                            <HorizontalScrollView
+                                android:id="@+id/report_act_scrollView_scrollHorizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:fillViewport="true"
+                                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="horizontal">
+
+
+                                <TableLayout
+                                    android:id="@+id/report_act_tablelayout_wallet_record"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:gravity="center">
+
+                                </TableLayout>
+
+                            </HorizontalScrollView>
+
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--click to Next-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center"
+        android:visibility="gone"
+        android:id="@+id/report_act_layout_next"
+        android:gravity="center|bottom">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            android:layout_margin="3dp"
+            app:cardBackgroundColor="@color/LightGray"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click Here Next Record.."
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/report_act_txt_next">
+
+            </TextView>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

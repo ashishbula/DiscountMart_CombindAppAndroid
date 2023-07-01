@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#cf000000"
+    tools:context="in.discountmart.utility_services.travel.bus.bus_activity.BusBookFinalDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/margin_xx_large"
+            android:layout_height="@dimen/margin_xx_large"
+            android:src="@drawable/ic_close"
+            android:background="@color/black"
+            android:layout_gravity="center"
+            android:id="@+id/bus_book_detail_act_imag_close"/>
+
+    </LinearLayout>
+    <!--Layout for flight detail and passenger detail-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/str_review_trip"/>
+
+                <!--Header for Bus detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Select Bus Detail"
+                        android:textSize="@dimen/txt_size_normal"/>
+                </LinearLayout>
+
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+                <!--Layout for From city and to City-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text From City-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_detail_act_txt_fromcity"/>
+
+                    <!--Text to City-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bus_book_detail_act_txt_tocity"/>
+                </LinearLayout>
+                <!--Layout for select bus Detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:orientation="vertical"
+                    android:id="@+id/bus_book_detail_act_layout_bus_detail">
+
+                </LinearLayout>
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+                <!--Header for Passenger-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Passenger Information"
+                        android:textSize="@dimen/txt_size_normal"/>
+                </LinearLayout>
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+                <!--Layout for Passenger Detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <!--S.no-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="S.no"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_detail_act_txt_seat_count"/>
+
+                    <!--SEat type-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".8"
+                        android:layout_height="wrap_content"
+                        android:text="Seat"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_detail_act_txt_seat_name"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1">
+
+                    </LinearLayout>
+
+                    <!--Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.3"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_detail_act_txt_passenger_name"/>
+
+                    <!--Age-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Age"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/bus_book_detail_act_txt_passenger_age"/>
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:background="@color/gray"/>
+
+
+                <!--Passenger content-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:id="@+id/bus_book_detail_act_layout_passenger_detail">
+
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:background="@color/gray"/>
+
+                <!--Bus Fare Detail-->
+                <!--Text Title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="Total Paid Amount"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Text for Total paid amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_total_fare"/>
+
+                    <!--Text for Total paid amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:paddingLeft="0dp"
+                        android:text="0"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bus_book_detail_act_txt_total_amount"/>
+
+                </LinearLayout>
+
+                <!--Layout for offer-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Offers:-"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textColor="@color/black"/>
+
+                    <!--discount-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="@string/str_have_discount"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_v_small"
+                                android:text=":- "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="100"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:id="@+id/bus_book_detail_act_txt_discount"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--Layout for discount detail-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin_normal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/bus_book_detail_act_txt_dis_detail"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/txt_size_normal"
+                    android:visibility="visible"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:id="@+id/bus_book_detail_act_layout_promo"
+                    android:background="@color/white">
+                    <!--Promo coupon-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:visibility="gone"
+                        android:id="@+id/bus_book_detail_act_layout_promocode"
+                        android:orientation="vertical">
+                        <!--Text couponcode, and couponcod-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_coupon_code"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bus_book_detail_act_lyout_remove_promo"
+                                android:background="@drawable/colorprimary_bg_box"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/bus_book_detail_act_txt_promocode"
+                                    android:textSize="@dimen/txt_size_normal"
+                                    android:text="@string/str_coupon_code"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:src="@drawable/ic_close"
+                                    android:id="@+id/bus_book_detail_act_img_remove_promo"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Detail about coupon code and cashback amount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_small">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:id="@+id/bus_book_detail_act_txt_cashback_detail"/>
+                        </LinearLayout>
+                        <!--coupon from and to date -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_small">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:id="@+id/bus_book_detail_act_txt_promo_expire_Date"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Promocode-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:id="@+id/bus_book_detail_act_layout_have_promo">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/orange8"
+                            android:gravity="center"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/bus_book_detail_act_txt_have_promo"
+                            android:text="@string/str_have_promo"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray3"
+            android:layout_margin="0dp">
+
+            <!--Layout for total amount-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:id="@+id/bus_book_detail_act_layout_fareamout"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_size_large"
+                    android:id="@+id/bus_book_detail_act_txt_total_amnt"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textColor="@color/orange8"
+                        android:id="@+id/bus_book_detail_act_txt_total_travelor"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:src="@drawable/ic_arrow_drop_up"
+                        android:id="@+id/bus_book_detail_act_img_Fare"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Layout for button-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:id="@+id/bus_book_detail_act_layout_btn"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn"
+                    android:visibility="visible"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/bus_book_detail_act_btn_continue"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".travel.bus.bus_fragment.Boarding_DropPointFragment">
+
+    <!--Layout for  content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Layout for text lower, upper -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:background="@drawable/black_border_bg_box"
+                android:elevation="@dimen/margin_small"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_boardpoint"
+                    android:background="@drawable/colorprimary_bg_box"
+                    android:id="@+id/droppoint_frag_txt_board_point"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_droppoint"
+                    android:id="@+id/droppoint_frag_txt_drop_point"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+
+            <!--Layout for Drop and boarding point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+
+
+                <!--Layout for Boarding point -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/droppoint_frag_layout_boarding"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--Tex View-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="@string/str_select_boardpoint"/>
+                    <!--Tex View to city-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/droppoint_frag_txt_fromcity"/>
+
+                    <!--recycler view  for drop point-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/droppoint_frag_recycler_boarding"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <!--Layout for Drop point -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/droppoint_frag_layout_drop"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--Tex View-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="@string/str_select_droppoint"/>
+                    <!--Tex View to city-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/droppoint_frag_txt_tocity"/>
+
+                    <!--recycler view  for drop point-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/droppoint_frag_recycler_drop"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Layout for button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_v_small"
+        android:gravity="center"
+        android:visibility="gone"
+        android:elevation="@dimen/margin_v_small"
+        android:id="@+id/droppoint_frag_layout_select_seat"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"
+            android:text="@string/str_select_seat"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id Activation"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Roots Layout for content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <!--Layout for Available Balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_available_bal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_large"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_large"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:id="@+id/id_activation_act_txt_bal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_large"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal">
+                <!--Member Id-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:text="@string/str_member_id">
+
+                    </TextView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:autofillHints="@string/str_member_id"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_member_id"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:id="@+id/id_activation_act_edTxt_memId" />
+
+
+
+                </LinearLayout>
+
+                <!-- button check -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_default"
+                        android:text="">
+
+                    </TextView>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:autofillHints="@string/str_member_id"
+                        android:background="@color/black"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_default"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:id="@+id/id_activation_act_btn_check"
+                        android:text="@string/str_check"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Member Name-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"
+                android:id="@+id/id_activation_act_txt_membername"
+                />
+
+            <!--Layout for other content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:id="@+id/id_activation_act_layout_content"
+                android:visibility="visible"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="vertical">
+                <!--Spinner Package-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/select_pckg"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/id_activation_act_spnr_pck">
+                        </Spinner>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Amount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/enter_amount"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:background="@drawable/white_bg_box_black_border"
+                            android:inputType="text"
+                            android:textSize="@dimen/txt_default"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/amount"
+                            android:autofillHints="@string/amount"
+                            android:id="@+id/id_activation_act_edTxt_amount"
+                            />
+
+
+
+
+                </LinearLayout>
+
+                <!--Spinner Payment Type-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/payment_type"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/id_activation_act_spnr_paytype">
+                        </Spinner>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Transaction Password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/str_transaction_pas"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/txt_default"
+
+                        android:hint="@string/str_transaction_pas"
+                        android:autofillHints="@string/str_transaction_pas"
+                        android:id="@+id/id_activation_act_edTxt_trans_pass" />
+
+
+
+
+                </LinearLayout>
+
+
+                <!--Button Submitt-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:visibility="visible"
+                    android:id="@+id/id_activation_act_layout_sbmitt"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/id_activation_act_btn_submitt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_default"
+                        android:text="@string/str_submit"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:textColor="@color/red"
+                android:id="@+id/id_activation_act_txt_error_msg"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

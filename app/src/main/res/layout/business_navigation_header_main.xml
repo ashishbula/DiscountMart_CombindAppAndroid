@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/margin_medium"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!--Layout for User name, id-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bus_homedash_act_txt_userId"
+                android:textSize="@dimen/txt_default"
+                android:fontFamily="@font/abhaya_libre_bold"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/bus_homedash_act_txt_UserName"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/bus_homedash_act_txt_rank"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <!--Layout for profile pic-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="@dimen/margin_small"
+                    app:cardElevation="0dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="70dp">
+                    <ImageView
+                        android:id="@+id/bus_homedash_act_img_profileImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small"
+                        android:scaleType="fitCenter"
+                        />
+                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/bus_homedash_act_img_editimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_gravity="end|bottom"
+                    android:src="@drawable/ic_add_photo" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

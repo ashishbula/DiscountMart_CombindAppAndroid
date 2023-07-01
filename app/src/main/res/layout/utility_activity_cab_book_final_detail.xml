@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cf000000"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.utility_cab.cab_activity.CabBookFinalDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/margin_xx_large"
+            android:layout_height="@dimen/margin_xx_large"
+            android:src="@drawable/ic_close"
+            android:background="@color/black"
+            android:layout_gravity="center"
+            android:id="@+id/cab_book_detail_act_imag_close"/>
+
+    </LinearLayout>
+    <!--Layout for Cab  and passenger detail-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/str_review_trip"/>
+
+                <!--Header for cab detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Selected Cab Detail"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                </LinearLayout>
+
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+                <!--Layout for From city and to City-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text From City-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_fromcity"/>
+
+                    <!--Text to City-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_large"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_tocity"/>
+                </LinearLayout>
+
+                <!--Layout for Departure Date  and  Total distance/ KM-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text Total distance/ KM-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_datetime"/>
+
+
+                </LinearLayout>
+
+                <!--Layout for Cab name  and  Cab type-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text Cab name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_cabname"/>
+
+                    <!--Text  Cab type-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_cabtype"/>
+                    <!--Text Departure Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_km"/>
+                </LinearLayout>
+
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+
+                <!--Header for Passenger-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Passenger Information"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+                    <!--Text no of Passenger -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_passenger_no"/>
+                </LinearLayout>
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/gray"/>
+                <!--Layout for  Passenger name , no of Pax -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text Passenger name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_passenger_name"/>
+
+                    <!--Text no of Passenger -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_passenger_gender"/>
+
+
+                </LinearLayout>
+
+                <!--Layout for Passenger Mobile  and  Passenger Email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text Mobile and Email-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_mobile"/>
+
+                    <!--Text  Passenger Email-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_email"/>
+                </LinearLayout>
+
+                <!--Layout for Passenger DropAddress  and  Passenger Pick Address-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <!--Text Passenger DropAddress-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/cab_book_detail_act_txt_pic_address"/>
+
+                    <!--Text  Passenger Pick Address-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_drop_address"/>
+                </LinearLayout>
+                <!--Line-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:background="@color/gray"/>
+
+                <!--Cab Fare Detail-->
+                <!--Text Title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="Total Paid Amount"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Text for Total paid amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_total_fare"/>
+
+                    <!--Text for Total paid amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:paddingLeft="0dp"
+                        android:text="0"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_book_detail_act_txt_total_amount"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray3"
+            android:layout_margin="0dp">
+
+            <!--Layout for total amount-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:id="@+id/cab_book_detail_act_layout_fareamout"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_size_large"
+                    android:id="@+id/cab_book_detail_act_txt_total_amnt"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:textColor="@color/orange8"
+                        android:id="@+id/cab_book_detail_act_txt_total_travelor"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Layout for button-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:id="@+id/cab_book_detail_act_layout_btn"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_bg_btn"
+                    android:visibility="visible"
+                    android:text="@string/str_continue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_default"
+                    android:id="@+id/cab_book_detail_act_btn_continue"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

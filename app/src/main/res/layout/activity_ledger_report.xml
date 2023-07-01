@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.report.activity.LedgerReportActivity">
+
+    <!--Layout for From and to Date-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:layout_margin="@dimen/margin_v_small"
+        android:elevation="@dimen/margin_v_small"
+        android:background="@drawable/layout_bg_white"
+        android:orientation="vertical">
+
+        <!--Text Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_medium"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/ledger_report_note"/>
+        <!--Text Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:text="@string/select_date"/>
+        <!--Layout for from,to date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--From Date-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/ledger_report_act_edtxt_from"
+                    android:drawableRight="@drawable/ic_date"
+                    android:hint="@string/from_date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- To Date-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/ledger_report_act_edtxt_to"
+                    android:drawableRight="@drawable/ic_date"
+                    android:hint="@string/to_date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!--Layout for services spinner-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_service"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:background="@drawable/white_bg_box"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/billpay_report_act_spinner_services"
+                    style="@style/Base.Widget.AppCompat.DropDownItem.Spinner">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_submit"
+                android:id="@+id/ledger_report_act_btn_submit"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_bg_btn"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Layout for list content-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:orientation="vertical"
+            android:id="@+id/ledger_report_act_layout_record">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledger_report_act_recycler_content"
+                android:paddingBottom="@dimen/margin_medium">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/ledger_report_act_layout_norecord"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/no_result"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

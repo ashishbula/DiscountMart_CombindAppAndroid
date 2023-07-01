@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--Header Title Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flight_passenger_item_layout_header"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_traveler_information"
+            android:textSize="@dimen/txt_size_large"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:background="@color/gray3"
+            android:textSize="@dimen/txt_size_medium"
+            android:text="@string/str_name_shoud_be_govt"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

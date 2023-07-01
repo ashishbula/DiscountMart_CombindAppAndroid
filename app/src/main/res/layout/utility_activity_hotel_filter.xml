@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="false"
+    tools:context=".travel.hotel.hotel_activity.HotelFilterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <!--Tool Bar-->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentInsetStart="0dp">
+
+            <!--Layout for toolbar content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Image close-->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hotel_filter_act_img_close"
+                    android:src="@drawable/ic_close"/>
+
+                <!--Text filter-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Filters"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_large"
+                    android:textColor="@color/white"/>
+
+                <!--Text Reset-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/hotel_filter_act_txt_reset"
+                    android:textSize="@dimen/txt_size_large"
+                    android:text="@string/str_reset"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--attach layout-->
+    <include layout="@layout/utility_hotel_filter_content"/>
+
+    <!--Button Apply flter-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/margin_medium"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_bg_btn"
+            android:textColor="@color/white"
+            android:text="@string/str_apply_filter"
+            android:id="@+id/hotel_filter_act_btn_apply"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            />
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.travel.hotel.hotel_activity.HotelBookFinalDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Layout for hotel name , start address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+                <!--Text hotel name-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_hotel_name"
+                    android:textSize="@dimen/margin_normal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/room_book_final_detail_act_txt_hotelname"/>
+
+                <!--Text hotel rating bar-->
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:numStars="5"
+                    android:id="@+id/room_book_final_detail_act_rating_bar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+                <!--Text hotel city-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:text="@string/str_to_city"
+                    android:id="@+id/room_book_final_detail_act_txt_hotel_city"/>
+
+                <!--Text hotel Room Type-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text="@string/str_room"
+                    android:id="@+id/room_book_final_detail_act_txt_roomName"/>
+            </LinearLayout>
+
+            <!--Layout for Check in date , check out date, room guest-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:elevation="@dimen/margin_medium"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/full_round_corner_white_box"
+                android:orientation="horizontal">
+
+                <!--Text check in date-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2-2-2019"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_book_final_detail_act_txt_checkIn_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+                <!--Text check out date-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2-2-2019"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_book_final_detail_act_txt_checkOut_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+                <!--Text hotel room-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_book_final_detail_act_txt_hotel_room"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+                <!--Text hotel guest-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_book_final_detail_act_txt_hotel_guest"/>
+
+            </LinearLayout>
+
+            <!--Header for Passenger-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center|left"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Passenger Information"
+                    android:textSize="@dimen/txt_default"/>
+            </LinearLayout>
+
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/gray"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+                <!--Passenger Type and Passenger count-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="@dimen/margin_50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_v_small"
+                            android:text="S.no"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_v_small"
+                            android:textStyle="bold"
+                            android:text="Pax Type"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:padding="@dimen/margin_v_small"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_v_small"
+                            android:text="Gender"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_v_small"
+                            android:text="Name"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+                    <!--Layout for Passenger Detail-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:id="@+id/room_book_final_detail_act_layout_passenger_detail">
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <!--Bus Fare Detail-->
+            <!--Text Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:text="Total Fare"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Text for Total paid amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_total_fare"/>
+
+                <!--Text for Total paid amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:paddingLeft="0dp"
+                    android:text="0"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_book_final_detail_act_txt_total_amount"/>
+
+            </LinearLayout>
+
+            <!--Layout for offer-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offers:-"
+                    android:textSize="@dimen/txt_size_large"
+                    android:textColor="@color/black"/>
+
+                <!--discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="@string/str_have_discount"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text=":- "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="100"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:id="@+id/room_book_final_detail_act_txt_discount"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Layout for discount detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_normal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/room_book_final_detail_act_txt_dis_detail"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Promocode-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/txt_size_normal"
+                android:visibility="visible"
+                android:paddingBottom="@dimen/margin_normal"
+                android:id="@+id/room_book_final_detail_act_layout_promo"
+                android:background="@color/white">
+                <!--Promo coupon-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:visibility="visible"
+                    android:id="@+id/room_book_final_detail_act_layout_promocode"
+                    android:orientation="vertical">
+                    <!--Text couponcode, and couponcod-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_coupon_code"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/room_book_final_detail_act_lyout_remove_promo"
+                            android:background="@drawable/colorprimary_bg_box"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:id="@+id/room_book_final_detail_act_txt_promocode"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_coupon_code"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:src="@drawable/ic_close"
+                                android:id="@+id/room_book_final_detail_act_img_remove_promo"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Detail about coupon code and cashback amount-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/room_book_final_detail_act_txt_cashback_detail"/>
+                    </LinearLayout>
+                    <!--coupon from and to date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/room_book_final_detail_act_txt_promo_expire_Date"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/room_book_final_detail_act_layout_have_promo">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange8"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/room_book_final_detail_act_txt_have_promo"
+                        android:text="@string/str_have_promo"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Layout for base fare , buttin  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray3"
+        android:elevation="@dimen/margin_small"
+        android:padding="@dimen/margin_v_small">
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:id="@+id/room_book_final_detail_act_layout_fareamout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/room_book_final_detail_act_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/room_book_final_detail_act_txt_total_room"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/room_book_final_detail_act_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout for button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_bg_btn"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_book_final_detail_act_btn_continue"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

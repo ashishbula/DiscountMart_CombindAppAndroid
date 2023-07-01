@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_40dp"
+            android:orientation="vertical">
+
+            <!--Layout Verify Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_gravity="center|right"
+                android:id="@+id/kyc_activity_layout_verify"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--TextView Status -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_txt_verify_status"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/black"/>
+
+                <!--TextView Rejected Date -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_txt_rejected_date"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+
+                <!-- TextView Rejected Remark -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_txt_rejected_mark"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+
+                <!-- TextView Rejected Reason -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_txt_rejected_reason"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!--Text Address Deail title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_default"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/address_detail"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <!--Address,state,city,pincode,mobile,phone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:id="@+id/kyc_activity_layout_click"
+                android:orientation="vertical">
+
+                <!--Address-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text Address-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/str_address"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@string/str_address"
+                        android:hint="@string/str_address"
+                        android:gravity="top"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:minLines="2"
+                        android:textColor="@color/black"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:inputType="textMultiLine"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/kyc_activity_edTxt_address"/>
+
+
+                </LinearLayout>
+
+                <!--Pincode Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text Address-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/pincode"/>
+
+                    <EditText
+                       style="@style/EditTextStyle1"
+                        android:maxLength="6"
+                        android:autofillHints="@string/str_pin"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_pin"
+                        android:inputType="number"
+                        android:id="@+id/kyc_activity_edTxt_pincode"/>
+
+
+                </LinearLayout>
+
+                <!--State Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text Address-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/str_state"/>
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:autofillHints="@string/str_state"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:visibility="gone"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_state"
+                        android:focusable="false"
+                        android:id="@+id/kyc_activity_edTxt_state"/>
+                    <!-- State spinner-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/txt_default"
+                            android:layout_marginTop="0dp"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/kyc_activity_spiner_state">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--District Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text District-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/str_district"/>
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:autofillHints="@string/str_district"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_district"
+                        android:focusable="true"
+                        android:id="@+id/kyc_activity_edTxt_district"/>
+
+
+                </LinearLayout>
+
+                <!--City-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_city"
+                        android:textColor="@color/black"
+                        />
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:textSize="@dimen/txt_default"
+                        android:focusable="true"
+                        android:hint="@string/str_city"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:autofillHints="@string/str_city"
+                        android:id="@+id/kyc_activity_edTxt_city"/>
+
+
+
+                </LinearLayout>
+
+                <!--Area Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:layout_gravity="left"
+                        android:paddingLeft="2dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/kyc_activity_spiner_area">
+                        </Spinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Other Area-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_layout_other_area"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_area_name"
+                        android:textColor="@color/black"
+                        />
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/str_area_name"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:autofillHints="@string/str_area_name"
+                        android:inputType="text"
+                        android:id="@+id/kyc_activity_edTxt_other_area"/>
+
+
+
+                </LinearLayout>
+
+                <!--Address Proof Id Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_address_id"
+                        android:layout_gravity="left"
+                        android:paddingLeft="2dp"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/txt_default"
+                            android:layout_marginTop="0dp"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/kyc_activity_spiner_proof">
+
+                        </Spinner>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:backgroundTint="@color/gray"/>
+                </LinearLayout>
+
+                <!--Aadhar No,Voter Id,License Edit Text Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_select_id_no"
+                       android:textColor="@color/black"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edtxt_height"
+                            android:maxLength="12"
+                            android:textSize="@dimen/txt_default"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:paddingRight="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:background="@drawable/white_bg_box_black_border"
+                            android:autofillHints="@string/str_select_id_no"
+                            android:hint="@string/str_select_id_no"
+                            android:inputType="textNoSuggestions|text"
+                            android:id="@+id/kyc_activity_edTxt_aadhar1"
+                             />
+                </LinearLayout>
+
+                <!--Layout for Upload Image address kyc doc-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--For front side address proof id image-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_gravity="left"
+                            android:text="Front image of Id Proof."/>
+                            <ImageView
+                                android:layout_width="@dimen/margin_40dp"
+                                android:id="@+id/kyc_activity_img_front_img"
+                                android:layout_height="@dimen/margin_40dp"
+                                android:gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_camera_black"
+                                android:padding="@dimen/margin_small" />
+
+                        <TextView
+                            android:id="@+id/kyc_activity_txt_front_img_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:gravity="center"
+                            android:textSize="@dimen/txt_small"
+                            android:text="No File Attach"
+                            android:textColor="@color/red" />
+
+
+                    </LinearLayout>
+
+                    <!--For Back side address proof id image-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="0dp"
+                            android:layout_gravity="left"
+                            android:text="Back image of Id Proof."/>
+
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_40dp"
+                            android:id="@+id/kyc_activity_img_back_img"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_camera_black"
+                            android:padding="@dimen/margin_small" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:textSize="@dimen/txt_small"
+                            android:id="@+id/kyc_activity_txt_back_img_name"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGray"
+                android:layout_marginTop="@dimen/margin_small"/>
+            <!-- Layout content for Bank Detail-->
+
+            <!--Account type, Account no. bank detail, branch name, ifsc code -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:id="@+id/kyc_activity_layout_clic"
+                android:orientation="vertical">
+                <!--Text Bank Deail title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:textStyle="bold"
+                    android:text="@string/str_bank_detail"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small"/>
+
+                <!--Account type Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Account Type"
+                        android:layout_gravity="left"
+                        android:paddingLeft="2dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/kyc_activity_spiner_account">
+                        </Spinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Account no Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text account no-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/ac_no"/>
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:autofillHints="@string/str_ac_no"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_ac_no"
+                        android:inputType="number"
+                        android:id="@+id/kyc_activity_edTxt_acno"/>
+
+
+                </LinearLayout>
+
+                <!--Bank name Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Bank"
+                        android:layout_gravity="left"
+                        android:paddingLeft="2dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_height="@dimen/spiner_height"
+                            android:id="@+id/kyc_activity_spiner_bank">
+                        </Spinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Other Bank Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kyc_activity_layout_other_bank"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_bank_name"
+                        android:textColor="@color/black"
+                        />
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/str_bank_name"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:autofillHints="@string/str_bank_name"
+                        android:inputType="text"
+                        android:id="@+id/kyc_activity_edTxt_other_bank"/>
+
+
+
+                </LinearLayout>
+
+                <!--Bank Branck name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text Branck name-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="@string/branch_name"/>
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:autofillHints="@string/branch_name"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/branch_name"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:id="@+id/kyc_activity_edTxt_branch"/>
+
+
+                </LinearLayout>
+
+                <!--IFSc Code-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ifsccode"
+                        android:textColor="@color/black"
+                        />
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:textSize="@dimen/txt_default"
+                        android:hint="@string/ifsccode"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:autofillHints="@string/ifsccode"
+                        android:id="@+id/kyc_activity_edTxt_ifsc"/>
+
+                </LinearLayout>
+
+                <!--Layout for Upload Image Bank Detail doc-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_gravity="left"
+                        android:text="Upload doc of Bank Proof."/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/margin_40dp"
+                            android:id="@+id/kyc_activity_img_bank_doc"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_camera_black"
+                            android:padding="@dimen/margin_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:textSize="@dimen/txt_small"
+                            android:id="@+id/kyc_activity_txt_bank_img_pah"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Layout content for PAN Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGray"
+                    android:layout_marginTop="@dimen/margin_small"/>
+
+                <!--Text Pan Deail title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:textStyle="bold"
+                    android:text="@string/str_pan_detail"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small"/>
+
+                <!--PAN no Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <!--Text Pan no-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:text="Pan No (All Letter shoud be Capital)"/>
+
+                    <EditText
+                        style="@style/EditTextStyle1"
+                        android:autofillHints="@string/str_pan_num"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/white_bg_box_black_border"
+                        android:hint="@string/str_pan_num"
+                        android:textAllCaps="true"
+                        android:inputType="text"
+                        android:id="@+id/kyc_activity_edTxt_panno"/>
+
+
+                </LinearLayout>
+
+                <!-- Layout for Pan Image upload-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_gravity="left"
+                        android:text="Upload doc of PAN Proof."/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_40dp"
+                            android:id="@+id/kyc_activity_img_pan"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_camera_black"
+                            android:padding="@dimen/margin_small" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:textSize="@dimen/txt_small"
+                            android:id="@+id/kyc_activity_txt_pan_img_pah"/>
+
+
+                    </LinearLayout>
+
+                   
+                </LinearLayout>
+            </LinearLayout>
+          
+            <!--Button Submitt-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:padding="2dp"
+                android:id="@+id/kyc_activity_layout_submit"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_default"
+                    android:id="@+id/kyc_activity_btn_submit"
+                    android:text="@string/str_submit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

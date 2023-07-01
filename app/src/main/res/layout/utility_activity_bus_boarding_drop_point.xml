@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:showIn=".travel.bus.bus_activity.BusBoarding_DropPointActivity"
+    >
+    <!--Layout for Travel name and bus type, and departure date -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_v_small"
+        android:elevation="@dimen/margin_v_small"
+            android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!--Travel name and bus type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text Travel Name-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_from_city"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/droppoint_activity_txt_travel_name"/>
+            <!-- Departure Date-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium"
+                android:visibility="visible"
+                android:id="@+id/droppoint_activity_txt_dep_Date"/>
+
+        </LinearLayout>
+
+        <!--Bus Type, Cancel policy-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_v_small"
+            android:orientation="horizontal">
+
+            <!--Text Bus Type-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/str_bus_type"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:id="@+id/droppoint_activity_txt_bus_type"/>
+
+            <!--Text Bus Cancel Policy-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="@string/str_cancel_policy"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/droppoint_activity_txt_bus_policy"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--Layout for  content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/margin_v_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Layout for text lower, upper -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:background="@drawable/black_border_bg_box"
+                android:elevation="@dimen/margin_small"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_boardpoint"
+                    android:background="@drawable/colorprimary_bg_box"
+                    android:id="@+id/droppoint_activity_txt_board_point"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_droppoint"
+                    android:id="@+id/droppoint_activity_txt_drop_point"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+
+            <!--Layout for Drop and boarding point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+
+
+                <!--Layout for Boarding point -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/droppoint_activity_layout_boarding"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--Tex View-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="@string/str_select_boardpoint"/>
+                    <!--Tex View to city-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/droppoint_activity_txt_fromcity"/>
+
+                    <!--recycler view  for drop point-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/droppoint_activity_recycler_boarding"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <!--Layout for Drop point -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/droppoint_activity_layout_drop"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <!--Tex View-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_large"
+                        android:text="@string/str_select_droppoint"/>
+                    <!--Tex View to city-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/droppoint_activity_txt_tocity"/>
+
+                    <!--recycler view  for drop point-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/droppoint_activity_recycler_drop"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Layout for button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_small"
+        android:gravity="center"
+        android:visibility="visible"
+        android:elevation="@dimen/margin_v_small"
+        android:id="@+id/droppoint_activity_layout_continue"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"
+            android:text="@string/str_continue"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

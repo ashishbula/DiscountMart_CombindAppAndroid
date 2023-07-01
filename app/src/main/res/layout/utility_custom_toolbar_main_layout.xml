@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/tools"
+    android:id="@+id/homedash_layout_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--App bar layout-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.Light"
+            android:elevation="@dimen/margin_small">
+            <!--Custom tool bar-->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/home_dash_appbar_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:elevation="@dimen/margin_small"
+                app:contentInsetStart="0dp">
+                <!--Custom toolbar layout-->
+                <LinearLayout
+                    android:id="@+id/custom_toolbat_layout_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--actionlogo-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textSize="@dimen/txt_large"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"/>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:src="@mipmap/ic_appbar_title"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:paddingBottom="@dimen/margin_60dp"
+            android:id="@+id/utility_content_frame"/>
+
+
+
+        <!--<include layout="@layout/home_layout_content"/>-->
+    </LinearLayout>
+
+
+    <!--<FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+    </FrameLayout>-->
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/homedash_navigation_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bottom_bg"
+            android:splitMotionEvents="false"
+            android:visibility="visible"
+            app:itemHorizontalTranslationEnabled="false"
+            app:itemIconTint="@color/utility_bottom_nav_icon_selecotr"
+            app:itemTextColor="@color/utility_bottom_nav_text_selecotr"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/utility_bottom_nav_item" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

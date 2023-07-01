@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="utility_nav_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homedash_nav_home"
+            android:icon="@drawable/ic_home_orange_icon"
+            android:title="@string/str_home" />
+        <item
+            android:id="@+id/homedash_nav_business"
+            android:icon="@drawable/ic_business"
+            android:visible="false"
+            android:title="Business" />
+        <item
+            android:id="@+id/homedash_nav_profile"
+            android:visible="false"
+            android:icon="@drawable/ic_persone_orange_icon"
+            android:title="@string/str_profile" />
+        <item
+            android:id="@+id/homedash_nav_fund_req"
+            android:icon="@drawable/ic_wallet"
+            android:visible="false"
+            android:title="Fund Request" />
+        <item
+            android:id="@+id/homedash_nav_bank"
+            android:icon="@drawable/ic_bank_black"
+            android:visible="false"
+            android:title="Bank" />
+        <item
+            android:id="@+id/homedash_nav_promo"
+            android:icon="@drawable/ic_wallet"
+            android:visible="true"
+            android:title="All Promocode" />
+
+
+        <item
+            android:id="@+id/homedash_nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="Setting" />
+
+        <item
+            android:id="@+id/homedash_nav_logout"
+            android:icon="@drawable/ic_logout_black"
+            android:title="@string/str_logout" />
+        <item
+            android:id="@+id/homedash_nav_login"
+            android:icon="@drawable/ic_login_black"
+            android:title="@string/str_logout" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/homedash_nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/homedash_nav_send"
+                android:icon="@drawable/ic_send"
+                android:title="Send"
+                android:visible="false"/>
+
+        </menu>
+    </item>
+
+</menu>

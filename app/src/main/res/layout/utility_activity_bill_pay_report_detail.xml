@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".report.activity.BillPayReportDetailActivity">
+
+    <!--Layout for content-->
+
+    <!--Layout for Time date , status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Recharge date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/billpay_detail_act_txt_date"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+        <!--Status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Text Status note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/billpay_detail_act_txt_statusnote"/>
+            <!--Text Status-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/billpay_detail_act_txt_status"/>
+        </LinearLayout>
+
+        <!--Approved-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Text Status note-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:id="@+id/billpay_detail_act_txt_approve"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Layout for transaction id, operator id-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:orientation="vertical">
+
+
+        <!--Text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Operator ID"/>
+
+        <!--text operator ID-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/billpay_detail_act_txt_operatorid" />
+
+
+    </LinearLayout>
+
+    <!--Recharge status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--Text service type-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/billpay_detail_act_txt_service_type"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--Iamge -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="wrap_content"
+                android:id="@+id/billpay_detail_act_img" />
+
+            <!--Layout for service type, name-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Text Service name-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"
+                    android:id="@+id/billpay_detail_act_txt_service_operator"/>
+
+            </LinearLayout>
+
+            <!--Text Price-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_detail_act_txt_price"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <!--Layout for debit , credit from-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_normal"
+            android:text="Debited from"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/billpay_detail_act_txt_wallet"
+            android:layout_height="wrap_content" />
+
+        <!--Recharge utility_wallet from-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:id="@+id/billpay_detail_act_img_wallet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_detail_act_txt_debitamount"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

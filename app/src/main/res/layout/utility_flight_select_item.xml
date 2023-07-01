@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <!--Layout for Flight logo, Name , Code-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <!--Layout for Flight Logo , name,code-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <!--Layout for Flight Logo-->
+            <ImageView
+                android:layout_width="@dimen/margin_x_large"
+                android:layout_height="@dimen/margin_x_large"
+                android:id="@+id/flight_select_item_img_flight_logo"/>
+
+            <!--Flight NAme -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"
+                android:textColor="@color/black"
+                android:id="@+id/flight_select_list_item_txt_flight_name"
+                android:text="AirIndia"/>
+            <!--Flight  code-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/flight_select_list_item_txt_flight_code"
+                android:text="AI-492"/>
+        </LinearLayout>
+
+        <!--Layout for cancel policy-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/flight_select_item_layout_cancelpolicy"
+            android:layout_weight="1">
+
+            <!--Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/str_cancel_policy"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Layout for Flight Departure Time,Day , Form City-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--Departure Flight Icon-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flight_takeoff"/>
+                <!--Form City-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textColor="@color/black"
+                    android:id="@+id/flight_select_list_item_txt_from_city"
+                    android:text="JAI"/>
+
+            </LinearLayout>
+            <!--Departure time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textStyle="bold"
+                android:id="@+id/flight_select_list_item_txt_departure_time"
+                android:text="time"/>
+            <!--Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textColor="@color/black"
+                android:id="@+id/flight_select_list_item_txt_departure_date"
+                android:text="12/03/19"/>
+            <!--Day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:visibility="gone"
+                android:textSize="@dimen/txt_size_small"
+                android:id="@+id/flight_select_list_item_txt_departure_day"
+                android:text="Monday"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <!--Layout for Flight Reach Time,Stop-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <!--Icon Clock-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_schedule"/>
+
+            <!--Flight Total Reach Time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_select_list_item_txt_total_hour"
+                android:text="time"/>
+
+            <!--Stop -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_small"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:id="@+id/flight_select_list_item_txt_stop"
+                android:text="NotStop"/>
+
+            <!--Refundable-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_small"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:visibility="gone"
+                android:id="@+id/flight_select_list_item_txt_refundable"
+                android:text="Refundable"/>
+
+        </LinearLayout>
+
+        <!--Layout for Flight Return Time,Day , Form City-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <!--Layout for flight land icon, time-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--Destination Flight Icon-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flight_land"
+                    />
+                <!--to City-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:id="@+id/flight_select_list_item_txt_to_city"
+                    android:text="DEL"/>
+            </LinearLayout>
+            <!--Arraival time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/flight_select_list_item_txt_arriv_time"
+                android:text="time"/>
+            <!--Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textColor="@color/black"
+                android:id="@+id/flight_select_list_item_txt_arrive_date"
+                android:text="12/03/19"/>
+            <!--Day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:visibility="gone"
+                android:id="@+id/flight_select_list_item_txt_arrive_day"
+                android:text="Monday"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--Layout for Layhour / Rest time-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_bg_box"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:padding="3dp"
+        android:gravity="center"
+        android:id="@+id/flight_select_list_item_layout_layhour"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flight_select_list_item_txt_layhour"
+            android:textSize="@dimen/txt_size_medium"/>
+    </LinearLayout>
+    <!--Layout for Not-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/flight_select_list_item_layout_notes"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_description"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/flight_select_list_item_txt_note"/>
+    </LinearLayout>
+
+</LinearLayout>

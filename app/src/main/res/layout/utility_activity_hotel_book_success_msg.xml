@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#cf000000"
+    tools:context=".travel.bus.bus_activity.BusBookSuccessMsgActivity">
+
+    <!--Text Msg success-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_hotel_book_success"
+        android:textSize="@dimen/txt_size_large"
+        android:layout_marginTop="@dimen/margin_xx_large"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/hotel_book_success_msg_success_act_txt_msg"/>
+
+    <!--Content for offline-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:background="@color/white"
+        android:padding="@dimen/margin_normal"
+        android:id="@+id/layout_for_offline"
+        android:orientation="vertical">
+        <!--Hotel Name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/hotel_book_success_msg_act_txt_hotelname"/>
+
+        <!--City-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/hotel_book_success_msg_success_act_txt_city"/>
+
+
+        <!--Transaction Id-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/hotel_book_success_msg_act_txt_transId"/>
+
+        <!--Status-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/hotel_book_success_msg_act_txt_status"/>
+
+    </LinearLayout>
+
+    <!--Content for online-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_gravity="center"
+        android:gravity="left|center"
+        android:background="@color/white"
+        android:id="@+id/layout_for_online"
+        android:padding="@dimen/margin_normal"
+        android:orientation="vertical">
+
+        <!--Hotel Name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_act_txt_hotelname"/>
+
+        <!--Room Type-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_success_act_txt_room"/>
+
+        <!--City-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_success_act_txt_city"/>
+
+        <!--Layout for totamount, no of room-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Booking Price -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/online_hotel_book_success_msg_success_act_txt_price"/>
+
+            <!--Total Room -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/online_hotel_book_success_msg_success_act_txt_totRoom"/>
+
+
+        </LinearLayout>
+
+        <!--Booking Id-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_act_txt_bookId"/>
+
+        <!--confirmation No-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_act_txt_confNo"/>
+
+        <!--Booking date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_act_txt_bookdate"/>
+
+        <!--Layout for check in date or check out date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--Check in date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/online_hotel_book_success_msg_act_txt_checkIndate"/>
+
+
+            <!--Text blank-->
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="-"
+               android:layout_marginLeft="@dimen/margin_medium"
+               android:textColor="@color/black"
+               android:textSize="@dimen/txt_size_normal" />
+
+            <!--Check ot date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/online_hotel_book_success_msg_act_txt_checkOutdate"/>
+
+        </LinearLayout>
+        <!--Status-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/online_hotel_book_success_msg_act_txt_status"/>
+
+    </LinearLayout>
+
+    <!--For ticket print/pdf-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_normal">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_print"
+            android:id="@+id/hotel_book_success_msg_act_floatbtn_print"
+            android:backgroundTint="@color/gray2"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--Tool Bar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/cab_select_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <!--Layout for from,to city and date, child,adult,infants-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--Layout for from and to city-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/cab_select_activity_toolbar_txtfromcity"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:layout_marginRight="@dimen/margin_v_small"
+                            android:src="@drawable/right_arrow_white"
+                            android:id="@+id/cab_select_activity_toolbar_img_arrow"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/cab_select_activity_toolbar_txttocity"/>
+                    </LinearLayout>
+                    <!--Layout for departure date, adult,child,infants-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cab_select_activity_toolbar_layout_edit"
+                        android:orientation="horizontal">
+
+                        <!-- Departure Date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:id="@+id/cab_select_activity_toolbar_txt_dDate"
+                            android:textSize="@dimen/txt_size_small"/>
+
+
+                        <!--Departure Time-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:id="@+id/cab_select_activity_toolbar_txt_time"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Layout for home and edit icon-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Image home-->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/cab_select_activity_toolbar_img_home"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_whit"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Layaout for content Select cab-->
+
+    <!--Content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Layout for Recycler View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/margin_small"
+                    app:cardElevation="@dimen/margin_small"
+                    android:layout_margin="@dimen/margin_small">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                        <!-- Layout for Cab name or type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="horizontal">
+
+                            <!--Cab name-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:textColor="@color/black"
+                                android:id="@+id/cab_select_act_txt_cabname"/>
+
+                            <!--Cab Type-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:textColor="@color/black"
+                                android:id="@+id/cab_select_act_txt_cabtype"/>
+
+                        </LinearLayout>
+
+                        <!-- Layout for Km, per km Rate, total amount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:orientation="horizontal">
+
+                            <!--total distance (KM)-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:textColor="@color/black"
+                                android:id="@+id/cab_select_act_txt_distance"/>
+
+                            <!--Per km Rate-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/txt_size_medium"
+                                android:textColor="@color/black"
+                                android:id="@+id/cab_select_act_txt_km_rate"/>
+
+                            <!--Total Amount-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:textColor="@color/black"
+                                android:id="@+id/cab_select_act_txt_tot_amount"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!--Layout for offer-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:visibility="visible"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offers:-"
+                    android:textSize="@dimen/txt_size_large"
+                    android:textColor="@color/black"/>
+
+                <!--discount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="@string/str_have_discount"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text=":- "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:id="@+id/cab_select_activity_txt_discount"/>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <!--Layout for discount detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_normal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/cab_select_activity_txt_dis_detail"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Promocode-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/txt_size_normal"
+                android:paddingBottom="@dimen/margin_normal"
+                android:background="@color/white">
+                <!--Promo coupon-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:visibility="gone"
+                    android:id="@+id/cab_select_activity_layout_promocode"
+                    android:orientation="vertical">
+                    <!--Text couponcode, and couponcod-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_coupon_code"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cab_select_activity_lyout_remove_promo"
+                            android:background="@drawable/colorprimary_bg_box"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:id="@+id/cab_select_activity_txt_promocode"
+                                android:textSize="@dimen/txt_size_normal"
+                                android:text="@string/str_coupon_code"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:src="@drawable/ic_close"
+                                android:id="@+id/cab_select_activity_img_remove_promo"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Detail about coupon code and cashback amount-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/cab_select_activity_txt_cashback"/>
+                    </LinearLayout>
+                    <!--coupon from and to date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:id="@+id/cab_select_activity_txt_Date"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:id="@+id/cab_select_activity_layout_have_promo">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange8"
+                        android:gravity="center"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/cab_select_activity_txt_have_promo"
+                        android:text="@string/str_have_promo"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/white_bg_box"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:id="@+id/cab_select_activity_layout_fareamout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/cab_select_activity_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="@string/str_basefare"
+                    android:textColor="@color/black"
+                    android:id="@+id/cab_select_activity_txt_total_travelor"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/cab_select_activity_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:padding="@dimen/margin_v_small"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cab_select_activity_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/white"
+                android:text="continue >>"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

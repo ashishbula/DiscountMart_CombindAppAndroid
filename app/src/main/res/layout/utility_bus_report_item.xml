@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:id="@+id/bus_report_item_card"
+        app:cardElevation="@dimen/margin_small"
+        app:contentPadding="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_small">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Layout for Traver Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Travels Name-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:id="@+id/bus_report_item_txt_travel"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Layout for Book Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <!-- booking Date-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"
+                    android:id="@+id/bus_report_item_txt_book_date"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <!--Layout for total seat , Total amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <!--total seat-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"
+                    android:id="@+id/bus_report_item_txt_totseat"
+                    android:layout_height="wrap_content" />
+
+                <!--Total amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:id="@+id/bus_report_item_txt_totamount"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--Layout for Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <!--Remark-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/bus_report_item_txt_remark"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

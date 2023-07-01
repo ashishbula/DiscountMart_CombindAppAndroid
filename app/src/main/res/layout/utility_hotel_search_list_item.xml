@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Image for Hotel-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_v_small"
+        app:cardCornerRadius="@dimen/margin_v_small"
+        app:cardElevation="@dimen/margin_v_small"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Hotel image-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:id="@+id/hotel_search_list_item_image"
+                android:src="@mipmap/utility_ic_hotel"/>
+
+            <!--HOtel name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt_size_normal"
+                android:text="hotel"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/hotel_search_list_item_txt_hotel_nme"/>
+
+            <!--Layout hotel address,star,price-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Layout for address and star-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+                    <!--Layout for star rating-->
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:numStars="5"
+                        android:id="@+id/hotel_search_list_item_rating_bar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:id="@+id/hotel_search_list_item_txt_hotel_star"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:textColor="@color/black"
+                        android:id="@+id/hotel_search_list_item_txt_hotel_address"/>
+
+                </LinearLayout>
+                <!--Layout for price-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:padding="@dimen/margin_v_small"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/hotel_search_list_item_txt_hotel_price"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:text="@string/str_per_night"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:id="@+id/hotel_search_list_item_txt_hotel_perroom"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

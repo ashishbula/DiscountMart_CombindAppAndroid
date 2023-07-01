@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#cf000000"
+    android:weightSum="2"
+    tools:context=".travel.hotel.hotel_activity.RoomCancelPolicyActivity">
+
+
+    <!--Layout header trasparent-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        android:id="@+id/room_cancel_policy_act_layout_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_cancel_policy"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:textSize="@dimen/txt_size_large"/>
+
+    </LinearLayout>
+
+    <!--Layout for cancel policy content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:padding="@dimen/margin_medium"
+            android:background="@drawable/layout_bg_white">
+
+            <!--TExt Cancel policy-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_cancel_policy_act_txt_detail"/>
+
+            <!--TExt Cancel charge-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_cancel_policy_act_txt_charge"/>
+
+
+            <!--TExt Cancel from Date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_cancel_policy_act_txt_fromdate"/>
+
+            <!--TExt Cancel to Date-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_cancel_policy_act_txt_todate"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

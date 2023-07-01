@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <!--Layout Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Wallet Transfer"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:orientation="vertical">
+            <!--Layout for Available Balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text="@string/str_available_bal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text=": -"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:id="@+id/wallet_transfer_frag_txt_avail_bal"/>
+            </LinearLayout>
+
+            <!--Spinner From Wallet-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/from_wallet_trans"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:spinnerMode="dialog"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wallet_transfer_frag_spnr_from_wallet">
+                    </Spinner>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Spinner To Wallet-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/to_wallet"/>
+
+                <!--Layout for Spinner to Wallet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:spinnerMode="dialog"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wallet_transfer_frag_spnr_to_wallet">
+                    </Spinner>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for available amount from select wallet-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/str_available_amount"/>
+
+                <!--Layout for Spinner to Wallet-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/wallet_transfer_frag_txt_avail_wallet_amount"
+                    android:padding="@dimen/margin_small"
+                    android:background="@drawable/gray_bg_box"
+                    android:orientation="vertical">
+
+                </TextView>
+            </LinearLayout>
+
+            <!--Layout for transfer amount -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/amount"/>
+
+                <!--Layout for Spinner to Wallet-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/wallet_transfer_frag_edtxt_amount"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="vertical">
+
+                </EditText>
+            </LinearLayout>
+
+
+            <!--Layout for Remark -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/str_remark"/>
+
+                <!--Layout for Spinner to Wallet-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/wallet_transfer_frag_edtxt_remark"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="vertical">
+
+                </EditText>
+            </LinearLayout>
+
+            <!--Layout for Transaction Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:text="@string/str_trans_pass"/>
+
+                <!--Layout for Spinner to Wallet-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:padding="@dimen/margin_small"
+                    android:inputType="textPassword"
+                    android:id="@+id/wallet_transfer_frag_edtxt_tpass"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:orientation="vertical">
+
+                </EditText>
+            </LinearLayout>
+
+            <!--Layout for Msg-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:id="@+id/wallet_transfer_frag_txt_msg"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/red"/>
+
+
+            <!--Layout for Button submit -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="vertical">
+
+
+                <!--Layout for Spinner to Wallet-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wallet_transfer_frag_btn_submit"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:text="@string/str_submit">
+
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

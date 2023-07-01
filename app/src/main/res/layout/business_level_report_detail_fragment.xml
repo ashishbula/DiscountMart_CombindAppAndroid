@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Title Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/gray">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Direct Detail"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+    <!--Layout for content-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_v_small"
+        android:layout_marginRight="@dimen/margin_v_small"
+        android:orientation="vertical">
+
+        <!--Layout for header title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Blank-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <!--Left-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/str_left"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content" />
+            <!--Right-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/str_right"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content" />
+            <!--Total-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/str_total"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Layout for Total direct-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Title Total direct-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:text="@string/str_tot_direct"
+                android:layout_height="wrap_content" />
+
+            <!--Total direct Left-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_totdirect_left"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Total direct  Right-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_totdirect_right"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Total direct  Total-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_totdirect_total"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Layout for Active direct-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Active Total direct-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:text="@string/str_active_direct"
+                android:layout_height="wrap_content" />
+
+            <!--Active direct Left-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_actdirect_left"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Active direct  Right-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_actdirect_right"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Total direct  Total-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_actdirect_total"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Layout for direct BV-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Direct BV title-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:text="@string/str_direct_bv"
+                android:layout_height="wrap_content" />
+
+            <!--Direct BV Left-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_directbv_left"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Direct BV Right-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_directbv_right"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+            <!--Total direct  Total-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/level_detail_frag_txt_directbv_total"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Text Total Record Title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_normal"
+        android:text="@string/str_total_record"/>
+
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/black"/>
+
+
+
+    <!--Content-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Layout  RecyclerView Record-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:id="@+id/level_detail_frag_Layout_recycler"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/level_detail_frag_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_vertical"
+                android:layout_margin="2dp"
+                android:clipToPadding="false"
+                android:paddingBottom="35dp"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+        <!--Layout progress Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:id="@+id/level_detail_frag_Layout_progressbar"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/level_detail_frag_progressBar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <!--Lauout No Record Image view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/level_detail_frag_layout_norecord"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/no_result"
+                />
+        </LinearLayout>
+
+        <!--Floating button for total record-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:gravity="center|bottom"
+            android:id="@+id/level_detail_frag_layout_total"
+            android:layout_margin="@dimen/margin_v_small"
+            android:layout_gravity="bottom|right|center">
+            <TextView
+                android:layout_width="@dimen/margin_60dp"
+                android:layout_height="@dimen/margin_60dp"
+                android:paddingLeft="@dimen/margin_v_small"
+                android:paddingRight="@dimen/margin_v_small"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:paddingTop="0dp"
+                android:text="text"
+                android:layout_gravity="bottom|center"
+                android:background="@drawable/circle"
+                android:textSize="@dimen/txt_size_small"
+                android:textColor="@color/black"
+                android:id="@+id/level_detail_frag_txtView_total_record"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

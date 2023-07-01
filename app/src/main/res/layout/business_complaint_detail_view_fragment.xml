@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_v_small"
+    android:background="@color/LightGray"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_medium"
+            android:layout_margin="@dimen/margin_medium">
+            <!--Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:background="@color/black">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Detail"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+            <!--Layout Complaint Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/str_complain_type"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:background="@drawable/white_bg_box_round_corner"
+                    android:padding="@dimen/margin_v_small"
+                    android:id="@+id/complaint_detail_view_dilog_complaint_type"/>
+            </LinearLayout>
+
+            <!--Layout Complaint -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/str_complain"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_round_corner"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:id="@+id/complaint_detail_view_dilog_complaint"/>
+            </LinearLayout>
+
+            <!--Layout Previous Reply-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/str_previous_reply"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_round_corner"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/complaint_detail_view_dilog_pre_reply"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="right"
+        android:src="@drawable/ic_action_close"
+        android:id="@+id/complaint_detail_view_dilog_cross"
+        android:layout_alignParentRight="true"/>
+
+
+
+</RelativeLayout>

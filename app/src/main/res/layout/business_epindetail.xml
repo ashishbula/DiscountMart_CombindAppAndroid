@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Epin Detail"/>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Layout Record With Recycler View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:id="@+id/epin_deatil_fragment_layout_Record"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/epin_summery_frag_recyView_epin_detail">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--No Record Image-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/epin_deatil_fragment_layout_noRecord"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/no_result"/>
+
+        </LinearLayout>
+
+        <!--Layout Total Record-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:visibility="visible"
+            android:padding="5dp"
+            android:id="@+id/epin_summery_frag_layout_total"
+            android:gravity="bottom|right">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textColor="@color/black"
+                android:background="@drawable/circle"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:id="@+id/epin_summery_frag_txtView_record"/>
+            <!-- <android.support.design.widget.FloatingActionButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/left_downline_frag_ftb_total"
+                 android:src="@android:color/transparent"/>-->
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

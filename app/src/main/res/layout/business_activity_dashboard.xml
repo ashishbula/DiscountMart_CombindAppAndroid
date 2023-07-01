@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/business_drawer"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/business_appbar_toolbar"
+        layout="@layout/business_appbar_main" />
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/business_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/business_navigation_header_main"/>
+
+            <pl.openrnd.multilevellistview.MultiLevelListView
+                android:id="@+id/business_multiLevelMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:alwaysExtended="false"
+                app:nestType="multiple" />
+        </LinearLayout>
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+    <!-- android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            app:itemIconTint="@color/drawer_item_icon_color"
+            app:itemBackground="@color/drawer_item_bg_selector"
+            app:itemTextColor="@color/drawer_item_text_color"
+            app:menu="@menu/main_drawer"
+            app:itemTextAppearance="@style/Widget.Design.NavigationView"-->

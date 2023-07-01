@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="colorPrimary">#ffe876</color>-->
+    <color name="colorPrimary">#e93f52</color>
+    <!--<color name="colorPrimary">#ffffff</color> #e93f52 -->
+    <color name="colorPrimaryDark">#e93f52</color>
+    <color name="colorAccent">#052f73</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <!--  <color name="colorAccent">#D81B60</color>-->
+    <!--<color name="coo">#8C6226</color>-->
+    <color name="coo">#B3841F</color>
+    <color name="appColor">#00baf2</color>
+
+    <color name="colorPrimaryTrans">#33000080</color>
+    <color name="colorPrimaryTrans1">#B9600D</color>
+
+    <color name="LightGray1">#F1F1F1</color>
+    <!--color Name with hexa code-->
+    <color name="white">#FFFFFF</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="LightGray">#FFE2E2E2</color>
+    <color name="gray">#808080</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="light_pink">#fbfeebec</color>
+    <color name="reddark">#cb8e0307</color>
+    <color name="reddark1">#cbcf4d50</color>
+    <color name="red1">#fbfa3136</color>
+    <color name="red_light">#fbf9888b</color>
+    <color name="red_transparent">#d8d00202</color>
+    <color name="Maroon">#800000</color>
+    <color name="Maroon1">#941515</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="Olive">#808000</color>
+    <color name="Lime">#00FF00</color>
+    <color name="Green">#008000</color>
+    <color name="Aqua">#00FFFF</color>
+    <color name="Teal">#008080</color>
+    <color name="Bule">#0000FF</color>
+    <color name="blue">#0000FE</color>
+    <color name="blue_light1">#8f8ff5</color>
+    <color name="LightBlue">#C8C8f9</color>
+    <color name="LightBlue1">#FFEEEEFB</color>
+    <color name="Navy">#000080</color>
+    <color name="FUCHSIA">#FF00FF</color>
+    <color name="Purple">#800080</color>
+    <color name="fill_color">#F4F4F4</color>
+
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#FFFFFF</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+
+    <color name="level_0">#1abc9c</color>
+    <color name="level_1">#3498db</color>
+    <color name="level_2">#e67e22</color>
+    <color name="level_3">#8e44ad</color>
+    <color name="level_4">#f1c40f</color>
+    <color name="level_5">#2ecc71</color>
+    <color name="level_default">#000000</color>
+
+    <color name="TextColor">#000000</color>
+    <color name="text_color">#000000</color>
+    <color name="drawerbg_color">#80ffffff</color>
+    <color name="PrimaryTextColor">#212121</color>
+    <color name="SecondaryTextColor">#727272</color>
+
+    <color name="hintcolor">#808080</color>
+    <color name="darkblue">#0d0dbf</color>
+    <color name="orange">#f58634</color>
+    <color name="yellow">#ffdd21</color>
+    <color name="pink">#CC3467</color>
+    <color name="green">#73A301</color>
+    <color name="brown">#800000</color>
+    <color name="skyblue">#00aeef</color>
+    <color name="darkgray">#333333</color>
+    <color name="lightgray">#c8c8c8</color>
+    <color name="tolightgray">#DCDCDC</color>
+    <color name="lightyellow">#ffff4c</color>
+    <color name="bgcolor">#ffffff</color>
+    <color name="maroon">#b22d30</color>
+
+    <color name="tabTransparent">#10ffffff</color>
+    <color name="gray_trans">#08000000</color>
+    <color name="colorAccent_trans">#08ED3237 </color>
+    <color name="black_trans">#CC000000 </color>
+    <color name="red_trans">#CCFF0000</color>
+
+    <color name="hometextcolor">#2E3E63</color>
+    <color name="PrimaryColor_trans">#33303F9F</color>
+
+    <color name="logocolor">#80B131</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="app_bg_light">#ceddd8</color>
+    <color name="app_bg_dark">#94acac</color>
+    <color name="app_orange_light">#FDA75A</color>
+    <color name="app_toolbar_gray_dark">#4d4d4d</color>
+    <color name="app_toolbar_gray_light">#696868</color>
+
+    <color name="appBar_color">#daa520</color>
+    <color name="appBar_color1">#daa520</color>
+    <color name="appBar_color_light1">#fac849</color>
+    <color name="appBar_color_light">#fad883</color>
+    <color name="color">#222222</color>
+    <color name="app_gray">#afbeb9</color>
+    <color name="app_gray_light">#D1D6D4</color>
+
+    <color name="colorPrimaryDark1">#ab0208</color>
+    <color name="colorAccent1">#343334</color>
+
+    <color name="appcolorprimary">#f9b221</color>
+    <color name="appcolorprimarydark">#f4ed0209</color>
+    <color name="appcolorAccent">#343334</color>
+
+    <color name="topcolor">#f9b221</color>
+    <color name="topcolorlight">#f2f7dc61</color>
+    <color name="subheader_color">#fef2dd</color>
+    <color name="mainscreen_footer_color">#be2b22</color>
+    <color name="view_detail_btn_color">#403d3b</color>
+
+
+    <color name="peach">#F6C491</color>
+    <color name="peach1">#f6d0a8</color>
+    <color name="coral">#FF7F50</color>
+    <color name="lightgreen">#7DC255</color>
+    <color name="green_light">#9ECC47</color>
+    <color name="skyblue_dark">#0288D1</color>
+    <color name="lightgray2">#e5e2e2</color>
+    <color name="gray_trans1">#73c8c8c8</color>
+    <color name="colorTabbg">#FBDEBE</color>
+
+    <color name="white_trans">#99FFFFFF</color>
+    <color name="Indico_light">#7986CB</color>
+    <color name="Indico_prime">#230f9f</color>
+    <color name="DarkKhaki">#BDB768</color>
+    <color name="YellowGreen">#9ACD32</color>
+    <color name="OrangeRed">#FF4500</color>
+    <color name="SkyBule">#87CEEB</color>
+    <color name="LightSkyBule">#87CEFA</color>
+    <color name="DeepSkyBule">#00BFFF</color>
+    <color name="OlivedRed">#6B8E23</color>
+    <color name="Coral">#FF7F50</color>
+    <color name="DARKSLATEGRAY">#2F4F4F</color>
+
+
+    <!--Green color light or dark-->
+    <color name="green1">#4CAF50</color>
+    <color name="green2">#E8F5E9</color>
+    <color name="green3">#C8E6C9</color>
+    <color name="green4">#A5D6A7</color>
+    <color name="green5">#81C784</color>
+    <color name="green6">#66BB6A</color>
+    <color name="green7">#4CAF50</color>
+    <color name="green8">#43A047</color>
+    <color name="green9">#388E3C</color>
+    <color name="green10">#2E7D32</color>
+    <color name="green11">#1B5E20</color>
+    <color name="green12">#B9F6CA</color>
+    <color name="green13">#69F0AE</color>
+    <color name="green14">#00E676</color>
+    <color name="green15">#00C853</color>
+
+
+    <!--light green light or dark-->
+    <color name="light_green1">#8BC34A</color>
+    <color name="light_green2">#F1F8E9</color>
+    <color name="light_green3">#DCEDC8</color>
+    <color name="light_green4">#C5E1A5</color>
+    <color name="light_green5">#AED581</color>
+    <color name="light_green6">#9CCC65</color>
+    <color name="light_green7">#8BC34A</color>
+    <color name="light_green8">#7CB342</color>
+    <color name="light_green9">#689F38</color>
+    <color name="light_green10">#558B2F</color>
+    <color name="light_green11">#33691E</color>
+    <color name="light_green12">#CCFF90</color>
+    <color name="light_green13">#B2FF59</color>
+    <color name="light_green14">#76FF03</color>
+    <color name="light_green15">#64DD17</color>
+
+
+    <!--lime color light or dark-->
+    <color name="lime1">#CDDC39</color>
+    <color name="lime2">#F9FBE7</color>
+    <color name="lime3">#F0F4C3</color>
+    <color name="lime4">#E6EE9C</color>
+    <color name="lime5">#DCE775</color>
+    <color name="lime6">#D4E157</color>
+    <color name="lime7">#CDDC39</color>
+    <color name="lime8">#C0CA33</color>
+    <color name="lime9">#AFB42B</color>
+    <color name="lime10">#9E9D24</color>
+    <color name="lime11">#827717</color>
+    <color name="lime12">#F4FF81</color>
+    <color name="lime13">#EEFF41</color>
+    <color name="lime14">#C6FF00</color>
+    <color name="lime15">#AEEA00</color>
+
+
+    <!--Yellow color light or dark-->
+    <color name="yellow1">#FFEB3B</color>
+    <color name="yellow2">#FFFDE7</color>
+    <color name="yellow3">#FFF9C4</color>
+    <color name="yellow4">#FFF59D</color>
+    <color name="yellow5">#FFF176</color>
+    <color name="yellow6">#FFEE58</color>
+    <color name="yellow7">#FFEB3B</color>
+    <color name="yellow8">#FDD835</color>
+    <color name="yellow9">#FBC02D</color>
+    <color name="yellow10">#F9A825</color>
+    <color name="yellow11">#F57F17</color>
+    <color name="yellow12">#FFFF8D</color>
+    <color name="yellow13">#FFFF00</color>
+    <color name="yellow14">#FFEA00</color>
+    <color name="yellow15">#FFD600</color>
+
+
+    <!--amber color light or dark-->
+    <color name="amber1">#FFC107</color>
+    <color name="amber2">#FFF8E1</color>
+    <color name="amber3">#FFECB3</color>
+    <color name="amber4">#FFE082</color>
+    <color name="amber5">#FFD54F</color>
+    <color name="amber6">#FFCA28</color>
+    <color name="amber7">#FFC107</color>
+    <color name="amber8">#FFB300</color>
+    <color name="amber9">#FFA000</color>
+    <color name="amber10">#FF8F00</color>
+    <color name="amber11">#FF6F00</color>
+    <color name="amber12">#FFE57F</color>
+    <color name="amber13">#FFD740</color>
+    <color name="amber14">#FFC400</color>
+    <color name="amber15">#FFAB00</color>
+
+
+    <!--Orange color light or dark-->
+    <color name="orange1">#FF9800</color>
+    <color name="orange2">#FFF3E0</color>
+    <color name="orange3">#FFE0B2</color>
+    <color name="orange4">#FFCC80</color>
+    <color name="orange5">#FFB74D</color>
+    <color name="orange6">#FFA726</color>
+    <color name="orange7">#FF9800</color>
+    <color name="orange8">#FB8C00</color>
+    <color name="orange9">#F57C00</color>
+    <color name="orange10">#EF6C00</color>
+    <color name="orange11">#E65100</color>
+    <color name="orange12">#FFD180</color>
+    <color name="orange13">#FFAB40</color>
+    <color name="orange14">#FF9100</color>
+    <color name="orange15">#FF6D00</color>
+
+
+    <!--deep orange color light or dark-->
+    <color name="deep_orange1">#FF5722</color>
+    <color name="deep_orange2">#FBE9E7</color>
+    <color name="deep_orange3">#FFCCBC</color>
+    <color name="deep_orange4">#FFAB91</color>
+    <color name="deep_orange5">#FF8A65</color>
+    <color name="deep_orange6">#FF7043</color>
+    <color name="deep_orange7">#FF5722</color>
+    <color name="deep_orange8">#F4511E</color>
+    <color name="deep_orange9">#E64A19</color>
+    <color name="deep_orange10">#D84315</color>
+    <color name="deep_orange11">#BF360C</color>
+    <color name="deep_orange12">#FF9E80</color>
+    <color name="deep_orange13">#FF6E40</color>
+    <color name="deep_orange14">#FF3D00</color>
+    <color name="deep_orange15">#DD2C00</color>
+
+
+    <!--brown color light or dark-->
+    <color name="brown1">#795548</color>
+    <color name="brown2">#EFEBE9</color>
+    <color name="brown3">#D7CCC8</color>
+    <color name="brown4">#BCAAA4</color>
+    <color name="brown5">#A1887F</color>
+    <color name="brown6">#8D6E63</color>
+    <color name="brown7">#795548</color>
+    <color name="brown8">#6D4C41</color>
+    <color name="brown9">#5D4037</color>
+    <color name="brown10">#4E342E</color>
+    <color name="brown11">#3E2723</color>
+
+    <!--Gray color light or dark-->
+    <color name="gray1">#9E9E9E</color>
+    <color name="gray2">#FAFAFA</color>
+    <color name="gray3">#F5F5F5</color>
+    <color name="gray4">#EEEEEE</color>
+    <color name="gray5">#E0E0E0</color>
+    <color name="gray6">#BDBDBD</color>
+    <color name="gray7">#9E9E9E</color>
+    <color name="gray8">#757575</color>
+    <color name="gray9">#616161</color>
+    <color name="gray10">#616161</color>
+    <color name="gray11">#212121</color>
+
+
+</resources>

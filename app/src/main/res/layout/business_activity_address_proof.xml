@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@mipmap/background"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <!--Layout Image View, Text View Upload Image-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--Layout For Front Side Document Upload-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <!--Layout Image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:background="@color/colorPrimaryDark">
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_file_upload"
+                                android:id="@+id/address_proof_activity_imgView_doc"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Layout Text-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="0"
+                            android:id="@+id/address_proof_activity_txtView_uploadDoc"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_v_small"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:background="@drawable/white_bg_box_round_corner"
+                            android:text="Upload Document Front Side"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="0"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:maxLength="20"
+                            android:id="@+id/address_proof_activity_txtView_doc_pah"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Layout For Back Side Document Upload-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <!--Layout Image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/margin_v_small"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:background="@color/gray">
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_file_upload"
+                                android:id="@+id/address_proof_activity_imgView_doc2"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Layout Text-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="0"
+                            android:id="@+id/address_proof_activity_txtView_uploadDoc2"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:padding="@dimen/margin_v_small"
+                            android:background="@drawable/white_bg_box_round_corner"
+                            android:text="Upload Document Back Side"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="0"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center"
+                            android:text="No File Attach"
+                            android:maxLength="20"
+                            android:id="@+id/address_proof_activity_txtView_doc_pah2"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Layout Verify Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:layout_gravity="center|right"
+                android:id="@+id/add_proof_activity_layout_verify"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--TextView Status -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_proof_activity_txtView_verify_status"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/black"/>
+
+                <!--TextView Rejected Date -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_proof_activity_txtView_rejected_date"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/black"/>
+
+                <!-- TextView Rejected Remark -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_proof_activity_txtView_rejected_mark"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/black"/>
+
+                <!-- TextView Rejected Reason -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_proof_activity_txtView_rejected_reason"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!--Address,state,city,pincode,mobile,phone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:id="@+id/address_proof_activity_layout_click"
+                android:orientation="vertical">
+                <!--Address-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_address">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_address"
+                            android:gravity="top"
+                            android:inputType="textMultiLine"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:id="@+id/address_proof_activity_edTxt_address"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Pincode Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       app:hintTextColor="@color/black"
+                        android:hint="@string/str_pin">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="6"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_pin"
+                            android:inputType="number"
+                            android:textColor="@color/black"
+                            android:id="@+id/address_proof_activity_edTxt_pincode"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!--State-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_state">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_state"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/address_proof_activity_edTxt_state"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--District-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       app:hintTextColor="@color/black"
+                        android:hint="@string/str_district">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_district"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:id="@+id/address_proof_activity_edTxt_district"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--City-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_city">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:focusable="false"
+                            android:autofillHints="@string/str_city"
+                            android:id="@+id/address_proof_activity_edTxt_city"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Area Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/material_graybg"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Area"
+                            android:layout_gravity="left"
+                            android:paddingLeft="2dp"
+                            android:textColor="@color/black"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address_proof_activity_spiner_area">
+                        </Spinner>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:backgroundTint="@color/gray"/>
+                </LinearLayout>
+
+                <!--Address Proof Id Spinner Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/material_graybg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_address_id"
+                            android:layout_gravity="left"
+                            android:paddingLeft="2dp"
+                            android:textColor="@color/black"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address_proof_activity_spiner_proof">
+
+                        </Spinner>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:backgroundTint="@color/gray"/>
+                </LinearLayout>
+
+                <!--Aadhar No,Voter Id,License Edit Text Layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_select_doc"
+                        app:hintTextColor="@color/black">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:maxLength="12"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:autofillHints="@string/str_select_doc"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:inputType="textNoSuggestions|text|textVisiblePassword"
+                            android:id="@+id/address_proof_activity_edTxt_aadhar1"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <!--Button Submit-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:padding="2dp"
+                android:id="@+id/address_proof_activity_layout_submit"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
+                    android:id="@+id/address_proof_activity_btn_submit"
+                    android:text="Submit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

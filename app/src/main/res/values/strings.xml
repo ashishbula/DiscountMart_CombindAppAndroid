@@ -1,0 +1,1116 @@
+<resources>
+    <string name="app_name">Discount Mart</string>
+    <string name="appbar_title">Discount Mart</string>
+
+    <string name="rs_symbol">\u20B9</string>
+    <string name="rs_text">\u20A8</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="multiplied_expanding">Multiplied expanding</string>
+    <string name="always_expanded">Always expanded</string>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">Friends</string>
+    <string name="nav_item_notifications">Messages</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="initial_network_message">Please check the network state as application require working internet connection</string>
+    <string name="vendor_id_mismatch_in_cart">Please select products from single Vendor.</string>
+
+    <string name="ok_capitalize">Ok</string>
+    <string name="dialog_number_confirmation_message">Is this your correct number? \n\nIt would be verified by sending the confirmation code to this number</string>
+
+    <string name="toast_number_error">Please enter a valid mobile number</string>
+    <string name="txv_mobile_number">Enter your Mobile No.</string>
+    <string name="network_error">Device is out of network coverage</string>
+    <string name="some_error">Some error occurred, please try again later</string>
+    <string name="server_error">Server error occurred, please try again later</string>
+
+    <string name="location_settings">Location Settings</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="location_disabled">Device Location is not enabled. Do you want to go to settings menu?</string>
+
+    <string name="select_recipients">Select Recipients</string>
+
+    <string name="qr_code_steps">1.Take  a screenshot. \n2.Takeout a print of this Qr Code. \n3.Paste at it your shop counter. \n4.Ask your customer to scan it from their app. \n5.Customer will be redirected to your offer page directly.</string>
+    <string name="rank_reward_note">*Minimum Group Growth 30% counted on both side for monthly incentive.</string>
+    <!--Dash Board-->
+    <string name="str_home">Home</string>
+    <string name="str_transaction">Transaction</string>
+    <string name="str_news">News</string>
+    <string name="news_event">News &amp; Event</string>
+    <string name="str_view_detail">View Detail</string>
+
+    <!--Dashboard-->
+    <string name="dash_detail">Dashboard Deail</string>
+    <string name="today_regis">Today Registration</string>
+    <string name="today_bv">Today BV</string>
+    <string name="total_regis">Total Registration</string>
+    <string name="today_activation">Today Activation</string>
+    <string name="total_activation">Total Activation</string>
+    <string name="total_direct_active">Total Direct Active</string>
+    <string name="total_fv">Total FV</string>
+    <string name="total_bv">Total BV</string>
+    <string name="total_income">Total Income</string>
+    <string name="total_direct_fv">Total Direct FV</string>
+    <string name="total_direct_bv">Total Direct BV</string>
+    <string name="total_reward_point">Total Reward Point</string>
+    <string name="my_team_detail">My Team Details</string>
+    <string name="top_seller">Top Seller</string>
+    <string name="kyc_detail">KYC Details</string>
+    <string name="my_generation_detail">MY Generation Details</string>
+    <string name="my_profile_detail">MY Profile Details</string>
+    <string name="browser">Browser</string>
+    <string name="login_time">Login Time</string>
+    <string name="till_last_month">Last Month</string>
+    <string name="last_month">Last Month</string>
+    <string name="current_month">Current Month</string>
+    <string name="accumulate">Accumulated</string>
+    <string name="self_pv">Self PV</string>
+    <string name="self_rv">Self RV</string>
+    <string name="group_rv">Group RV</string>
+    <string name="group_pv">Group PV</string>
+    <string name="total_pv">Total PV</string>
+    <string name="total_rv">Total RV</string>
+    <string name="address_status">Address Status</string>
+    <string name="bank_status">Bank Status</string>
+    <string name="pan_status">Pan Status</string>
+    <string name="address_verify_status">Address Verify Status</string>
+    <string name="bank_verify_status">Bank Verify Status</string>
+    <string name="pan_verify_status">Pan Verify Status</string>
+    <string name="address_verify_date">Address Verify Date</string>
+    <string name="address_proof">Address Proof</string>
+    <string name="bank_proof">Bank Proof</string>
+    <string name="pan_card">Pan Card</string>
+    <string name="pan_verify_date">Pan Verify Date</string>
+    <string name="reward_limit">Reward(Time Limit)</string>
+    <string name="reward_nolimit">Reward(Time No Limit)</string>
+    <string name="remaining_day">Remaining Days</string>
+    <string name="login_history">Login History</string>
+    <string name="myacive_direct">My Active Directs</string>
+    <string name="my_invoice">My Invoice</string>
+    <string name="team_purchase">Team Purchase</string>
+    <string name="select_any">Select Any One</string>
+    <string name="particular">Particular</string>
+
+    <string name="str_credit">Credit</string>
+    <string name="str_debit">Debit</string>
+    <string name="str_balance">Balance</string>
+    <string name="str_wallet_summary">Wallet Summary</string>
+    <!--Login-->
+    <string name="str_login">Login</string>
+    <string name="str_username">User Name</string>
+    <string name="username">User Name*</string>
+    <string name="str_user_id">User Id*</string>
+    <string name="str_user_pass">Password*</string>
+    <string name="str_pass">Password*</string>
+    <string name="str_pass_trans">Transaction Password*</string>
+    <string name="str_pass_confirm">Confirm Password*</string>
+    <string name="str_remmber_me">Remember Me</string>
+    <string name="str_forgot_pass">Forgot Password?</string>
+    <string name="str_registration">New Registration</string>
+    <string name="new_registration">New Registration ?</string>
+
+    <!--Change password-->
+    <string name="old_pass">Old Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="change_pass">Change Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+
+    <!--Profile-->
+    <string name="str_dob_joining">Date of Joining</string>
+    <string name="str_dob_active">Date of Activation</string>
+    <string name="title_placement_detail">Your Placement Detail.</string>
+    <string name="str_position">Position</string>
+
+    <!--New Register-->
+    <string name="str_head_register">Register</string>
+    <string name="str_sponser_detail">Sponsor Detail</string>
+    <string name="str_sponserid">Sponsor ID</string>
+    <string name="str_sponser_pass">Sponsor Password</string>
+    <string name="str_sponser_nme">Sponsor Name</string>
+    <string name="str_click_here_for">Click here for Sponsor Name</string>
+    <string name="str_click_here">Click here for Distributor Name</string>
+    <string name="str_personal_detail">Personal Detail</string>
+    <string name="str_contact_detail">Contact Detail</string>
+    <string name="father_name">Father Name</string>
+    <string name="str_legs">Legs</string>
+    <string name="str_side">Side</string>
+    <string name="str_name">Name</string>
+    <string name="str_marital_status">Marital Status</string>
+    <string name="str_fath_hus">Father/Husband Name</string>
+    <string name="str_qulify">Qualification</string>
+    <string name="str_married">Married</string>
+    <string name="str_unmarried">UnMarried</string>
+    <string name="str_dob">DOB</string>
+    <string name="str_married_date">Married Date</string>
+    <string name="str_next">Next >></string>
+    <string name="str_address">Address</string>
+    <string name="str_area">Area</string>
+    <string name="str_pin">Pincode</string>
+    <string name="str_district">District</string>
+    <string name="str_state">State</string>
+    <string name="str_country">Country</string>
+    <string name="str_city">City</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="select_state">Select State</string>
+    <string name="district">District</string>
+    <string name="str_mobile">Mobile No</string>
+    <string name="str_phone">Phone No</string>
+    <string name="str_email">Email Id</string>
+    <string name="str_nomine_detail">Nominee Detail.</string>
+    <string name="str_nomine">Nominee Detail</string>
+    <string name="str_nomine_nme">Nominee Name</string>
+    <string name="str_nomine_age">Nominee Age</string>
+    <string name="str_nomine_dob">Nominee DOB</string>
+    <string name="str_nomine_mobile">Nominee Mobile No.</string>
+    <string name="str_relation">Relation</string>
+    <string name="str_conf_pass">Confirm Password</string>
+    <string name="conf_mobile">Confirm Mobile No.</string>
+    <string name="str_trans_pass">Transaction Password</string>
+    <string name="str_agree">I Agree With</string>
+    <string name="str_term_cond"><u>Term &amp; Condition</u></string>
+    <string name="str_enter_otp_"> Please Wait for Receive OTP \n And Enter The OTP Below</string>
+    <string name="str_otp_send_to">OTP send to this no.</string>
+    <string name="str_verify_otp">Verify OTP</string>
+    <string name="str_enter_otp">Enter OTP Code</string>
+    <string name="recom_product">Recommended product for you</string>
+
+    <string name="str_registeras">Register As</string>
+    <string name="str_register_type">Register Type</string>
+    <string name="str_propriter_ship">Proprietor Ship</string>
+    <string name="str_partner_ship">Partnership Firm</string>
+    <string name="str_pvt_comp">Private Limited Company</string>
+
+    <string name="str_owner_name">Owner Name*</string>
+    <string name="str_propriter_name">Proprietor Name*</string>
+    <string name="str_partner_name">Partner Name*</string>
+    <string name="str_compny_name">Company Name*</string>
+    <string name="str_registeration_number">Company Registration No</string>
+    <string name="str_date_of_registeration">Date Of Company Register</string>
+
+    <string name="term1">It is kind advise to you that you promote Business as per actual. Company will not responsible for your miss commitments in the market through any manner.</string>
+    <string name="term2">Registration is FREE in our system.</string>
+    <string name="term3">Company provides you online account as your ID with password. It contains all your legal information , Transaction Balance, Team detail, Bonus details etc.</string>
+    <string name="term4">Year starts from 1st April every year.</string>
+    <string name="term5">KYC Documents is mandatory.</string>
+    <string name="term6">You must sign your application form &amp; submitted in nearest company Branch/office along with one colour passport size photo &amp; copy of self attested ID proof or address proof / PAN No.</string>
+
+
+    <string name="str_individual">Individual</string>
+    <string name="str_company">Company</string>
+    <!--My Purchase Fragment -->
+    <string name="my_purchase_string">Plz Select From and To Date Then Click Submit to Show Record |</string>
+
+
+    <!--Pin Tansfer Fragment -->
+    <string name="pin_transfer_string1">click here to get member name</string>
+    <string name="pin_transfer_string2">Enter Id Number</string>
+    <string name="pin_transfer_string3">Enter Quantity</string>
+    <string name="pin_transfer_string4">Enter Remark</string>
+    <string name="pin_transfer_string5">Enter OTP Number</string>
+    <string name="pin_transfer_manual_otp">(Enter the OTP below in )</string>
+
+    <!--Complaint-->
+    <string name="str_direct_seler_id">Direct Seller Id</string>
+    <!-- <string name="str_name">Name</string>
+    <string name="str_mobile">Mobile No.</string>
+    <string name="str_email">Email ID</string>-->
+    <string name="str_package">Package</string>
+    <string name="packg_name">Package Name</string>
+    <string name="str_subject">Subject</string>
+    <string name="str_description">Description</string>
+    <string name="str_submit">Submit</string>
+    <!--Complian Detail-->
+    <string name="str_complain_id">Complaint Id</string>
+    <string name="str_complain_date">Complaint Date</string>
+    <string name="str_complain">Complaint</string>
+    <string name="complain_detail">Complaint Detail</string>
+    <string name="str_complain_type">Complaint Type</string>
+    <string name="str_reply_date">Reply Date</string>
+    <string name="str_reply">Reply</string>
+    <string name="str_previous_reply">Previous Reply</string>
+    <string name="str_view">View</string>
+
+    <!--Wallet Request-->
+    <string name="str_note1">Note:- 1. After 5 PM Payment approve on next working day</string>
+    <string name="str_note2">2.There should be single bank transaction against a request. </string>
+
+    <!--Downline Detail-->
+    <string name="str_tot_bv">Total BV</string>
+    <string name="str_tot_topup">Total Top-up</string>
+    <string name="str_tot_join">Total Joined</string>
+    <string name="str_left">Left</string>
+    <string name="str_right">Right</string>
+    <string name="str_idno">Id No</string>
+    <string name="str_member">Member Name</string>
+    <string name="member_name">Member Name</string>
+    <string name="guardian_relation">Guardian Relation</string>
+    <string name="relation">Relation</string>
+    <string name="guardian_name">Guardian Name</string>
+    <string name="str_placemnt_id">Placement Id</string>
+    <string name="str_sponsor_id">Sponsor Id*</string>
+    <string name="sponsor_id">Sponsor Id</string>
+    <string name="str_introducer_id">Introducer Consultant ID*</string>
+    <string name="str_upliner_id">Upliner Id*</string>
+    <string name="str_upliner_name">Upliner Name</string>
+    <string name="str_doj">Date of Join</string>
+    <string name="str_activate_date">Activation Date</string>
+    <string name="activate_status">Activation Status</string>
+    <string name="str_pkg_mrp">Pkg.Mrp</string>
+    <string name="str_bv">BV</string>
+    <string name="str_record">Record</string>
+
+    <string name="str_bank_detail">Bank Detail</string>
+    <string name="str_ac_no">Account No</string>
+    <string name="str_ac_type">Account Type</string>
+    <string name="str_bank">Bank</string>
+    <string name="str_select_bank">Select Bank</string>
+    <string name="str_branch_nme">Branch Name</string>
+    <string name="str_ifsc">IFSC Code</string>
+    <string name="str_pan_no">Pan No Available</string>
+    <string name="str_pan_num">PAN No.</string>
+    <string name="pan_num">PAN Number</string>
+    <string name="str_no_pan">(TDS will deduct 20% if you not enter PAN no.)</string>
+    <string name="str_parter_nme_with_coma">Partner Name Separated By Comma(,)</string>
+
+    <!--Level Wise detail-->
+    <string name="str_tot_direct">Total Direct</string>
+    <string name="str_active_direct">Active Direct</string>
+    <string name="str_direct_bv">Direct BV</string>
+    <string name="str_total">Total</string>
+    <string name="str_total_record">Total Record</string>
+    <string name="select_level">Select Level</string>
+    <string name="select_pckg">Select Package</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="str_check">Check ID</string>
+    <string name="select_kit">Select Kit</string>
+    <string name="level_wise">Level Wise Direct</string>
+    <string name="level">Level</string>
+    <string name="select_status">Select Status</string>
+    <string name="select_team">Select Team</string>
+    <string name="show_record">Showing below given record..</string>
+    <string name="team1">Team 2</string>
+    <string name="team2">Team 2</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="my_direct">My Direct</string>
+    <string name="rank_wise">Rank Wise</string>
+    <string name="my_income">My Income</string>
+    <string name="income">Income</string>
+    <string name="value">Value</string>
+    <string name="downline_purchase">Downline Purchase</string>
+    <string name="downline_detail">Downline Detail</string>
+
+    <!--Profile-->
+    <string name="name">Name</string>
+    <string name="dob">DOB</string>
+    <string name="email">Email</string>
+    <string name="pincode">Pincode</string>
+    <string name="mobile">Mobile</string>
+    <string name="address_detail">Address Details</string>
+
+
+    <!--Address Proof-->
+    <string name="str_address_id">Address Proof Id</string>
+    <string name="str_address_1">Address 1</string>
+    <string name="str_address_2">Address 2</string>
+    <string name="str_address_3">Address 3</string>
+    <string name="str_select_doc">Document Number</string>
+    <string name="str_idproof_no">Id Proof No.</string>
+    <string name="str_upload_doc">Upload Document</string>
+    <string name="str_upload_doc1">Upload Document Front Side</string>
+    <string name="str_upload_doc2">Upload Document Back Side</string>
+    <string name="str_select_doc_no">Enter Selected Id No.</string>
+    <string name="str_aadhar_no">Aadhar number</string>
+    <string name="str_area_name">Area Name</string>
+    <string name="str_select_id_no">Enter Selected Id Proof No.</string>
+    <string name="str_bank_name">Bank Name</string>
+    <string name="str_pan_detail">Pan Detail</string>
+
+    <!--My Network-->
+    <string name="team1fv">Team 1 FV</string>
+    <string name="team2fv">Team 2 FV</string>
+    <string name="team1rp">Team 1 RP</string>
+    <string name="team2rp">Team 2 RP</string>
+    <string name="sno">S.No.</string>
+
+    <!--Incentive/Income-->
+    <string name="matching_fvbonus">Matching FV Bonus</string>
+    <string name="matching_bonus">Matching Bonus</string>
+    <string name="additional_bonus">Additional Bonus</string>
+    <string name="superstar_bonus">Super Star Bonus</string>
+    <string name="leadership_bonus">Leadership Bonus</string>
+    <string name="self_fvincome">Self FV Income</string>
+    <string name="dir_sponsor_incom">Direct Sponsor Income</string>
+    <string name="dir_bonus">Direct Bonus</string>
+    <string name="dir_match_bonus">Direct Matching Bonus</string>
+    <string name="gen_match_bonus">General Matching Bonus</string>
+    <string name="gen_dir_match_level_bonus">General Direct Matching Level Bonus</string>
+    <string name="sponsor_level_incom">Sponsor Level Income</string>
+    <string name="level_incom">Level Income</string>
+    <string name="repurchase_income">Repurchase Income</string>
+    <string name="royalty_incom">Royalty Income</string>
+    <string name="rank_reward">Rank Reward</string>
+    <string name="rank_bonus">Rank Bonus</string>
+    <string name="dir_incom">Direct Income</string>
+    <string name="ref_bonus">Referral Bonus</string>
+    <string name="dev_bonus">Development Bonus</string>
+    <string name="reward_income">Reward Income</string>
+    <string name="reward">Reward</string>
+    <string name="promo_incentive">Promotional Incentive</string>
+    <string name="gross_income">Gross Income</string>
+    <string name="tds_amount">TDS Amount</string>
+    <string name="admin_charge">Admin Charge</string>
+    <string name="social_charge">Social Charge</string>
+    <string name="repurchse_deduction">Repurchase Deduction</string>
+    <string name="tot_deduction">Total Deduction</string>
+    <string name="pre_bal">Previous Balance</string>
+    <string name="next_income">Next Income</string>
+    <string name="differential_income">Differential Income</string>
+    <string name="carry_forward">Carry Forward</string>
+    <string name="payout_date">Payout Date</string>
+    <string name="bike_buget">Bike Budget</string>
+    <string name="car_buget">Car Budget</string>
+    <string name="house_buget">House Budget</string>
+    <string name="net_income">Net Income</string>
+    <string name="net_amount">Net Amount</string>
+    <string name="closing">Closing</string>
+    <string name="daily_incentive">Daily Incentive</string>
+    <string name="weekly_incentive">Weekly Incentive</string>
+    <string name="monthly_incentive">RV Payout Detail</string>
+    <string name="session">Session</string>
+
+    <!--My purchase detail-->
+    <string name="orderno">Order/Bill no.</string>
+    <string name="order_date">Order Date</string>
+    <string name="order_amount">Order Amount</string>
+    <string name="request">Request</string>
+    <string name="shop_wallet">Shopping Wallet</string>
+    <string name="service_wallet">Service Wallet</string>
+    <string name="courier_name">Courier Name</string>
+    <string name="docket_no">Docket No.</string>
+    <string name="docket_date">Docket Date</string>
+    <string name="website">Website</string>
+    <string name="mypurchase_detail">My Purchase Detail</string>
+
+    <!--Wallet-->
+    <string name="amount">Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="select_paymode">Select Paymode</string>
+    <string name="paymode">Mode of Payment</string>
+    <string name="checq_no">Cheque No</string>
+    <string name="checq_date">Cheque Date</string>
+    <string name="dd_date">DD Date</string>
+    <string name="dd_no">DD No</string>
+    <string name="cash">Cash</string>
+    <string name="transaction_no">Transaction No</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="from_wallet_trans">From Wallet</string>
+    <string name="to_wallet">To Wallet</string>
+    <string name="wallet_name">Wallet Name</string>
+    <string name="income_wallet">Income Wallet</string>
+    <string name="tot_ep">Total EP</string>
+    <string name="withdrawl_ep">Withdrawal EP</string>
+    <string name="balance_ep">Balance EP</string>
+    <!--Withdrawal Detail-->
+    <string name="req_id">Request ID</string>
+    <string name="payee_name">Payee Name</string>
+    <string name="ac_no">Account No.</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="ifsccode">IFSC Code</string>
+    <string name="req_amount">Request Amount</string>
+    <string name="req_date">Request Date</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="bank_service">Bank Service</string>
+
+
+    <!--Report-->
+    <string name="bill_no">Bill No</string>
+    <string name="team">Team</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="invoice_amount">Invoice Amount</string>
+    <string name="invoice_no">Invoice No</string>
+    <string name="bill_date">Bill Date</string>
+    <string name="bill_type">Bill Type</string>
+    <string name="start_date">Start Date</string>
+    <string name="coupon_amount">Coupon Amount</string>
+    <string name="coupon_no">Coupon No.</string>
+    <string name="status">Status</string>
+    <string name="exp_date">Expire Date</string>
+    <string name="use_date">Used Date</string>
+    <string name="shopee_user">Shoppe User</string>
+    <string name="used_bilno">Used BillNo</string>
+    <string name="used_fpv">Used FPV</string>
+    <string name="fv">F.V</string>
+    <string name="fv_rv">FV/RV</string>
+    <string name="rv">R.V</string>
+    <string name="free_prod_voucher">Free Product Voucher</string>
+    <string name="cc_voucher">Camp Coupon Voucher</string>
+
+
+    <!--Epin-->
+    <string name="str_remark">Remark</string>
+    <string name="str_pin_date">Pin Date</string>
+    <string name="str_pin_trans_to_id">Transfer To Id No.</string>
+    <string name="str_pin_trans_to_mem">Transfer to Member</string>
+    <string name="str_kit_name">Kit Name</string>
+    <string name="str_pkg_name">Package Name</string>s
+    <string name="str_pin_no">Pin No.</string>
+    <string name="str_scratch_no">Scratch No.</string>
+    <string name="str_pin_status">Pin Status</string>
+    <string name="str_topup">Top-up</string>
+    <string name="str_topup_by">Top-up By</string>
+
+    <!--Epin detail-->
+    <string name="pin_receivedetail">Pin Received Detail</string>
+    <string name="pin_transfer_detail">Pin Transfer Detail</string>
+    <string name="distributor_name">Distributor Name</string>
+    <string name="quantity">Quantity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="testimonial">Testimonial</string>
+
+
+    <string name="action_logout">Logout</string>
+    <string name="select">Select</string>
+    <string name="Mobileno">Mobile Number</string>
+    <string name="SubscriberId">Subscriber ID</string>
+    <string name="subscription">Subscription</string>
+    <string name="Datacardno">Data Card Number</string>
+    <string name="forgot_password"><u>Forgot Passwpord?</u></string>
+    <string name="remember_me"> Remember me</string>
+    <string name="Login_to"><u>Login to WayFast </u></string>
+    <string name="select_price_range">Select Price Range</string>
+    <string name="select_point_range">Select Points Range</string>
+    <string name="select_brand">Select Brand</string>
+    <string name="select_size">Select Size</string>
+    <string name="select_color">Select Color</string>
+    <string name="Summary"><u>Summary</u></string>
+    <string name="fill_delivery_location"><u>Fill Delivery Location</u></string>
+    <string name="payment_option"><u>Payment Option</u></string>
+    <string name="update_profile"><u>Update Profile</u></string>
+    <string name="fill_payment_detail"><u>Fill Payment Detail</u></string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+    <string name="thanku_message">for placing your order with us here at WayFast.\n\nYour order has been placed successfully.</string>
+    <string name="thanku_message2"><u>Your Order no. is</u></string>
+    <string name="thanku_message3">Please find your order status in the "Orders" in "Report" section.</string>
+    <string name="apply_voucher"><u>Apply Voucher</u></string>
+    <string name="apply_promo"><u>Apply Promocode</u></string>
+    <string name="choose_voucher"><u>Choose your Discount Voucher</u></string>
+    <string name="choose_payment_option"><u>choose your payment option</u></string>
+    <string name="signup"><u>New Registration</u></string>
+    <string name="registration"><u>Registration</u></string>
+    <string name="press_back_msg">Press once more to exit.</string>
+
+    <string name="tot_Amount">Total Amount</string>
+    <string name="tot_price">Total Price</string>
+    <string name="tot_discount">Total Discount</string>
+    <string name="promo_amount">Promo Amount</string>
+    <string name="tot_paid_amount">Total Paid Amount</string>
+    <string name="tot_bv">Total EP</string>
+
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="youAreNotUpdatedMessage">A new version of YOUR_APP_NAME is available. Please update to version\s</string>
+    <string name="youAreNotUpdatedMessage1">\s now</string>
+    <string name="update">Update</string>
+
+    <string name="str_change_circle">Change Circle</string>
+
+    <!--DRAWER menu string-->
+    <string name="Home">Home</string>
+    <string name="Shop_by_cat">Shop By Category</string>
+    <string name="My_Profile">My Profile</string>
+    <string name="Track_Order">Track Order</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="Contact">Contact Us</string>
+    <string name="Terms_n_Condition">Terms and Conditions</string>
+    <string name="Share_App">Share App</string>
+    <string name="Rate_App">Rate App</string>
+    <string name="Logout">Logout</string>
+    <string name="Login">Login</string>
+
+    <string name="toolbar_title">City List</string>
+    <string name="search_hint">Type name…</string>
+    <string name="shop_deal">Shopping  &amp; CashBack</string>
+
+    <!--Splash-->
+    <string name="str_welcome">Welcome</string>
+    <string name="str_biz">Biz</string>
+    <string name="str_utility">Utility</string>
+    <string name="str_shopping">Shopping</string>
+    <string name="str_app">App</string>
+    <string name="str_to">To</string>
+
+    <!--Login-->
+    <string name="img_logo">Logo Image</string>
+
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_photos">Photos</string>
+    <string name="nav_movies">Movies</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--HOme DashBoard -->
+    <string name="str_travel_title">Travel &amp; Booking</string>
+    <string name="str_flight">Flight</string>
+    <string name="str_utility_services">Explore Utility Services</string>
+    <string name="str_cab">Cab</string>
+    <string name="str_holiday">Holiday</string>
+    <string name="str_irctc">IRCTC Booking</string>
+    <string name="str_bus">Bus</string>
+    <string name="str_hotel">Hotel</string>
+    <string name="str_bill">Bill &amp; Pay</string>
+    <string name="str_bill_recharge">Bill Pay &amp; Recharge</string>
+    <string name="str_bill_payment">Bill Payment</string>
+    <string name="str_insurance">Insurance</string>
+    <string name="str_postpaid">Postpaid</string>
+    <string name="str_prepaid">Prepaid</string>
+    <string name="str_elctricity">Electricity</string>
+    <string name="str_gas">Gas</string>
+    <string name="str_credit_card">Credit Card</string>
+    <string name="str_cash_back">Cash Back</string>
+    <string name="str_dth">DTH</string>
+    <string name="str_datacard">Datacard</string>
+    <string name="str_recharge">Recharge</string>
+    <string name="str_add_fund">Add Fund</string>
+    <string name="str_fund">Fund</string>
+    <string name="str_add_money">Add Money</string>
+    <string name="str_business_dashboard">Business</string>
+    <string name="str_account">Account</string>
+    <string name="str_account_no">Account no.</string>
+    <string name="str_account_detail">Account Detail</string>
+    <string name="str_gst_detail">GST Detail</string>
+    <string name="str_report">Reports</string>
+    <string name="str_profile">Profile</string>
+    <string name="str_share_app">Share</string>
+    <string name="str_complaints">Complaint</string>
+
+    <string name="str_share">Share</string>
+    <string name="str_logout">Logout</string>
+    <string name="str_wallet">Wallet</string>
+    <string name="str_wallet_name">Wallet Name</string>
+
+    <string name="str_bbsemall">BBS Emall</string>
+    <string name="str_ecommerce">Commerce</string>
+    <string name="str_imps">IMPS</string>
+    <string name="str_oursrvices">Services</string>
+    <string name="str_buynsell">Buy n Sell</string>
+    <string name="str_advertise">Advertise</string>
+    <string name="str_deals_nearby_u">Deals</string>
+
+    <!--Flight Search-->
+    <string name="str_oneway">Oneway</string>
+    <string name="str_roundtrip">Roundtrip</string>
+    <string name="str_from">From</string>
+    <string name="str_from_city">City</string>
+    <string name="str_to_city">City</string>
+    <string name="str_departure_date">Departure Date</string>
+    <string name="str_return_date">Return Date</string>
+    <string name="str_demostic">Domestic</string>
+    <string name="str_international">International</string>
+    <string name="str_adult">Adults</string>
+    <string name="str_adult_year">12+ Years</string>
+    <string name="str_child">Child</string>
+    <string name="str_child_year">2–12 Years</string>
+    <string name="str_infants">Infants</string>
+    <string name="str_infants_year">0–2 Years</string>
+    <string name="str_serch_flight">Search Flight</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_cancel_time">Cancel Time</string>
+    <string name="str_cancel_charge">Cancel Charges</string>
+    <string name="ownward">Own ward </string>
+    <string name="ownward_flight">Own ward flight</string>
+    <string name="return_flight">Return flight</string>
+    <string name="ret">Return</string>
+    <string name="tot">Total</string>
+    <string name="book">Book</string>
+
+    <!--Flight Passenger Info-->
+    <string name="str_traveler_information">Traveller Information</string>
+    <string name="str_name_shoud_be_govt">Name Should Be Same As Is Government ID Proof</string>
+    <string name="str_first_name">First Name</string>
+    <string name="str_last_name">Last Name</string>
+    <string name="str_sur_name">Sur Name</string>
+    <string name="str_age">Age</string>
+    <string name="str_age_in_year">Age In Year</string>
+    <string name="str_date_of_birth">Date of Birth</string>
+    <string name="str_gender">Gender</string>
+    <string name="str_name_title">Title</string>
+
+    <string name="str_pan">Pan no.</string>
+    <string name="str_have_gst_no">I Have GST Number(Optional)</string>
+    <string name="str_gst_no">GST No.</string>
+    <string name="str_gst_email">GST Email</string>
+    <string name="str_company_name">Company Name</string>
+    <string name="str_company_address">Company Address</string>
+    <string name="str_contact_no">Contact No.</string>
+
+    <!--Book Flight-->
+    <string name="str_payment_method">Payment Method</string>
+    <string name="str_payment_deduct">Payment Deduct</string>
+    <string name="str_main_wallet">Main Wallet</string>
+    <string name="ewallet_account">E-Wallet/Account</string>
+    <string name="str_e_wallet">Pay Using E-Wallet</string>
+    <string name="str_use_available_fund">Use Available Fund :- </string>
+    <string name="str_send_otp">Send OTP</string>
+    <string name="str_receive_otp">Receive OTP</string>
+    <string name="str_resend_otp">Resend OTP</string>
+    <string name="str_flight_booking_detail">Your Booking Details</string>
+    <string name="str_flght_passenger">Flight Passengers</string>
+    <string name="str_adult_basefare">Adult Base Fare</string>
+    <string name="str_child_basefare">Child Base Fare</string>
+    <string name="str_infants_basefare">Infants Base Fare</string>
+    <string name="str_basefare">Base Fare</string>
+    <string name="str_taxes">Taxes</string>
+    <string name="str_other_charge">Other Charge</string>
+    <string name="str_total_paid">Total to be paid</string>
+    <string name="str_total_fare">Total Amount</string>
+    <string name="str_tot_book_amont">Total Book Amount</string>
+    <string name="str_promo_discount">Promo Discount(Cashback)</string>
+    <string name="str_discount">Discount</string>
+    <string name="str_have_discount">You Have Discount</string>
+    <string name="str_have_discount_cong">Congratulation. You will get discount on booking this flight.</string>
+    <string name="str_have_promo">Have Promocode ?</string>
+    <string name="str_per_passenger">per passenger</string>
+    <string name="str_agent_invoice_detail">Agent Invoice Detail</string>
+    <string name="str_margin">Margin</string>
+
+    <string name="str_member_id">Member ID</string>
+    <string name="str_transaction_pas">Transaction Password</string>
+    <string name="str_select_fund_font">Select Fund From</string>
+    <string name="str_amount_available">Amount Available</string>
+    <string name="str_available_amount">Available Amount</string>
+    <string name="str_amount_request">Amount Request</string>
+    <string name="str_pay_book">Proceed to Flight Book</string>
+    <string name="str_enter_otp_if"> Please Wait for Receive OTP \n  Otp Number will Auto Detect</string>
+    <string name="str_review_trip"> Complete Done! Please Check Your Trip</string>
+    <string name="str_flight_book_toolbar_title">Verify &amp; Flight Book</string>
+    <string name="str_flight_no_code">Flight No. &amp; Code</string>
+    <string name="str_flight_depart_time_date">Departure Date &amp; Time </string>
+    <string name="str_flight_arrive_time_date">Departure Date &amp; Time </string>
+    <string name="str_coupon_code">Coupon Code</string>
+    <string name="str_apply_promocode">Apply Promocode</string>
+    <string name="str_apply">Apply</string>
+    <string name="str_choose_promocode">Choose from the offers promocode below</string>
+    <string name="str_promocode_note1">Min 30 days gap required for the usage of same service.</string>
+    <string name="str_promocode_note2">All Coupons are beneficial only for the ID Holder.</string>
+    <string name="str_select_any">Select any</string>
+    <string name="str_promo_msg_">Success. You will get cashback \u20B9</string>
+    <string name="str_promo_cashbck_detail">Cashback will be added to your main wallet within 24 hours after payment process complete on selected service.</string>
+    <string name="str_click_here_for_doc">Click Here to Upload Related Document</string>
+    <string name="str_click_here_for_doc2">Click Here Upload Id Proof</string>
+    <!--Fliter Flight-->
+    <string name="str_refundable">Only refundable flights</string>
+    <string name="str_stop">Stops</string>
+    <string name="str_non_stop_flight">Non-stop flight only</string>
+    <string name="str_non_stop">Non-stop flight</string>
+    <string name="str_max_1stop_flight">Max 1 stop flight only</string>
+    <string name="str_max_1stop">Max 1 stop flight </string>
+    <string name="str_all_flight">All flight </string>
+    <string name="str_all_airlines">All Airlines </string>
+    <string name="str_flight_class">Flight Class</string>
+    <string name="str_economy">Economy</string>
+    <string name="str_business">Business</string>
+    <string name="str_first">First</string>
+    <string name="str_airlines">Airlines</string>
+    <string name="str_indigo">Indigo</string>
+    <string name="str_airindia">Air India</string>
+    <string name="str_airasia">Air Asia</string>
+    <string name="str_departure_time">Departure Time</string>
+    <string name="str_before_11am">Before 11.00Am</string>
+    <string name="str_after_noon_11to5pm">Afternoon(11:00AM - 5.00PM)</string>
+    <string name="str_after_11to5pm">11:00AM - 5.00PM</string>
+    <string name="str_evening_5to9pm">Evening(5:00PM - 9.00PM)</string>
+    <string name="str_5to9pm">5:00PM - 9.00PM</string>
+    <string name="str_after_9pm">After(9.00PM)</string>
+    <string name="str_cheapest">Cheapest</string>
+    <string name="str_fastest">Fastest</string>
+    <string name="str_early_takeoff">Early take off</string>
+    <string name="str_late_takeoff">Late take off</string>
+    <string name="str_land_early">Early landing</string>
+    <string name="str_land_late">Late landing</string>
+    <string name="str_apply_filter">Apply Filter</string>
+    <string name="str_filter_as">Filter As</string>
+    <string name="str_filter_by">Filter By</string>
+    <string name="str_reset">Reset</string>
+
+    <!--Hotel-->
+    <!--Hotel Search list-->
+    <string name="str_select_city">Select City</string>
+    <string name="str_select_wallet">Select Wallet</string>
+    <string name="str_select">Select</string>
+    <string name="str_checkin_date">Check-In</string>
+    <string name="str_checkout_date">Check-Out</string>
+    <string name="str_guest">Guests</string>
+    <string name="str_room">Rooms</string>
+    <string name="str_search_hotel">Search Hotel</string>
+    <string name="str_hotel_search">Hotel Search</string>
+    <string name="str_per_night">Per Night</string>
+    <string name="str_total_hotel">Total Hotel</string>
+    <string name="str_recommended_for_u">Recommended Hotel for you</string>
+    <string name="str_recommended_for_u_room">Recommended Room for you</string>
+
+    <!--Hotel Filter-->
+    <string name="str_five_star">Five Star</string>
+    <string name="str_highest_rate">Highest Rating</string>
+    <string name="str_lowest_rate">Lowest Rating</string>
+    <string name="str_low_price">Low price</string>
+    <string name="str_high_price">High price</string>
+    <string name="str_filter_by_rating">Filter By Star Rating</string>
+
+
+    <!--Hotel Select Room-->
+    <string name="str_remove">Remove</string>
+    <string name="str_how_many_people">How many people?</string>
+    <string name="str_add_room"> + Add another room</string>
+    <string name="str_remove_room"> - Remove room</string>
+    <string name="str_child1_age">Child 1 age : </string>
+    <string name="str_child2_age">Child 2 age : </string>
+
+    <!--Hotel Info-->
+    <string name="str_hotel_name">Hotel Name</string>
+    <string name="str_hotel_address">Hotel Address</string>
+    <string name="str_hotel_map">Hotel Map</string>
+    <string name="str_map">Map</string>
+    <string name="str_hotel_photos">Hotel Photos</string>
+    <string name="str_photos">Photos</string>
+    <string name="str_hotel_facility">Hotel Facility </string>
+    <string name="str_facility">Facilities </string>
+    <string name="str_hotel_feature">Hotel Feature</string>
+    <string name="str_about_hotel">About The Hotel</string>
+    <string name="str_feature">Feature</string>
+    <string name="str_hotel_attraction">Hotel Attractions</string>
+    <string name="str_pincode"> PinCode</string>
+    <string name="str_country_name">Country Name</string>
+    <string name="str_hotel_contact_info">Hotel Contact Info.</string>
+    <string name="str_hotel_contact_no">Contact No.</string>
+    <string name="str_faxno">Fax No.</string>
+    <string name="str_read_more">Read More....</string>
+    <string name="str_lat">Latitude</string>
+    <string name="str_long">Longitude</string>
+    <string name="str_hotel_book_review">Review &amp; Booking Info.</string>
+    <string name="str_hotel_book_toolbar_title">Verify &amp; Hotel Book</string>
+    <string name="str_hotel_book_success">! Hotel Book Successfully !</string>
+    <string name="str_pay_book_hotel">Proceed to Hotel Book</string>
+
+    <!--Bus-->
+    <!--bus shop_search-->
+    <string name="str_today_date">Today</string>
+    <string name="str_tomarow_date">Tomorrow</string>
+    <string name="str_bus_search">Search Bus</string>
+    <string name="str_non_stop_bus">Non-stop bus only</string>
+    <string name="str_ac_bus">Ac bus only</string>
+    <string name="str_cancel_policy">Cancellation Policy</string>
+    <string name="str_drop_point">Boarding &amp; Drop Point </string>
+    <string name="str_bus_drop_point">Bus Boarding &amp; Drop Point </string>
+    <string name="str_bus_book_review">Review &amp; Passenger Info.</string>
+    <string name="str_rating">Rating</string>
+    <string name="str_available">Available</string>
+    <string name="str_available_bal">Available Balance</string>
+    <string name="str_utility_bal">UTILITY</string>
+    <string name="str_shopping_bal">SHOPPING</string>
+    <string name="str_business_bal">BUSINESS</string>
+
+    <string name="str_booked">Booked</string>
+    <string name="str_ladies">Ladies</string>
+    <string name="str_ladies_booked">Ladies Booked</string>
+    <string name="str_lower">Lower</string>
+    <string name="str_upper">Upper</string>
+    <string name="support">Support</string>
+    <string name="str_select_droppoint">Select Drop Point</string>
+    <string name="str_droppoint">Drop Points</string>
+    <string name="str_select_boardpoint">Select Boarding Point</string>
+    <string name="str_select_seat">Select Seat</string>
+    <string name="str_boardpoint">Boarding Points</string>
+    <string name="str_bus_policy">Bus Book Policy</string>
+    <string name="str_bus_type">Bus Type</string>
+    <string name="str_policy">Policies</string>
+    <string name="str_seat">Seat</string>
+    <string name="str_travel_name">Travel Name</string>
+    <string name="str_bus_book_toolbar_title">Otp Verify &amp; Bus Book</string>
+    <string name="otp_verify">Otp Verify</string>
+    <string name="str_btn_bus_book">Proceed to Bus Seat Book</string>
+    <string name="str_bus_book_id">Book Id</string>
+    <string name="str_bus_book_amount">Booking Amount</string>
+    <string name="str_depart_time">Departure Time</string>
+    <string name="str_arrival_time">Arrival Time</string>
+    <string name="str_select_room">Select Room</string>
+    <string name="str_deduct_from">Deduct from Main Wallet</string>
+
+
+    <!--Bus seat-->
+    <string name="str_bus_seats">Bus Seats</string>
+    <string name="str_have_discount_cong_bus">Congratulation. You will get discount on this booking </string>
+
+    <!--Bus Filter-->
+    <string name="str_before_6am">Before 6am</string>
+    <string name="str_6am_to_12pm">6am to 12pm</string>
+    <string name="str_12pm_to_6pm">12pm to 6pm</string>
+    <string name="str_after_6pm">After 6pm</string>
+    <string name="str_bus_seat">Seat</string>
+    <string name="str_bus_sleeper">Sleeper</string>
+    <string name="str_ac">Ac</string>
+    <string name="str_bus_nonAc">NonAc</string>
+
+    <!--Bus booking fare detail-->
+    <string name="str_selected_seat">Selected Seat</string>
+
+    <!--Cab-->
+    <string name="outstation">Outstation</string>
+    <string name="airpot_cab">Airport Cabs</string>
+    <string name="rent_cab">Rentals Cabs</string>
+    <string name="enter_add_or_turn_location">Enter pick-up address/current location</string>
+    <string name="from_area_landmark">Form(Area,street or landmark)</string>
+    <string name="from_airport_drop_add">Form(Airport or drop address)</string>
+    <string name="to_airport_drop_add">To(Airport or drop address)</string>
+    <string name="to_area_landmark">To(Area,street or landmark)</string>
+    <string name="enter_drop_add_near_area">Enter drop address/nearby area</string>
+    <string name="enter_pickup_add">Enter Pick-up address</string>
+    <string name="from_location">From Location</string>
+    <string name="to_airport">To Airport</string>
+    <string name="pickup_date">Pick-up date</string>
+    <string name="pickup_time">Pick-up time</string>
+    <string name="pickup_location">Pick-up Location</string>
+    <string name="pickup_address">Pick-up Address</string>
+    <string name="drop_location">Drop-off Location</string>
+    <string name="drop_address">Drop-off Address</string>
+    <string name="search_cab">Search Cab</string>
+    <string name="str_ac_cab">Ac Cab Only</string>
+    <string name="no_of_pax">No of Pax</string>
+
+    <!--Recharge-->
+    <!--Mobile-->
+    <string name="str_mobile_rech_act_appbar_title">Mobile Recharge</string>
+    <string name="str_choose_oprator">Choose Operator</string>
+    <string name="str_oprator_name">Operator Name</string>
+    <string name="str_select_disrtict">Select District</string>
+    <string name="str_choose_service_provider">Choose Service Provider</string>
+    <string name="str_enter_mobno">Enter Mobile Number</string>
+    <string name="str_enter_amount">Enter  Amount</string>
+    <string name="str_rechrge">Recharge</string>
+    <string name="str_rechrge_continue">Continue to Recharge</string>
+    <string name="str_rechrge_amount">Recharge Amount</string>
+    <string name="str_dish_regis_mob_card_no">Register Mobile Number or Viewing Card Number </string> <!--Dish tv-->
+    <string name="str_tata_regis_mob_subscrib_no">Register Mobile Number or Subscriber Id </string> <!--Tata Sky-->
+    <string name="str_d2h_id_enter_regis_mob">Subscriber Id / Register Mobile Number </string> <!--//d2h-->
+    <string name="str_airtel_customor_id">Customer Id </string>  <!--Airtel-->
+    <string name="str_sun_or_relince_smart_card_no">Smart Card Number </string> <!--Sun direct or Reliance-->
+    <string name="permission_contacts_rationale">Contacts permissions are needed to demonstrate access.</string>
+    <string name="ok">OK</string>
+    <string name="permision_available_contacts">Contacts Permissions have been granted. Contacts screen can now be opened.</string>
+    <string name="permissions_not_granted">Permissions were not granted.</string>
+
+    <string name="str_airtel_note">Your service id is located on your TV menu, on the bottom of TV screen.</string>
+    <string name="str_dishtv_note">Enter your mobile no. registered with dish TV or Enter your 11 digit card number.</string>
+    <string name="str_reliancetv_note">Enter 12 digits smart card number.</string>
+    <string name="str_sundirect_note">To know your customer ID ,SMS \'ID\' from your registered telephone number or SMS
+        &amp;aposCID &amp;apos  &amp;lt somart card number &amp;gt from non-registered telephone number to 9212102299.</string>
+    <string name="str_tatasky_note">Enter your mobile no. registered with TaTa Sky or Subscriber Id Number</string>
+    <string name="str_d2htv_note">SMS \'ID\' to 566777 from your registerd mobile no or call 1800 1370 444 (Toll Free No)
+                                   to know your customer ID , balance check and recharge due</string>
+
+    <string name="str_rech_success">! Recharge Successfully !</string>
+    <string name="str_recharge_verify_otp_title">Verify Otp &amp; Recharge</string>
+
+    <!-- Bill Pay-->
+    <string name="str_plz_select">Please Select</string>
+    <string name="str_click_here_refernce_no">Click here for get reference number</string>
+    <string name="str_refernce_no"> Reference number</string>
+    <string name="str_bill_amount">Enter Bill Amount</string>
+    <string name="str_customer_name">Enter Customer Name</string>
+    <string name="str_mobile_no">Enter Mobile Number</string>
+    <string name="str_card_type">Card Type</string>
+    <string name="str_card_no">Card No.</string>
+    <string name="str_confirm_card_no">Confirm Card No.</string>
+    <string name="str_promocode">Promo code</string>
+    <string name="str_apply_promo">Applied Promo</string>
+    <string name="str_promocode_reader">Promo code Reader</string>
+    <string name="str_btn_discount_cal">Calculate Discount</string>
+    <string name="str_promocode_discount">Promo code Discount</string>
+    <string name="str_btn_bilPay">Proceed to bill pay</string>
+
+
+    <string name="str_gas_group_no">Enter Gas Group Number</string>
+    <string name="str_upload_file">Upload file</string>
+    <string name="str_upload">Upload</string>
+    <string name="str_upload_id">Upload Id</string>
+    <!-- <string name="str_click_here">Click Here</string>
+        <string name="str_click_here_for">Click here for upload document</string>-->
+    <string name="str_billpay_proceed">Proceed to Bill Pay</string>
+    <string name="str_billpay_verify_otp_title">Verify Otp &amp; Bill Pay</string>
+    <string name="str_policy_no">Policy Number</string>
+    <string name="str_ref_k_id_no">Reference./ K / Id Number</string>
+    <string name="str_policy_holder">Policy Holder Name</string>
+    <string name="str_policy_amount">Policy Amount</string>
+    <string name="str_check_final_billPay">Check final detail of bill pay</string>
+    <string name="str_check_final_rechargePay">Check final detail of recharge </string>
+    <string name="str_service_type">Service Type</string>
+    <string name="str_service">Service</string>
+    <string name="str_service_prov_name">Service Provider</string>
+    <string name="str_continue">Continue >></string>
+    <string name="str_location_code">Location Code</string>
+    <string name="str_meter_read_date">Meter Reading Date </string>
+    <string name="str_cycle_no">Cycle Number</string>
+    <string name="str_bill_unit">Bill Unit</string>
+    <string name="str_meter_no">Meter No.</string>
+    <string name="str_client_id">Client Id</string>
+
+    <!--Fund Request-->
+    <string name="str_amount">Amount</string>
+    <string name="str_deposit_mode">Select Deposit Mode</string>
+    <string name="str_fund_req">Fund Request</string>
+    <string name="str_send_req">Send Request</string>
+    <string name="str_remark_as_mode">Selected Mode No.</string>
+    <string name="str_promocode_list">Recommanded promocod are.</string>
+
+    <!--Report-->
+    <string name="select_date">Select Date</string>
+    <string name="rechare_report_note">Find data date wise than select from and to date ! </string>
+    <string name="ledger_report_note">Select from and to date for show record. </string>
+    <string name="select_service">Select Service</string>
+
+    <!--Add Fund-->
+    <string name="str_select_fund_from">Select Fund From</string>
+    <string name="str_transaction_pass">Transaction Password</string>
+    <string name="amount_available">Amount Available</string>
+    <string name="amount_req">Amount Request</string>
+    <string name="send_req">Send Request</string>
+    <string name="validate">check available fund</string>
+    <string name="remark">Remark</string>
+    <string name="apporve_reject">Approve/Reject</string>
+    <string name="Date">Date</string>
+    <string name="request_by">Request by</string>
+    <string name="from_wallet">E-Wallet</string>
+    <string name="from_account">Online Payment</string>
+    <string name="choose_option">Choose Option</string>
+
+    <!--************************************CASHBACK*****************************-->
+
+    <string name="facebook_app_id">1816498155253770</string>
+    <string name="fb_login_protocol_scheme">fb280807615594867</string>
+
+
+    <string name="OR"><u>OR</u></string>
+    <string name="Skip"><u>SKIP</u></string>
+    <string name="signup_text"><u>Not Registered? Sign Up Here</u></string>
+    <string name="Register"><u>Register</u></string>
+    <string name="Change_Password"><u>Change password</u></string>
+    <string name="Bank_details"><u>Bank Details</u></string>
+    <string name="Personal_detail"><u>Personal Details</u></string>
+    <string name="Seach_hint">Search for your favourite store</string>
+
+    <string name="imageFolderName">BBSbiz Images</string>
+
+    <!-- ACTION MENU MENU STRING-->
+    <string name="action_myaccount">My Account</string>
+    <string name="action_notification">Notification</string>
+    <string name="action_home">Home</string>
+    <!--<string name="action_search">Search</string>-->
+
+    <!-- DRAWER MENU STRING-->
+    <string name="home_string">Home</string>
+    <string name="myaccount_string">My Account</string>
+    <string name="setting">Account Settings</string>
+    <string name="aboutus">About us</string>
+    <string name="store">Stores</string>
+    <string name="tnc_string">Terms and Condition</string>
+    <string name="faq_string">FAQ</string>
+    <string name="rateapp_string">Rate App</string>
+    <string name="shareapp_string">Share App</string>
+    <string name="refer_string">Refer and Earn</string>
+    <string name="howitworks_string">How App Works</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout_string">Logout</string>
+    <string name="login_string">Login</string>
+    <string name="pp_string">Privacy Policy</string>
+
+    <!-- OPEN CLOSE DRAWER MENU STRING-->
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
+    <string-array name="no_of_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+    <!-- <string name="rs_symbol">\u20B9</string>
+         <string name="rs_text">\u20A8</string>-->
+
+    <!--************************SHOPPING*********************************-->
+
+
+    <string name="service_web_development">Web Development</string>
+    <string name="service_msme_registration">MSME Registration</string>
+    <string name="service_retail_profit">Retail Profit</string>
+    <string name="service_ambulance_facility">Ambulance Facility</string>
+    <string name="service_tour_travels">Tour n Travels</string>
+    <string name="service_share_sell_earn">Share-Sell Earn</string>
+    <string name="service_enterprenur_help_desk">Enterpreneur Help Desk</string>
+    <string name="service_resale_used_product">Resale Used Product</string>
+    <string name="service_mobile_app_development">Mobile app development</string>
+    <string name="service_rent_a_house_office">Rent a House/Office</string>
+    <string name="service_become_a_distributor">Become a Distributor</string>
+    <string name="service_pan_card_service">Pan Card Service</string>
+    <string name="service_cab_booking">cab Booking</string>
+    <string name="service_aeps">AEPS</string>
+    <string name="service_type">Service Type</string>
+    <string name="service_mobile_recharge">Mobile Recharge</string>
+    <string name="service_iso_registration">ISO Registration</string>
+    <string name="service_insurance_premium">Insurance Premium</string>
+    <string name="service_irctc">IRCTC Ticket Booking</string>
+    <string name="service_shopping_discount">Shopping Discount on 100+ site</string>
+    <string name="service_market_place">Market Place</string>
+    <string name="service_flight_booking">Flight Booking</string>
+    <string name="service_home_service">Home Service</string>
+    <string name="service_gst_registration">GST Registration</string>
+    <string name="service_gst_return">GST Return</string>
+    <string name="service_busbooking">Bus Booking</string>
+    <string name="service_company_registration">Company Registration</string>
+    <string name="service_hotel_booking">Hotel Booking</string>
+    <string name="service_itreturn">IT return</string>
+    <string name="service_mpos">MPOS</string>
+    <string name="service_loan">Loan</string>
+    <string name="promo_code_detail">PromoCode Detail</string>
+
+    <string name="str_change_operator">Change Operator</string>
+    <string name="str_choose_circle">Choose Circle</string>
+    <string name="continue_for_book">Continue for booking</string>
+
+    <string name="str_change_plan">Change Plan</string>
+    <string name="str_continue_for_recharge">Continue for recharge >></string>
+    <string name="str_continue_for_billpay">Continue for Bill Payment >></string>
+
+
+</resources>

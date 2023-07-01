@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_v_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <!--Iamge -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_report_item_img"
+            />
+
+        <!--Layout for service type, name-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Text Service type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/recharge_report_item_txt_serrvice_type"/>
+            <!--Text Service number-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:id="@+id/recharge_report_item_txt_service_number"/>
+        </LinearLayout>
+
+        <!--Text Price-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="@dimen/txt_default"
+            android:id="@+id/recharge_report_item_txt_price"/>
+
+    </LinearLayout>
+
+    <!--Layout for Time date , debit, credit from-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <!--Recharge date-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/recharge_report_item_txt_date"
+            android:layout_height="wrap_content" />
+
+        <!--Recharge utility_wallet from-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/txt_size_medium"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:id="@+id/recharge_report_item_txt_wallet"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_report_item_img_wallet"/>
+    </LinearLayout>
+
+    <!--Status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:orientation="horizontal">
+        <!--Text Status note-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/margin_medium"
+            android:id="@+id/recharge_report_item_txt_statusnote"/>
+        <!--Text Status-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:id="@+id/recharge_report_item_txt_status"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

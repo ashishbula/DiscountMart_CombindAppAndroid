@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="3dp">
+
+    <!--Layout for Flight logo, Name , Code-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <!--Layout for Flight Logo-->
+        <ImageView
+            android:layout_width="@dimen/margin_x_large"
+            android:layout_height="@dimen/margin_x_large"
+            android:scaleType="fitXY"
+            android:id="@+id/flight_search_list_item_img_flight_logo"/>
+
+        <!--Flight NAme -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/black"
+            android:id="@+id/flight_search_list_item_txt_flight_name"
+            android:text="AirIndia"/>
+        <!--Flight  code-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:textSize="@dimen/txt_size_medium"
+            android:id="@+id/flight_search_list_item_txt_flight_code"
+            android:text="AI-492"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/margin_v_small"
+        android:paddingBottom="@dimen/margin_v_small"
+        android:weightSum="4"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Layout for Flight Departure Time,Day , Form City-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--Departure Flight Icon-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flight_takeoff"/>
+                <!--Departure time-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flight_search_list_item_txt_departure_time"
+                    android:text="time"/>
+            </LinearLayout>
+
+            <!--Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_departure_date"
+                android:text="12/03/19"/>
+            <!--Day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:visibility="visible"
+                android:textSize="@dimen/txt_size_medium"
+                android:id="@+id/flight_search_list_item_txt_departure_day"
+                android:text="Monday"/>
+
+            <!--Form City-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textColor="@color/black"
+                android:id="@+id/flight_search_list_item_txt_from_city"
+                android:text="JAI"/>
+        </LinearLayout>
+
+        <!--Layout for Flight Reach Time,Stop-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".8"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <!--Flight Total Reach Time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:id="@+id/flight_search_list_item_txt_total_hour"
+                android:text="time"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            <!--Stop -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_stop"
+                android:text="NotStop"/>
+
+            <!--Refundable-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_refundable"
+                android:text="Refundable"/>
+
+        </LinearLayout>
+
+        <!--Layout for Flight Return Time,Day , Form City-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <!--Layout for flight land icon, time-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--Destination Flight Icon-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flight_land"
+                    />
+                <!--Arraival time-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flight_search_list_item_txt_arriv_time"
+                    android:text="time"/>
+            </LinearLayout>
+
+            <!--Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_arrive_date"
+                android:text="12/03/19"/>
+            <!--Day-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:visibility="visible"
+                android:id="@+id/flight_search_list_item_txt_arrive_day"
+                android:text="Monday"/>
+
+            <!--to City-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_to_city"
+                android:text="DEL"/>
+
+        </LinearLayout>
+
+        <!--Layout Form Flight Price, Seat Available,Button Book-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".8"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!--flight Price-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/flight_search_list_item_txt_price"
+                android:text=" 1500"/>
+            <!--Seat Availabel-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_small"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:id="@+id/flight_search_list_item_txt_avail_seat"
+                android:text="3"/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

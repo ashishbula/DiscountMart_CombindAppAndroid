@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/margin_v_small"
+    android:layout_height="wrap_content">
+
+    <!--Layout TextView for text message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_action_close"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:id="@+id/otp_verify_act_img_close"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:id="@+id/otp_verify_act_txt_title"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/str_enter_otp_"
+                android:textAlignment="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/otp_verify_act_txt_message"/>
+        </LinearLayout>
+        <!--Layout for edit text otp-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:id="@+id/otp_verify_act_layout_otptext"
+            android:orientation="horizontal">
+            <!--Edit text Enter Otp-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:id="@+id/otp_verify_act_txtInput_otp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_enter_otp"
+                    android:paddingLeft="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:id="@+id/otp_verify_act_edtxt_otp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/str_otp_send_to"
+                android:id="@+id/otp_verify_act_txt_num"/>
+        </LinearLayout>
+
+        <!--Button request Otp Verify-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:id="@+id/otp_verify_act_layout_btn_verify"
+            android:visibility="visible"
+            android:gravity="center"
+            android:paddingBottom="0dp"
+            android:layout_marginRight="@dimen/margin_medium">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/otp_verify_act_btn_otpverify"
+                android:background="@drawable/selector_bg_btn"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/white"
+                android:text="@string/str_verify_otp"/>
+        </LinearLayout>
+
+        <!--Layout for txt error msg-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:id="@+id/otp_verify_act_layout_msg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/otp_verify_act_txt_msg"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

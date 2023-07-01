@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".utilityServices.billpayment.activity.BillPayFinalDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/billpay_final_detail_img_close"
+            android:src="@drawable/ic_close"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/margin_medium"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <!--Title text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_check_final_billPay"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_large"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <!--Service Type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_service_type"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_final_detail_txt_service_type"
+                android:gravity="center"/>
+
+            <!--Reference no-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_refernce_no"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_final_detail_txt_refno"
+                android:gravity="center"/>
+
+            <!--bill amount-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_bill_amount"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_final_detail_txt_billamunt"
+                android:gravity="center"/>
+
+            <!--Service name-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_service_prov_name"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/billpay_final_detail_txt_service_name"
+                android:gravity="center"/>
+
+            <!--Button continue-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:background="@drawable/selector_bg_btn"
+                    android:id="@+id/billpay_final_detail_btn_continue"
+                    android:textColor="@color/white"
+                    android:text="@string/str_continue_for_billpay"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Layout for  recharge payment content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:visibility="gone"
+            android:id="@+id/billpay_payment_layout"
+            android:orientation="vertical">
+            <!--vertical line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"></View>
+
+            <!--Main utility_wallet balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:id="@+id/billpay_payment_layout_main_wallet">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_main_wallet" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:id="@+id/billpay_payment_txt_main_bal"/>
+            </LinearLayout>
+
+            <!--Layout for Total booking Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:orientation="horizontal">
+                <!--Text amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bill_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal"/>
+
+                <!--Text value amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:gravity="right"
+                    android:id="@+id/billpay_payment_txt_totPay_amount"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_normal"/>
+            </LinearLayout>
+
+            <!--Layout for Payment Method option-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_payment_deduct"
+                    android:textSize="@dimen/txt_size_large"/>
+
+                <!--Main Wallet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/billpay_payment_layout_chbox_main_wallet"
+                    android:orientation="horizontal">
+                    <!--Check Box Main Wallet-->
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/billpay_payment_chbox_mainWallet"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_main_wallet"/>
+                    <!--Text Main utility_wallet amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/billpay_payment_txt_main_bal_deduct"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--E-utility_wallet/ Account Check box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/billpay_payment_layout_chbox_ewallt"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/billpay_payment_chbox_eWallet"
+                        android:text="@string/ewallet_account"/>
+                    <!--Text deduct amount from other-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/billpay_payment_txt_bal_deduct_other"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--Promo Wallet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/billpay_payment_layout_chbox_promo"
+                    android:orientation="horizontal">
+                    <!--Check Box Promo amountt-->
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/billpay_payment_chbox_promo"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_promocode_discount"/>
+                    <!--Text Promo amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/billpay_payment_txt_promo_bal"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!--Update-->
+                <!--Layout for applied promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/billpay_payment_act_layout_promocode"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/str_apply_promo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/txt_size_normal">
+
+                    </TextView>
+
+                    <!--Promo-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/billpay_payment_act_txt_promo"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_normal">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/billpay_payment_rdg_payment_method"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_main_wallet"
+                        android:checked="true"
+                        android:id="@+id/billpay_payment_rdb_mainwallet"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ewallet_account"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:id="@+id/billpay_payment_rdb_ewallet"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--Layout for remaining amount from-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/billpay_payment_layout_clickhere"
+                android:visibility="gone"
+                android:padding="@dimen/margin_v_small"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_large"
+                    android:id="@+id/billpay_payment_txt_clickhere"
+                    android:layout_marginLeft="@dimen/txt_size_small"
+                    android:text="Click here to continue process >>"/>
+
+            </LinearLayout>
+
+
+            <!--Button send otp-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billpay_payment_layout_otp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <Button
+                    android:id="@+id/billpay_payment_btn_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@drawable/selector_bg_btn"
+                    android:text="@string/str_submit"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <!--Layout for show balance message-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/billpay_payment_layout_message"
+                android:layout_marginRight="@dimen/margin_medium">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/billpay_payment_txt_bal_message"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    app:layout_behavior="">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_large"
+        android:background="@color/black"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="Bank Proof"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_large"
+            android:orientation="vertical">
+
+            <!--Layout FOr Image View Document-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0"
+                        android:id="@+id/bank_proof_activity_txtView_uploadDoc"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="Upload Document"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:text="No file Attach"
+                        android:maxLength="20"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/bank_proof_activity_txtView_doc_pah"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_v_small"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark">
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_file_upload"
+                            android:id="@+id/bank_proof_activity_imgView_doc"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout TextView Verify -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:orientation="vertical">
+                <!--Text Verify status-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bank_proof_activity_txtView_verify_status"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"/>
+
+                <!--Text reject reason-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bank_proof_activity_txtView_reject_reson"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"/>
+
+                <!--Text reject date-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bank_proof_activity_txtView_reject_date"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"/>
+
+                <!--Text reject remark-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bank_proof_activity_txtView_reject_remark"
+                    android:paddingLeft="2dp"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!--Account Type,Account No,Bank, Branch, Ifsc Code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <!--Account Type Spinner  Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/material_graybg"
+                        android:layout_marginTop="@dimen/margin_v_small"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_ac_type"
+                            android:paddingLeft="@dimen/margin_v_small"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:layout_gravity="left"
+                            android:textColor="@color/black"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:id="@+id/bank_proof_activity_spiner_actype">
+                        </Spinner>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Account No-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_ac_no"
+                        app:hintTextColor="@color/black">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:autofillHints="@string/str_ac_no"
+                            android:inputType="number"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:minLines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:id="@+id/bank_proof_activity_edTxt_acno"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--Layout Spinner Bank -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/material_graybg"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_select_bank"
+                            android:paddingLeft="@dimen/margin_v_small"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:layout_gravity="left"
+                            android:textColor="@color/black"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:spinnerMode="dialog"
+                            android:id="@+id/bank_proof_activity_spiner_bank">
+                        </Spinner>
+
+
+                    </LinearLayout>
+
+
+
+
+                <!--Branch Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_branch_nme"
+                        app:hintTextColor="@color/black">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:autofillHints="@string/str_branch_nme"
+                            android:textColor="@color/black"
+                            android:minLines="1"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:maxLines="1"
+                            android:inputType="text|textNoSuggestions"
+                            android:id="@+id/bank_proof_activity_edTxt_branch"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--IFSC Code-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_ifsc"
+                        app:hintTextColor="@color/black">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_ifsc"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:textColor="@color/black"
+                            android:minLines="1"
+                            android:maxLines="1"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:inputType="text|textNoSuggestions"
+                            android:id="@+id/bank_proof_activity_edTxt_ifsc"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="2dp"
+                android:id="@+id/bank_proof_activity_layout_submitt"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:background="@drawable/selector_bg_btn_black"
+                    android:id="@+id/bank_proof_activity_btn_submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:text="@string/str_submit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

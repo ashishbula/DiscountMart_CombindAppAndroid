@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".recharge.activity.RechargeSucccessMsgActivity">
+
+    <!--Text Msg success-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_rech_success"
+        android:textSize="@dimen/txt_size_large"
+        android:layout_marginTop="@dimen/margin_xx_large"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/recharge_success_act_txt_msg"/>
+
+    <!--Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/margin_normal"
+        android:orientation="vertical">
+
+        <!--Status-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_success_act_txt_status"/>
+        <!--Mobile-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_success_act_txt_mobile"/>
+        <!--Amount-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_success_act_txt_amount"/>
+
+        <!--Operator Id-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_success_act_txt_opratorId"/>
+
+        <!--Transaction Id-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_success_act_txt_transId"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

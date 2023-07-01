@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_v_small">
+
+    <!--Header Title Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/room_passenger_item_layout_header"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_traveler_information"
+            android:textSize="@dimen/txt_size_large"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:background="@color/gray3"
+            android:textSize="@dimen/txt_size_medium"
+            android:text="@string/str_name_shoud_be_govt"/>
+
+
+    </LinearLayout>
+
+    <!--Passenger Detail Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@color/white"
+        android:id="@+id/room_passenger_item_layout_itemview"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_adult"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_passenger_item_txt_paasenger_title"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:id="@+id/room_passenger_item_txt_paasenger_count"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+        <!--Name Title For Adult Radio Group -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:id="@+id/room_passenger_item_rdg_adult_title"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/room_passenger_item_rdb_mr"
+                android:text="Mr"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/room_passenger_item_rdb_mrs"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="Mrs"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/room_passenger_item_rdb_ms"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="Ms"/>
+
+
+
+        </RadioGroup>
+
+        <!--Name Title For Child or Infants Radio Group -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:id="@+id/room_passenger_item_rdg_child_title"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/room_passenger_item_rdb_mstr"
+                android:text="Mstr"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/room_passenger_item_rdb_miss"
+                android:text="Miss"/>
+
+
+        </RadioGroup>
+
+        <!--Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_v_small"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/room_passenger_item_edtxt_name"
+                android:inputType="text"
+                android:textSize="@dimen/txt_size_normal"
+                android:hint="@string/str_name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Sur Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/room_passenger_item_edtxt_surname"
+                android:textSize="@dimen/txt_size_normal"
+                android:inputType="text"
+                android:hint="@string/str_last_name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--DOB and Gender-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <!--DOB-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_passenger_item_edtxt_dob"
+                    android:inputType="number"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:hint="@string/str_age_in_year"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Gender Radio Group-->
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/room_passenger_item_rdg_gender"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:checked="true"
+                    android:id="@+id/room_passenger_item_rdb_male"
+                    android:text="Male"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:id="@+id/room_passenger_item_rdb_female"
+                    android:text="Female"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--Layout For error msg-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/txt_size_normal"
+                android:id="@+id/room_passenger_item_txt_error"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

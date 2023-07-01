@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="in.discountmart.utility_services.billpayment.activity.GasBillActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+    <!--Custom toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/gas_billpay_act_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.Dark"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--title-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Gas Bill Pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_large"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wallet"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:layout_gravity="right|center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/gas_billpay_act_txt_walletamount"
+                android:layout_gravity="right|center"
+                android:textSize="@dimen/txt_size_medium"
+                android:layout_marginRight="@dimen/margin_small"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--all Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:paddingBottom="@dimen/margin_large"
+            android:layout_margin="@dimen/margin_v_small"
+            android:orientation="vertical">
+            <!--title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:textSize="@dimen/margin_normal"
+                android:text="Choose Service Provider "/>
+
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/gray"/>
+            <!--Choose Bank -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/white"
+                android:gravity="center"
+                android:id="@+id/gas_billpay_act_layout_oprator"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_choose_oprator"
+                    android:id="@+id/gas_billpay_act_txt_oprator"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+            <!--Line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/gray"/>
+
+            <!--Layout for preference number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_ref"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_refernce_no"
+                        android:singleLine="true"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/gas_billpay_act_edtxt_ref_no"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Bill Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_billamount"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_bill_amount"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:id="@+id/gas_billpay_act_edtxt_bill_amnt"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Gas Group Number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_groupno"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_gas_group_no"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/gas_billpay_act_edtxt_gasno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Customer name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_billername"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_customer_name"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:singleLine="true"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:id="@+id/gas_billpay_act_edtxt_cust_name"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Mobile no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_mobile"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/str_mobile_no"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:singleLine="true"
+                        android:id="@+id/gas_billpay_act_edtxt_mobileno"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for Email Id-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_email">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_email"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:singleLine="true"
+                        android:id="@+id/gas_billpay_act_edtxt_email"
+                        android:textSize="@dimen/txt_default"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Layout for card number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/gas_billpay_act_layout_card_no"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_card_no"
+                    android:textSize="@dimen/txt_size_normal"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_cardno1"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/gas_billpay_act_edtxt_cardno2"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_cardno3"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:padding="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_cardno4"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for confirm card number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/gas_billpay_act_layout_confcardno"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_confirm_card_no"
+                    android:textSize="@dimen/txt_size_normal"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_conf_cardno1"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:id="@+id/gas_billpay_act_edtxt_conf_cardno2"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_v_small"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_conf_cardno3"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:padding="@dimen/margin_v_small"
+                        android:background="@drawable/white_bg_box_round_corner"
+                        android:id="@+id/gas_billpay_act_edtxt_conf_cardno4"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout promocode -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/gas_billpay_act_layout_promocode"
+                android:orientation="horizontal">
+
+                <!--Edit text Promocode-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edtxt_height"
+                        android:hint="@string/str_promocode"
+                        android:paddingLeft="@dimen/margin_v_small"
+                        android:background="@drawable/bg_gray_border_black_box"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:id="@+id/gas_billpay_act_edtxt_promocode"
+                        android:textSize="@dimen/txt_size_normal"/>
+
+
+                </LinearLayout>
+
+                <!--Text Calculate Get Promocode -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_have_promo"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/margin_v_small"
+                        android:id="@+id/gas_billpay_act_txt_getpromo"
+                        android:background="@drawable/colorprimary_bg_box"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_medium"
+                        android:id="@+id/gas_billpay_act_txt_used_promo"
+                        />
+
+                </LinearLayout>
+
+                <!--Remove Promo-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/gas_billpay_act_layout_remove_promo">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close_black"></ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout promocode discount -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/gas_billpay_act_layout_discount"
+                android:orientation="horizontal">
+
+                <!--Edit text Promocode-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:inputType="number"
+                            android:hint="@string/str_promocode_discount"
+                            android:paddingLeft="@dimen/margin_v_small"
+                            android:id="@+id/gas_billpay_act_edtxt_promo_dis"
+                            android:textSize="@dimen/txt_size_normal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--Text Calculate Promo discount-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_btn_discount_cal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/margin_v_small"
+                        android:id="@+id/gas_billpay_act_txt_cal_dis"
+                        android:background="@drawable/colorprimary_bg_box"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Button Bill Pay-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/gas_billpay_act_layout_billpay">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_btn_bilPay"
+                    android:textColor="@color/white"
+                    android:id="@+id/gas_billpay_act_btn_billpay"
+                    android:background="@drawable/selector_bg_btn"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

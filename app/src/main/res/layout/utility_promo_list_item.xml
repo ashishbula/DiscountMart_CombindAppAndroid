@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_v_small"
+        app:cardElevation="@dimen/margin_v_small"
+        android:layout_margin="@dimen/margin_v_small">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            /*Linear Layout for TextView Service*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Service"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text=":"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promo_list_item_txt_service"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Value*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Value"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text=":"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promo_list_item_txt_value"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Promo code*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Voucher Code"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text=":"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promo_list_item_txt_promocode"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Validity*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Validity"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text=":"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promo_list_item_txt_validity"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            /*Linear Layout for TextView Status*/
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="@dimen/margin_v_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Status"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text=":"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/promo_list_item_txt_status">
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

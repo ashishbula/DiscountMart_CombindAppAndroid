@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    tools:showIn="@layout/utility_activity_cab_city_list"
+    tools:context="in.discountmart.utility_services.travel.utility_cab.cab_activity.CabSearchListActivity">
+
+
+    <!--Layout for Total Bus and Filter-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:background="@color/white"
+        android:elevation="@dimen/margin_medium"
+        android:padding="@dimen/margin_v_small"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_v_small"
+            android:id="@+id/cab_search_list_actvity_txt_totalcab"
+            android:text="Total Cab"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:background="@color/black"/>
+
+    <!--Layout for Flight List in Recycler View-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cab_search_list_actvity_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_v_small">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

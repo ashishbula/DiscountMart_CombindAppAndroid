@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Layout for choose payment option Radio-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <!--Layout for main balance-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="@dimen/margin_v_small"
+            android:background="@color/LightGray1"
+            android:layout_marginLeft="@dimen/margin_x_large"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wallet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_main_wallet"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_normal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/add_fund_act_txt_balance"
+                android:textSize="@dimen/txt_size_normal"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/add_fund_act_txt_deduct_msg"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_option"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:textSize="@dimen/txt_size_normal"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_fund_act_rdg_option"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="horizontal">
+            <!--Radio Wallet-->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_fund_act_rdb_wallet"
+                android:checked="false"
+                android:text="Wallet"
+                android:visibility="visible"/>
+
+            <!--Radio Payment Gateway-->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:checked="false"
+                android:id="@+id/add_fund_act_rdb_gateway"
+                android:text="@string/from_account"
+                />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <!--Layout content for payment gateway-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/add_fund_act_layout_gateway">
+
+            <!--Edit text Mobile no-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:paddingTop="0dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/Mobileno"
+                    android:autofillHints="@string/Mobileno"
+                    android:id="@+id/add_fund_act_edtxt_mobile"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Edit text Email id-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:visibility="visible"
+                android:layout_marginRight="@dimen/margin_normal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textSize="@dimen/txt_default"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:id="@+id/add_fund_act_edtxt_email"
+                    android:autofillHints="@string/email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Edit text Amount Request-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textSize="@dimen/txt_default"
+                    android:inputType="number"
+                    android:hint="@string/str_amount_request"
+                    android:id="@+id/add_fund_act_edtxt_gatewayreq_amount"
+                    android:autofillHints="@string/str_amount_request" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Button fund request-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_normal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_fund_act_btn_fund_gatewayreq"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="@string/str_fund_req"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--Layout content for payment Wallet-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--Layout for E-Wallet Balance-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_large"
+            android:id="@+id/add_fund_act_layout_ewallet"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <!--TExt Member Id-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_normal"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:id="@+id/add_fund_act_txt_memberid"/>
+
+            <!--Edit text Transaction Password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:paddingTop="0dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:passwordToggleEnabled="true">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textSize="@dimen/txt_default"
+                    android:hint="@string/str_transaction_pas"
+                    android:id="@+id/add_fund_act_edtxt_trans_pass"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Text Spinner Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_default"
+                android:text="@string/str_select_fund_from"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_v_small" />
+            <!--spinner select Fund From-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:id="@+id/add_fund_act_layout_spinner"
+                android:background="@drawable/white_bg_box_round_corner">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxx_large"
+                    android:id="@+id/add_fund_act_spinner_fund_from">
+                </androidx.appcompat.widget.AppCompatSpinner>
+            </LinearLayout>
+
+            <!--Fund Message-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textColor="@color/red"
+                android:layout_marginLeft="@dimen/margin_v_small"
+                android:id="@+id/add_fund_act_txt_message"/>
+
+            <!--Button check fund-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:id="@+id/add_fund_act_btn_checkfund"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:text="@string/validate"/>
+            </LinearLayout>
+
+            <!-- text Amount Available-->
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/colorPrimary"
+               android:textSize="@dimen/txt_size_normal"
+               android:layout_marginTop="@dimen/margin_normal"
+               android:layout_marginLeft="@dimen/margin_v_small"
+               android:id="@+id/add_fund_act_txt_available_fund"/>
+
+            <!--Edit text Amount Request-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/add_fund_act_txtInputLay_amntreq">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textSize="@dimen/txt_default"
+                    android:inputType="number"
+                    android:hint="@string/str_amount_request"
+                    android:id="@+id/add_fund_act_edtxt_request_amount"
+                    android:autofillHints="@string/str_amount_request" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Button fund request-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/add_fund_act_layout_fund_request"
+                android:layout_marginTop="@dimen/margin_normal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_fund_act_btn_fund_request"
+                    android:background="@drawable/selector_bg_btn"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/margin_v_small"
+                    android:text="@string/str_fund_req"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Text Error Message-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/red"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:id="@+id/add_fund_act_txt_error_msg"/>
+
+</LinearLayout>

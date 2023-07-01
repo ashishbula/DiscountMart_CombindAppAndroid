@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--Header Title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_v_small"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_v_small"
+            android:orientation="vertical">
+
+            <!--Title Sponser Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_v_small"
+                    android:text="Your Replacement Detail."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_default" />
+
+            </LinearLayout>
+
+            <!--sponser id, name, side-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_v_small"
+                android:orientation="vertical">
+                <!--Sponser ID-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_sponserid"
+                        app:hintTextColor="@color/black"
+                        app:counterTextColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edtxt_sponserId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_sponserid"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!--Position-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gray_bg_box"
+                        android:padding="@dimen/margin_v_small">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edtxt_position"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/str_side"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Title Personal Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_v_small"
+                    android:text="Personal Detail."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_default" />
+
+            </LinearLayout>
+
+            <!--name, father name, dob, qulification-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_v_small"
+                android:orientation="vertical">
+
+                <!--Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_name"
+                        app:hintTextColor="@color/black"
+                        android:padding="@dimen/margin_v_small">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Date of joining-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+
+                        android:hint="@string/str_dob_joining">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_join_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_dob_joining"
+                            android:textColor="@color/black"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:textSize="@dimen/txt_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+                <!--Date of Activation-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_dob_active">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_active_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_dob_active"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Guardian relation-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".6"
+                            android:orientation="vertical"
+                            android:background="@drawable/material_graybg">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="@dimen/margin_v_small"
+                                android:textSize="@dimen/txt_default"
+                                android:layout_marginLeft="@dimen/margin_v_small"
+                                android:textColor="@color/black"
+                                android:text="@string/relation"/>
+
+                            <Spinner
+                                android:id="@+id/edit_profile_act_spiner_prefix"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </Spinner>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:backgroundTint="@color/gray"/>
+                        </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        app:hintTextColor="@color/black"
+                            android:hint="@string/guardian_name">
+                            <EditText
+                                android:id="@+id/edit_profile_act_edTxt_fath_husband_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/TextInputLayoutAppearance"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:autofillHints="@string/guardian_name"
+                                android:textSize="@dimen/txt_default" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--DOB-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_dob">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_action_date"
+                            android:focusable="false"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:inputType="text"
+                            android:autofillHints="@string/str_dob"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Title Contact Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_v_small"
+                    android:text="Contact Detail."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_default" />
+
+            </LinearLayout>
+
+            <!--Address,state,city,pincode,mobile,phone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_v_small"
+                android:orientation="vertical">
+
+                <!--Mobile-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_mobile">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_mobile"
+                            android:inputType="number"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Phone-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:visibility="visible"
+                        android:hint="@string/str_phone">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_phone"
+                            android:inputType="number"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--Email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_email">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/str_email"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Title Nominee Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_v_small"
+                    android:text="Nominee Detail."
+                    android:visibility="visible"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_default" />
+
+            </LinearLayout>
+
+            <!--Nominee name, DOB, Relation-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_v_small"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <!--Nominee Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_nomine_nme">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_nomineeName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_nomine_nme"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--Nominee Relation-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+                        android:hint="@string/str_relation">
+
+                        <EditText
+                            android:id="@+id/edit_profile_act_edTxt_nomineerelation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            android:autofillHints="@string/str_relation"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Button Submit-->
+            <LinearLayout
+                android:id="@+id/edit_profile_act_layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_profile_act_button_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/str_submit"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

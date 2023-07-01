@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.discountmart.utility_services.travel.flight.flight_activity.FlightFilterActivity">
+
+    <!--All Content Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="70dp"
+        android:orientation="vertical">
+
+        <!--Layout for non refundable flight-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="@string/str_refundable"
+                android:textSize="@dimen/txt_size_large"/>
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/bus_filter_act_chekbox_nonrefund"
+                />
+        </LinearLayout>
+
+        <!--Vertical line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@color/gray"/>
+
+        <!--Layout for stop bus-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_stop"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+
+            <!--Radio Group Flight stops-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/bus_filter_rdg_stop"
+                android:orientation="vertical">
+
+                <!--Non stop flight-->
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_non_stop_flight"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:paddingLeft="@dimen/txt_size_medium"
+                    android:id="@+id/bus_filter_rdb_non_stop"/>
+
+                <!--Max i stop flight-->
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_max_1stop_flight"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:paddingLeft="@dimen/txt_size_medium"
+                    android:id="@+id/bus_filter_rdb_1stop"/>
+
+                <!--All flight-->
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_all_flight"
+                    android:paddingLeft="@dimen/txt_size_medium"
+                    android:textSize="@dimen/txt_size_normal"
+                    android:checked="true"
+                    android:id="@+id/bus_filter_rdb_all"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Vertical line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@color/gray"/>
+
+        <!--Layout for departure time according bus-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_departure_time"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+
+            <!-- Bus Departure time Check Box-->
+
+            <!--before 6 am-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/str_before_6am"
+                android:id="@+id/bus_filter_act_chekbox_bef6am"/>
+
+            <!-- 6 am to 12pm-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_6am_to_12pm"
+                android:id="@+id/bus_filter_act_chekbox_6amto12pm"/>
+
+            <!-- 12 am to 18 pm-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_12pm_to_6pm"
+                android:id="@+id/bus_filter_act_chekbox_12amto18pm"/>
+
+            <!-- After 6 pm-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_after_6pm"
+                android:id="@+id/bus_filter_act_chekbox_aft6am"/>
+
+
+        </LinearLayout>
+
+        <!--Vertical line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@color/gray"/>
+
+        <!--Layout bus type-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_bus_type"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+
+            <!-- Bus Departure time Check Box-->
+
+            <!--text Bus seats-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/str_seat"
+                android:id="@+id/bus_filter_act_chekbox_seat"/>
+
+            <!--text Bus utility_sleeper-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_bus_sleeper"
+                android:id="@+id/bus_filter_act_chekbox_sleeper"/>
+
+            <!--text Ac Bus-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_ac"
+                android:id="@+id/bus_filter_act_chekbox_ac"/>
+
+            <!--text Non-Ac Bus-->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/str_bus_nonAc"
+                android:id="@+id/bus_filter_act_chekbox_nonac"/>
+
+        </LinearLayout>
+
+        <!--Vertical line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@color/gray"/>
+
+        <!--Layout for bus filter by-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <!--TExt title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_filter_by"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/txt_size_large"/>
+            <!--Layout for title text travel name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:id="@+id/bus_filter_act_layout_travel"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_travel_name"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+            <!--Layout for show travel name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/bus_filter_act_layout_travelname">
+
+            </LinearLayout>
+            <!--Vertical line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:background="@color/gray"/>
+
+            <!--Layout for title text boarding point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:id="@+id/bus_filter_act_layout_boardingPont"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_boardpoint"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+
+            <!--Layout for show boarding point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/bus_filter_act_layout_boarding_name">
+
+            </LinearLayout>
+
+            <!--Vertical line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:background="@color/gray"/>
+
+
+            <!--Layout for title text drop point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center"
+                android:id="@+id/bus_filter_act_layout_dropPoint"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_droppoint"
+                    android:textSize="@dimen/txt_size_normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+
+            <!--Layout for show drop point-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:id="@+id/bus_filter_act_layout_dropPoint_name">
+
+            </LinearLayout>
+            <!--Vertical line-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:background="@color/gray"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

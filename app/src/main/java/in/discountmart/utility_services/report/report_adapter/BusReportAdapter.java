@@ -1,0 +1,263 @@
+package in.discountmart.utility_services.report.report_adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import in.discountmart.R;
+import in.discountmart.utility_services.report.custom_class.BaseViewHolder;
+import in.discountmart.utility_services.report.report_model.response.BusBookReportResponse;
+
+public class BusReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private static final int ITEM = 0;
+    private static final int LOADING = 1;
+
+    private ArrayList<BusBookReportResponse.BusReportDetail> reportArrayList;
+    private Context context;
+    public String type;
+
+    private boolean isLoadingAdded = false;
+    private BusReportListener listener;
+
+    public BusReportAdapter(Context context, BusReportListener reportListener ) {
+        this.context = context;
+        this.listener=reportListener;
+        reportArrayList = new ArrayList<>();
+    }
+
+    public ArrayList<BusBookReportResponse.BusReportDetail> getMovies() {
+        return reportArrayList;
+    }
+
+    public void setData(ArrayList<BusBookReportResponse.BusReportDetail> reportsList) {
+        this.reportArrayList = reportsList;
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        RecyclerView.ViewHolder viewHolder = null;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+
+        switch (viewType) {
+            case ITEM:
+                viewHolder = getViewHolder(parent, inflater);
+                break;
+            case LOADING:
+                View v2 = inflater.inflate(R.layout.utility_item_progress, parent, false);
+                viewHolder = new LoadingVH(v2);
+                break;
+        }
+        return viewHolder;
+    }
+
+    @NonNull
+    private RecyclerView.ViewHolder getViewHolder(ViewGroup parent, LayoutInflater inflater) {
+        RecyclerView.ViewHolder viewHolder;
+        View v1 = inflater.inflate(R.layout.utility_bus_report_item, parent, false);
+        viewHolder = new ViewHolder(v1);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+        try {
+            BusBookReportResponse.BusReportDetail rechargeReport = reportArrayList.get(position);
+
+            switch (getItemViewType(position)) {
+                case ITEM:
+                    ViewHolder viewHolder = (ViewHolder) holder;
+
+                    if(reportArrayList.get(position).getStatus().contains("REFUND")){
+                        viewHolder.cardView.setBackgroundColor(context.getResources().getColor(R.color.gray5));
+                    }
+                    else {
+                        viewHolder.cardView.setBackgroundColor(context.getResources().getColor(R.color.white));
+                    }
+
+                    viewHolder.txtTravelName.setText(reportArrayList.get(position).getTravels());
+                    viewHolder.txtTotAmount.setText("Amount :  "+context.getResources().getString(R.string.rs_symbol)+" "+reportArrayList.get(position).getTotalAmount());
+                    viewHolder.txtBookDate.setText("Booking Date : "+convert(reportArrayList.get(position).getTDate()));
+
+                    viewHolder.txtRemark.setText(reportArrayList.get(position).getStatus());
+
+                    String setname[]=reportArrayList.get(position).getSeatName().split(",");
+
+                    if(setname != null &&setname.length > 0){
+                        int count=0;
+                        count=setname.length;
+                        viewHolder.txtTotSeat.setText("Total Seat : "+String.valueOf(count));
+                    }
+                    else
+                        viewHolder.txtTotSeat.setText("");
+                    break;
+                case LOADING:
+//                Do nothing
+                    break;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return reportArrayList == null ? 0 : reportArrayList.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return (position == reportArrayList.size() - 1 && isLoadingAdded) ? LOADING : ITEM;
+    }
+
+    public static String convert(String dateString) throws ParseException {
+        System.out.println("Given date is " + dateString);
+
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        Date date = sdf.parse(dateString);
+
+        return new SimpleDateFormat("dd/MMM/yyyy").format(date);
+
+
+    }
+
+    /*
+   Helpers
+   _________________________________________________________________________________________________
+    */
+
+    public void add(BusBookReportResponse.BusReportDetail mc) {
+        reportArrayList.add(mc);
+        notifyItemInserted(reportArrayList.size() - 1);
+    }
+
+    public void addAll(ArrayList<BusBookReportResponse.BusReportDetail> mcList,String type) {
+        this.type=type;
+        for (BusBookReportResponse.BusReportDetail mc : mcList) {
+            add(mc);
+        }
+    }
+
+    public void remove(BusBookReportResponse.BusReportDetail city) {
+        int position = reportArrayList.indexOf(city);
+        if (position > -1) {
+            reportArrayList.remove(position);
+            notifyItemRemoved(position);
+        }
+    }
+
+    public void clear() {
+        isLoadingAdded = false;
+        while (getItemCount() > 0) {
+            remove(getItem(0));
+        }
+    }
+
+    public boolean isEmpty() {
+        return getItemCount() == 0;
+    }
+
+
+    public void addLoadingFooter() {
+        isLoadingAdded = true;
+        add(new BusBookReportResponse.BusReportDetail());
+    }
+
+    public void removeLoadingFooter() {
+        isLoadingAdded = false;
+
+        int position = reportArrayList.size() - 1;
+        BusBookReportResponse.BusReportDetail item = getItem(position);
+
+        if (item != null) {
+            reportArrayList.remove(position);
+            notifyItemRemoved(position);
+        }
+    }
+
+    public BusBookReportResponse.BusReportDetail getItem(int position) {
+        return reportArrayList.get(position);
+    }
+
+
+   /*
+   View Holders
+   _________________________________________________________________________________________________
+    */
+
+    /**
+     * Main list's content ViewHolder
+     */
+    public class ViewHolder extends BaseViewHolder {
+        public TextView txtTravelName;
+        public TextView txtBookDate;
+        public TextView txtTotSeat;
+        public TextView txtTotAmount;
+        public TextView txtRemark;
+        public ImageView imgType;
+        public ImageView imgWallet;
+        CardView cardView;
+
+        public ViewHolder(View view) {
+            super(view);
+            txtTravelName = view.findViewById(R.id.bus_report_item_txt_travel);
+            txtBookDate = view.findViewById(R.id.bus_report_item_txt_book_date);
+            txtTotSeat = view.findViewById(R.id.bus_report_item_txt_totseat);
+            txtTotAmount = view.findViewById(R.id.bus_report_item_txt_totamount);
+            txtRemark = view.findViewById(R.id.bus_report_item_txt_remark);
+            cardView = view.findViewById(R.id.bus_report_item_card);
+
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // send selected contact in callback
+                    listener.onItemSelected(reportArrayList.get(getAdapterPosition()));
+                }
+            });
+
+        }
+
+        protected void clear() {
+
+        }
+
+       /* public void onBind(int position) {
+            super.onBind(position);
+            RechargeReportResponse.RechargeReport item = mPostItems.get(position);
+
+            textViewTitle.setText(item.getTitle());
+            textViewDescription.setText(item.getDescription());
+        }*/
+    }
+
+
+    protected class LoadingVH extends RecyclerView.ViewHolder {
+
+        public LoadingVH(View itemView) {
+            super(itemView);
+        }
+    }
+
+    public interface BusReportListener {
+        void onItemSelected(BusBookReportResponse.BusReportDetail list);
+
+    }
+}

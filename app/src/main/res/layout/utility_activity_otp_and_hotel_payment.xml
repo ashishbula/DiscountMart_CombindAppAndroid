@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".travel.hotel.hotel_activity.OtpAndHotelPaymentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <!--Main utility_wallet balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:id="@+id/hotel_book_act_layout_main_wallet">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_default"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_main_wallet" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:id="@+id/hotel_book_act_txt_main_bal"/>
+            </LinearLayout>
+
+            <!--Layout for Total booking Amount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:orientation="horizontal">
+                <!--Text amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_tot_book_amont"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_large"/>
+
+                <!--Text value amount-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:gravity="right"
+                    android:id="@+id/hotel_book_act_txt_tot_amount"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_large"/>
+            </LinearLayout>
+
+            <!--Layout for Payment Method option-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_payment_deduct"
+                    android:textSize="@dimen/txt_size_large"/>
+
+                <!--Main Wallet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/hotel_book_act_layout_chbox_main_wallet"
+                    android:orientation="horizontal">
+                    <!--Check Box Main Wallet-->
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/hotel_book_act_chbox_mainWallet"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_main_wallet"/>
+                    <!--Text Main utility_wallet amount-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/hotel_book_act_txt_main_bal_deduct"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <!--E-utility Promo amount Check box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hotel_book_act_layout_chbox_promo"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_book_act_chbox_promo"
+                        android:text="@string/str_promocode_discount"/>
+                    <!--Text deduct amount from other-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/hotel_book_act_txt_bal_promo"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!--E-utility_wallet/ Account Check box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hotel_book_act_layout_chbox_ewallt"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hotel_book_act_chbox_eWallet"
+                        android:text="@string/ewallet_account"/>
+                    <!--Text deduct amount from other-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:id="@+id/hotel_book_act_txt_bal_deduct_other"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--Update-->
+                <!--Layout for applied promocode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/hotel_book_act_layout_promocode"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/str_apply_promo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/txt_size_normal">
+
+                    </TextView>
+
+                    <!--Promo-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/hotel_book_act_txt_promo"
+                        android:layout_marginRight="@dimen/margin_v_small"
+                        android:textSize="@dimen/txt_size_normal">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/hotel_book_act_rdg_payment_method"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_main_wallet"
+                        android:checked="true"
+                        android:id="@+id/hotel_book_act_rdb_mainwallet"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ewallet_account"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:id="@+id/hotel_book_act_rdb_ewallet"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--Layout for remaining amount from-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/hotel_book_act_layout_clickhere"
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/margin_v_small"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_large"
+                    android:id="@+id/hotel_book_act_txt_clickhere"
+                    android:layout_marginLeft="@dimen/txt_size_small"
+                    android:text="Click here to continue process >>"/>
+
+            </LinearLayout>
+
+
+            <!--Button send otp-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hotel_book_act_layout_otp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <Button
+                    android:id="@+id/hotel_book_act_btn_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="@drawable/selector_bg_btn"
+                  android:text="@string/continue_for_book"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <!--Layout for show balance message-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:visibility="gone"
+                android:id="@+id/hotel_book_act_layout_message"
+                android:layout_marginRight="@dimen/margin_medium">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hotel_book_act_txt_bal_message"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_gravity="center|top"
+    android:gravity="center"
+    android:padding="@dimen/margin_v_small"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_normal"
+        android:textColor="@color/black"
+        android:id="@+id/promocode_item_txt_promo"/>
+
+    <!--Text promo status-->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:layout_height="wrap_content"
+        android:id="@+id/promocode_item_txt_status"
+        android:textSize="@dimen/txt_size_normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:id="@+id/promocode_item_layout_apply"
+        android:background="@drawable/colorprimary_border_bg_white_box">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/promocode_item_txt_apply"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

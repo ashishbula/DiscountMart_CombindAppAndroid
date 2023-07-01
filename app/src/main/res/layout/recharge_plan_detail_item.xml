@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_small"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/plan_detail_item_txt_amount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_default" />
+        <TextView
+            android:id="@+id/plan_detail_item_txt_plan_validity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:paddingRight="@dimen/margin_v_small"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_default" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/plan_detail_item_txt_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_default" />
+
+</LinearLayout>

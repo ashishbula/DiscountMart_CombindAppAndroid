@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".business.activity.EditProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_personal_detail"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textColor="@color/colorPrimary"/>
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:background="@color/colorPrimary"/>
+    <!--Personal detail-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="@dimen/margin_v_small"
+        app:cardCornerRadius="@dimen/margin_v_small"
+        app:cardElevation="@dimen/margin_v_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Layout for name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for DOB-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/dob"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_dob"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for Join date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/str_doj"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_doj"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!--Address Detail Title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_detail"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textColor="@color/colorPrimary"/>
+    <!--Line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_v_small"
+        android:background="@color/colorPrimary"/>
+
+
+    <!--Personal detail-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="@dimen/margin_v_small"
+        app:cardCornerRadius="@dimen/margin_v_small"
+        app:cardElevation="@dimen/margin_v_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Layout for Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Text Address-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/str_address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for State-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text State-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/str_state"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_state"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for Distric-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/str_district"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_distric"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for Pincode-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/pincode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_pincode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Layout for Mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:orientation="horizontal">
+
+                <!--Text name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/mobile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_act_txt_mobile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium">
+
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

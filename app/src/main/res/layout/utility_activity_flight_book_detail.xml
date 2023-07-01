@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="in.discountmart.utility_services.report.activity.FlightBookDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".9">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Layout for content-->
+
+                <!--Layout for Time date , status-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--Booking date-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:id="@+id/flight_reportdetail_act_txt_date"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content" />
+
+                    <!--Status-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:orientation="horizontal">
+                        <!--Text Status note-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"
+                            android:id="@+id/flight_reportdetail_act_txt_statusnote"/>
+                        <!--Text Status-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_default"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="0dp"
+                            android:id="@+id/flight_reportdetail_act_txt_status"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Layout for Travels name , flight type-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/margin_60dp"
+                            android:layout_height="@dimen/margin_60dp"
+                            android:src="@mipmap/utility_ic_flight"/>
+
+                        <!--text Flight name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_large"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:id="@+id/flight_reportdetail_act_txt_travel_name" />
+                    </LinearLayout>
+
+                    <!--text Flight type -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/flight_reportdetail_act_txt_flight_type" />
+
+                </LinearLayout>
+
+                <!--Pnr Status and tid-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <!--Text Booking id -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_bookid"/>
+                    <!--Text Transaction id-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_tid"/>
+
+                </LinearLayout>
+
+                <!--Layout for departure and arrival Date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--departure Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_dep_date"
+                        android:layout_height="wrap_content" />
+
+                    <!--arrival Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_arr_date"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <!--Layout for departure and arrival time-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--departure Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_dep_time"
+                        android:layout_height="wrap_content" />
+
+                    <!--arrival Time-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_arr_time"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <!--Layout for departure and destination city time-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--departure city-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_dep_city"
+                        android:layout_height="wrap_content" />
+
+                    <!--destination city-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_arr_city"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <!--Layout for Total seat and Seat no-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="vertical">
+
+                    <!--Total seat-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="0dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_totseat"
+                        android:layout_height="wrap_content" />
+
+                    <!--Trace id-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_traceid"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--Layout for Total Amount and Promo Code-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Total seat-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_totamnt"
+                        android:layout_height="wrap_content" />
+
+                    <!--Seat no-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_pormo"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <!--Layout for Passenger NAme and Mobile-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <!--Passenger Name-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_passenger_name"
+                        android:layout_height="wrap_content" />
+
+                    <!--Mobile no-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txt_default"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:textColor="@color/black"
+                        android:id="@+id/flight_reportdetail_act_txt_mobile"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_print"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:id="@+id/flight_reportdetail_act_img_print"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.discountmart.utility_services.travel.hotel.hotel_activity.HotelPassengerInfoActivity">
+    <!--Tool Bar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/room_passenger_info_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:orientation="vertical" >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/txt_size_large"
+                    android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:id="@+id/room_passenger_info_activity_toolbar_txt_title"/>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Layout for hotel name , start address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:orientation="vertical">
+                <!--Text hotel name-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_hotel_name"
+                    android:textSize="@dimen/margin_normal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/room_passenger_info_actvity_txt_hotelname"/>
+
+                <!--Text hotel rating bar-->
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:numStars="5"
+                    android:id="@+id/room_passenger_info_actvity_rating_bar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <!--Text hotel room type-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:text="@string/str_select_room"
+                    android:id="@+id/room_passenger_info_actvity_txt_room_type"/>
+                <!--Text hotel city-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:text="@string/str_to_city"
+                    android:id="@+id/room_passenger_info_actvity_txt_hotel_city"/>
+            </LinearLayout>
+
+            <!--Layout for Check in date , check out date, room guest-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:elevation="@dimen/margin_medium"
+                android:padding="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/full_round_corner_white_box"
+                android:orientation="horizontal">
+
+                <!--Text check in date-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2-2-2019"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_passenger_info_actvity_txt_checkIn_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+
+                <!--Text check out date-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2-2-2019"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_passenger_info_actvity_txt_checkOut_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+                <!--Text hotel room-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_passenger_info_actvity_txt_hotel_room"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="-"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_v_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    />
+
+                <!--Text hotel guest-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="2"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:id="@+id/room_passenger_info_actvity_txt_hotel_guest"/>
+
+            </LinearLayout>
+
+            <!--Layout for passenger info content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <!--Layout for Recycler View-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/room_passenger_info_activity_recycler"
+                        android:paddingBottom="@dimen/margin_medium">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <!--Layout for offer-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Layout for total amount and button continue-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray3"
+        android:visibility="visible"
+        android:elevation="@dimen/margin_small"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <!--Layout for total amount-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:id="@+id/room_passenger_info_activity_layout_fareamout"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:textSize="@dimen/txt_size_large"
+                android:id="@+id/room_passenger_info_activity_txt_total_amnt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_v_small"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/orange8"
+                    android:id="@+id/room_passenger_info_activity_txt_total_room"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_v_small"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_arrow_drop_up"
+                    android:id="@+id/room_passenger_info_activity_img_Fare"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--Layout Button Continue-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_v_small"
+                android:id="@+id/room_passenger_info_activity_btn_continue"
+                android:background="@drawable/selector_bg_btn"
+                android:textColor="@color/white"
+                android:text="continue >>"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

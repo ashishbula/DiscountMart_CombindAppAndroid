@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/bus_search_list_actvity_coordinator"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bus_search_list_act_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <!--Layout for content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Layout for From and to city, and departure date -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <!--From and to city-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/bus_search_list_act_toolbar_txtfromcity"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:layout_marginRight="@dimen/margin_v_small"
+                            android:src="@drawable/right_arrow_white"
+                            android:id="@+id/bus_search_list_act_toolbar_img_arrow"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_from_city"
+                            android:textSize="@dimen/txt_size_medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/bus_search_list_act_toolbar_txttocity"/>
+                    </LinearLayout>
+
+                    <!-- departure date-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Departure Date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="fgfgg"
+                            android:id="@+id/bus_search_list_act_toolbar_txt_dDate"
+                            android:textSize="@dimen/txt_size_small"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="-"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/margin_v_small"/>
+                        <!--Arrival date-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_small"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/margin_v_small"
+                            android:text="fgfgg"
+                            android:id="@+id/bus_search_list_act_toolbar_txt_arrDate"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Layout for home and edit icon-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Image home-->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/bus_search_list_act_toolbar_img_home"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_whit"/>
+
+                    <!--Image home-->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:id="@+id/bus_search_list_act_toolbar_img_edit"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_edit_white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Layout content recycler view-->
+    <include layout="@layout/utility_bus_search_list_content"/>
+
+    <!--Layout for bootm navigation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:background="@drawable/custom_bottom_nav_bg"
+        android:id="@+id/bus_search_list_actvity_layout_bottom"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <!--Text Short for flight filter-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/bus_search_list_actvity_layout_short"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Short"
+                android:id="@+id/bus_search_list_actvity_txt_short"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <!--Select short type-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/bus_search_list_actvity_txt_select_short"
+                android:textSize="@dimen/txt_size_medium"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--Text for filter-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal"
+            android:id="@+id/bus_search_list_actvity_txt_filter"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <!--not stop-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:id="@+id/bus_search_list_actvity_layout_switch_btn"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                app:trackTintMode="add"
+                style="@style/SwitchCompatStyle"
+                android:id="@+id/bus_search_list_actvity_switch_btn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/str_ac_bus"
+                android:textSize="@dimen/txt_size_medium"
+                android:textAlignment="center"
+                android:visibility="visible"
+                android:textColor="@color/black"
+                android:id="@+id/bus_search_list_actvity_txt_nonstop"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

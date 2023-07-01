@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@mipmap/background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pin Transfer"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!--Layout for Id Number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_idno"
+                    android:textColor="@color/black"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@string/str_idno"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/whit_bg_box_round_corner"
+                        android:textColor="@color/black"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:inputType="text"
+                        android:id="@+id/pin_transfer_fragment_edtxt_idno"/>
+
+
+            </LinearLayout>
+
+            <!--Layout for Distributor NAme-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:text="@string/distributor_name"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/gray_bg_box"
+                    android:padding="5dp"
+                    android:hint="@string/str_click_here"
+                    android:id="@+id/pin_transfer_fragment_txt_distName"/>
+
+            </LinearLayout>
+
+            <!--Layout for Kit Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="0dp"
+                    android:text="@string/select_kit"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_v_small"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/trans_bg_black_round_corner"
+                    android:padding="0dp"
+                    android:id="@+id/pin_transfer_fragment_layout_kit">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/pin_transfer_fragment_spinner_kit">
+
+                    </Spinner>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Layout for Quantity-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@string/quantity"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:background="@drawable/whit_bg_box_round_corner"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:inputType="text|number"
+                        android:id="@+id/pin_transfer_fragment_edtxt_qty"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/margin_v_small"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:padding="@dimen/margin_small"
+                        android:id="@+id/pin_transfer_fragment_txt_qty"
+                        android:background="@drawable/gray_bg_box" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Layout for Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/str_remark"
+                   android:textColor="@color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@string/str_remark"
+                        android:textSize="@dimen/txt_size_normal"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:inputType="text"
+                        android:background="@drawable/whit_bg_box_round_corner"
+                        android:id="@+id/pin_transfer_fragment_edtxt_remark"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_btn_black"
+                    android:textColor="@color/white"
+                    android:text="@string/str_submit"
+                    android:id="@+id/pin_transfer_fragment_btn_submitt"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+</LinearLayout>

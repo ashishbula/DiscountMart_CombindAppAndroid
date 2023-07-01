@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".utility_services.activity.MoreServicesActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_medium">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_medium"
+            android:layout_margin="@dimen/margin_small">
+
+            <!--Slider for offer and news-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:background="@color/gray4"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/more_service_act_slider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+            <!--Layout for Travel and booking-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_small"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray2"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:text="Booking Services"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <!--Flight-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:padding="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/more_service_act_flight"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_flight"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            android:text="@string/str_flight"/>
+
+                    </LinearLayout>
+                    <!--Bus-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:padding="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/more_service_act_bus"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:src="@mipmap/utility_ic_bus"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_bus"/>
+
+                    </LinearLayout>
+                    <!--Train-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_train"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_train"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:visibility="gone"
+                            android:text="@string/str_cab"/>
+
+                    </LinearLayout>
+                    <!--Hotel-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_hotel"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_hotel"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_hotel"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for Travel and booking-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_small"
+                android:layout_margin="0dp"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:text="BillPayment Services"/>
+
+                <!--Layout for Bill payment-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+
+                    <!--Electricity-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_electricity"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_electricity"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_elctricity"/>
+
+                    </LinearLayout>
+                    <!--Gas-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_gas"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_gas"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:visibility="gone"
+                            android:text="@string/str_gas"/>
+
+                    </LinearLayout>
+                    <!--credit card-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_credit"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_credit"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_credit_card"/>
+                    </LinearLayout>
+                    <!--Insurance service-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:gravity="center"
+                        android:id="@+id/more_service_act_insurance"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_insurance"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Insurance"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Layout for Travel and booking-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_small"
+                android:layout_margin="0dp"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:text="Recharge Services"/>
+
+                <!--Layout for Recharge-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <!--Prepaid-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_prepaid"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_prepaid"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_prepaid"/>
+
+                    </LinearLayout>
+                    <!--Pospaid-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_postpaid"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_postpaid"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:visibility="gone"
+                            android:text="@string/str_postpaid"/>
+
+                    </LinearLayout>
+                    <!--DTH-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:id="@+id/more_service_act_dth"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_dth"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            android:text="@string/str_dth"/>
+
+                    </LinearLayout>
+
+                    <!-- DAta Card-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginBottom="0dp"
+                        android:padding="0dp"
+                        android:gravity="center"
+                        android:id="@+id/more_service_act_datacard"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/utility_ic_datacard"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Data Card"
+                            android:visibility="gone"
+                            android:textSize="@dimen/txt_size_normal"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--Layout for Travel and booking-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_small"
+                android:layout_margin="0dp"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:text="Fund Services"/>
+                <!--Top Services-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/homedash_top_layout"
+                    android:orientation="horizontal">
+
+
+
+                    <!--Wallet-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_wallet"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/utility_top_ic_wallet"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="@string/str_wallet"/>
+
+                    </LinearLayout>
+
+                    <!--Add fund-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_addfund"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/utility_top_ic_fund"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:visibility="gone"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="@string/str_add_fund"/>
+
+                    </LinearLayout>
+
+                    <!-- fund request-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_fundreq"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/utility_top_ic_fund_request"/>
+                        </LinearLayout>
+
+                        <!--Text fund request-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="@string/str_fund_req"/>
+
+                    </LinearLayout>
+                    <!-- Transaction -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_transaction"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/utility_top_ic_transaction"/>
+                        </LinearLayout>
+
+                        <!--Text fund request-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="@string/str_fund_req"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout for Report and History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_small"
+                android:layout_margin="0dp"
+                android:padding="@dimen/margin_small"
+                android:background="@color/gray2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:text="Report and History"/>
+
+                <!--Report and History Services-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/homedash_"
+                    android:orientation="horizontal">
+
+
+
+                    <!--Flight Report-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_filght_report"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="@dimen/margin_60dp"
+                                android:layout_height="@dimen/margin_60dp"
+                                android:src="@mipmap/ic_flight"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="Flight Report"/>
+
+                    </LinearLayout>
+
+                    <!--Bus Report-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_bus_report"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="@dimen/margin_60dp"
+                                android:layout_height="@dimen/margin_60dp"
+                                android:src="@mipmap/ic_bus"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="Bus Report"/>
+
+                    </LinearLayout>
+
+                    <!--Bill Payment Report-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_bill_report"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="@dimen/margin_60dp"
+                                android:layout_height="@dimen/margin_60dp"
+                                android:src="@mipmap/ic_billpayment"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="Bill Report"/>
+
+                    </LinearLayout>
+
+                    <!-- Recharge Report -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/more_service_act_recharge_report"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_weight="1">
+                        <!--Layout for image-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="@dimen/margin_60dp"
+                                android:layout_height="@dimen/margin_60dp"
+                                android:src="@mipmap/ic_recharge"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/margin_v_small"
+                            android:textSize="@dimen/margin_medium"
+                            android:text="Recharge Report"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
