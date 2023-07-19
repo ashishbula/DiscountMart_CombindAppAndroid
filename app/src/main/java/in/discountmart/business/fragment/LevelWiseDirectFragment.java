@@ -210,7 +210,7 @@ public class LevelWiseDirectFragment extends Fragment {
 
                     }
                     else if(stringStatus.equals("All")) {
-                        strStatus = "A";
+                        strStatus = "";
 
                     }
                 }

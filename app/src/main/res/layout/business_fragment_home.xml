@@ -324,7 +324,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
-                    android:id="@+id/business_homedash_frag_service_reward"
+                    android:id="@+id/business_homedash_frag_service_reward_new"
                     android:gravity="center"
                     android:orientation="vertical">
 

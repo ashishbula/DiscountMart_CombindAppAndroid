@@ -156,10 +156,7 @@ public class MyDirectFragment extends Fragment {
                     else if(stringStatus.equals("Right")) {
                         strSearch="2";
                         layoutLevel.setVisibility(View.GONE);
-
                     }
-
-
                 }
 
                 @Override
@@ -180,7 +177,7 @@ public class MyDirectFragment extends Fragment {
                     String stringStatus = spinnerStatus.getSelectedItem().toString();
 
                     if(stringStatus.equals("All")){
-                        strStatus="A";
+                        strStatus="";
 
                     }
                     if(stringStatus.equals("Active")){
@@ -277,9 +274,6 @@ public class MyDirectFragment extends Fragment {
 
                         e.printStackTrace();
                     }
-
-
-
                 }
             });
 
@@ -289,7 +283,6 @@ public class MyDirectFragment extends Fragment {
 
 
         return rootView;
-
     }
 
     public void initSpinnerStatus(){

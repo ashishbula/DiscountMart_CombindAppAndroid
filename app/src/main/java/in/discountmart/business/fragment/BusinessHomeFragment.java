@@ -83,8 +83,10 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
     LinearLayout serviceClub;
     LinearLayout serviceJoining;
     LinearLayout serviceWallet_Main;
+    LinearLayout serviceWalletRequest;
     LinearLayout serviceWallet_Franchise;
     LinearLayout serviceWallet_Shop;
+
     LinearLayout serviceLetter;
     LinearLayout serviceChangePass;
     LinearLayout serviceDocument;
@@ -120,17 +122,16 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
 
             serviceDailyIncome=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_daily_incentive);
             serviceMonthlyIncome=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_servic_monthly_incentive);
-            serviceReward=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_reward);
+            serviceReward=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_reward_new);
             //serviceWallet_Franchise=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_franchise_wallet);
 
             serviceMyDirect=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_mydirect);
             serviceMyBusiness=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_mybusiness);
             serviceTeamDetail=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_team_detail);
 
-
-
             serviceWallet_Shop=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_shop_wallet);
             serviceWallet_Main=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_main_wallet);
+            serviceWalletRequest=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_wallet_request);
 
             //serviceSupport=(LinearLayout)mainView.findViewById(R.id.business_homedash_frag_service_support);
 
@@ -302,6 +303,7 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
                     Intent dailyIncIntent = new Intent(context, CommonReportActivity.class);
                     dailyIncIntent.putExtra("Title", "Daily Income" );
                     dailyIncIntent.putExtra("Type","Daily");
+
                     startActivity(dailyIncIntent);
                     getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                 }
@@ -309,12 +311,11 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
             serviceMonthlyIncome.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Toast.makeText(context,"Coming soon..",Toast.LENGTH_SHORT).show();
                     Intent dailyIncIntent = new Intent(context, CommonReportActivity.class);
                     dailyIncIntent.putExtra("Title", "Monthly Income" );
                     dailyIncIntent.putExtra("Type","Monthly");
-                    //startActivity(dailyIncIntent);
-                    //getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
+                    startActivity(dailyIncIntent);
+                    getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                 }
             });
 
@@ -392,7 +393,6 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
                     ((BusinessDashboardActivity)context).replaceFragment(fragment,"Wallet",bundleFund);
                 }
             });*/
-
 
 
             /*Service Epin on click*/
@@ -567,6 +567,25 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
             });*/
 
 
+            serviceReward.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context,"Coming soon..",Toast.LENGTH_SHORT).show();
+
+                    RewardFragment fragment = new RewardFragment();
+                    ((BusinessDashboardActivity)context).replaceFragment_business(fragment,"My Reward",null);
+
+                }
+            });
+serviceWalletRequest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    WalletRequestFragment fragment = new WalletRequestFragment();
+                    ((BusinessDashboardActivity)context).replaceFragment_business(fragment,"My Wallet",null);
+
+                }
+            });
 
         }catch (Exception e){
             e.printStackTrace();

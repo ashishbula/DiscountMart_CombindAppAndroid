@@ -346,78 +346,9 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
                 public void onClick(View view) {
 
                     try {
-
-                       // if( ((DashboardActivity)context).checkLocationPermission()){
-                          /*String strUrl="https://www.b2me.co.in/";
-                         WebFragment fragment=new WebFragment();
-                        Bundle bundle=new Bundle();
-                        bundle.putString("Type","Website");
-                        bundle.putString("Title","My Business");
-                        bundle.putString("URL",strUrl);
-                        fragment.setArguments(bundle);
-                        ((DashboardActivity)context).replaceFragment(fragment,"Web",bundle);*/
-
-                            String dob = new SimpleDateFormat("dd MM yyyy HH:mm" , Locale.getDefault()).format(new Date());
-
-                            String[] curDat=dob.split(" ");
-                            String date=curDat[0].toString();
-                            String month=curDat[1].toString();
-                            String year=curDat[2].toString();
-                            String hour=curDat[3].toString();
-                            String []curTime=hour.split(":");
-                            String hur=curTime[0];
-                            String mint=curTime[1];
-                            byte[] login;
-                            byte[] info;
-                            String strUrl="https://cpanel.discountmart.in/directlogin.aspx?ref=";
-                            String userName = SharedPrefrence.getUserID(context);
-                            String pass = SharedPrefrence.getPassword(context);
-
-                            String ref = "Login";
-
-                            String infolDetail=userName+";"+pass+";"+year+month+date+hur+mint;
-                            //String str="UserName=SV6621159&Password=191519&Action=Login&Token=DEB13AD9-3C95-4C55-9268-6EFF826DD9F5&UtilityCoupon=0.00";
-
-
-                            login = ref.getBytes("UTF-8");
-                            info = infolDetail.getBytes("UTF-8");
-                            String url=strUrl+ref+"&"+"info="+infolDetail;
-                            Log.e("BusinessUrl :",url );
-                            //String base64="";
-                        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            base64 = android.util.Base64.getEncoder().encodeToString(stream.toByteArray());
-                        } else {
-                            encode = android.util.Base64.encodeToString(stream.toByteArray(), android.util.Base64.DEFAULT);
-                        }*/
-                            String ref64 = android.util.Base64.encodeToString(login, android.util.Base64.DEFAULT);
-                            String info64 = android.util.Base64.encodeToString(info, android.util.Base64.DEFAULT);
-                            String loginUrl=strUrl+ref64+"&"+"info="+info64;
-
-                            //http://localhost:50949/BasicMlm/Directlogin.aspx?ref=TG9naW4=&info=LP223344;LP@1234;202012191541
-
-                            Log.i("Base 64 ", loginUrl);
-
-                            // ask user witch browser open
-                            // Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(loginUrl));
-                            // Note the Chooser below. If no applications match,
-                            // Android displays a system message.So here there is no need for try-catch.
-                            //startActivity(Intent.createChooser(intent, "Browse with"));
-
-                        String url1="https://mart.crypque.ae/index.php";
-                            WebFragment fragment=new WebFragment();
-                            Bundle bundleBusiness=new Bundle();
-                            bundleBusiness.putString("Type","My Business");
-                            bundleBusiness.putString("URL",url1);
-                            fragment.setArguments(bundleBusiness);
-                            ((DashboardActivity)context).replaceFragment(fragment,"Web",bundleBusiness);
-
-                        Intent i = new Intent(context, BusinessDashboardActivity.class);
-                        //i.putExtra("URL", strUrl);
-                        //i.putExtra("Type","Website");
-                        //startActivity(i);
-                        //getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
-
-                    } catch (UnsupportedEncodingException e) {
+                        Intent i = new Intent(getActivity(), BusinessDashboardActivity.class);
+                        startActivity(i);
+                    } catch (Exception e) {
 
                         e.printStackTrace();
                     }
