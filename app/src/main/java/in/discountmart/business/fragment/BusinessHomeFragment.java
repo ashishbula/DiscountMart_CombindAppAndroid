@@ -533,14 +533,14 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
 
 
             /*Service Business Opportunity on click*/
-            serviceSupport.setOnClickListener(new View.OnClickListener() {
+           /* serviceSupport.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(context, ComplaintActivity.class);
                     context.startActivity(i);
                     getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                 }
-            });
+            });*/
 
             /*Service Business Opportunity on click*/
             /*serviceDocument.setOnClickListener(new View.OnClickListener() {
@@ -577,7 +577,8 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
 
                 }
             });
-serviceWalletRequest.setOnClickListener(new View.OnClickListener() {
+
+            serviceWalletRequest.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
