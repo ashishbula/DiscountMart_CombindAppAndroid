@@ -59,7 +59,7 @@
     <string name="str_view_detail">View Detail</string>
 
     <!--Dashboard-->
-    <string name="dash_detail">Dashboard Deail</string>
+    <string name="dash_detail">Dashboard Detail</string>
     <string name="today_regis">Today Registration</string>
     <string name="today_bv">Today BV</string>
     <string name="total_regis">Total Registration</string>

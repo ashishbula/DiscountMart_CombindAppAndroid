@@ -164,6 +164,14 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
                 }
             });
 
+            serviceMyBusiness.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MyBusinessFragment fragment = new MyBusinessFragment();
+                    ((BusinessDashboardActivity)context).replaceFragment_business(fragment,"My Business",null);
+                }
+            });
+
             /*Service Business Opportunity on click*/
             serviceKYC.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -570,11 +578,8 @@ public class BusinessHomeFragment extends Fragment implements BaseSliderView.OnS
             serviceReward.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context,"Coming soon..",Toast.LENGTH_SHORT).show();
-
-                    RewardFragment fragment = new RewardFragment();
+                    RewardFragmentNew fragment = new RewardFragmentNew();
                     ((BusinessDashboardActivity)context).replaceFragment_business(fragment,"My Reward",null);
-
                 }
             });
 

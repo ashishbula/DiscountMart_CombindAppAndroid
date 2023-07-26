@@ -370,8 +370,6 @@ public class RewardFragment extends BaseFragment {
                 txtName.setTextColor(getResources().getColor(R.color.black));
                 txtName.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimension(R.dimen.txt_medium));
 
-
-
                 linearLayout.setLayoutParams(getLayoutParams());
                 linearLayout.addView(txtName);
 
@@ -423,8 +421,6 @@ public class RewardFragment extends BaseFragment {
             layoutInfo.addView(linearLayout);
 
         }*/
-
-
 
     }
 

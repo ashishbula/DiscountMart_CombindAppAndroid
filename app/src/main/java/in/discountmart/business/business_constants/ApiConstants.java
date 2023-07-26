@@ -166,7 +166,7 @@ public class ApiConstants {
     public static final String REQUEST_BINARY_INCOME= "weeklyincentive";
     public static final String REQUEST_RETAIL_INCENTIVE= "retailincentive";
     public static final String REQUEST_YEARLY_REWARD= "yearlyreward";
-    public static final String REQUEST_REWARD= "rewards";
+    public static final String REQUEST_REWARD= "RewardNewDetail";
     public static final String REQUEST_REPURCHASE_REWARD= "RepurchaseRewards";
     public static final String REQUEST_PRODT_TRANSFER_DETAIL= "prodtransdetail";
     public static final String REQUEST_PRODUCT= "productrequest";
