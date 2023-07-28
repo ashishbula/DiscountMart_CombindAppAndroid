@@ -113,6 +113,7 @@ import in.discountmart.business.fragment.PinReceiveDetailFragment;
 import in.discountmart.business.fragment.PinTransferDetailFragment;
 import in.discountmart.business.fragment.PinTransferFragment;
 import in.discountmart.business.fragment.RewardFragment;
+import in.discountmart.business.fragment.RewardFragmentNew;
 import in.discountmart.business.fragment.SubServiceFragment;
 import in.discountmart.business.fragment.WalletTransferFragment;
 import in.discountmart.business.model_business.requestmodel.BaseRequest;
@@ -146,6 +147,7 @@ import retrofit2.Response;
 public class BusinessDashboardActivity extends BaseActivity {
 
     private MultiLevelListView multiLevelListView;
+
     ImageView imageViewProfilePic;
 
     TextView textViewUserId;
@@ -863,6 +865,7 @@ public class BusinessDashboardActivity extends BaseActivity {
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                         break;
 
+
                     case "Daily Incentive": //Monthly Income
                         Intent dailyIncIntent = new Intent(BusinessDashboardActivity.this, CommonReportActivity.class);
                         dailyIncIntent.putExtra("Title", "Daily Incentive Detail");
@@ -873,7 +876,7 @@ public class BusinessDashboardActivity extends BaseActivity {
 
                     case "My Reward":
                         CURRENT_TAG=REWARDS;
-                        fragment = new RewardFragment();
+                        fragment = new RewardFragmentNew();
                         strTitle="My Reward";
                         replaceFragment_business(fragment, CURRENT_TAG, null);
                        /* Intent rewardIncIntent = new Intent(BusinessDashboardActivity.this, CommonReportActivity.class);
@@ -881,6 +884,14 @@ public class BusinessDashboardActivity extends BaseActivity {
                         rewardIncIntent.putExtra("Type","MyReward");
                         startActivity(rewardIncIntent);
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);*/
+                        break;
+
+                    case "Community Payout": //Weekly Income
+                        Intent cmIntent = new Intent(BusinessDashboardActivity.this, CommonReportActivity.class);
+                        cmIntent.putExtra("Title", "Community Payout");
+                        cmIntent.putExtra("Type","Community Payout");
+                        startActivity(cmIntent);
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                         break;
 
                     case "Performance & MFA Detail": //Weekly Income

@@ -56,6 +56,7 @@ import in.discountmart.business.model_business.requestmodel.DownlinePurchaseRequ
 import in.discountmart.business.model_business.requestmodel.MyDirectRequest;
 import in.discountmart.business.model_business.requestmodel.WalletReportRequest;
 import in.discountmart.business.model_business.requestmodel.WeeklyIncentiveRequest;
+import in.discountmart.business.model_business.responsemodel.CommunityPayoutResponse;
 import in.discountmart.business.model_business.responsemodel.DailyIncentiveResponse;
 import in.discountmart.business.model_business.responsemodel.DownlineDetailResponse;
 import in.discountmart.business.model_business.responsemodel.DownlinePurchaseResponse;
@@ -469,10 +470,29 @@ public class CommonReportActivity extends BaseActivity {
                     if (!ConnectivityUtils.isNetworkEnabled(CommonReportActivity.this)) {
                         Toast.makeText(CommonReportActivity.this, getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                     } else {
-                        getMonthlyRewardPoints();
+                       // getMonthlyRewardPoints();
+                        getMyCommunityDetailPoints();
                     }
 
                 }
+
+                else if(type.equals("Community Payout")){
+
+                    //strToDate=intent.getStringExtra("ToDate");
+                    //strFromDate=intent.getStringExtra("FromDate");
+                    //strStatus=intent.getStringExtra("Status");
+                    //strSide=intent.getStringExtra("Side");
+                    //strLevelID=intent.getStringExtra("levelId");
+                    //strGroup=intent.getStringExtra("Group");
+
+                    if (!ConnectivityUtils.isNetworkEnabled(CommonReportActivity.this)) {
+                        Toast.makeText(CommonReportActivity.this, getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                    } else {
+                        getCommunityPayout();
+                    }
+
+                }
+
             }
 
             /* button on next click get next data*/
@@ -603,7 +623,7 @@ public class CommonReportActivity extends BaseActivity {
                                 Toast.makeText(CommonReportActivity.this, getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                getDynamicDailyIncentive();
+                                getDynamicMonthlyIncentive();
                             }
                         } else {
                             Toast.makeText(CommonReportActivity.this, "Record complete", Toast.LENGTH_SHORT).show();
@@ -698,6 +718,24 @@ public class CommonReportActivity extends BaseActivity {
                             }
                             else {
                                 getMFADetail();
+                            }
+                        } else {
+                            Toast.makeText(CommonReportActivity.this, "Record complete", Toast.LENGTH_SHORT).show();
+                            linearLayoutNext.setVisibility(View.GONE);
+                        }
+                    }
+
+                    else if(type.contains("Community Payout")){
+                        from = from + 10;
+                        to = to + 10;
+                        if (from <= totalRecord) {
+
+                            //Call SAve Complaint  APi
+                            if (!ConnectivityUtils.isNetworkEnabled(CommonReportActivity.this)) {
+                                Toast.makeText(CommonReportActivity.this, getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                getCommunityPayout();
                             }
                         } else {
                             Toast.makeText(CommonReportActivity.this, "Record complete", Toast.LENGTH_SHORT).show();
@@ -1477,8 +1515,6 @@ public class CommonReportActivity extends BaseActivity {
 
     }
 
-
-
     /**
      * This function add and show the headers to the table
      * In Level wise Direct Table
@@ -1849,7 +1885,6 @@ public class CommonReportActivity extends BaseActivity {
             }
         });
     }
-
 
     /**
      * This function add and show the headers to the table
@@ -6017,7 +6052,6 @@ public class CommonReportActivity extends BaseActivity {
 
     }
 
-
     // My Community Detail Api Calling
     //  Method for fetching data and get Details
     private void getMyCommunityDetailPoints(){
@@ -6130,7 +6164,6 @@ public class CommonReportActivity extends BaseActivity {
 
 
     }
-
 
     /**
      * This function add and show the headers to the table
@@ -6483,6 +6516,110 @@ public class CommonReportActivity extends BaseActivity {
 
             @Override
             public void onFailure(Call<Dy_MFADetailResponse> call, Throwable t) {
+
+                if(pDialog.isShowing())
+                    pDialog.dismiss();
+                Toast.makeText(CommonReportActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+    private void getCommunityPayout(){
+        pDialog=new ProgressDialog(this);
+        pDialog.setMessage("Please wait");
+        pDialog.setCancelable(false);
+        pDialog.show();
+
+        BaseFromToRequest request = new BaseFromToRequest();
+        request.setReqtype(ApiConstants.REQUEST_COMMUNITY_PAYOUT);
+        request.setPasswd(SharedPrefrence_Business.getPassword(this));
+        request.setUserid(SharedPrefrence_Business.getUserID(this));
+        request.setIslogin(SharedPrefrence_Business.getIsLogin(this));
+        request.setFrom(String.valueOf(from));
+        request.setTo(String.valueOf(to));
+
+        Call<CommunityPayoutResponse> callll=
+                NetworkClient1.getInstance(this).create(IncomeServices.class).fetchCommunityPayout(request,strApiKey);
+
+        callll.enqueue(new Callback<CommunityPayoutResponse>() {
+            @Override
+            public void onResponse(Call<CommunityPayoutResponse> call, Response<CommunityPayoutResponse> response) {
+
+                if(pDialog.isShowing())
+                    pDialog.dismiss();
+                try {
+                    CommunityPayoutResponse Response=new CommunityPayoutResponse();
+                    Response=response.body();
+
+                    if(Response != null){
+                        if (Response.getResponse().equals("OK")) {
+
+
+                            if(Integer.parseInt(Response.getRecordcount()) > 0){
+
+                                linearLayoutNoRecord.setVisibility(View.GONE);
+                                linearLayoutTable.setVisibility(View.VISIBLE);
+                                //tableLayoutRecord.setVisibility(View.VISIBLE);
+                                layoutMyDirectSummery.setVisibility(View.GONE);
+                                layoutMFANotes.setVisibility(View.GONE);
+                                linearLayoutNext.setVisibility(View.VISIBLE);
+
+                                //totalRecord = Integer.parseInt(reportResponse.getRecordcount());
+                                //txtRecord.setText("Record : - " +String.valueOf(totalRecord));
+                                //textViewRecord.setTextSize(12);
+                                ArrayList<Map<String ,String>> communitypayout= Response.getCommunitypayout();
+                                //ArrayList<Map<String ,String>> mapsLevelDirectSummery=dy_downdetailResponse.getDirectssummary();
+
+                                if(from == 1){
+                                    addDirectTableHeaders(communitypayout);
+                                    addDirectTableData(communitypayout);
+                                    createMyDirectSummeryDetail(communitypayout);
+                                }
+                                else {
+                                    addDirectTableData(communitypayout);
+                                }
+                            }
+                            else {
+                                linearLayoutNoRecord.setVisibility(View.VISIBLE);
+                                linearLayoutTable.setVisibility(View.GONE);
+                                //tableLayoutRecord.setVisibility(View.VISIBLE);
+                                layoutMyDirectSummery.setVisibility(View.GONE);
+                                linearLayoutNext.setVisibility(View.GONE);
+                                layoutMFANotes.setVisibility(View.GONE);
+                            }
+
+
+                        }
+                        else if(Response.getResponse().equals("FAILED") && Response.getMsg().contains("Invalid Login Details")){
+                            blankValueFromSharePreference(CommonReportActivity.this,Response.getMsg());
+                        }
+                        else if(Response.getResponse().equals("FAILED")) {
+                            String msg=Response.getResponse()+ " "+"Something went wrong..";
+                            Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
+                                    .setAction("CLOSE", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+
+                                        }
+                                    })
+                                    .setActionTextColor(getResources().getColor(android.R.color.holo_red_light ))
+                                    .show();
+
+                        }
+                    }
+                    else {
+                        String msg="Something went wrong. Please try again.";
+                        blankValueFromSharePreference(CommonReportActivity.this,msg);
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CommunityPayoutResponse> call, Throwable t) {
 
                 if(pDialog.isShowing())
                     pDialog.dismiss();

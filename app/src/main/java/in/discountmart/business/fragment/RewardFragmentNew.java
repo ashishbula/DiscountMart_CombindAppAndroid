@@ -125,6 +125,7 @@ public class RewardFragmentNew extends BaseFragment {
                                 scrollView.setVisibility(View.VISIBLE);
                                 imgNoResult.setVisibility(View.GONE);
                                 rewardRecords = rewardResponse.getRewarddetail();
+                                addAchieveRewardTableHeaders(rewardRecords);
                                 addAchieveRewardTableData(rewardRecords);
                             }
                         }
@@ -163,12 +164,51 @@ public class RewardFragmentNew extends BaseFragment {
             for(Object obj : map.keySet()){
                 Object objKey=map.get(obj);
                 tableRow.setLayoutParams(getLayoutParams());
-                if (i==0){
-                    tableRow.addView(getTextView(i, String.valueOf(obj), Color.WHITE, Typeface.BOLD, Color.BLACK));
-                }
-                else
                     tableRow.addView(getTextView(i, String.valueOf(objKey), Color.BLACK, Typeface.NORMAL, getResources().getColor(R.color.LightGray)));
             }
+            tableLayAchieveRecord.addView(tableRow);
+        }
+    }
+    public void addAchieveRewardTableHeaders(ArrayList<Map<String, String>> directList ) {
+        tableLayAchieveRecord.setVisibility(View.VISIBLE);
+        tableLayAchieveRecord.removeAllViews();
+        ArrayList<Map<String, String>> mylist1 = new ArrayList<Map<String, String>>();
+        mylist1=directList;
+
+        Map<String, String> map =mylist1.get(0);
+        Map<String,String> arrayMap = mylist1.get(0);
+        Log.d("ArrayMap: -",arrayMap.keySet().toString());
+
+        for (int i = 0; i < map.size(); i++)
+        {
+            // create a new TableRow
+            TableRow tableRow = new TableRow(context);
+
+            TableLayout.LayoutParams tableRowParams = new TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT);
+
+            int leftMargin = 0;
+            int topMargin = 0;
+            int rightMargin = 0;
+            int bottomMargin = 0;
+
+            tableRowParams.setMargins(leftMargin, topMargin, rightMargin,
+                    bottomMargin);
+
+            tableRow.setLayoutParams(tableRowParams);
+            tableRow.setBackgroundColor(getResources().getColor(R.color.gray));
+
+            for(Object obj : map.keySet()){
+
+                if(i==0){
+                    Log.d("Key - ", String.valueOf(obj));
+                    TableRow tr = new TableRow(context);
+                    tableRow.setLayoutParams(getLayoutParams());
+                    tableRow.addView(getTextView(i, String.valueOf(obj).toUpperCase(), Color.WHITE, Typeface.BOLD, getResources().getColor(R.color.colorPrimary)));
+                }
+            }
+            // add the TableRow to the TableLayout
             tableLayAchieveRecord.addView(tableRow);
         }
     }

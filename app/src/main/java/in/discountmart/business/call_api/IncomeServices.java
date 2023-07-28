@@ -15,6 +15,7 @@ import in.discountmart.business.model_business.requestmodel.RetailIncentiveReque
 import in.discountmart.business.model_business.requestmodel.WeeklyIncentiveRequest;
 import in.discountmart.business.model_business.requestmodel.YearlyReardRequest;
 import in.discountmart.business.model_business.responsemodel.BinaryIncomeResponse;
+import in.discountmart.business.model_business.responsemodel.CommunityPayoutResponse;
 import in.discountmart.business.model_business.responsemodel.DailyIncentiveResponse;
 import in.discountmart.business.model_business.responsemodel.DirectIncomeReponse;
 import in.discountmart.business.model_business.responsemodel.DownBusinessResponse;
@@ -103,6 +104,8 @@ public interface IncomeServices {
     Call<Dy_MonthlyRewardPoints> fetchDynamicMonthlyRewardPoint(@Body BaseFromToRequest request, @Header("apikey") String apikey);
 
 
+    @POST("/ProcessAPIWithK")
+    Call<CommunityPayoutResponse> fetchCommunityPayout(@Body BaseFromToRequest request, @Header("apikey") String apikey);
 
 
 

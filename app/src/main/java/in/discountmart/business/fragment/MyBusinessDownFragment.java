@@ -115,8 +115,6 @@ public class MyBusinessDownFragment extends BaseFragment {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
         return v;
     }
 
@@ -198,16 +196,12 @@ public class MyBusinessDownFragment extends BaseFragment {
                             adapter.notifyDataSetChanged();
                             layoutNoRecord.setVisibility(View.VISIBLE);
                             layoutRecord.setVisibility(View.GONE);
-
-
                         }
-
                     }
                     else {
                         Toast.makeText(context, Response.getResponse(), Toast.LENGTH_SHORT).show();
                         //editTextConfirmCode.setText("");
                         //Toast.makeText(LoginActivity.this, loginUserGetResponseEntity.getMessage(), Toast.LENGTH_SHORT).show();
-
                     }
 
                 } catch (Exception e) {

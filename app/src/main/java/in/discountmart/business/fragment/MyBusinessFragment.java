@@ -362,9 +362,6 @@ public class MyBusinessFragment extends BaseFragment {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
         return v;
     }
 
