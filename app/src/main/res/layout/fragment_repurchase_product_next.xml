@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_50dp"
+        android:orientation="vertical">
+
+        <!--Title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/LightGray">
+            <TextView
+
+                android:id="@+id/repurchase_prodt_next_txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repurch_product"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_normal"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+        <!--Layout Record With Recycler View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:id="@+id/repurchase_prodt_next_frag_layout_Record"
+            android:orientation="vertical">
+            <!--Recycler view-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/repurchase_prodt_next_recycler_list">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--No Record Image-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/repurchase_prodt_next_layout_noRecord"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/no_result"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <!--Mobile no-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Mobile No."/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edtxt_height"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/lightgray"
+                    android:textSize="@dimen/txt_default"
+                    android:focusable="false"
+                    android:enabled="false"
+                    android:autofillHints="@string/str_transaction_pas"
+                    android:id="@+id/id_activation_act_edTxt_mob" />
+
+            </LinearLayout>
+
+            <!--Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="Remark"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edtxt_height"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:inputType="text"
+                    android:textSize="@dimen/txt_default"
+                    android:id="@+id/id_activation_act_edTxt_remark" />
+
+            </LinearLayout>
+
+            <!--Transaction Password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/txt_default"
+                    android:textColor="@color/black"
+                    android:text="@string/str_transaction_pas"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edtxt_height"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/white_bg_box_black_border"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/txt_default"
+
+                    android:hint="@string/str_transaction_pas"
+                    android:autofillHints="@string/str_transaction_pas"
+                    android:id="@+id/id_activation_act_edTxt_trans_pass" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/edtxt_height"
+                    android:autofillHints="@string/str_member_id"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_default"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="0dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/id_activation_act_btn_send_request"
+                    android:text="Send Request"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/edtxt_height"
+                    android:autofillHints="@string/str_member_id"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_default"
+                    android:focusable="true"
+                    android:layout_marginLeft="5dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="0dp"
+                    android:id="@+id/id_activation_act_btn_cancel"
+                    android:text="Cancel"/>
+
+            </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

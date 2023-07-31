@@ -112,7 +112,6 @@ import in.discountmart.business.fragment.PanCardFragment;
 import in.discountmart.business.fragment.PinReceiveDetailFragment;
 import in.discountmart.business.fragment.PinTransferDetailFragment;
 import in.discountmart.business.fragment.PinTransferFragment;
-import in.discountmart.business.fragment.RewardFragment;
 import in.discountmart.business.fragment.RewardFragmentNew;
 import in.discountmart.business.fragment.SubServiceFragment;
 import in.discountmart.business.fragment.WalletTransferFragment;
@@ -635,8 +634,14 @@ public class BusinessDashboardActivity extends BaseActivity {
                         break;
 
                     case "ID Activation":
-                        Intent activationIntent = new Intent(BusinessDashboardActivity.this, IDActivationActivity.class);
-                         startActivity(activationIntent);
+                        Intent activationIntent = new Intent(BusinessDashboardActivity.this, IDActivation_Old_Activity.class);
+                        startActivity(activationIntent);
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
+                        break;//Id Activation/Upgrade
+
+                    case "Re-Purchase Request":
+                        Intent repurchaseIntent = new Intent(BusinessDashboardActivity.this, RepurchaseOrderActivity.class);
+                        startActivity(repurchaseIntent);
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                         break;//Id Activation/Upgrade
 

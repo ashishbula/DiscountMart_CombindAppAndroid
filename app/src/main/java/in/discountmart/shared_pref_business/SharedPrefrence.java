@@ -6,8 +6,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-import in.discountmart.constants.ApiConstants;
-import in.discountmart.constants.AppConstants;
+import in.discountmart.business.listener.constants.ApiConstants;
+import in.discountmart.business.listener.constants.AppConstants;
 
 
 public class SharedPrefrence {

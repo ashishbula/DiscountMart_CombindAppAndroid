@@ -21,6 +21,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.google.gson.Gson;
 
 import in.base.network.NetworkClient;
@@ -36,7 +37,6 @@ import in.discountmart.business.model_business.AddProductModel;
 import in.discountmart.business.model_business.SpinnerSingleItemModel;
 import in.discountmart.business.model_business.requestmodel.BaseRequest;
 import in.discountmart.business.model_business.requestmodel.IDActivationBalance;
-import in.discountmart.business.model_business.responsemodel.BaseResponse;
 import in.discountmart.business.model_business.responsemodel.CheckValidIDResponse;
 import in.discountmart.business.model_business.responsemodel.GetWalleBalanceResponse;
 import in.discountmart.business.model_business.responsemodel.IDActivePackageList;
@@ -49,11 +49,18 @@ import in.discountmart.utility.ConnectivityUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import in.discountmart.business.adapter.PackageListAdapter;
+import in.discountmart.business.adapter.RepurchaseProductAdapter;
+import in.discountmart.business.adapter.SpinnerSingleItemAdapter;
+import in.discountmart.business.model_business.AddProductModel;
+import in.discountmart.business.model_business.SpinnerSingleItemModel;
+import in.discountmart.business.model_business.responsemodel.IDActivePackageList;
+import in.discountmart.business.model_business.responsemodel.RepurchaseProductResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class IDActivationActivity extends AppCompatActivity {
+public class RepurchaseOrderActivity extends AppCompatActivity {
     Context context;
     View view;
     TextView txtAvailBal;
@@ -82,7 +89,6 @@ public class IDActivationActivity extends AppCompatActivity {
     String strTPass="";
     boolean sponsorId;
     boolean walletBal;
-
 
     String strEP="";
     String strPckgId="";
@@ -122,7 +128,7 @@ public class IDActivationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_id_activation);
+        setContentView(R.layout.activity_id_activation_new);
         try {
             view=findViewById(android.R.id.content);
             content(view);
@@ -150,12 +156,12 @@ public class IDActivationActivity extends AppCompatActivity {
         // Enabling Up / Back navigation
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ID Activation");
+        getSupportActionBar().setTitle("Product Request");
 
         /*Call From Wallet typ
         e*/
         if(!ConnectivityUtils.isNetworkEnabled(this)){
-            Toast.makeText(IDActivationActivity.this,getResources().getString(R.string.network_error),Toast.LENGTH_SHORT).show();
+            Toast.makeText(RepurchaseOrderActivity.this,getResources().getString(R.string.network_error),Toast.LENGTH_SHORT).show();
         }
         else {
             // getWalletList("From",strWalletType);
@@ -211,30 +217,26 @@ public class IDActivationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(edtxtMemId.getText().toString().equals("")){
-                    Toast.makeText(IDActivationActivity.this,"Plz Enter Member Id", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RepurchaseOrderActivity.this,"Plz Enter Member Id", Toast.LENGTH_SHORT).show();
                     edtxtMemId.requestFocus();
                 }
                 else {
-                    View view2 = IDActivationActivity.this.getCurrentFocus();
+                    View view2 = RepurchaseOrderActivity.this.getCurrentFocus();
                     if (view2 != null) {
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(view2.getWindowToken(),
                                 0);
                     }
                     strMemId=edtxtMemId.getText().toString().toUpperCase();
-                    String idno= SharedPrefrence_Business.getUserID(IDActivationActivity.this).toUpperCase();
-
+                    String idno= SharedPrefrence_Business.getUserID(RepurchaseOrderActivity.this).toUpperCase();
 
                         //Call Epin ckeck api
-                        if(!ConnectivityUtils.isNetworkEnabled(IDActivationActivity.this)){
-                            Toast.makeText(IDActivationActivity.this,getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                        if(!ConnectivityUtils.isNetworkEnabled(RepurchaseOrderActivity.this)){
+                            Toast.makeText(RepurchaseOrderActivity.this,getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                         }
                         else {
-
                             checkIdForActivation();
                         }
-
-
                 }
             }
         });
@@ -252,16 +254,16 @@ public class IDActivationActivity extends AppCompatActivity {
                     }*/
                 if(edtxtMemId.getText().toString().equals("")){
                     //edtxtMemId.setError("Please enter Member Id");
-                    Toast.makeText(IDActivationActivity.this,"Please enter Member Id",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RepurchaseOrderActivity.this,"Please enter Member Id",Toast.LENGTH_SHORT).show();
                     edtxtMemId.requestFocus();
                 }
                 else if(!sponsorId){
                     //edTextSponsorIdNo.setError("Enter Sponsor Id.No.");
                     //edTextSponsorIdNo.requestFocus();
-                    Toast.makeText(IDActivationActivity.this,"click on check button for ID is active or not",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RepurchaseOrderActivity.this,"click on check button for ID is active or not",Toast.LENGTH_SHORT).show();
                 }
                 else if(strPckgId.equals("0")){
-                    Toast.makeText(IDActivationActivity.this,"Please select proper package",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RepurchaseOrderActivity.this,"Please select proper package",Toast.LENGTH_SHORT).show();
                 }
                 else if(edtxtAmount.getText().toString().equals("")){
                     edtxtAmount.setError("Please select kit");
@@ -280,7 +282,7 @@ public class IDActivationActivity extends AppCompatActivity {
                     strAmount=edtxtAmount.getText().toString();
                     //strRemark=edTxtRemark.getText().toString();
                     strTPass=edtxtTPass.getText().toString();
-                    View view1 = IDActivationActivity.this.getCurrentFocus();
+                    View view1 = RepurchaseOrderActivity.this.getCurrentFocus();
                     if (view1 != null) {
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(view1.getWindowToken(),
@@ -290,10 +292,10 @@ public class IDActivationActivity extends AppCompatActivity {
                     if (sponsorId && walletBal) {
                             // call wallet transfer api
                         String msg= "Do you continue for Id Activation ?" ;
-                            if (!ConnectivityUtils.isNetworkEnabled(IDActivationActivity.this)) {
-                                Toast.makeText(IDActivationActivity.this, getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                            if (!ConnectivityUtils.isNetworkEnabled(RepurchaseOrderActivity.this)) {
+                                Toast.makeText(RepurchaseOrderActivity.this, getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                             } else {
-                                AlertDialogUtils.showMaterialDialogWithOneButton_2(IDActivationActivity.this, new AlertDialogButtonListener() {
+                                AlertDialogUtils.showMaterialDialogWithOneButton_2(RepurchaseOrderActivity.this, new AlertDialogButtonListener() {
                                     @Override
                                     public void onButtontapped(String btnText) {
                                         if (btnText.equals("OK")) {
@@ -305,11 +307,11 @@ public class IDActivationActivity extends AppCompatActivity {
                             }
                         } else if(!sponsorId && walletBal) {
                             String msg = "Please correct Id no.";
-                            Toast.makeText(IDActivationActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RepurchaseOrderActivity.this, msg, Toast.LENGTH_SHORT).show();
                         }
                         else if(sponsorId && !walletBal) {
                             String msg = "Check Wallet balance.";
-                            Toast.makeText(IDActivationActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RepurchaseOrderActivity.this, msg, Toast.LENGTH_SHORT).show();
 
                         }
                 }
@@ -329,7 +331,7 @@ public class IDActivationActivity extends AppCompatActivity {
 
         acTypeArryayList=new ArrayList<SpinnerSingleItemModel>(Arrays.asList(acTypeModel));
 
-        spinnerAdapter = new SpinnerSingleItemAdapter(IDActivationActivity.this, acTypeArryayList);
+        spinnerAdapter = new SpinnerSingleItemAdapter(RepurchaseOrderActivity.this, acTypeArryayList);
         spnrPayType.setAdapter(spinnerAdapter);
 
     }
@@ -337,7 +339,7 @@ public class IDActivationActivity extends AppCompatActivity {
     /*Wallet Balance Api Request and response*/
     private void getWalletBalance(){
 
-        pDialog=new ProgressDialog(IDActivationActivity.this);
+        pDialog=new ProgressDialog(RepurchaseOrderActivity.this);
         pDialog.setMessage("Please wait..");
         pDialog.setCancelable(false);
         pDialog.show();
@@ -345,9 +347,9 @@ public class IDActivationActivity extends AppCompatActivity {
         IDActivationBalance baseRequest=new IDActivationBalance();
         /*Set value in Entity class*/
         baseRequest.setReqtype(ApiConstants.REQUEST_ID_ACTIVE_BAL);
-        baseRequest.setPasswd(SharedPrefrence_Business.getPassword(IDActivationActivity.this));
-        baseRequest.setUserid(SharedPrefrence_Business.getUserID(IDActivationActivity.this));
-        baseRequest.setIslogin(SharedPrefrence_Business.getIsLogin(IDActivationActivity.this));
+        baseRequest.setPasswd(SharedPrefrence_Business.getPassword(RepurchaseOrderActivity.this));
+        baseRequest.setUserid(SharedPrefrence_Business.getUserID(RepurchaseOrderActivity.this));
+        baseRequest.setIslogin(SharedPrefrence_Business.getIsLogin(RepurchaseOrderActivity.this));
         baseRequest.setWallettype("R");
         String request= new Gson().toJson(baseRequest);
         Log.e("Request",request);
@@ -392,15 +394,15 @@ public class IDActivationActivity extends AppCompatActivity {
                     }
                     else if(Response.getResponse().contains("FAILED") && Response.getMsg().contains("Invalid Login")){
                         String toast= "Invalid login detail. Please login again";
-                        Toast.makeText(IDActivationActivity.this,toast,Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(IDActivationActivity.this, LoginActivity.class);
+                        Toast.makeText(RepurchaseOrderActivity.this,toast,Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(RepurchaseOrderActivity.this, LoginActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();
                     }
                     else if(Response.getResponse().contains("FAILED")) {
-                        Toast.makeText(IDActivationActivity.this, Response.getResponse(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RepurchaseOrderActivity.this, Response.getResponse(), Toast.LENGTH_SHORT).show();
                         layoutContent.setVisibility(View.GONE);
                         btnCheck.setClickable(false);
                         btnCheck.setEnabled(false);
@@ -416,7 +418,7 @@ public class IDActivationActivity extends AppCompatActivity {
             public void onFailure(Call<GetWalleBalanceResponse> call, Throwable t) {
                 if(pDialog.isShowing())
                     pDialog.dismiss();
-                Toast.makeText(IDActivationActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RepurchaseOrderActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -455,13 +457,14 @@ public class IDActivationActivity extends AppCompatActivity {
                             sponsorId=true;
                             String mobNo = Response.getMobileno();
                             CURRENT_TAG=REPURCHASE_PRODUCT;
-                            if (sponsorId && walletBal && (Response.getActivestatus().equals("N"))) {
+                           // if (sponsorId && walletBal && (Response.getActivestatus().equals("Y"))) {
+                            if (sponsorId && walletBal) {
                                 // call wallet transfer api
                                 String msg= "Do you continue for Id Activation ?" ;
-                                if (!ConnectivityUtils.isNetworkEnabled(IDActivationActivity.this)) {
-                                    Toast.makeText(IDActivationActivity.this, getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                                if (!ConnectivityUtils.isNetworkEnabled(RepurchaseOrderActivity.this)) {
+                                    Toast.makeText(RepurchaseOrderActivity.this, getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                                 } else {
-                                    AlertDialogUtils.showMaterialDialogWithOneButton_2(IDActivationActivity.this, new AlertDialogButtonListener() {
+                                    AlertDialogUtils.showMaterialDialogWithOneButton_2(RepurchaseOrderActivity.this, new AlertDialogButtonListener() {
                                         @Override
                                         public void onButtontapped(String btnText) {
                                             if (btnText.equals("OK")) {
@@ -469,7 +472,7 @@ public class IDActivationActivity extends AppCompatActivity {
                                                 bundle.putString("idno", strMemId);
                                                 bundle.putString("shoppingwallet", String.valueOf(availWalletBal));
                                                 bundle.putString("mobileno", mobNo);
-                                                Intent activationIntent = new Intent(IDActivationActivity.this, IDActivationProduct.class);
+                                                Intent activationIntent = new Intent(RepurchaseOrderActivity.this, RepurchaseOrderProduct.class);
                                                 activationIntent.putExtras(bundle);
                                                 startActivity(activationIntent);
                                                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
@@ -480,32 +483,32 @@ public class IDActivationActivity extends AppCompatActivity {
                             }
                             else if(sponsorId && !walletBal) {
                                 String msg = "Check Wallet balance.";
-                                Toast.makeText(IDActivationActivity.this, msg, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RepurchaseOrderActivity.this, msg, Toast.LENGTH_SHORT).show();
 
-                            } else if (Response.getActivestatus().equals("Y"))
-                            {                            txtMemName.setTextColor(getResources().getColor(R.color.red));
-                                layoutContent.setVisibility(View.GONE);
-                                txtMemName.setText("ID Already Active. Please Check..!");
-                                txtMemName.setTextColor(getResources().getColor(R.color.red));
                             }
+                            else if (Response.getActivestatus().equals("N"))
+                            {
+                                layoutContent.setVisibility(View.GONE);
+                                txtMemName.setText("ID not Active. Please Check..!");
+                                txtMemName.setTextColor(getResources().getColor(R.color.red));                            }
                             //layoutContent.setVisibility(View.VISIBLE);
                         }
                         else if(Response.getResponse().contains("FAILED") && Response.getMsg().contains("Invalid Login")){
-                            new BusinessDashboardActivity().blankValueFromSharedPreference(IDActivationActivity.this);
+                            new BusinessDashboardActivity().blankValueFromSharedPreference(RepurchaseOrderActivity.this);
                         }
                         else if(Response.getResponse().contains("FAILED")){
                             layoutContent.setVisibility(View.GONE);
                             txtMemName.setText(Response.getMsg());
                             txtMemName.setTextColor(getResources().getColor(R.color.red));
                             sponsorId=false;
-                            String toast= Response.getResponse()+ ":" + Response.getMsg();
-                            Toast.makeText(IDActivationActivity.this, toast, Toast.LENGTH_SHORT).show();
+                            String toast= Response.getResponse()+ " : " + Response.getMsg();
+                            Toast.makeText(RepurchaseOrderActivity.this, toast, Toast.LENGTH_SHORT).show();
                         }
                     }
                     else {
                         String msg="Something went wrong.";
-                        Toast.makeText(IDActivationActivity.this,msg,Toast.LENGTH_SHORT).show();
-                        new BusinessDashboardActivity().blankValueFromSharedPreference(IDActivationActivity.this);
+                        Toast.makeText(RepurchaseOrderActivity.this,msg,Toast.LENGTH_SHORT).show();
+                        new BusinessDashboardActivity().blankValueFromSharedPreference(RepurchaseOrderActivity.this);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -516,7 +519,7 @@ public class IDActivationActivity extends AppCompatActivity {
             public void onFailure(Call<CheckValidIDResponse> call, Throwable t) {
                 if(pDialog.isShowing())
                     pDialog.dismiss();
-                Toast.makeText(IDActivationActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RepurchaseOrderActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

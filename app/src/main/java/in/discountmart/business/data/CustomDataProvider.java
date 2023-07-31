@@ -123,6 +123,7 @@ public class CustomDataProvider  {
 
         //shopList.add(new Item("My Purchase Detail"));
         shopList.add(new Item("ID Activation"));
+        shopList.add(new Item("Re-Purchase Request"));
         shopList.add(new Item("Downline Purchase"));
 
         return shopList;

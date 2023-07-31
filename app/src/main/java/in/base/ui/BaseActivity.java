@@ -435,5 +435,21 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public void replaceFragment(Fragment fragment, String tag, Bundle bundle) {
 
+        if (bundle != null) {
+            fragment.setArguments(bundle);
+        }
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.business_content_frame, fragment, tag);
+        fragment.setRetainInstance(true);
+        /*to add fragment to stack*/
+        ft.addToBackStack(tag);
+        try {
+            ft.commit();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            ft.commitAllowingStateLoss();
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package in.discountmart.constants;
+package in.discountmart.business.listener.constants;
 
 public class AppConstants {
   

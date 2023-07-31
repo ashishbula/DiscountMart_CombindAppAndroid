@@ -96,6 +96,9 @@ public class ApiConstants {
     public static final String REQUEST_MONTH_SESSION="monthdetail";
     public static final String REQUEST_COMMUNITY_DETAIL="reentrycommunitypayout";
     public static final String REQUEST_COMMUNITY_PAYOUT="communitypayout";
+
+    public static final String REQUEST_SHOPPING="shopping";
+
     // Upload KYC
 
     public static final String REQUEST_SAVE_KYC="saveallkyc";
@@ -302,4 +305,7 @@ public class ApiConstants {
     //public static final String REQUEST_BANK_WITHDRAWAL="bankwithdrawls";
     public static final String REQUEST_BANK_WITHDRAWAL="withdrawltransfer";
     //public static  final String REQUEST_S_WALLET_REPORT="swalletbalance";
+
+    public static final String REQUEST_GET_PRODUCT="getproduct";
+
 }

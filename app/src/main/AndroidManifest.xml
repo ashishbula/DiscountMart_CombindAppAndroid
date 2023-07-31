@@ -722,8 +722,26 @@
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".business.activity.IDActivationActivity"
+            android:name=".business.activity.IDActivation_Old_Activity"
             android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.IDActivationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.IDActivationProduct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.IDActivationProductNext"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="stateHidden|adjustResize" />
@@ -762,7 +780,24 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
+        <activity
+            android:name=".business.activity.RepurchaseOrderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.RepurchaseOrderProduct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".business.activity.RepurchaseOrderProductNext"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>

@@ -38,7 +38,7 @@ import java.util.Objects;
 
 import in.base.ui.BaseActivity;
 import in.discountmart.R;
-import in.discountmart.constants.AppConstants;
+import in.discountmart.business.listener.constants.AppConstants;
 import in.discountmart.fragment.HomeFragment;
 import in.discountmart.fragment.WebFragment;
 import in.discountmart.listener.AlertDialogButtonListener;

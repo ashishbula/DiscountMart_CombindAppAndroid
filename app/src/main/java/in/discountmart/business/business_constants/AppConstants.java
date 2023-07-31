@@ -203,6 +203,7 @@ public class AppConstants {
     public static String EXTRA_SERIALIZABLE="extra_serializable";
     public static String EXTRA_SERIALIZABLE2="extra_serializable2";
 
+    public static final String REPURCHASE_PRODUCT = "repurchase_product";
 
 
     // Static Variable for Temp Store Value

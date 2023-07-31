@@ -17,7 +17,7 @@ import in.base.network.NetworkClient;
 import in.base.ui.BaseActivity;
 import in.discountmart.R;
 import in.discountmart.call_api.ProfileServices;
-import in.discountmart.constants.ApiConstants;
+import in.discountmart.business.listener.constants.ApiConstants;
 import in.discountmart.listener.AlertDialogButtonListener;
 import in.discountmart.model_business.requestmodel.BaseRequest;
 import in.discountmart.model_business.responsemodel.ForgotPasswordResponse;

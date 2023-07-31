@@ -214,14 +214,25 @@
     <string name="term5">KYC Documents is mandatory.</string>
     <string name="term6">You must sign your application form &amp; submitted in nearest company Branch/office along with one colour passport size photo &amp; copy of self attested ID proof or address proof / PAN No.</string>
 
+    <string name="repurch_product">Repurchase Product</string>
+    <string name="qty">Quantity</string>
+    <string name="mrp">Mrp.</string>
+    <string name="prod_mrp">Product Mrp.</string>
+    <string name="tot_prod_mrp">Total Product Mrp.</string>
+    <string name="tot_value">Total Value</string>
+    <string name="tot_prod_fv">Total Product PV</string>
+    <string name="tot_fv">Total PV</string>
+    <string name="prod_discount">Total Discount</string>
+    <string name="prodt">Product</string>
+    <string name="prodt_cat">Product Category</string>
 
-    <string name="str_individual">Individual</string>
-    <string name="str_company">Company</string>
-    <!--My Purchase Fragment -->
+        <string name="str_individual">Individual</string>
+        <string name="str_company">Company</string>
+    <!-- My Purchase Fragment -->
     <string name="my_purchase_string">Plz Select From and To Date Then Click Submit to Show Record |</string>
 
 
-    <!--Pin Tansfer Fragment -->
+    <!-- Pin Tansfer Fragment -->
     <string name="pin_transfer_string1">click here to get member name</string>
     <string name="pin_transfer_string2">Enter Id Number</string>
     <string name="pin_transfer_string3">Enter Quantity</string>

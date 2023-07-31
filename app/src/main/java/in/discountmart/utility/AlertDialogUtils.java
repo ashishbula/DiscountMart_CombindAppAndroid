@@ -127,4 +127,24 @@ public class AlertDialogUtils {
         dialog = builder.create();
         dialog.show();
     }
+
+    public static void showMaterialDialogWithOneButton_2(Context context, final AlertDialogButtonListener buttonListener, final String... param) {
+        androidx.appcompat.app.AlertDialog dialog;
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context,R.style.AlertDialogTheme);
+        builder.setTitle(param[0])
+                .setMessage(Html.fromHtml("<font color='#FF7F27'>"+param[1]+"</font>"))
+                .setIcon(context.getResources().getDrawable(R.mipmap.done));
+
+        builder.setPositiveButton(param[2], new DialogInterface.OnClickListener() {
+            @Override
+
+            public void onClick(DialogInterface dialog, int arg1) {
+                buttonListener.onButtontapped(param[2]);
+                dialog.dismiss();
+            }
+        });
+        dialog = builder.create();
+        dialog.show();
+    }
+
 }

@@ -6,8 +6,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+import java.util.ArrayList;
+
 import in.discountmart.business.business_constants.ApiConstants;
 import in.discountmart.business.business_constants.AppConstants;
+import in.discountmart.business.model_business.AddProductModel;
 
 
 public class SharedPrefrence_Business {
@@ -17,6 +20,11 @@ public class SharedPrefrence_Business {
      * @param context
      * @return
      */
+
+     private static SharedPrefrence_Business sharedValues = null;
+    public ArrayList<AddProductModel> addProductList=new ArrayList<AddProductModel>();
+
+
     private static SharedPreferences getSharedPrefrences(Context context) {
         return context.getSharedPreferences(ApiConstants.MAPLIFE_SHARED_PREFERENCE, Context.MODE_PRIVATE);
     }
@@ -237,6 +245,11 @@ public class SharedPrefrence_Business {
         return getSharedPrefrences(context).getString(AppConstants.PACKAGE, "");
     }
 
+    public static SharedPrefrence_Business getInstance() {
+        if (sharedValues == null)
+            sharedValues = new SharedPrefrence_Business();
+        return sharedValues;
+    }
 
 
 }

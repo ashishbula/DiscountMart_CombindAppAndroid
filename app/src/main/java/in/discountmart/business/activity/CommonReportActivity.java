@@ -500,6 +500,8 @@ public class CommonReportActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
 
+
+
                     /* For My Purchase detail*/
                     if(type.equals("MyDirect")){
                         from = from + 10;
