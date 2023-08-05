@@ -221,6 +221,8 @@
     <string name="tot_prod_mrp">Total Product Mrp.</string>
     <string name="tot_value">Total Value</string>
     <string name="tot_prod_fv">Total Product PV</string>
+    <string name="tot_prod_bv">Total Product BV</string>
+
     <string name="tot_fv">Total PV</string>
     <string name="prod_discount">Total Discount</string>
     <string name="prodt">Product</string>

@@ -645,6 +645,12 @@ public class BusinessDashboardActivity extends BaseActivity {
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
                         break;//Id Activation/Upgrade
 
+                     case "Repurchase Gallery":
+                        Intent repurchaseGIntent = new Intent(BusinessDashboardActivity.this, RepurchaseOrderActivity.class);
+                        startActivity(repurchaseGIntent);
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_right);
+                        break;//Id Activation/Upgrade
+
                     case "Level Wise Count":
                         Intent leveCountIntent = new Intent(BusinessDashboardActivity.this, CommonReportActivity.class);
                         leveCountIntent.putExtra("Type","LevelWise");

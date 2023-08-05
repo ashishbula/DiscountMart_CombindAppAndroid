@@ -23,6 +23,26 @@ public class RepurchaseProductResponse extends BaseResponse {
 
         boolean isSelected;
 
+
+        String TotalAmount;
+        String Weight;
+
+        public String getTotalAmount() {
+            return TotalAmount;
+        }
+
+        public void setTotalAmount(String totalAmount) {
+            TotalAmount = totalAmount;
+        }
+
+        public String getWeight() {
+            return Weight;
+        }
+
+        public void setWeight(String weight) {
+            Weight = weight;
+        }
+
         public String getShipping() {
             return shipping;
         }

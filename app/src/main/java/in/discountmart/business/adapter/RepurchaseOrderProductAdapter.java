@@ -38,8 +38,8 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView txtProdtName;
-        public TextView txtProdtPrice;
-        public TextView txtProdtPV;
+        public TextView txtProdWeight;
+        public TextView txtProdtBV;
         public TextView txtProdtDP;
         public TextView txtIncrement;
         public TextView txtDecrement;
@@ -52,38 +52,15 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
             super(view);
 
             txtProdtName = view.findViewById(R.id.product_item_txt_pname);
-            txtProdtPrice = view.findViewById(R.id.product_item_txt_price);
-            txtProdtPV = view.findViewById(R.id.product_item_txt_pv);
+            txtProdWeight = view.findViewById(R.id.product_item_txt_price);
+            txtProdtBV = view.findViewById(R.id.product_item_txt_pv);
             txtProdtDP = view.findViewById(R.id.product_item_txt_dp);
             txtIncrement = view.findViewById(R.id.product_item_txt_increse);
             txtDecrement = view.findViewById(R.id.product_item_txt_decrese);
             txtQuantity = view.findViewById(R.id.product_item_txt_number);
             checkBox = view.findViewById(R.id.product_item_cnkbox);
-
-            /*view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // send selected contact in callback
-                    listener.onHotelSelected(hotelSearchList.get(getAdapterPosition()));
-                }
-            });*/
         }
     }
-
-   /* public static class MyFooter extends RecyclerView.ViewHolder{
-        public  LinearLayout layoutFooter;
-        public  TextView txtQuantity;
-        public  TextView txtPrice;
-        public  TextView txtOrderNow;
-        public MyFooter(@NonNull View itemHeaderView) {
-            super(itemHeaderView);
-            layoutFooter=(LinearLayout)itemHeaderView.findViewById(R.id.cart_item_footer_layout);
-            txtPrice=(TextView)itemHeaderView.findViewById(R.id.product_item_footer_totprice);
-            txtQuantity=(TextView)itemHeaderView.findViewById(R.id.product_item_footer_quantity);
-            txtOrderNow=(TextView)itemHeaderView.findViewById(R.id.product_item_footer_order);
-
-        }
-    }*/
 
     public RepurchaseOrderProductAdapter(Context context, ArrayList<RepurchaseProductResponse.ProductList> productList, RepurchaseOrderProduct fragment) {
         this.mContext = context;
@@ -108,19 +85,7 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
 
         return new MyViewHolder(itemView);
 
-      /*  if (viewType == TYPE_ITEM) {
-            View itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.product_list_item, parent, false);
-            return new MyViewHolder(itemView);
-        }
-
-        if (viewType == TYPE_FOOTER) {
-            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_footer_layout, parent, false);
-            return new MyFooter(layoutView);
-        }*/
-
-        //throw new RuntimeException("No match for " + viewType + ".");
-    }
+     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
@@ -133,8 +98,8 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                 //final FlightSearchResponse contact = flightSearchList.get(position);
 
                 myViewHolder.txtProdtName.setText(productArrayList.get(position).getProductname());
-                myViewHolder.txtProdtPrice.setText(productArrayList.get(position).getShipping());
-                myViewHolder.txtProdtPV.setText(productArrayList.get(position).getPv());
+                myViewHolder.txtProdWeight.setText(productArrayList.get(position).getWeight());
+                myViewHolder.txtProdtBV.setText(productArrayList.get(position).getBv());
                 myViewHolder.txtProdtDP.setText(productArrayList.get(position).getDp());
 
                 //prodQuantityList= new ArrayList<ProductQuantity>();
@@ -172,12 +137,12 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                     @Override
                     public void onClick(View v) {
                         quantity = Integer.parseInt(productArrayList.get(position).getQty());
-                        double totPrice = 0;
-                        double totRcp = 0;
-                        double totFVRV = 0;
-                        double prodtPrice = Double.parseDouble(productArrayList.get(position).getShipping());
-                        double prodtRcp = Double.parseDouble(productArrayList.get(position).getDp()) + Double.parseDouble(productArrayList.get(position).getShipping());
-                        double prodtFV = Double.parseDouble(productArrayList.get(position).getPv());
+                        double totWeight = 0;
+                        double totDP = 0;
+                        double totBV = 0;
+                        double prodtWeight = Double.parseDouble(productArrayList.get(position).getWeight());
+                        double prodtDP = Double.parseDouble(productArrayList.get(position).getDp());
+                        double prodtBV = Double.parseDouble(productArrayList.get(position).getBv());
                         int prodQuantity = 0;
 
                         if (!productArrayList.get(position).isSelected()) {
@@ -222,20 +187,20 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                                 }
                             }
                             productArrayList.get(position).setQty(String.valueOf(quantity));
-                            totPrice = prodtPrice * quantity;
-                            totRcp = prodtRcp * quantity;
-                            totFVRV = prodtFV * quantity;
+                            totWeight = prodtWeight * quantity;
+                            totDP = prodtDP * quantity;
+                            totBV = prodtBV * quantity;
                             AddProductModel addProductModel = new AddProductModel();
                             addProductModel.setProductname(productArrayList.get(position).getProductname());
                             addProductModel.setProductId(productArrayList.get(position).getProdid());
-                            addProductModel.setMrp(Double.parseDouble(productArrayList.get(position).getShipping()));
+                            addProductModel.setMrp(Double.parseDouble(productArrayList.get(position).getWeight()));
                             addProductModel.setRcp(Double.parseDouble(productArrayList.get(position).getDp()));
-                            addProductModel.setFv_rv(Double.parseDouble(productArrayList.get(position).getPv()));
+                            addProductModel.setFv_rv(Double.parseDouble(productArrayList.get(position).getBv()));
                             addProductModel.setProdusQuantity(quantity);
-                            addProductModel.setTotalMrp(totPrice);
-                            addProductModel.setTotalRcp(totRcp);
-                            addProductModel.setTotalFVRV(totFVRV);
-                            addProductModel.setShipping(Double.parseDouble(productArrayList.get(position).getShipping()));
+                            addProductModel.setTotalMrp(totWeight);
+                            addProductModel.setTotalRcp(totDP);
+                            addProductModel.setTotalFVRV(totBV);
+                            addProductModel.setShipping(Double.parseDouble(productArrayList.get(position).getWeight()));
                             ArrayList<AddProductModel> tempList = new ArrayList<AddProductModel>();
                             tempList.add(addProductModel);
 
@@ -256,13 +221,13 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                         //increaseInteger(v);
                         //auldinteger=0;
                         quantity = Integer.parseInt(productArrayList.get(position).getQty());
-                        double totPrice = 0;
-                        double totRcp = 0;
-                        double totFVRV = 0;
+                        double totWeight = 0;
+                        double totDP = 0;
+                        double totBV = 0;
 
-                        double prodtPrice = Double.parseDouble(productArrayList.get(position).getShipping());
-                        double prodtRcp = Double.parseDouble(productArrayList.get(position).getDp())+Double.parseDouble(productArrayList.get(position).getShipping());
-                        double prodtFV = Double.parseDouble(productArrayList.get(position).getPv());
+                        double prodtWeight = Double.parseDouble(productArrayList.get(position).getWeight());
+                        double prodtDP = Double.parseDouble(productArrayList.get(position).getDp());
+                        double prodtBV = Double.parseDouble(productArrayList.get(position).getBv());
                         if (quantity == 0) {
                             quantity = 0;
                             myViewHolder.txtQuantity.setText(String.valueOf(quantity));
@@ -308,17 +273,17 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                         AddProductModel addProductModel = new AddProductModel();
                         addProductModel.setProductname(productArrayList.get(position).getProductname());
                         addProductModel.setProductId(productArrayList.get(position).getProdid());
-                        addProductModel.setMrp(Double.parseDouble(productArrayList.get(position).getShipping()));
+                        addProductModel.setMrp(Double.parseDouble(productArrayList.get(position).getWeight()));
                         addProductModel.setRcp(Double.parseDouble(productArrayList.get(position).getDp()));
-                        addProductModel.setFv_rv(Double.parseDouble(productArrayList.get(position).getPv()));
+                        addProductModel.setFv_rv(Double.parseDouble(productArrayList.get(position).getBv()));
                         addProductModel.setProdusQuantity(quantity);
-                        addProductModel.setShipping(Double.parseDouble(productArrayList.get(position).getShipping()));
-                        totPrice = prodtPrice * quantity;
-                        totRcp = prodtRcp * quantity;
-                        totFVRV = prodtFV * quantity;
-                        addProductModel.setTotalMrp(totPrice);
-                        addProductModel.setTotalRcp(totRcp);
-                        addProductModel.setTotalFVRV(totFVRV);
+                        addProductModel.setShipping(Double.parseDouble(productArrayList.get(position).getWeight()));
+                        totWeight = prodtWeight * quantity;
+                        totDP = prodtDP * quantity;
+                        totBV = prodtBV * quantity;
+                        addProductModel.setTotalMrp(totWeight);
+                        addProductModel.setTotalRcp(totDP);
+                        addProductModel.setTotalFVRV(totBV);
                         ArrayList<AddProductModel> tempList = new ArrayList<AddProductModel>();
                         tempList.add(addProductModel);
                         deleteProduct(addProductModel);
@@ -364,29 +329,8 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
                 });
 
             }
-            /*else if(holder instanceof MyFooter){
-                MyFooter footer=(MyFooter)holder;
-                footer.layoutFooter.setVisibility(View.GONE);
-
-            }*/
         }
     }
-
-   /* @Override
-    public int getItemViewType(int position) {
-        //Return item type according to requirement
-
-         //if (isPositionFooter(position))
-         //   return TYPE_FOOTER;
-       // else
-        //    return TYPE_ITEM;
-        if (position == productArrayList.size()) {
-            // This is where we'll add footer.
-            return TYPE_FOOTER;
-        }
-
-        return super.getItemViewType(position);
-    }*/
 
     private boolean isPositionFooter(int position) {
         return position == productArrayList.size() + 1;
@@ -396,26 +340,6 @@ public class RepurchaseOrderProductAdapter extends RecyclerView.Adapter<Recycler
     public int getItemCount() {
         return productArrayList == null ? 0 : productArrayList.size();
     }
-    /*@Override
-    public int getItemCount() {
-        if (productArrayList == null) {
-            return 0;
-        }
-
-        if (productArrayList.size() == 0) {
-            //Return 1 here to show nothing
-            return 1;
-        }
-
-        // Add extra view to show the footer view
-        return productArrayList.size() + 1;
-    }*/
-
-   /* public interface HotelListAdapterListener {
-        void onHotelSelected(HotelSearchResponse contact);
-
-    }
-*/
 
     public void addProduct(AddProductModel list) {
         try {

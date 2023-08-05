@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
@@ -14,134 +12,266 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/selected_prodt_footer_item_txt_totitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/selected_prodt_footer_item_txt_totitem"
             android:layout_marginLeft="@dimen/margin_medium"
-            android:textSize="@dimen/txt_size_normal"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal" />
+
+        <!--Layout for Delivery-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <!--Text title-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".1"
+                android:text="Delivery"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+            <!--Text Total Mrp-->
+            <!--Radio Button By Hand and  By Courier -->
+
+            <RadioGroup
+                android:id="@+id/selected_prodt_footer_item_rdb_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/selected_prodt_footer_item_rdb_byhand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="By Hand" />
+
+                <RadioButton
+                    android:id="@+id/selected_prodt_footer_item_rdb_bycourier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:text="By Courier" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--Layout for Delivery Center-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!--Text title-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Delivery Center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+            <!--Text Total Mrp-->
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_xxx_large"
+                android:id="@+id/selected_prodt_footer_item_spinner_delivery">
+            </androidx.appcompat.widget.AppCompatSpinner>
+        </LinearLayout>
 
         <!--Layout for title-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginRight="@dimen/margin_small"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
             <!--Text particular-->
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:layout_weight="1"
                 android:gravity="left"
-                android:textSize="@dimen/txt_size_medium"
-                android:text="@string/particular"/>
+                android:text="@string/particular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
 
             <!--Text Total Mrp-->
             <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_tot_qty"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/tot_value"
-                android:id="@+id/selected_prodt_footer_item_txt_tot_qty"
-                android:textSize="@dimen/txt_size_medium"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
         </LinearLayout>
 
         <!--Layout for Total Product Price -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginRight="@dimen/margin_small"
             android:orientation="horizontal"
             android:visibility="gone">
             <!--Text title-->
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tot_prod_mrp"
                 android:textColor="@color/black"
-                android:textSize="@dimen/txt_size_medium"
-                android:text="@string/tot_prod_mrp"/>
+                android:textSize="@dimen/txt_size_medium" />
             <!--Text Total Mrp-->
             <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_tot_mrp"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="right"
-                android:textSize="@dimen/txt_size_medium"
                 android:textColor="@color/black"
-                android:id="@+id/selected_prodt_footer_item_txt_tot_mrp"/>
+                android:textSize="@dimen/txt_size_medium" />
         </LinearLayout>
 
         <!--Layout for Total Product RCP -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginRight="@dimen/margin_small"
             android:orientation="horizontal">
             <!--Text RCP-->
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Product Amount"
                 android:textColor="@color/black"
-                android:textSize="@dimen/txt_size_medium"
-                android:text="Total Amount"/>
+                android:textSize="@dimen/txt_size_medium" />
 
             <!--Text Total Rcp-->
             <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_tot_rcp"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="right"
-                android:textSize="@dimen/txt_size_medium"
                 android:textColor="@color/black"
-                android:id="@+id/selected_prodt_footer_item_txt_tot_rcp"/>
+                android:textSize="@dimen/txt_size_medium" />
         </LinearLayout>
 
-        <!--Layout for Total Product FV -->
+        <!--Layout for Shipping -->
+        <LinearLayout
+            android:id="@+id/selected_prodt_footer_item_layout_shipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:orientation="horizontal">
+            <!--Text Shipping-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Courier Charge"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+
+            <!--Text Total Shipping-->
+            <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_shipping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+        </LinearLayout>
+
+        <!--Layout for Total Product BV -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!--Text BV-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tot_prod_bv"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+
+            <!--Text Total bv-->
+            <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_tot_fv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_medium" />
+        </LinearLayout>
+
+        <!--Layout for Payable Amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
             android:layout_marginRight="@dimen/margin_small"
             android:orientation="horizontal">
-            <!--Text FV-->
+            <!--Text BV-->
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Payable Amount"
                 android:textColor="@color/black"
-                android:textSize="@dimen/txt_size_medium"
-                android:text="@string/tot_prod_fv"/>
+                android:textSize="@dimen/txt_size_medium" />
 
-            <!--Text Total fv-->
+            <!--Text Total Payable Amount-->
             <TextView
+                android:id="@+id/selected_prodt_footer_item_txt_tot_payable_amt"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="right"
-                android:textSize="@dimen/txt_size_medium"
                 android:textColor="@color/black"
-                android:id="@+id/selected_prodt_footer_item_txt_tot_fv"/>
+                android:textSize="@dimen/txt_size_medium" />
         </LinearLayout>
         <!--line-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray"
-            android:layout_marginTop="@dimen/margin_medium">
-        </View>
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/gray"></View>
 
         <!--Layout for discount-->
         <LinearLayout
@@ -153,64 +283,60 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
                 android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_large"
                 android:layout_marginRight="@dimen/margin_small"
                 android:orientation="horizontal">
                 <!--Text Discount-->
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tot_discount"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/txt_size_medium"
-                    android:text="@string/tot_discount"/>
+                    android:textSize="@dimen/txt_size_medium" />
 
                 <!--Text Total dicount-->
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="right"
-                    android:textSize="@dimen/txt_size_medium"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginRight="@dimen/margin_small"
                 android:orientation="horizontal">
                 <!--Text Discount-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:id="@+id/selected_prodt_footer_item_txt_dis_calcu"
-                    android:textSize="@dimen/txt_size_medium"
-                    />
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_medium" />
 
                 <!--Text Total dicount-->
                 <!--Text Total dicount-->
                 <TextView
+                    android:id="@+id/selected_prodt_footer_item_txt_tot_dis"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="right"
-                    android:textSize="@dimen/txt_size_medium"
                     android:textColor="@color/black"
-                    android:id="@+id/selected_prodt_footer_item_txt_tot_dis"/>
+                    android:textSize="@dimen/txt_size_medium" />
             </LinearLayout>
 
 
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>
