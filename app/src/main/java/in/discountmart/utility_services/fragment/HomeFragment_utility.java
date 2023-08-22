@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -30,19 +27,15 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 
 import in.base.ui.BaseFragment;
 import in.discountmart.R;
 
-import in.discountmart.fragment.WebBrandProdtFragment;
 import in.discountmart.utility.AlertDialogUtils;
 import in.discountmart.utility_services.activity.MainActivity_utility;
-import in.discountmart.utility_services.activity.MoreServicesActivity;
 import in.discountmart.utility_services.activity.MyWalletActivity;
-import in.discountmart.utility_services.activity.PromocodeListActivity;
 import in.discountmart.utility_services.billpayment.activity.BillPayServiceListActivity;
 import in.discountmart.utility_services.billpayment.billpay_shared_preferance.BillPaySharedPreferance;
 import in.discountmart.utility_services.fund.activity.AddFundActivity;
@@ -55,7 +48,6 @@ import in.discountmart.utility_services.report.activity.LedgerReportActivity;
 import in.discountmart.utility_services.travel.bus.bus_activity.BusSearchActivity;
 import in.discountmart.utility_services.travel.flight.flight_activity.FlightSearchActivity;
 import in.discountmart.utility_services.travel.hotel.hotel_activity.HotelSearchActivity;
-import in.discountmart.utility_services.utilities.ConnectivityUtils;
 
 
 public class HomeFragment_utility extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener

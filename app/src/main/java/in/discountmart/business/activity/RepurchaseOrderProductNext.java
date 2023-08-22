@@ -45,6 +45,7 @@ import retrofit2.Response;
  */
 public class RepurchaseOrderProductNext extends AppCompatActivity {
 
+
     Context context;
     View view;
     RecyclerView recyclerView;
@@ -89,7 +90,7 @@ public class RepurchaseOrderProductNext extends AppCompatActivity {
             btnCancel = (Button) findViewById(R.id.id_activation_act_btn_cancel);
             /*Get Selected Product List from shared preference*/
             edMobile.setText(bundle.getString("mobileno"));
-          /*  bundle.putString("idno", strMemId);
+            /*bundle.putString("idno", strMemId);
             bundle.putString("shoppingwallet", String.valueOf(availWalletBal));
             bundle.putString("mobileno", mobNo);*/
             selectProdtList = new ArrayList<AddProductModel>();

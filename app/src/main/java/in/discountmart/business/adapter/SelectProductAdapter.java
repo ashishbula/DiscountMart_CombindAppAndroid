@@ -101,7 +101,6 @@ public class SelectProductAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     }
 
-
     public class MyFooter extends RecyclerView.ViewHolder {
         public LinearLayout layoutFooter;
         public TextView txtTotQty;
@@ -377,7 +376,6 @@ public class SelectProductAdapter extends RecyclerView.Adapter<RecyclerView.View
         try {
 
             /*Main Request Model*/
-
             BaseHeaderRequest headerRequest = new BaseHeaderRequest();
             headerRequest.setUserName(loginResponse.getUserName());
             headerRequest.setPassword(loginResponse.getPasswd());

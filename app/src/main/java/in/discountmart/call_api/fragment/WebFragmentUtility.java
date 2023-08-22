@@ -1,4 +1,4 @@
-package in.discountmart.fragment;
+package in.discountmart.call_api.fragment;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;

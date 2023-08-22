@@ -1,4 +1,4 @@
-package in.discountmart.fragment;
+package in.discountmart.call_api.fragment;
 
 
 import android.app.ProgressDialog;
@@ -22,7 +22,6 @@ import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

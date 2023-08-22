@@ -1,4 +1,4 @@
-package in.discountmart.fragment;
+package in.discountmart.call_api.fragment;
 
 import android.Manifest;
 import android.annotation.TargetApi;

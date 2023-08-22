@@ -185,7 +185,6 @@ public class RegistrationActivity extends BaseActivity {
     String strNomineRelation="";
     Button btn1;
 
-
     String strFrom="";
     String strAcNo="";
     String strBranch="";
@@ -273,15 +272,11 @@ public class RegistrationActivity extends BaseActivity {
                             Toast.makeText(RegistrationActivity.this,getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                         }
                         else {
-
                             getMemberName();
                         }
                     }
-
-
                 }
             });
-
 
             /*Text User name on click */
           /*  btnCheckUser.setOnClickListener(new View.OnClickListener() {
@@ -359,7 +354,6 @@ public class RegistrationActivity extends BaseActivity {
                             (StateListResponse.StateList)parent.getItemAtPosition(position);
                     strStateId=stateList.getStatecode();
                     strStateName=stateList.getStatename();
-
                 }
 
                 @Override
@@ -378,7 +372,6 @@ public class RegistrationActivity extends BaseActivity {
                     MemberRelationListResponse.MemberRelation memberRelation1=
                             (MemberRelationListResponse.MemberRelation)parent.getItemAtPosition(position);
                     strMemRelation=memberRelation1.getMemrel();
-
                 }
 
                 @Override
